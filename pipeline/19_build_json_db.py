@@ -29,6 +29,13 @@ def build_db():
     print("Fetching complexes...")
     complexes = fetch_all("complexes")
 
+    print(f"Fetching pyeong_stats...")
+    py_stats = fetch_all("pyeong_stats")
+    py_map = {}
+    for ps in py_stats:
+        k = f"{ps['complex_id']}_{ps['match_key_area']}"
+        py_map[k] = ps
+
     print(f"Fetching rtms_transactions...")
     transactions = fetch_all("rtms_transactions")
 
@@ -94,6 +101,10 @@ def build_db():
             recent_avg = sum(t["deal_price"] for t in recent_5) / len(recent_5) if recent_5 else 0
             mock_ask = int(recent_avg * 0.98)
             
+            # 🔥 찐 네이버 최저 호가 연동 (pyeong_stats)
+            real_ask = py_map.get(f"{cid}_{area}", {}).get("current_lowest_ask")
+            final_ask = real_ask if real_ask else mock_ask
+            
             c_stats.append({
                 "match_key_area": area,
                 "highest_deal_price": highest_trade["deal_price"],
@@ -103,7 +114,7 @@ def build_db():
                 "month_volume": len(month_deals),
                 "max_month_volume": 10,
                 "volume_drop_rate": 0,
-                "current_lowest_ask": mock_ask
+                "current_lowest_ask": final_ask
             })
             
         final_data.append({

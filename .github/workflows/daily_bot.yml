@@ -9,6 +9,8 @@ on:
 jobs:
   daily-run:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     
     steps:
     - name: Checkout repository
@@ -30,10 +32,12 @@ jobs:
         mkdir -p pipeline
         echo "SUPABASE_URL=${{ secrets.SUPABASE_URL }}" >> pipeline/.env
         echo "SUPABASE_KEY=${{ secrets.SUPABASE_KEY }}" >> pipeline/.env
+        echo "RTMS_API_KEY=${{ secrets.RTMS_API_KEY }}" >> pipeline/.env
         
     - name: Run Master Daily Script
       run: |
-        python 32_master_daily_run.py
+        sudo apt-get install -y xvfb
+        xvfb-run --auto-servernum --server-args="-screen 0 1280x1024x24" python 32_master_daily_run.py
         
     - name: Commit and Push Updated Data
       run: |

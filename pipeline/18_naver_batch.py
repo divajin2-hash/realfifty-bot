@@ -7,8 +7,8 @@ from playwright.sync_api import sync_playwright
 from supabase import create_client, Client
 from dotenv import load_dotenv
 
-sys.stdout.reconfigure(encoding='utf-8')
-sys.stderr.reconfigure(encoding='utf-8')
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', line_buffering=True)
+sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', line_buffering=True)
 
 load_dotenv('pipeline/.env')
 supabase: Client = create_client(os.environ.get("SUPABASE_URL"), os.environ.get("SUPABASE_KEY"))
@@ -22,43 +22,30 @@ def parse_price(price_str):
         return eok + man
     return 0
 
-def fetch_pyeong_meta_dyn(page, complex_no):
-    api_url = f"https://new.land.naver.com/api/complexes/{complex_no}"
+def get_pyeong_lowest_ask(page, complex_no, target_pyeong):
+    # 기획자 로직: 수학을 이용한 네이버 공급면적(spcMin, spcMax) 필터 계산 (전용률 ~75% 보정)
+    spc_center = target_pyeong * 1.33
+    spc_min = int(spc_center) - 8
+    spc_max = int(spc_center) + 12
+    
+    url = f"https://new.land.naver.com/complexes/{complex_no}?a=APT&b=A1&spcMin={spc_min}&spcMax={spc_max}&prcSort=asc"
+    
     try:
-        r = page.goto(api_url)
-        data = r.json()
-        pyeongs = []
-        for p in data.get("complexPyeongDetailList", []):
-            ptpNo = p.get("ptpNo")
-            pyeongNm = p.get("pyeongNm")
-            exclusive = p.get("exclusiveArea")
-            if not ptpNo or not exclusive: continue
-            
-            match_key = int(float(exclusive))
-            if not any(x["match_key"] == match_key for x in pyeongs):
-                pyeongs.append({
-                    "ptpNo": str(ptpNo),
-                    "pyeongNm": pyeongNm,
-                    "match_key": match_key
-                })
-        return pyeongs
-    except: return []
-
-def get_naver_lowest_ask(page, complex_no, ptpNo):
-    url = f"https://new.land.naver.com/complexes/{complex_no}?a=APT&b=A1&ptpNo={ptpNo}&prcSort=asc"
-    try:
-        page.goto(url, wait_until="domcontentloaded", timeout=15000)
-        page.wait_for_selector(".item_inner", timeout=10000)
-        try:
-            page.locator("label:has-text('동일매물 묶기')").click(timeout=2000)
-            time.sleep(1)
-        except: pass
-
+        page.goto(url, wait_until="domcontentloaded", timeout=12000)
+        page.wait_for_selector(".item_inner", timeout=7000)
+        
         cards = page.locator(".item_inner").all()[:10]
         for card in cards:
             text = card.inner_text()
-            if "지분" in text or "경매" in text: continue
+            if "지분" in text or "경매" in text or "보류지" in text: continue
             
+            # 필터링 범위 내에서도 진짜 목표한 전용 면적과 흡사한지 마지막 방어선 체크 (오차 ±2.0)
+            area_match = re.search(r'/([0-9\.]+)(㎡|m)', text)
+            if not area_match: continue
+            actual_area = float(area_match.group(1))
+            if abs(actual_area - target_pyeong) > 2.0:
+                continue
+                
             try:
                 p_text = card.locator(".price").first.inner_text().strip()
                 p_num = parse_price(p_text)
@@ -67,6 +54,8 @@ def get_naver_lowest_ask(page, complex_no, ptpNo):
             except: pass
         return None
     except: return None
+
+
 
 def run_naver_50_master():
     print("=======================================================================")
@@ -77,6 +66,7 @@ def run_naver_50_master():
     if not complexes: return
         
     with sync_playwright() as p:
+        # xvfb를 사용할 것이므로 항상 headless=False로 구동하여 네이버 봇 차단(캡챠) 방지
         browser = p.chromium.launch(headless=False, args=["--disable-blink-features=AutomationControlled"])
         context = browser.new_context(user_agent="Mozilla/5.0")
         page = context.new_page()
@@ -87,7 +77,6 @@ def run_naver_50_master():
             name = c["name"]
             
             print(f"\n▶ [{idx+1}/50] 🏢 {name} 크롤링 및 MDD 결산 중...")
-            pyeongs = fetch_pyeong_meta_dyn(page, c_no)
             
             # DB(rtms_transactions)에서 해당 단지의 최고가(ATH) 목록 불러오기
             try:
@@ -102,27 +91,20 @@ def run_naver_50_master():
             except Exception as e:
                 ath_map = {}
                 
-            for p_meta in pyeongs:
-                ptpNo = p_meta["ptpNo"]
-                mk = p_meta["match_key"]
-                p_name = p_meta["pyeongNm"]
-                
-                # 최고가가 없으면(10년치 거래 없으면) 패스
-                if mk not in ath_map: continue
-                
+            for mk in sorted(ath_map.keys()):
                 ath_price = ath_map[mk]["price"]
                 ath_date = ath_map[mk]["date"]
                 
-                # 네이버 실시간 호가 조회
-                current_ask = get_naver_lowest_ask(page, c_no, ptpNo)
+                # 네이버 실시간 호가 조회 (웹 URL spc 필터 방식)
+                current_ask = get_pyeong_lowest_ask(page, c_no, mk)
                 if not current_ask: continue
                 
                 mdd = round(((current_ask - ath_price) / ath_price) * 100, 2)
                 
                 stat_data = {
                     "complex_id": cid,
-                    "pyeong_name": p_name,
-                    "naver_ptp_no": ptpNo,
+                    "pyeong_name": f"{mk}㎡",
+                    "naver_ptp_no": "0", # 더 이상 ptpNo를 쓰지 않음
                     "match_key_area": mk,
                     "current_lowest_ask": current_ask,
                     "highest_deal_price": ath_price,
@@ -136,7 +118,7 @@ def run_naver_50_master():
                 print(f"   ✅ [전용 {mk}㎡] 호가 {c_str} vs 최고가 {h_str} ({ath_date}) 👉 MDD: {mdd}%")
             
             # 네이버 어뷰징 타임아웃 밴 회피 로직
-            time.sleep(1.5)
+            time.sleep(1.0)
             
         browser.close()
     print("\n🎉 전국 50대장 모든 평형의 실시간 최저호가 및 하락률(MDD) 결산 완료!")

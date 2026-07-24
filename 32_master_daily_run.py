@@ -13,13 +13,16 @@ if __name__ == "__main__":
     # Ensure we are in root dir (kb50_mdd)
     # The GH Action runs from the root of the repo
     
-    # 1. Update lowest ask prices 
-    run_script("11_heuristic_scraper.py")
+    # 1. Update MOTIE recent deals (This Month & Last Month)
+    run_script("31_daily_rtms.py")
+
+    # 2. Update Naver lowest ask prices and calc MDD 
+    run_script("18_naver_batch.py")
     
-    # 2. Re-build the JSON DB that the frontend reads
+    # 3. Re-build the JSON DB that the frontend reads
     run_script("19_build_json_db.py")
     
-    # 3. Take a snapshot of the newly generated JSON and save it to Daily History DB
+    # 4. Take a snapshot of the newly generated JSON and save it to Daily History DB
     run_script("30_daily_snapshot.py")
     
     print("\n✅ All daily master bot scripts executed successfully!")
