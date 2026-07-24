@@ -1,0 +1,333 @@
+"use client";
+
+import React, { useState } from 'react';
+import { useParams, useRouter } from 'next/navigation';
+import rawData from '@/data/kb50_stats.json';
+import TickerClient from '../../TickerClient';
+import '@/app/globals.css';
+
+function formatPriceNum(num: number) {
+    if (!num) return '-';
+    const eok = Math.floor(num / 100000000);
+    const man = Math.floor((num % 100000000) / 10000);
+    const manStr = man > 0 ? `.${Math.floor(man / 1000)}` : '';
+    return `${eok}${manStr}`;
+}
+
+function formatDate(dateStr: string) {
+    if (!dateStr) return '';
+    return dateStr.replace('202', '2').replace(/-/g, '.');
+}
+
+function getRepIndex(stats: any[]) {
+    if (!stats || stats.length === 0) return 0;
+    const now = new Date().getTime();
+    const scoredStats = stats.map((s: any, idx: number) => {
+        let diffDays = 99999;
+        if (s.recent_deal_absolute && s.recent_deal_absolute.date) {
+            const lastDate = new Date(s.recent_deal_absolute.date).getTime();
+            diffDays = Math.abs(now - lastDate) / (1000 * 3600 * 24);
+        }
+        const dist84 = Math.abs(s.match_key_area - 84);
+        const isAlive = diffDays <= 365;
+        const groupDist = (s.match_key_area >= 82 && s.match_key_area <= 85) ? 0 : dist84;
+        return { ...s, diffDays, dist84, isAlive, groupDist, originalIdx: idx };
+    });
+    scoredStats.sort((a, b) => {
+        if (a.isAlive !== b.isAlive) return a.isAlive ? -1 : 1;
+        if (a.groupDist !== b.groupDist) return a.groupDist - b.groupDist;
+        return b.highest_deal_price - a.highest_deal_price;
+    });
+    return scoredStats[0].originalIdx;
+}
+
+function getRepresentativeStat(stats: any[]) {
+    if (!stats || stats.length === 0) return null;
+    const now = new Date().getTime();
+    
+    const scoredStats = stats.map((s: any) => {
+        let diffDays = 99999;
+        if (s.recent_deal_absolute && s.recent_deal_absolute.date) {
+            const lastDate = new Date(s.recent_deal_absolute.date).getTime();
+            diffDays = Math.abs(now - lastDate) / (1000 * 3600 * 24);
+        }
+        const dist84 = Math.abs(s.match_key_area - 84);
+        const isAlive = diffDays <= 365;
+        const groupDist = (s.match_key_area >= 82 && s.match_key_area <= 85) ? 0 : dist84;
+        
+        return { ...s, diffDays, dist84, isAlive, groupDist };
+    });
+    
+    scoredStats.sort((a, b) => {
+        if (a.isAlive !== b.isAlive) return a.isAlive ? -1 : 1;
+        if (a.groupDist !== b.groupDist) return a.groupDist - b.groupDist;
+        return b.highest_deal_price - a.highest_deal_price;
+    });
+    
+    return scoredStats[0];
+}
+
+export default function DetailPage() {
+    const params = useParams();
+    const router = useRouter();
+    const complexId = params.id as string;
+
+    const group = (rawData as any[]).find(g => g.complex.id === complexId);
+    
+    const sortedStats = group ? [...group.stats].map(s => {
+        const mdd_rate = s.highest_deal_price > 0 ? -Math.abs(((s.highest_deal_price - s.current_lowest_ask) / s.highest_deal_price) * 100) : 0;
+        return { ...s, mdd_rate };
+    }).sort((a, b) => a.match_key_area - b.match_key_area) : [];
+
+    const [activeIndex, setActiveIndex] = useState(() => getRepIndex(sortedStats));
+
+    if (!group) return <div style={{ padding: '50px' }}>단지를 찾을 수 없습니다.</div>;
+    const complex = group.complex;
+
+    const activeStat = sortedStats[activeIndex];
+    const ath = activeStat.highest_deal_price;
+    const absoluteRecent = activeStat.recent_deal_absolute;
+    const currentAsk = activeStat.current_lowest_ask;
+    const mddStr = activeStat.mdd_rate ? Math.abs(activeStat.mdd_rate).toFixed(1) : '0.0';
+
+    const monthDealsCount = activeStat.month_volume || 0;
+    const volumeDropRate = activeStat.volume_drop_rate || 0;
+
+    const absDrop = absoluteRecent ? (((ath - absoluteRecent.price) / ath) * 100).toFixed(1) : '0.0';
+    const txList = activeStat.month_deals || [];
+
+    const currentMonth = new Date().getMonth() + 1;
+
+    let diffDays = 0;
+    let lastDealDateStr = '-';
+    if (absoluteRecent && absoluteRecent.date) {
+        const lastDate = new Date(absoluteRecent.date);
+        const now = new Date();
+        const diffTime = Math.abs(now.getTime() - lastDate.getTime());
+        diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+        const yy = absoluteRecent.date.substring(2, 4);
+        const mm = absoluteRecent.date.substring(5, 7);
+        const dd = absoluteRecent.date.substring(8, 10);
+        lastDealDateStr = `${yy}.${mm}.${dd}`;
+    }
+
+    return (
+        <div className="app-wrapper">
+            <aside className="sidebar">
+                <div className="sidebar-logo" style={{ padding: '32px 24px 12px 24px' }}>
+                    <div style={{ fontSize: '2.2rem', fontWeight: 900, color: '#ffffff', letterSpacing: '1px', textShadow: '0 2px 10px rgba(0,0,0,0.2)' }}>
+                        Real<span style={{ color: '#ffb4ab' }}>Fifty</span>
+                    </div>
+                    
+                </div>
+                <div className="sidebar-menu" style={{ marginTop: '20px' }}>
+                    <div className="menu-item" onClick={() => router.push('/')}>📊 실시간 시장 현황 (메인)</div>
+                    <div className="menu-item active">📊 통합 마켓 상세 현황</div>
+                    <div className="menu-item">🔔 가격 변동 알림 (준비중)</div>
+                    <div className="menu-item">💼 관심 단지 등록 (준비중)</div>
+                </div>
+            </aside>
+
+            <div className="main-content" style={{ backgroundColor: '#f7f9fc' }}>
+                <div className="top-ticker" style={{ padding: 0, overflow: 'hidden' }}>
+                    <TickerClient items={(() => {
+                        const totalDropRates = (rawData as any[]).map(g => {
+                            const rep = getRepresentativeStat(g.stats);
+                            return rep ? rep.recent_drop_rate : 0;
+                        }).filter(d => d < 0);
+                        const avgNum = totalDropRates.length > 0 
+                            ? parseFloat((totalDropRates.reduce((acc, val) => acc + val, 0) / totalDropRates.length).toFixed(2)) 
+                            : 0;
+
+                        const groupedDataForTicker: any[] = [...(rawData as any[])].map(g => {
+                            const rep = getRepresentativeStat(g.stats);
+                            return {
+                                name: g.complex.name,
+                                recent_drop_rate: rep ? rep.recent_drop_rate : 0
+                            };
+                        }).sort((a,b) => a.recent_drop_rate - b.recent_drop_rate);
+                        
+                        groupedDataForTicker.forEach((g, idx) => g.rank = idx + 1);
+
+                        return groupedDataForTicker
+                            .filter(item => item.recent_drop_rate < avgNum)
+                            .map(item => ({
+                                name: item.name,
+                                drop: item.recent_drop_rate.toFixed(1),
+                                isSevere: item.recent_drop_rate <= -20,
+                                rank: item.rank
+                            }));
+                    })()} />
+                </div>
+
+                <div className="dashboard-area" style={{ padding: '24px 40px' }}>
+
+                    <div style={{ display: 'flex', alignItems: 'center', marginBottom: '24px' }}>
+                        <button onClick={() => router.push('/')} style={{ border: 'none', background: '#e0e3e6', color: '#191c1e', width: '40px', height: '40px', borderRadius: '8px', cursor: 'pointer', marginRight: '16px', fontWeight: 'bold' }}>←</button>
+                        <div>
+                            <h1 style={{ fontSize: '2rem', fontWeight: 800, color: '#191c1e' }}>{complex.name}</h1>
+                            <div style={{ fontSize: '0.9rem', color: '#76777d', marginTop: '4px' }}>📍 {complex.region}</div>
+                        </div>
+                        <div style={{ marginLeft: 'auto', display: 'flex', gap: '8px' }}>
+                            <span style={{ background: '#ffdad6', color: '#93000b', padding: '6px 12px', borderRadius: '999px', fontSize: '0.8rem', fontWeight: 700 }}>하락세 강함</span>
+                            <span style={{ background: '#dae2fd', color: '#131b2e', padding: '6px 12px', borderRadius: '999px', fontSize: '0.8rem', fontWeight: 700 }}>안전성 평가중</span>
+                        </div>
+                    </div>
+
+                    <div style={{ background: '#131b2e', borderRadius: '12px', padding: '20px', marginBottom: '24px' }}>
+                        <div style={{ color: 'white', fontSize: '0.85rem', fontWeight: 600, marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M4 4h16v16H4V4zm2 2v12h12V6H6z" /></svg>
+                            단지 내 전용면적별 분석 (㎡)
+                        </div>
+                        <div style={{ display: 'flex', gap: '12px', overflowX: 'auto', paddingBottom: '8px' }}>
+                            {sortedStats.map((s, idx) => {
+                                const isActive = idx === activeIndex;
+                                return (
+                                    <div
+                                        key={idx}
+                                        onClick={() => setActiveIndex(idx)}
+                                        style={{
+                                            minWidth: '80px', height: '80px', flexShrink: 0,
+                                            background: isActive ? '#ffffff' : '#1e293b',
+                                            color: isActive ? '#131b2e' : '#ffffff',
+                                            border: isActive ? '2px solid #ba1a1a' : '1px solid rgba(255,255,255,0.1)',
+                                            borderRadius: '8px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+                                            cursor: 'pointer', transition: 'all 0.2s', fontWeight: 700
+                                        }}
+                                    >
+                                        <span className="num-font" style={{ fontSize: '1.4rem' }}>{s.match_key_area}</span>
+                                        <span style={{ fontSize: '0.7rem', opacity: isActive ? 0.7 : 0.5 }}>m²</span>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    </div>
+
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px', marginBottom: '24px' }}>
+
+                        <div className="ap-card" style={{ padding: '24px' }}>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', color: '#76777d', fontSize: '0.85rem', fontWeight: 600, marginBottom: '16px' }}>
+                                <span>최고가 및 실거래 낙폭 분석</span>
+                                <span>📉</span>
+                            </div>
+                            <div style={{ fontSize: '0.8rem', color: '#191c1e', fontWeight: 700 }}>역대 최고가 <span className="num-font">({formatDate(activeStat.highest_deal_date)})</span></div>
+                            <div style={{ fontSize: '1.8rem', fontWeight: 800, marginBottom: '20px' }}>
+                                <span className="num-font">{formatPriceNum(ath)}</span><span className="kr-unit">억</span>
+                            </div>
+                            <div style={{ fontSize: '0.8rem', color: '#191c1e', fontWeight: 700 }}>가장 최근 체결된 실거래가</div>
+                            <div style={{ fontSize: '1.4rem', fontWeight: 700, marginBottom: '20px' }}>
+                                {absoluteRecent ? <><span className="num-font">{formatPriceNum(absoluteRecent.price)}</span><span className="kr-unit">억</span></> : '-'}
+                            </div>
+                            <div style={{ background: '#ffdad6', color: '#93000b', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px 16px', borderRadius: '6px', fontWeight: 800, fontSize: '1.2rem' }}>
+                                <span className="num-font">{-absDrop}%</span>
+                                <span style={{ fontSize: '0.75rem', opacity: 0.8 }}>고점 대비 수익률 하락</span>
+                            </div>
+                        </div>
+
+                        <div className="ap-card" style={{ padding: '24px' }}>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', color: '#76777d', fontSize: '0.85rem', fontWeight: 600, marginBottom: '16px' }}>
+                                <span>시장 매수 유동성 분석</span>
+                                <span>📊</span>
+                            </div>
+                            <div style={{ fontSize: '0.8rem', color: '#191c1e', fontWeight: 700 }}>당월 ({currentMonth}월) 실질 매수 체결량</div>
+                            <div style={{ fontSize: '1.8rem', fontWeight: 800, marginBottom: '20px' }}>
+                                <span className="num-font">{monthDealsCount}</span> <span className="kr-unit">건</span>
+                            </div>
+                            
+                        </div>
+
+                        <div className="ap-card" style={{ padding: '24px' }}>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', color: '#76777d', fontSize: '0.85rem', fontWeight: 600, marginBottom: '16px' }}>
+                                <span>실시간 시장 매물(호가) 현황</span>
+                                <span>🏷️</span>
+                            </div>
+                            <div style={{ fontSize: '0.8rem', color: '#191c1e', fontWeight: 700 }}>가장 싼 네이버 최저 호가</div>
+                            <div style={{ fontSize: '1.8rem', fontWeight: 800, marginBottom: '20px' }}>
+                                <span className="num-font">{formatPriceNum(currentAsk)}</span><span className="kr-unit">억</span>
+                            </div>
+                            <div style={{ fontSize: '0.8rem', color: '#191c1e', fontWeight: 700 }}>실거래 ↔ 호가 괴리</div>
+                            <div style={{ fontSize: '0.9rem', color: '#76777d', fontWeight: 600, marginBottom: '20px', minHeight: '38px', paddingTop: '4px' }}>
+                                {(() => {
+                                    const gap = currentAsk - (absoluteRecent ? absoluteRecent.price : 0);
+                                    if (!absoluteRecent) return '최근 실거래 없음';
+                                    const gapEok = Math.abs(gap / 100000000).toFixed(1);
+                                    if (gap < 0) return `최근 실거래가 대비 ${gapEok}억원 저렴`;
+                                    if (gap > 0) return `최근 실거래가 대비 ${gapEok}억원 비쌈`;
+                                    return `최근 실거래가와 동일`;
+                                })()}
+                            </div>
+                            <div style={{ background: '#dae2fd', color: '#131b2e', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px 16px', borderRadius: '6px', fontWeight: 800, fontSize: '1.2rem' }}>
+                                <span className="num-font">{mddStr}%</span>
+                                <span style={{ fontSize: '0.75rem', opacity: 0.8 }}>과거 최고가(ATH) 대비 저렴</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div className="ap-card" style={{ padding: '30px', marginBottom: '24px' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+                            <h2 style={{ fontSize: '1.4rem', fontWeight: 800 }}>📊 최근 10년 롱텀 가격 궤적 (Trend)</h2>
+                            <div style={{ display: 'flex', gap: '8px' }}>
+                                <span style={{ background: '#191c1e', color: 'white', padding: '4px 12px', fontSize: '0.8rem', borderRadius: '4px' }}>10년</span>
+                                <span style={{ background: '#e0e3e6', color: '#191c1e', padding: '4px 12px', fontSize: '0.8rem', borderRadius: '4px' }}>5년</span>
+                                <span style={{ background: '#e0e3e6', color: '#191c1e', padding: '4px 12px', fontSize: '0.8rem', borderRadius: '4px' }}>1년</span>
+                            </div>
+                        </div>
+                        <div style={{ width: '100%', height: '300px', border: '1px dashed #e0e3e6', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', overflow: 'hidden' }}>
+                            <svg style={{ position: 'absolute', width: '100%', height: '100%' }} preserveAspectRatio="none" viewBox="0 0 100 100">
+                                <path d="M0 90 Q 20 80 40 60 T 80 40 T 100 50 L 100 100 L 0 100 Z" fill="url(#grad)" opacity="0.4" />
+                                <path d="M0 90 Q 20 80 40 60 T 80 40 T 100 50" fill="none" stroke="#ba1a1a" strokeWidth="2" />
+                                <circle cx="80" cy="40" r="2" fill="#ba1a1a" />
+                                <defs>
+                                    <linearGradient id="grad" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0%" stopColor="#ffdad6" />
+                                        <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <div style={{ position: 'absolute', zIndex: 10, left: '72%', top: '25%', fontSize: '0.7rem', color: '#ba1a1a', fontWeight: 'bold' }}>최고가 <span className="num-font">{formatPriceNum(ath)}</span>억</div>
+                            <h1 style={{ position: 'absolute', fontSize: '4rem', color: 'rgba(0,0,0,0.04)', fontWeight: 800, letterSpacing: '4px' }}>MDD TERMINAL ANALYTICS</h1>
+                        </div>
+                    </div>
+
+                    <div className="ap-card">
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '24px', borderBottom: '1px solid #e0e3e6' }}>
+                            <h2 style={{ fontSize: '1.2rem', fontWeight: 800 }}>📋 당월 ({currentMonth}월) 확정 실거래 내역</h2>
+                        </div>
+                        <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'center', fontSize: '0.95rem' }}>
+                            <thead style={{ background: '#f2f4f7', color: '#76777d', fontSize: '0.8rem' }}>
+                                <tr>
+                                    <th style={{ padding: '16px' }}>체결 일자</th>
+                                    <th style={{ padding: '16px' }}>거래 금액 (억원)</th>
+                                    <th style={{ padding: '16px' }}>면적 / 층</th>
+                                    <th style={{ padding: '16px' }}>거래 유형</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {txList.map((tx: any, i: number) => (
+                                    <tr key={i} style={{ borderBottom: '1px solid #e0e3e6', transition: 'background 0.2s', cursor: 'pointer' }}>
+                                        <td className="num-font" style={{ padding: '20px 16px', fontWeight: 700 }}>{tx.date?.slice(0, 10)}</td>
+                                        <td style={{ padding: '20px 16px', fontSize: '1.1rem', fontWeight: 800 }}><span className="num-font">{(tx.price / 100000000).toFixed(1)}</span><span className="kr-unit">억</span></td>
+                                        <td style={{ padding: '20px 16px', color: '#45464d' }}><span className="num-font">{activeStat.match_key_area}</span>m² / <span className="num-font">{tx.floor || '-'}</span>층</td>
+                                        <td style={{ padding: '20px 16px', color: '#76777d' }}>{tx.type || '중개거래'}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                        {txList.length === 0 && (
+                            <div style={{ padding: '50px', textAlign: 'center', color: '#76777d', fontSize: '1rem', borderBottom: '1px solid #e0e3e6' }}>
+                                이전 거래일(<span className="num-font">{lastDealDateStr}</span>) 이후로
+                                <div className="freeze-warning" style={{ fontSize: '1.5rem', marginTop: '12px' }}>
+                                    <span className="num-font">{diffDays}</span>일간 거래 없음
+                                </div>
+                            </div>
+                        )}
+                        <div style={{ padding: '20px', textAlign: 'center', color: '#ba1a1a', fontSize: '0.9rem', fontWeight: 700, cursor: 'pointer', background: '#f7f9fc' }}>10년치(약 150개월) 거래 원장 조회기능 준비중</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    );
+}
