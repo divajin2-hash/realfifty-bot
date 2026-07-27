@@ -279,53 +279,49 @@ body {
   }
 
   .sidebar {
-    position: relative;
-    width: 100%;
-    height: auto;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 16px;
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0 16px !important;
     z-index: 50;
   }
 
   .sidebar-logo {
     padding: 16px 0 !important;
-    /* Override inline styles */
-    border-bottom: none;
+    border-bottom: none !important;
   }
 
   .sidebar-menu {
-    display: none;
-    /* 모바일에서는 메뉴 숨김 (필요시 햄버거 메뉴 구현) */
+    display: none !important;
   }
 
   .sidebar>div:last-child {
-    display: none;
-    /* 모바일에서는 하단 검색바/마켓리포트 버튼 임시 숨김 (공간 부족) */
+    display: none !important;
   }
 
   .main-content {
-    margin-left: 0;
+    margin-left: 0 !important;
   }
 
   .dashboard-area {
-    padding: 16px;
+    padding: 16px !important;
   }
 
-  /* 대시보드 상단 요약 박스 세로 배치 */
   .dashboard-area>div:first-child {
     flex-direction: column !important;
-    gap: 16px;
+    gap: 16px !important;
   }
 
   .dashboard-area>div:first-child>div:last-child {
-    width: 100%;
-    justify-content: space-between;
+    width: 100% !important;
+    justify-content: space-between !important;
   }
 
   .grid-layout {
-    grid-template-columns: 1fr;
-    gap: 12px;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
   }
 }
