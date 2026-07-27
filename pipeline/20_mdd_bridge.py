@@ -116,7 +116,10 @@ def run_mdd_bridge():
     print(f"✅ 최종 MDD 산출 완료: {len(stats_to_insert)}개 평형 블록 업데이트 준비.")
     
     # 5. DB pyeong_stats 테이블 업데이트
-    # pyeong_stats 테이블은 (complex_id, match_key_area)를 유니크 키로 사용하여 덮어씀 (Upsert)
+    # ⚠️ 먼저 기존 레거시 데이터를 완전히 삭제하여, 구형 스크래퍼가 남긴 오염 데이터 제거
+    supabase.table("pyeong_stats").delete().neq("id", "00000000-0000-0000-0000-000000000000").execute()
+    print("🗑️ 기존 pyeong_stats 전체 초기화 완료. 신규 데이터로 교체합니다.")
+    
     if stats_to_insert:
         chunk_size = 500
         for i in range(0, len(stats_to_insert), chunk_size):

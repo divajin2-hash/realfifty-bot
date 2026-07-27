@@ -15,7 +15,7 @@ export default async function Dashboard() {
             stats: group.stats.map((s: any) => {
                 const recentPrice = s.recent_deal_absolute ? s.recent_deal_absolute.price : s.highest_deal_price;
                 // 최고가 대비 "최근 실거래가" 하락률
-                const recent_drop_rate = (s.highest_deal_price > 0 && recentPrice) ? -Math.abs(((s.highest_deal_price - recentPrice) / s.highest_deal_price) * 100) : 0;
+                const recent_drop_rate = (s.highest_deal_price > 0 && recentPrice) ? ((recentPrice - s.highest_deal_price) / s.highest_deal_price) * 100 : 0;
                 return {
                     id: group.complex.id + s.match_key_area,
                     match_key_area: s.match_key_area,
@@ -27,7 +27,7 @@ export default async function Dashboard() {
                     volume_drop_rate: s.volume_drop_rate,
                     current_lowest_ask: s.current_lowest_ask,
                     recent_drop_rate: recent_drop_rate,
-                    mdd_rate: s.highest_deal_price > 0 ? -Math.abs(((s.highest_deal_price - s.current_lowest_ask) / s.highest_deal_price) * 100) : 0
+                    mdd_rate: s.highest_deal_price > 0 ? ((s.current_lowest_ask - s.highest_deal_price) / s.highest_deal_price) * 100 : 0
                 }
             })
         }
@@ -35,30 +35,30 @@ export default async function Dashboard() {
 
     // 대표평형 추출 로직 (UI 표출 기준)
     function getRepresentativeStat(stats: any[]) {
-    if (!stats || stats.length === 0) return null;
-    const now = new Date().getTime();
-    
-    const scoredStats = stats.map((s: any) => {
-        let diffDays = 99999;
-        if (s.recent_deal_absolute && s.recent_deal_absolute.date) {
-            const lastDate = new Date(s.recent_deal_absolute.date).getTime();
-            diffDays = Math.abs(now - lastDate) / (1000 * 3600 * 24);
-        }
-        const dist84 = Math.abs(s.match_key_area - 84);
-        const isAlive = diffDays <= 365;
-        const groupDist = (s.match_key_area >= 82 && s.match_key_area <= 85) ? 0 : dist84;
-        
-        return { ...s, diffDays, dist84, isAlive, groupDist };
-    });
-    
-    scoredStats.sort((a, b) => {
-        if (a.isAlive !== b.isAlive) return a.isAlive ? -1 : 1;
-        if (a.groupDist !== b.groupDist) return a.groupDist - b.groupDist;
-        return b.highest_deal_price - a.highest_deal_price;
-    });
-    
-    return scoredStats[0];
-}
+        if (!stats || stats.length === 0) return null;
+        const now = new Date().getTime();
+
+        const scoredStats = stats.map((s: any) => {
+            let diffDays = 99999;
+            if (s.recent_deal_absolute && s.recent_deal_absolute.date) {
+                const lastDate = new Date(s.recent_deal_absolute.date).getTime();
+                diffDays = Math.abs(now - lastDate) / (1000 * 3600 * 24);
+            }
+            const dist84 = Math.abs(s.match_key_area - 84);
+            const isAlive = diffDays <= 365;
+            const groupDist = (s.match_key_area >= 82 && s.match_key_area <= 85) ? 0 : dist84;
+
+            return { ...s, diffDays, dist84, isAlive, groupDist };
+        });
+
+        scoredStats.sort((a, b) => {
+            if (a.isAlive !== b.isAlive) return a.isAlive ? -1 : 1;
+            if (a.groupDist !== b.groupDist) return a.groupDist - b.groupDist;
+            return b.highest_deal_price - a.highest_deal_price;
+        });
+
+        return scoredStats[0];
+    }
 
     // 기획자님 지시: 화면에 노출되는 '대표평형' 기준으로 고점대비 실거래가가 가장 낮은 순(하락폭이 큰 순) 정렬!
     groupedData.sort((a, b) => {
@@ -84,7 +84,7 @@ export default async function Dashboard() {
         : '0.00';
 
 
-    
+
     return (
         <div className="app-wrapper">
             {/* 🔴 Left Sidebar */}
@@ -93,7 +93,7 @@ export default async function Dashboard() {
                     <div style={{ fontSize: '2.2rem', fontWeight: 900, color: '#ffffff', letterSpacing: '1px', textShadow: '0 2px 10px rgba(0,0,0,0.2)' }}>
                         Real<span style={{ color: '#ffb4ab' }}>Fifty</span>
                     </div>
-                    
+
                 </div>
                 <div className="sidebar-menu" style={{ marginTop: '10px' }}>
                     <div className="menu-item active">📈 실시간 시장 현황</div>
@@ -123,15 +123,15 @@ export default async function Dashboard() {
                             rank: 0
                         };
                     });
-                    
+
                     // Filter: Only include items whose drop is WORSE (more negative) than the average drop
                     const filtered = items.filter(item => item.rawDrop < avgNum);
-                    
+
                     // Assign explicit ranking (since groupedData is already sorted)
                     filtered.forEach((item, idx) => {
                         item.rank = idx + 1;
                     });
-                    
+
                     return filtered;
                 })()} />
 
