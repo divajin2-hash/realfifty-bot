@@ -2,7 +2,7 @@ import os
 import sys
 
 def run_script(script_name):
-    print(f"\n{'='*50}\n🚀 RUNNING: {script_name}\n{'='*50}")
+    print(f"\n{'='*50}\n▶ RUNNING: {script_name}\n{'='*50}")
     # Using python module execution to stay in the same env
     res = os.system(f"python pipeline/{script_name}")
     if res != 0:
@@ -11,18 +11,22 @@ def run_script(script_name):
 
 if __name__ == "__main__":
     # Ensure we are in root dir (kb50_mdd)
-    # The GH Action runs from the root of the repo
     
     # 1. Update MOTIE recent deals (This Month & Last Month)
-    run_script("31_daily_rtms.py")
+    # [PRO 적용] 직거래 필터 및 소수점 면적 보존, 입주권 분양권 동시 순회
+    run_script("31_daily_rtms_pro.py")
 
-    # 2. Update Naver lowest ask prices and calc MDD 
-    run_script("18_naver_batch.py")
+    # 2. Update Naver lowest ask prices
+    # [PRO 적용] 원자 단위 호가 스크래퍼 (최저가 100% 수집하여 raw_daily_asks.json 생성)
+    run_script("10_full_pyeong_scraper.py")
     
-    # 3. Re-build the JSON DB that the frontend reads
+    # 3. 네이버 수집파일 + 국토부 파일 결합 및 MDD(pyeong_stats) 생성 처리기
+    run_script("20_mdd_bridge.py")
+    
+    # 4. Re-build the JSON DB that the frontend reads
     run_script("19_build_json_db.py")
     
-    # 4. Take a snapshot of the newly generated JSON and save it to Daily History DB
+    # 5. Take a snapshot
     run_script("30_daily_snapshot.py")
     
     print("\n✅ All daily master bot scripts executed successfully!")
