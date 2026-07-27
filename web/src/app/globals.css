@@ -269,3 +269,63 @@ body {
   border-top: 1px dashed var(--border-light);
   margin: 16px 0;
 }
+
+/* -------------------
+   Mobile Responsive Layout
+------------------- */
+@media (max-width: 768px) {
+  .app-wrapper {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    z-index: 50;
+  }
+
+  .sidebar-logo {
+    padding: 16px 0 !important;
+    /* Override inline styles */
+    border-bottom: none;
+  }
+
+  .sidebar-menu {
+    display: none;
+    /* 모바일에서는 메뉴 숨김 (필요시 햄버거 메뉴 구현) */
+  }
+
+  .sidebar>div:last-child {
+    display: none;
+    /* 모바일에서는 하단 검색바/마켓리포트 버튼 임시 숨김 (공간 부족) */
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .dashboard-area {
+    padding: 16px;
+  }
+
+  /* 대시보드 상단 요약 박스 세로 배치 */
+  .dashboard-area>div:first-child {
+    flex-direction: column !important;
+    gap: 16px;
+  }
+
+  .dashboard-area>div:first-child>div:last-child {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .grid-layout {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
