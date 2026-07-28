@@ -19,6 +19,7 @@ export default async function Dashboard({ searchParams }: { searchParams: { sort
                 return {
                     id: group.complex.id + s.match_key_area,
                     match_key_area: s.match_key_area,
+                    pyeong_name: s.pyeong_name,
                     highest_deal_price: s.highest_deal_price,
                     highest_deal_date: s.highest_deal_date,
                     recent_deal_absolute: s.recent_deal_absolute,
