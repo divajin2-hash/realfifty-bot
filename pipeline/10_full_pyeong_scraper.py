@@ -91,14 +91,14 @@ def run_master():
                             pass
 
                 main_page.on("response", handle_response)
-                main_url = f"https://new.land.naver.com/complexes/{nid}?a=APT&b=A1"
+                main_url = f"https://new.land.naver.com/complexes/{nid}?a=APT:ABYG:JGC&b=A1"
                 
                 try:
                     main_page.goto(main_url, wait_until='networkidle', timeout=12000)
                 except:
                     pass
                     
-                time.sleep(1.5)
+                main_page.wait_for_timeout(1500)
                 main_page.remove_listener("response", handle_response)
                 
                 if target_ptp_info:
@@ -129,7 +129,7 @@ def run_master():
                 ex_area = float(p_type.get('exclusiveArea', 0))
                 nid = p_type.get('_naver_id')
                 
-                target_url = f"https://new.land.naver.com/complexes/{nid}?a=APT&b=A1&ptpNo={ptp_no}"
+                target_url = f"https://new.land.naver.com/complexes/{nid}?a=APT:ABYG:JGC&b=A1&ptpNo={ptp_no}"
                 
                 target_page = context.new_page()
                 try:
