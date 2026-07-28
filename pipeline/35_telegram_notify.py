@@ -4,6 +4,18 @@ from datetime import datetime, timedelta, timezone
 from dotenv import load_dotenv
 from supabase import create_client
 
+def format_price(price):
+    if price == 0:
+        return "0원"
+    eok = price // 100000000
+    man = (price % 100000000) // 10000
+    res = ""
+    if eok > 0:
+        res += f"{eok}억"
+    if man > 0:
+        res += f"{man}만" if eok == 0 else f" {man}만"
+    return res
+
 def run():
     env_path = os.path.join(os.path.dirname(__file__), ".env")
     load_dotenv(env_path)
@@ -25,7 +37,6 @@ def run():
     
     print(f"Fetching summary stats for {today_date} vs {yesterday_date}...")
     
-    # Query Supabase
     res_today = supabase.table('daily_history').select('*').eq('base_date', today_date).execute()
     res_yest = supabase.table('daily_history').select('*').eq('base_date', yesterday_date).execute()
     
@@ -35,8 +46,9 @@ def run():
         
     yest_dict = {(r['complex_id'], r['area']): r for r in res_yest.data}
     
-    ask_drops = []
-    recent_updates = []
+    # Lists to hold formatted strings
+    rtms_changes = []
+    ask_changes = []
     
     for t in res_today.data:
         key = (t['complex_id'], t['area'])
@@ -47,35 +59,54 @@ def run():
         c_name = t['complex_name']
         area = t['area']
         
-        # Check asking price drop
-        if t['lowest_ask'] and y['lowest_ask'] and t['lowest_ask'] < y['lowest_ask']:
-            diff = y['lowest_ask'] - t['lowest_ask']
-            ask_drops.append(f"- {c_name} {area}㎡: {y['lowest_ask']//10000}만 📉 {t['lowest_ask']//10000}만 (▼{diff//10000}만)")
+        # 1. 국토부 실거래가 (recent_price 변동 비교)
+        t_recent = t.get('recent_price') or 0
+        y_recent = y.get('recent_price') or 0
+        if t_recent > 0 and y_recent > 0 and t_recent != y_recent:
+            diff = t_recent - y_recent
+            diff_abs = abs(diff)
+            mark = "🔺상승" if diff > 0 else "🔻하락"
             
-        # Check new recent deals
-        if t['recent_price'] and y['recent_price'] and t['recent_price'] != y['recent_price']:
-            diff = t['recent_price'] - y['recent_price']
-            mark = "🔺" if diff > 0 else "🔻"
-            recent_updates.append(f"- {c_name} {area}㎡: {y['recent_price']//10000}만 ➡️ {t['recent_price']//10000}만 ({mark}{abs(diff)//10000}만)")
+            t_str = format_price(t_recent)
+            y_str = format_price(y_recent)
+            d_str = format_price(diff_abs)
+            
+            rtms_changes.append(f"- {c_name} {area}㎡: {y_str} ➡️ {t_str} ({mark} {d_str})")
+            
+        # 2. 네이버 최저호가 (lowest_ask 변동 비교)
+        t_ask = t.get('lowest_ask') or 0
+        y_ask = y.get('lowest_ask') or 0
+        
+        if t_ask > 0 and y_ask > 0 and t_ask != y_ask:
+            diff = t_ask - y_ask
+            diff_abs = abs(diff)
+            mark = "📈상승" if diff > 0 else "📉하락"
+            
+            t_str = format_price(t_ask)
+            y_str = format_price(y_ask)
+            d_str = format_price(diff_abs)
+            
+            ask_changes.append(f"- {c_name} {area}㎡: {y_str} ➡️ {t_str} ({mark} {d_str})")
             
     # Format message
-    msg = f"🔔 *RealFifty 데일리 업데이트 완료!*\n({today_date} 자정 기준)\n\n"
-    msg += f"✅ 국토부 실거래가 및 네이버 호가 50개 단지 수집 및 DB 저장 완료.\n\n"
+    msg = f"🔔 *RealFifty 데일리 리포트*\n({today_date} 자정 기준)\n\n"
     
-    if ask_drops:
-        msg += "📉 *주요 24시간 호가 하락*\n" + "\n".join(ask_drops[:10]) + "\n"
-        if len(ask_drops) > 10:
-            msg += f"...외 {len(ask_drops)-10}건 더 있음\n"
-        msg += "\n"
-        
-    if recent_updates:
-        msg += "💸 *새로운 실거래가 업데이트*\n" + "\n".join(recent_updates[:10]) + "\n"
-        if len(recent_updates) > 10:
-            msg += f"...외 {len(recent_updates)-10}건 더 있음\n"
-        msg += "\n"
-        
-    if not ask_drops and not recent_updates:
-        msg += "평온한 하루네요. 오늘 감지된 특이 변동사항(호가 하락 및 신규 실거래)이 없습니다."
+    msg += f"🏢 *1. 국토부 실거래가 신규 등록* : 총 {len(rtms_changes)}건\n"
+    if rtms_changes:
+        msg += "\n".join(rtms_changes[:15]) + "\n"
+        if len(rtms_changes) > 15:
+            msg += f"...외 {len(rtms_changes)-15}건 더 있음\n"
+    else:
+        msg += "새롭게 등록된 실거래가 변동 내역이 없습니다.\n"
+    
+    msg += "\n"
+    msg += f"🏷️ *2. 네이버 최저호가 변동* : 총 {len(ask_changes)}건\n"
+    if ask_changes:
+        msg += "\n".join(ask_changes[:15]) + "\n"
+        if len(ask_changes) > 15:
+            msg += f"...외 {len(ask_changes)-15}건 더 있음\n"
+    else:
+        msg += "어제 대비 최저호가 변동 내역이 없습니다.\n"
         
     # Send
     t_url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
