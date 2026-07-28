@@ -52,8 +52,19 @@ export default async function Dashboard() {
         });
 
         scoredStats.sort((a, b) => {
+            // 1. 1년 내 거래가 있었던 평형을 우대 (최근 거래 활성도)
             if (a.isAlive !== b.isAlive) return a.isAlive ? -1 : 1;
+
+            // 2. 84㎡ (국민평형)에 가까운 것을 우선 (1순위)
             if (a.groupDist !== b.groupDist) return a.groupDist - b.groupDist;
+
+            // 3. 84㎡가 아니거나 거리가 같다면, 거래량이 가장 많은(압도적인) 평형을 우선 (2순위)
+            // max_month_volume은 해당 평형의 역사적 월간 최대 거래량이므로 세대수/활성도를 가장 잘 대변함
+            const volA = a.max_month_volume || 0;
+            const volB = b.max_month_volume || 0;
+            if (volA !== volB) return volB - volA;
+
+            // 4. 마지막 보루는 최고가 기준 정렬
             return b.highest_deal_price - a.highest_deal_price;
         });
 
