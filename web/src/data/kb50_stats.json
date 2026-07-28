@@ -727,12 +727,6 @@
             "type": "중개거래"
           },
           {
-            "price": 3400000000,
-            "date": "2026-07-02",
-            "floor": 14,
-            "type": "중개거래"
-          },
-          {
             "price": 3475000000,
             "date": "2026-07-04",
             "floor": 21,
@@ -763,7 +757,7 @@
             "type": "중개거래"
           }
         ],
-        "month_volume": 7,
+        "month_volume": 6,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
         "current_lowest_ask": 3244780000
@@ -1530,20 +1524,13 @@
         "highest_deal_price": 1730000000,
         "highest_deal_date": "2026-06-29",
         "recent_deal_absolute": {
-          "price": 1600000000,
-          "date": "2026-07-10",
-          "floor": 18,
+          "price": 1730000000,
+          "date": "2026-06-29",
+          "floor": 15,
           "type": "중개거래"
         },
-        "month_deals": [
-          {
-            "price": 1600000000,
-            "date": "2026-07-10",
-            "floor": 18,
-            "type": "중개거래"
-          }
-        ],
-        "month_volume": 1,
+        "month_deals": [],
+        "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
         "current_lowest_ask": 1538600000
@@ -2115,19 +2102,13 @@
             "type": "중개거래"
           },
           {
-            "price": 2900000000,
-            "date": "2026-07-06",
-            "floor": 3,
-            "type": "중개거래"
-          },
-          {
             "price": 3100000000,
             "date": "2026-07-17",
             "floor": 7,
             "type": "중개거래"
           }
         ],
-        "month_volume": 4,
+        "month_volume": 3,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
         "current_lowest_ask": 3150000000
@@ -4420,23 +4401,6 @@
         "max_month_volume": 10,
         "volume_drop_rate": 0,
         "current_lowest_ask": 6600000000
-      },
-      {
-        "match_key_area": 84,
-        "pyeong_name": "",
-        "highest_deal_price": 3680000000,
-        "highest_deal_date": "2026-06-24",
-        "recent_deal_absolute": {
-          "price": 3680000000,
-          "date": "2026-06-24",
-          "floor": 6,
-          "type": "중개거래"
-        },
-        "month_deals": [],
-        "month_volume": 0,
-        "max_month_volume": 10,
-        "volume_drop_rate": 0,
-        "current_lowest_ask": 0
       }
     ]
   },
@@ -5875,50 +5839,19 @@
       {
         "match_key_area": 174,
         "pyeong_name": "",
-        "highest_deal_price": 6150000000,
-        "highest_deal_date": "2026-07-09",
+        "highest_deal_price": 4500000000,
+        "highest_deal_date": "2026-06-02",
         "recent_deal_absolute": {
-          "price": 6150000000,
-          "date": "2026-07-09",
-          "floor": 24,
+          "price": 4500000000,
+          "date": "2026-06-02",
+          "floor": 13,
           "type": "중개거래"
         },
-        "month_deals": [
-          {
-            "price": 6150000000,
-            "date": "2026-07-09",
-            "floor": 24,
-            "type": "중개거래"
-          }
-        ],
-        "month_volume": 1,
+        "month_deals": [],
+        "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
         "current_lowest_ask": 4410000000
-      },
-      {
-        "match_key_area": 164,
-        "pyeong_name": "",
-        "highest_deal_price": 5600000000,
-        "highest_deal_date": "2026-07-08",
-        "recent_deal_absolute": {
-          "price": 5600000000,
-          "date": "2026-07-08",
-          "floor": 25,
-          "type": "중개거래"
-        },
-        "month_deals": [
-          {
-            "price": 5600000000,
-            "date": "2026-07-08",
-            "floor": 25,
-            "type": "중개거래"
-          }
-        ],
-        "month_volume": 1,
-        "max_month_volume": 10,
-        "volume_drop_rate": 0,
-        "current_lowest_ask": 0
       }
     ]
   },
