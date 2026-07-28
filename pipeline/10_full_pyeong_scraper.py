@@ -121,8 +121,9 @@ def run_master():
                 continue
                 
             print(f"   ✅ 총 {len(combined_ptps)}개 타입 확보 완료. 개별 수집 시작!")
-
-            for p_type in combined_ptps:
+            failed_queue = []
+            
+            def process_ptp(p_type, retry_count=0):
                 ptp_no = p_type.get('pyeongNo') or p_type.get('ptpNo')
                 ptp_nm = p_type.get('pyeongName') or p_type.get('pyeongNm')
                 ex_area = float(p_type.get('exclusiveArea', 0))
@@ -137,9 +138,10 @@ def run_master():
                     try:
                         target_page.wait_for_selector(".item_inner", timeout=4000)
                     except:
-                        print(f"   [{ptp_nm:<7} / 전용 {ex_area:>5}㎡] ❌ 매물없음")
-                        continue
+                        print(f"   [{ptp_nm:<7} / 전용 {ex_area:>5}] -> 매물없음")
+                        return True
                     
+                    import time
                     time.sleep(0.5)
                     
                     price_btn = target_page.locator("a[data-nclk='TAA.price']")
@@ -154,8 +156,8 @@ def run_master():
                     article_url = None
                     
                     for card in cards:
-                        text = card.inner_text()
-                        if "지분" in text or "보류지" in text or "경매" in text:
+                        c_text = card.inner_text()
+                        if "지분" in c_text or "보류지" in c_text or "경매" in c_text:
                             continue
                             
                         price_text = card.locator(".price").first.inner_text().strip()
@@ -167,7 +169,7 @@ def run_master():
                             break
                             
                     if found_price:
-                        print(f"   [{ptp_nm:<7} / 전용 {ex_area:>5}㎡] ✅ 최저가: {display_price} ({found_price:,}원)")
+                        print(f"   [{ptp_nm:<7} / 전용 {ex_area:>5}] -> 최저가: {display_price} ({found_price:,}원)")
                         all_results.append({
                             "crawled_date": today_str,
                             "complex_no": complex_no_db,
@@ -179,13 +181,37 @@ def run_master():
                             "lowest_ask": found_price,
                             "article_url": article_url
                         })
+                        return True
                     else:
-                        print(f"   [{ptp_nm:<7} / 전용 {ex_area:>5}㎡] ❌ 정상매물 없음")
+                        print(f"   [{ptp_nm:<7} / 전용 {ex_area:>5}] -> 정상매물 없음")
+                        return True
                         
                 except Exception as e:
-                    print(f"   [{ptp_nm:<7} / 전용 {ex_area:>5}㎡] ⚠️ 수집 에러 발생: {e}")
+                    print(f"   [{ptp_nm:<7} / 전용 {ex_area:>5}] ⚠️ 수집 에러 발생 (재시도 큐 대기): {e}")
+                    return False
                 finally:
                     target_page.close()
+            
+            for p_type in combined_ptps:
+                success = process_ptp(p_type, 0)
+                if not success:
+                    failed_queue.append(p_type)
+            
+            # Retry logic
+            retries = 0
+            while failed_queue and retries < 2:
+                retries += 1
+                import time
+                print(f"   🔄 실패한 {len(failed_queue)}개 평형 재시도 {retries}/2 ... (3초 대기)")
+                time.sleep(3)
+                current_failed = failed_queue.copy()
+                failed_queue.clear()
+                
+                for p_type in current_failed:
+                    success = process_ptp(p_type, retries)
+                    if not success:
+                        failed_queue.append(p_type)
+
                     
         main_page.close()
         browser.close()

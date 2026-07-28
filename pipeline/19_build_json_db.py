@@ -98,12 +98,30 @@ def build_db():
             month_deals = [map_t(t) for t in trades_sorted if t["deal_date"].startswith(current_date_str)]
             
             recent_5 = trades_sorted[-5:]
-            recent_avg = sum(t["deal_price"] for t in recent_5) / len(recent_5) if recent_5 else 0
-            mock_ask = int(recent_avg * 0.98)
             
-            # 🔥 찐 네이버 최저 호가 연동 (pyeong_stats)
+            # 현 일자 네이버 최저 호가 연동 (pyeong_stats)
             real_ask = py_map.get(f"{cid}_{area}", {}).get("current_lowest_ask")
-            final_ask = real_ask if real_ask else mock_ask
+            if real_ask:
+                final_ask = real_ask
+            else:
+                # [안전 장치] 최근 실거래가 기반 가짜 데이터(-2%) 생성 로직 폐기.
+                # 실패한 경우 데이터베이스(daily_history)에서 가장 최근에 성공한 '진짜 최저호가'를 인계받아 보존.
+                try:
+                    dh_res = supabase.table("daily_history")\
+                                .select("lowest_ask")\
+                                .eq("complex_id", cid)\
+                                .eq("area", area)\
+                                .order("base_date", desc=True)\
+                                .limit(1)\
+                                .execute()
+                    if dh_res.data and dh_res.data[0].get("lowest_ask"):
+                        final_ask = dh_res.data[0]["lowest_ask"]
+                        print(f"Fallback 적용: [{c['name']} {area}㎡]의 최저호가를 이전 데이터({final_ask})로 보존합니다.")
+                    else:
+                        final_ask = 0
+                except Exception as e:
+                    print(f"Fallback Error for {cid}_{area}: {e}")
+                    final_ask = 0
             
             c_stats.append({
                 "match_key_area": area,
