@@ -2,7 +2,7 @@ name: Daily PropTech Bot
 
 on:
   schedule:
-    # KST 자정(00시) = UTC 15시
+    # KST ?�정(00?? = UTC 15??
     - cron: '0 15 * * *'
   workflow_dispatch:
 
@@ -33,8 +33,12 @@ jobs:
         echo "SUPABASE_URL=${{ secrets.SUPABASE_URL }}" >> pipeline/.env
         echo "SUPABASE_KEY=${{ secrets.SUPABASE_KEY }}" >> pipeline/.env
         echo "RTMS_API_KEY=${{ secrets.RTMS_API_KEY }}" >> pipeline/.env
+        echo "TELEGRAM_BOT_TOKEN=${{ secrets.TELEGRAM_BOT_TOKEN }}" >> pipeline/.env
+        echo "TELEGRAM_CHAT_ID=${{ secrets.TELEGRAM_CHAT_ID }}" >> pipeline/.env
         
     - name: Run Master Daily Script
+      env:
+        TZ: "Asia/Seoul"
       run: |
         sudo apt-get install -y xvfb
         xvfb-run --auto-servernum --server-args="-screen 0 1280x1024x24" python 32_master_daily_run.py
@@ -44,4 +48,4 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action Bot"
         git add web/src/data/kb50_stats.json
-        git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 [Daily Bot] 확정 실거래가 & 호가 데이터 갱신" && git push)
+        git diff --quiet && git diff --staged --quiet || (git commit -m "?�� [Daily Bot] ?�정 ?�거?��? & ?��? ?�이??갱신" && git push)

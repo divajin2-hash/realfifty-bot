@@ -30,3 +30,7 @@ if __name__ == "__main__":
     run_script("30_daily_snapshot.py")
     
     print("\n✅ All daily master bot scripts executed successfully!")
+
+    # 6. Send Telegram Notification
+    run_script("35_telegram_notify.py")
+
