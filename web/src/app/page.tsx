@@ -5,7 +5,7 @@ import SearchInput from './SearchInput'
 import TickerClient from './TickerClient'
 import rawData from '../data/kb50_stats.json'
 
-export const revalidate = 60;
+export const dynamic = 'force-dynamic';
 
 export default async function Dashboard({ searchParams }: { searchParams: { sort?: string } }) {
 
