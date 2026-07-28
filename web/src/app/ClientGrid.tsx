@@ -99,10 +99,10 @@ function ComplexCard({ complex, stats, rank }: { complex: any, stats: any[], ran
             <div className="card-header-navy">
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: 1, minWidth: 0 }}>
                     <div className="live-indicator" style={{ flexShrink: 0 }}></div>
-                    <div style={{ 
-                        fontSize: complex.name.length > 10 ? '0.95rem' : (complex.name.length > 8 ? '1.05rem' : 'inherit'), 
-                        whiteSpace: 'nowrap', 
-                        overflow: 'hidden', 
+                    <div style={{
+                        fontSize: complex.name.length > 10 ? '0.95rem' : (complex.name.length > 8 ? '1.05rem' : 'inherit'),
+                        whiteSpace: 'nowrap',
+                        overflow: 'hidden',
                         textOverflow: 'ellipsis',
                         letterSpacing: complex.name.length > 8 ? '-1px' : 'inherit'
                     }}>
@@ -117,7 +117,7 @@ function ComplexCard({ complex, stats, rank }: { complex: any, stats: any[], ran
             <div className="card-body">
                 <div className="rep-badge">
                     <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg>
-                    대표 주력 타입 (전용 {activeStat.match_key_area}㎡)
+                    대표 주력 타입 (전용 {activeStat.match_key_area}㎡{activeStat.pyeong_name ? ` / 공급 ${activeStat.pyeong_name.replace(/[^0-9]/g, '')}㎡` : ''})
                 </div>
 
                 <div className="data-split">
@@ -219,7 +219,7 @@ export default function ClientGrid({ groupedData }: { groupedData: any[] }) {
 
     return (
         <div>
-            
+
             <div className="grid-layout">
                 {filtered.map((group) => (
                     <ComplexCard key={group.complex.id} complex={group.complex} stats={group.stats} rank={group.rank} />

@@ -70,6 +70,7 @@ def build_db():
                 },
                 "stats": [{
                     'match_key_area': 84,
+                    'pyeong_name': "84",
                     'highest_deal_price': 0,
                     'highest_deal_date': None,
                     'recent_deal_absolute': None,
@@ -125,6 +126,7 @@ def build_db():
             
             c_stats.append({
                 "match_key_area": area,
+                "pyeong_name": py_map.get(f"{cid}_{area}", {}).get("pyeong_name", ""),
                 "highest_deal_price": highest_trade["deal_price"],
                 "highest_deal_date": highest_trade["deal_date"],
                 "recent_deal_absolute": absolute_recent,
