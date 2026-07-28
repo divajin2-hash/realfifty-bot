@@ -7,7 +7,7 @@ import rawData from '../data/kb50_stats.json'
 
 export const revalidate = 60;
 
-export default async function Dashboard() {
+export default async function Dashboard({ searchParams }: { searchParams: { sort?: string } }) {
 
     const groupedData = (rawData as any[]).map(group => {
         return {
@@ -71,20 +71,33 @@ export default async function Dashboard() {
         return scoredStats[0];
     }
 
-    // 기획자님 지시: 화면에 노출되는 '대표평형' 기준으로 고점대비 실거래가가 가장 낮은 순(하락폭이 큰 순) 정렬!
+    const sortMethod = (await searchParams)?.sort || 'real_drop_high';
+
+    // 정렬 방식 설정
     groupedData.sort((a, b) => {
         const repA = getRepresentativeStat(a.stats);
         const repB = getRepresentativeStat(b.stats);
 
-        // 유효하면 하락률 반환, 없으면 0. 가장 낮은 값(큰 마이너스 값)이 1등
-        const dropA = repA ? repA.recent_drop_rate : 0;
-        const dropB = repB ? repB.recent_drop_rate : 0;
+        const realDropA = repA ? repA.recent_drop_rate : 0;
+        const realDropB = repB ? repB.recent_drop_rate : 0;
 
-        return dropA - dropB; // 오름차순 (예: -38%가 -10%보다 먼저 배열됨)
+        const askDropA = repA ? repA.mdd_rate : 0;
+        const askDropB = repB ? repB.mdd_rate : 0;
+
+        if (sortMethod === 'real_drop_less') {
+            return realDropB - realDropA; // 실거래가 하락률 적은 순 (내림차순, 예: 0% -> -10% -> -30%)
+        } else if (sortMethod === 'ask_drop_high') {
+            return askDropA - askDropB; // 최저호가 하락률 높은 순 (오름차순, 예: -30% -> -10% -> 0%)
+        } else if (sortMethod === 'ask_drop_less') {
+            return askDropB - askDropA; // 최저호가 하락률 적은 순 (내림차순)
+        } else {
+            // 기본값: real_drop_high
+            return realDropA - realDropB; // 실거래가 하락률 높은 순 (오름차순)
+        }
     });
     groupedData.forEach((g: any, idx: number) => g.rank = idx + 1);
 
-    // 전체 단지 평균 실거래 하락률 (진짜 표출된 대표평형들 기준)
+    // 전체 단지 평균 실거래가 하락률 (진짜 추출된 대표평형들 기준)
     const totalDropRates = groupedData.map(g => {
         const rep = getRepresentativeStat(g.stats);
         return rep ? rep.recent_drop_rate : null;
@@ -94,7 +107,27 @@ export default async function Dashboard() {
         ? (totalDropRates.reduce((acc, val) => acc + val, 0) / totalDropRates.length).toFixed(2)
         : '0.00';
 
+    // 전체 단지 평균 최저호가 하락률 
+    const totalAskDropRates = groupedData.map(g => {
+        const rep = getRepresentativeStat(g.stats);
+        return rep ? rep.mdd_rate : null; // mdd_rate는 최고가 대비 현재 최저호가 하락률입니다.
+    }).filter(v => v !== null) as number[];
 
+    const avgAskDrop = totalAskDropRates.length > 0
+        ? (totalAskDropRates.reduce((acc, val) => acc + val, 0) / totalAskDropRates.length).toFixed(2)
+        : '0.00';
+
+    // 시장 투자 심리 결정
+    const numAvgDrop = parseFloat(avgDrop);
+    let marketSentiment = "약세장";
+    let marketColor = "#005fb0";
+    if (numAvgDrop >= 0) {
+        marketSentiment = "상승장";
+        marketColor = "#ba1a1a";
+    } else if (numAvgDrop < -10) {
+        marketSentiment = "하락장";
+        marketColor = "#005fb0";
+    }
 
     return (
         <div className="app-wrapper">
@@ -151,18 +184,32 @@ export default async function Dashboard() {
                         <div>
                             <h1 style={{ fontSize: '2.5rem', fontWeight: 800, letterSpacing: '-1px' }}>선도50 아파트 모니터링</h1>
                             <p style={{ color: '#76777d', fontSize: '1rem', marginTop: '12px' }}>
-                                총 {groupedData.length}개 단지 추적 중 | <strong style={{ color: '#ba1a1a' }}>최고가 대비 실거래가 하락률(MDD)</strong> 낮은 순 정렬
+                                총 {groupedData.length}개 단지 추적 중
                             </p>
+                            <div style={{ display: 'flex', gap: '8px', marginTop: '16px' }}>
+                                <a href="?sort=real_drop_high" style={{ padding: '6px 12px', fontSize: '0.9rem', borderRadius: '4px', textDecoration: 'none', backgroundColor: sortMethod === 'real_drop_high' ? '#2e2f32' : '#e6e8eb', color: sortMethod === 'real_drop_high' ? 'white' : '#2e2f32' }}>실거래가 하락 폭 큰 순</a>
+                                <a href="?sort=real_drop_less" style={{ padding: '6px 12px', fontSize: '0.9rem', borderRadius: '4px', textDecoration: 'none', backgroundColor: sortMethod === 'real_drop_less' ? '#2e2f32' : '#e6e8eb', color: sortMethod === 'real_drop_less' ? 'white' : '#2e2f32' }}>실거래가 하락 폭 적은 순</a>
+                                <a href="?sort=ask_drop_high" style={{ padding: '6px 12px', fontSize: '0.9rem', borderRadius: '4px', textDecoration: 'none', backgroundColor: sortMethod === 'ask_drop_high' ? '#2e2f32' : '#e6e8eb', color: sortMethod === 'ask_drop_high' ? 'white' : '#2e2f32' }}>최저호가 하락 폭 큰 순</a>
+                                <a href="?sort=ask_drop_less" style={{ padding: '6px 12px', fontSize: '0.9rem', borderRadius: '4px', textDecoration: 'none', backgroundColor: sortMethod === 'ask_drop_less' ? '#2e2f32' : '#e6e8eb', color: sortMethod === 'ask_drop_less' ? 'white' : '#2e2f32' }}>최저호가 하락 폭 적은 순</a>
+                            </div>
                         </div>
 
                         <div style={{ display: 'flex', gap: '16px' }}>
-                            <div style={{ backgroundColor: '#e6e8eb', padding: '16px 24px', borderRadius: '8px', minWidth: '160px' }}>
-                                <div style={{ fontSize: '0.8rem', color: '#76777d', fontWeight: 700 }}>대표평형 평균 하락률</div>
-                                <div className="num-font" style={{ fontSize: '2rem', color: '#ba1a1a', fontWeight: 800 }}>{avgDrop}%</div>
+                            <div style={{ backgroundColor: '#e6e8eb', padding: '16px 24px', borderRadius: '8px', minWidth: '220px' }}>
+                                <div style={{ fontSize: '0.8rem', color: '#76777d', fontWeight: 700 }}>평균 실거래가 / 최저호가</div>
+                                <div className="num-font" style={{ fontSize: '1.2rem', color: parseFloat(avgDrop) > 0 ? '#ba1a1a' : '#005fb0', fontWeight: 800, marginTop: '4px' }}>
+                                    실거래가 등락률 {avgDrop}% {parseFloat(avgDrop) > 0 ? '상승' : '하락'}
+                                </div>
+                                <div className="num-font" style={{ fontSize: '1.2rem', color: parseFloat(avgAskDrop) > 0 ? '#ba1a1a' : '#005fb0', fontWeight: 800, marginTop: '4px' }}>
+                                    최저호가 등락률 {avgAskDrop}% {parseFloat(avgAskDrop) > 0 ? '상승' : '하락'}
+                                </div>
                             </div>
-                            <div style={{ backgroundColor: '#e6e8eb', padding: '16px 24px', borderRadius: '8px', minWidth: '160px' }}>
-                                <div style={{ fontSize: '0.8rem', color: '#76777d', fontWeight: 700 }}>시장 투자 심리</div>
-                                <div style={{ fontSize: '2rem', color: '#ba1a1a', fontWeight: 800 }}>약세장(Bearish)</div>
+                            <div
+                                style={{ backgroundColor: '#e6e8eb', padding: '16px 24px', borderRadius: '8px', minWidth: '160px', cursor: 'help' }}
+                                title="* 시장 기준 안내: 0% 이상(상승장), 0 ~ -10%(약세장), -10% 미만(하락장)"
+                            >
+                                <div style={{ fontSize: '0.8rem', color: '#76777d', fontWeight: 700 }}>시장 투자 심리 <span style={{ fontSize: '0.6rem' }}>ⓘ</span></div>
+                                <div style={{ fontSize: '2rem', color: marketColor, fontWeight: 800 }}>{marketSentiment}</div>
                             </div>
                         </div>
                     </div>
