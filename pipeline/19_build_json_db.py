@@ -32,9 +32,16 @@ def build_db():
     print(f"Fetching pyeong_stats...")
     py_stats = fetch_all("pyeong_stats")
     py_map = {}
+    valid_areas_map = {}
     for ps in py_stats:
-        k = f"{ps['complex_id']}_{ps['match_key_area']}"
+        cid = str(ps['complex_id'])
+        area = int(ps['match_key_area'])
+        k = f"{cid}_{area}"
         py_map[k] = ps
+        if cid not in valid_areas_map:
+            valid_areas_map[cid] = set()
+        valid_areas_map[cid].add(area)
+
 
     print(f"Fetching rtms_transactions...")
     transactions = fetch_all("rtms_transactions")
@@ -53,6 +60,32 @@ def build_db():
             grouped[c_id][area] = []
         
         grouped[c_id][area].append(t)
+
+    # ---------------------------------------------------------
+    # 오차 면적 병합 (Merge orphaned areas into valid Naver areas)
+    # 국토부 실거래가는 59, 84 인데 네이버 호가는 60, 85 인 경우
+    # ---------------------------------------------------------
+    for cid in list(grouped.keys()):
+        valid_areas = valid_areas_map.get(cid, set())
+        if not valid_areas:
+            continue
+            
+        for area in list(grouped[cid].keys()):
+            if area not in valid_areas:
+                closest = None
+                min_diff = 999
+                for va in valid_areas:
+                    diff = abs(va - area)
+                    if diff < min_diff and diff <= 2:
+                        min_diff = diff
+                        closest = va
+                        
+                if closest is not None:
+                    if closest not in grouped[cid]:
+                        grouped[cid][closest] = []
+                    grouped[cid][closest].extend(grouped[cid][area])
+                    del grouped[cid][area]
+    # ---------------------------------------------------------
 
     final_data = []
     current_date_str = "2026-07"

@@ -80,9 +80,33 @@ def run_mdd_bridge():
         if len(res) < limit: break
         offset += limit
         
+    # Valid Naver areas per complex
+    valid_areas_map = {}
+    for node_key in grouped_asks.keys():
+        cid, area_str = node_key.split('_')
+        if cid not in valid_areas_map:
+            valid_areas_map[cid] = set()
+        valid_areas_map[cid].add(int(area_str))
+        
     grouped_ath = {}
     for t in all_trades:
-        key = f"{t['complex_id']}_{t['match_key_area']}"
+        cid = t['complex_id']
+        t_area = t['match_key_area']
+        
+        # Merge logic to closest Naver area if not found
+        valid_areas = valid_areas_map.get(cid, set())
+        if t_area not in valid_areas:
+            closest = None
+            min_diff = 999
+            for va in valid_areas:
+                diff = abs(va - t_area)
+                if diff < min_diff and diff <= 2:
+                    min_diff = diff
+                    closest = va
+            if closest is not None:
+                t_area = closest
+                
+        key = f"{cid}_{t_area}"
         if key not in grouped_ath or t["deal_price"] > grouped_ath[key]["price"]:
             grouped_ath[key] = {
                 "price": t["deal_price"],
