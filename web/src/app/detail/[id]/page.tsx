@@ -1,10 +1,11 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import rawData from '@/data/kb50_stats.json';
 import TickerClient from '../../TickerClient';
 import '@/app/globals.css';
+import { ComposedChart, Line, Bar, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer } from 'recharts';
 
 function formatPriceNum(num: number) {
     if (!num) return '-';
@@ -80,6 +81,18 @@ export default function DetailPage() {
     }).sort((a, b) => a.match_key_area - b.match_key_area) : [];
 
     const [activeIndex, setActiveIndex] = useState(() => getRepIndex(sortedStats));
+    const [chartPeriod, setChartPeriod] = useState<1 | 5 | 10>(10);
+    const [chartDataState, setChartDataState] = useState<any>(null);
+
+    const complexIdStr = Array.isArray(complexId) ? complexId[0] : complexId;
+
+    useEffect(() => {
+        if (!complexIdStr) return;
+        fetch(`/chart_data/${complexIdStr}.json`)
+            .then(res => res.json())
+            .then(data => setChartDataState(data))
+            .catch(err => console.error("차트 데이터를 쿼리하는데 실패했습니다.", err));
+    }, [complexIdStr]);
 
     if (!group) return <div style={{ padding: '50px' }}>단지를 찾을 수 없습니다.</div>;
     const complex = group.complex;
@@ -97,6 +110,49 @@ export default function DetailPage() {
     const txList = activeStat.month_deals || [];
 
     const currentMonth = new Date().getMonth() + 1;
+
+    const currentArea = activeStat?.match_key_area;
+
+    const chartData = useMemo(() => {
+        if (!chartDataState || !currentArea || !chartDataState[currentArea]) return [];
+
+        const areaData = chartDataState[currentArea];
+        const trades = areaData.trades || [];
+        const volume = areaData.volume || [];
+        const asks = areaData.asks || [];
+
+        const now = new Date();
+        const startTime = new Date();
+        startTime.setFullYear(now.getFullYear() - chartPeriod);
+        const startTimestamp = startTime.getTime();
+
+        const points: any[] = [];
+
+        trades.forEach((t: any) => {
+            const time = new Date(t.date).getTime();
+            if (time >= startTimestamp) {
+                points.push({ time, dealPrice: parseFloat((t.price / 100000000).toFixed(2)) });
+            }
+        });
+
+        asks.forEach((a: any) => {
+            const time = new Date(a.date).getTime();
+            if (time >= startTimestamp) {
+                points.push({ time, askPrice: parseFloat((a.price / 100000000).toFixed(2)) });
+            }
+        });
+
+        volume.forEach((v: any) => {
+            const time = new Date(v.month + "-15").getTime();
+            if (time >= startTimestamp) {
+                points.push({ time, volumeCount: v.count });
+            }
+        });
+
+        points.sort((a, b) => a.time - b.time);
+
+        return points;
+    }, [chartDataState, currentArea, chartPeriod]);
 
     let diffDays = 0;
     let lastDealDateStr = '-';
@@ -283,28 +339,82 @@ export default function DetailPage() {
 
                     <div className="ap-card" style={{ padding: '30px', marginBottom: '24px' }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
-                            <h2 style={{ fontSize: '1.4rem', fontWeight: 800 }}>📊 최근 10년 롱텀 가격 궤적 (Trend)</h2>
+                            <h2 style={{ fontSize: '1.4rem', fontWeight: 800 }}>📊 최근 {chartPeriod}년 롱텀 가격 궤적 (Trend)</h2>
                             <div style={{ display: 'flex', gap: '8px' }}>
-                                <span style={{ background: '#191c1e', color: 'white', padding: '4px 12px', fontSize: '0.8rem', borderRadius: '4px' }}>10년</span>
-                                <span style={{ background: '#e0e3e6', color: '#191c1e', padding: '4px 12px', fontSize: '0.8rem', borderRadius: '4px' }}>5년</span>
-                                <span style={{ background: '#e0e3e6', color: '#191c1e', padding: '4px 12px', fontSize: '0.8rem', borderRadius: '4px' }}>1년</span>
+                                {[10, 5, 1].map((p) => (
+                                    <span
+                                        key={p}
+                                        onClick={() => setChartPeriod(p as 1 | 5 | 10)}
+                                        style={{
+                                            background: chartPeriod === p ? '#191c1e' : '#e0e3e6',
+                                            color: chartPeriod === p ? 'white' : '#191c1e',
+                                            padding: '6px 14px', fontSize: '0.85rem', borderRadius: '6px',
+                                            cursor: 'pointer', fontWeight: 700,
+                                            transition: 'all 0.2s',
+                                            boxShadow: chartPeriod === p ? '0 2px 8px rgba(0,0,0,0.2)' : 'none'
+                                        }}
+                                    >
+                                        {p}년
+                                    </span>
+                                ))}
                             </div>
                         </div>
-                        <div style={{ width: '100%', height: '300px', border: '1px dashed #e0e3e6', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', overflow: 'hidden' }}>
-                            <svg style={{ position: 'absolute', width: '100%', height: '100%' }} preserveAspectRatio="none" viewBox="0 0 100 100">
-                                <path d="M0 90 Q 20 80 40 60 T 80 40 T 100 50 L 100 100 L 0 100 Z" fill="url(#grad)" opacity="0.4" />
-                                <path d="M0 90 Q 20 80 40 60 T 80 40 T 100 50" fill="none" stroke="#ba1a1a" strokeWidth="2" />
-                                <circle cx="80" cy="40" r="2" fill="#ba1a1a" />
-                                <defs>
-                                    <linearGradient id="grad" x1="0" y1="0" x2="0" y2="1">
-                                        <stop offset="0%" stopColor="#ffdad6" />
-                                        <stop offset="100%" stopColor="#ffffff" stopOpacity="0" />
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                            <div style={{ position: 'absolute', zIndex: 10, left: '72%', top: '25%', fontSize: '0.7rem', color: '#ba1a1a', fontWeight: 'bold' }}>최고가 <span className="num-font">{formatPriceNum(ath)}</span>억</div>
-                            <h1 style={{ position: 'absolute', fontSize: '4rem', color: 'rgba(0,0,0,0.04)', fontWeight: 800, letterSpacing: '4px' }}>MDD TERMINAL ANALYTICS</h1>
+                        <div style={{ width: '100%', height: '400px', position: 'relative', overflow: 'hidden' }}>
+                            <ResponsiveContainer width="100%" height="100%">
+                                <ComposedChart data={chartData} margin={{ top: 30, right: 20, left: 0, bottom: 0 }}>
+                                    <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e0e3e6" />
+                                    <XAxis
+                                        dataKey="time"
+                                        type="number"
+                                        domain={['dataMin', 'dataMax']}
+                                        scale="time"
+                                        tickFormatter={(time) => {
+                                            const d = new Date(time);
+                                            return `${d.getFullYear().toString().slice(2)}년`;
+                                        }}
+                                        tick={{ fontSize: 13, fill: '#76777d' }}
+                                        axisLine={false}
+                                        tickLine={false}
+                                        minTickGap={30}
+                                    />
+                                    <YAxis
+                                        yAxisId="left"
+                                        domain={['auto', 'auto']}
+                                        tick={{ fontSize: 13, fill: '#76777d', fontWeight: 600 }}
+                                        tickFormatter={(v) => `${v}억`}
+                                        axisLine={false}
+                                        tickLine={false}
+                                    />
+                                    <YAxis
+                                        yAxisId="right"
+                                        orientation="right"
+                                        domain={[0, (dataMax: number) => dataMax === 0 ? 10 : Math.ceil(dataMax * 3.5)]}
+                                        tick={{ fontSize: 12, fill: '#76777d' }}
+                                        tickFormatter={(v) => `${v}건`}
+                                        axisLine={false}
+                                        tickLine={false}
+                                    />
+                                    <RechartsTooltip
+                                        contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 20px rgba(0,0,0,0.1)', fontWeight: 700 }}
+                                        labelStyle={{ color: '#131b2e', fontSize: '0.9rem', marginBottom: '6px' }}
+                                        labelFormatter={(value) => {
+                                            const d = new Date(value as number);
+                                            return `${d.getFullYear()}년 ${d.getMonth() + 1}월 ${d.getDate()}일`;
+                                        }}
+                                        formatter={(value: any, name: any) => {
+                                            if (name === 'dealPrice') return [`${value}억`, '실거래가'];
+                                            if (name === 'askPrice') return [`${value}억`, '네이버 최저호가'];
+                                            if (name === 'volumeCount') return [`${value}건`, '월간 거래량'];
+                                            return [value, name];
+                                        }}
+                                    />
+                                    <Bar yAxisId="right" dataKey="volumeCount" fill="#f87171" barSize={8} opacity={0.6} radius={[2, 2, 0, 0]} />
+                                    <Line yAxisId="left" connectNulls type="linear" dataKey="askPrice" stroke="#f97316" strokeWidth={2} dot={{ r: 2.5, fill: '#f97316' }} activeDot={{ r: 6 }} />
+                                    <Line yAxisId="left" connectNulls type="linear" dataKey="dealPrice" stroke="#60a5fa" strokeWidth={2.5} dot={{ r: 3, fill: '#3b82f6' }} activeDot={{ r: 7 }} />
+                                </ComposedChart>
+                            </ResponsiveContainer>
                         </div>
+                        <div style={{ textAlign: 'center', marginTop: '16px', fontSize: '0.85rem', color: '#76777d' }}>* 과거 10년의 실거래가, 호가 이력 및 거래량 원장 데이터를 통합하여 분석합니다.</div>
                     </div>
 
                     <div className="ap-card">
