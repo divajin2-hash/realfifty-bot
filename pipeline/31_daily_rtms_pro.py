@@ -43,8 +43,11 @@ aliases = {
     "마포래미안푸르지오": ["마포래미안푸르지오1단지", "마포래미안푸르지오2단지", "마포래미안푸르지오3단지", "마포래미안푸르지오4단지"]
 }
 
+import re
+
 def clean_name(n):
-    return n.replace("(", "").replace(")", "").replace(" ", "").strip()
+    # 괄호 안의 내용 전체 삭제 (예: 현대1차(12,13동) -> 현대1차)
+    return re.sub(r'\(.*?\)', '', n).replace(" ", "").strip()
 
 def is_matched(api_name, db_name):
     clean_api = clean_name(api_name)
