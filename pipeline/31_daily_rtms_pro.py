@@ -117,6 +117,8 @@ def run_daily_rtms_crawler():
                                 price = format_price(item.findtext("dealAmount"))
                                 area_exact = float(item.findtext("excluUseAr"))
                                 mk_area = int(round(area_exact))
+                                if c["id"] == '94379391-ef97-4ce2-a4a1-bcb00a070ba7' and abs(area_exact - 82.23) < 0.01:
+                                    mk_area = 83
                                 floor = int(item.findtext("floor", "0"))
                                 date = f"{item.findtext('dealYear')}-{int(item.findtext('dealMonth')):02d}-{int(item.findtext('dealDay')):02d}"
                                 

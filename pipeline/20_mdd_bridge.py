@@ -44,6 +44,8 @@ def run_mdd_bridge():
         # 소수점 면적을 반올림하여 DB의 match_key_area와 호환되도록 평탄화
         ex_area = ask.get("exclusive_area", 0)
         match_key = int(round(ex_area))
+        if cid == '94379391-ef97-4ce2-a4a1-bcb00a070ba7' and abs(ex_area - 82.23) < 0.01:
+            match_key = 83
         
         # 특정 단지의 match_key(평형) 중 절대적 최저호가 발굴
         price = ask.get("lowest_ask", 0)

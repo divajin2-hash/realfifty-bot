@@ -9213,8 +9213,8 @@
       {
         "match_key_area": 82,
         "pyeong_name": "108",
-        "highest_deal_price": 6300000000,
-        "highest_deal_date": "2025-09-24",
+        "highest_deal_price": 6070000000,
+        "highest_deal_date": "2025-11-28",
         "recent_deal_absolute": {
           "price": 4650000000,
           "date": "2026-06-19",
@@ -9243,6 +9243,23 @@
         "max_month_volume": 10,
         "volume_drop_rate": 0,
         "current_lowest_ask": 6650000000
+      },
+      {
+        "match_key_area": 83,
+        "pyeong_name": "113",
+        "highest_deal_price": 6300000000,
+        "highest_deal_date": "2025-09-24",
+        "recent_deal_absolute": {
+          "price": 5500000000,
+          "date": "2026-06-03",
+          "floor": 4,
+          "type": "중개거래"
+        },
+        "month_deals": [],
+        "month_volume": 0,
+        "max_month_volume": 10,
+        "volume_drop_rate": 0,
+        "current_lowest_ask": 5690000000
       }
     ]
   }
