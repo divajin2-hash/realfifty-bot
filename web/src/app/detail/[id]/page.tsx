@@ -44,7 +44,7 @@ function getRepIndex(stats: any[]) {
 function getRepresentativeStat(stats: any[]) {
     if (!stats || stats.length === 0) return null;
     const now = new Date().getTime();
-    
+
     const scoredStats = stats.map((s: any) => {
         let diffDays = 99999;
         if (s.recent_deal_absolute && s.recent_deal_absolute.date) {
@@ -54,16 +54,16 @@ function getRepresentativeStat(stats: any[]) {
         const dist84 = Math.abs(s.match_key_area - 84);
         const isAlive = diffDays <= 365;
         const groupDist = (s.match_key_area >= 82 && s.match_key_area <= 85) ? 0 : dist84;
-        
+
         return { ...s, diffDays, dist84, isAlive, groupDist };
     });
-    
+
     scoredStats.sort((a, b) => {
         if (a.isAlive !== b.isAlive) return a.isAlive ? -1 : 1;
         if (a.groupDist !== b.groupDist) return a.groupDist - b.groupDist;
         return b.highest_deal_price - a.highest_deal_price;
     });
-    
+
     return scoredStats[0];
 }
 
@@ -73,7 +73,7 @@ export default function DetailPage() {
     const complexId = params.id as string;
 
     const group = (rawData as any[]).find(g => g.complex.id === complexId);
-    
+
     const sortedStats = group ? [...group.stats].map(s => {
         const mdd_rate = s.highest_deal_price > 0 ? -Math.abs(((s.highest_deal_price - s.current_lowest_ask) / s.highest_deal_price) * 100) : 0;
         return { ...s, mdd_rate };
@@ -119,7 +119,7 @@ export default function DetailPage() {
                     <div style={{ fontSize: '2.2rem', fontWeight: 900, color: '#ffffff', letterSpacing: '1px', textShadow: '0 2px 10px rgba(0,0,0,0.2)' }}>
                         Real<span style={{ color: '#ffb4ab' }}>Fifty</span>
                     </div>
-                    
+
                 </div>
                 <div className="sidebar-menu" style={{ marginTop: '20px' }}>
                     <div className="menu-item" onClick={() => router.push('/')}>📊 실시간 시장 현황 (메인)</div>
@@ -136,8 +136,8 @@ export default function DetailPage() {
                             const rep = getRepresentativeStat(g.stats);
                             return rep ? rep.recent_drop_rate : 0;
                         }).filter(d => d < 0);
-                        const avgNum = totalDropRates.length > 0 
-                            ? parseFloat((totalDropRates.reduce((acc, val) => acc + val, 0) / totalDropRates.length).toFixed(2)) 
+                        const avgNum = totalDropRates.length > 0
+                            ? parseFloat((totalDropRates.reduce((acc, val) => acc + val, 0) / totalDropRates.length).toFixed(2))
                             : 0;
 
                         const groupedDataForTicker: any[] = [...(rawData as any[])].map(g => {
@@ -146,8 +146,8 @@ export default function DetailPage() {
                                 name: g.complex.name,
                                 recent_drop_rate: rep ? rep.recent_drop_rate : 0
                             };
-                        }).sort((a,b) => a.recent_drop_rate - b.recent_drop_rate);
-                        
+                        }).sort((a, b) => a.recent_drop_rate - b.recent_drop_rate);
+
                         groupedDataForTicker.forEach((g, idx) => g.rank = idx + 1);
 
                         return groupedDataForTicker
@@ -170,8 +170,6 @@ export default function DetailPage() {
                             <div style={{ fontSize: '0.9rem', color: '#76777d', marginTop: '4px' }}>📍 {complex.region}</div>
                         </div>
                         <div style={{ marginLeft: 'auto', display: 'flex', gap: '8px' }}>
-                            <span style={{ background: '#ffdad6', color: '#93000b', padding: '6px 12px', borderRadius: '999px', fontSize: '0.8rem', fontWeight: 700 }}>하락세 강함</span>
-                            <span style={{ background: '#dae2fd', color: '#131b2e', padding: '6px 12px', borderRadius: '999px', fontSize: '0.8rem', fontWeight: 700 }}>안전성 평가중</span>
                         </div>
                     </div>
 
@@ -196,8 +194,15 @@ export default function DetailPage() {
                                             cursor: 'pointer', transition: 'all 0.2s', fontWeight: 700
                                         }}
                                     >
-                                        <span className="num-font" style={{ fontSize: '1.4rem' }}>{s.match_key_area}</span>
-                                        <span style={{ fontSize: '0.7rem', opacity: isActive ? 0.7 : 0.5 }}>m²</span>
+                                        {s.pyeong_name && (
+                                            <span style={{ fontSize: '0.75rem', opacity: isActive ? 0.9 : 0.5, marginBottom: '2px' }}>
+                                                공급 {s.pyeong_name}㎡
+                                            </span>
+                                        )}
+                                        <div style={{ display: 'flex', alignItems: 'baseline', gap: '3px' }}>
+                                            <span style={{ fontSize: '0.8rem', opacity: isActive ? 0.9 : 0.6, fontWeight: 600 }}>전용</span>
+                                            <span className="num-font" style={{ fontSize: '1.4rem' }}>{s.match_key_area}</span>
+                                        </div>
                                     </div>
                                 )
                             })}
@@ -215,7 +220,9 @@ export default function DetailPage() {
                             <div style={{ fontSize: '1.8rem', fontWeight: 800, marginBottom: '20px' }}>
                                 <span className="num-font">{formatPriceNum(ath)}</span><span className="kr-unit">억</span>
                             </div>
-                            <div style={{ fontSize: '0.8rem', color: '#191c1e', fontWeight: 700 }}>가장 최근 체결된 실거래가</div>
+                            <div style={{ fontSize: '0.8rem', color: '#191c1e', fontWeight: 700 }}>
+                                가장 최근 체결된 실거래가 <span className="num-font" style={{ color: '#ba1a1a', opacity: 0.8, marginLeft: '6px' }}>({lastDealDateStr})</span>
+                            </div>
                             <div style={{ fontSize: '1.4rem', fontWeight: 700, marginBottom: '20px' }}>
                                 {absoluteRecent ? <><span className="num-font">{formatPriceNum(absoluteRecent.price)}</span><span className="kr-unit">억</span></> : '-'}
                             </div>
@@ -231,35 +238,44 @@ export default function DetailPage() {
                                 <span>📊</span>
                             </div>
                             <div style={{ fontSize: '0.8rem', color: '#191c1e', fontWeight: 700 }}>당월 ({currentMonth}월) 실질 매수 체결량</div>
-                            <div style={{ fontSize: '1.8rem', fontWeight: 800, marginBottom: '20px' }}>
+                            <div style={{ fontSize: '1.8rem', fontWeight: 800, marginBottom: '16px' }}>
                                 <span className="num-font">{monthDealsCount}</span> <span className="kr-unit">건</span>
                             </div>
-                            
+
+                            <div style={{ height: '70px', width: '100%', position: 'relative', borderBottom: '2px solid #e0e3e6', marginTop: 'auto' }}>
+                                <svg width="100%" height="100%" viewBox="0 0 100 60" preserveAspectRatio="none" style={{ overflow: 'visible' }}>
+                                    <path d="M 0 10 Q 15 5, 30 20 T 60 40 T 100 55" fill="none" stroke="#ba1a1a" strokeWidth="2.5" />
+                                    <circle cx="100" cy="55" r="4.5" fill="#ba1a1a" />
+                                    <circle cx="100" cy="55" r="9" fill="#ba1a1a" opacity="0.2" />
+                                </svg>
+                                <div style={{ position: 'absolute', bottom: '-22px', right: '0', fontSize: '0.7rem', color: '#76777d', fontWeight: 600 }}>최근 실거래 추이</div>
+                            </div>
+
                         </div>
 
-                        <div className="ap-card" style={{ padding: '24px' }}>
+                        <div className="ap-card" style={{ padding: '24px', display: 'flex', flexDirection: 'column' }}>
                             <div style={{ display: 'flex', justifyContent: 'space-between', color: '#76777d', fontSize: '0.85rem', fontWeight: 600, marginBottom: '16px' }}>
                                 <span>실시간 시장 매물(호가) 현황</span>
                                 <span>🏷️</span>
                             </div>
-                            <div style={{ fontSize: '0.8rem', color: '#191c1e', fontWeight: 700 }}>가장 싼 네이버 최저 호가</div>
+                            <div style={{ fontSize: '0.8rem', color: '#191c1e', fontWeight: 700 }}>최저호가</div>
                             <div style={{ fontSize: '1.8rem', fontWeight: 800, marginBottom: '20px' }}>
                                 <span className="num-font">{formatPriceNum(currentAsk)}</span><span className="kr-unit">억</span>
                             </div>
-                            <div style={{ fontSize: '0.8rem', color: '#191c1e', fontWeight: 700 }}>실거래 ↔ 호가 괴리</div>
-                            <div style={{ fontSize: '0.9rem', color: '#76777d', fontWeight: 600, marginBottom: '20px', minHeight: '38px', paddingTop: '4px' }}>
+
+                            <div style={{ fontSize: '1rem', color: '#131b2e', fontWeight: 800, marginBottom: '20px', minHeight: '38px', paddingTop: '4px', letterSpacing: '-0.5px' }}>
                                 {(() => {
                                     const gap = currentAsk - (absoluteRecent ? absoluteRecent.price : 0);
                                     if (!absoluteRecent) return '최근 실거래 없음';
                                     const gapEok = Math.abs(gap / 100000000).toFixed(1);
-                                    if (gap < 0) return `최근 실거래가 대비 ${gapEok}억원 저렴`;
-                                    if (gap > 0) return `최근 실거래가 대비 ${gapEok}억원 비쌈`;
-                                    return `최근 실거래가와 동일`;
+                                    if (gap < 0) return `↓ 최근 실거래가 대비 ${gapEok}억원 저렴`;
+                                    if (gap > 0) return `↑ 최근 실거래가 대비 ${gapEok}억원 비쌈`;
+                                    return `- 최근 실거래가와 동일`;
                                 })()}
                             </div>
-                            <div style={{ background: '#dae2fd', color: '#131b2e', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px 16px', borderRadius: '6px', fontWeight: 800, fontSize: '1.2rem' }}>
-                                <span className="num-font">{mddStr}%</span>
-                                <span style={{ fontSize: '0.75rem', opacity: 0.8 }}>과거 최고가(ATH) 대비 저렴</span>
+
+                            <div style={{ marginTop: 'auto', background: (activeStat.mdd_rate ?? 0) <= 0 ? '#dae2fd' : '#ffdad6', color: (activeStat.mdd_rate ?? 0) <= 0 ? '#131b2e' : '#93000b', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '12px 16px', borderRadius: '6px', fontWeight: 800, fontSize: '1.05rem', letterSpacing: '-0.5px' }}>
+                                최고가 대비 <span className="num-font" style={{ margin: '0 6px', fontSize: '1.2rem' }}>{mddStr}%</span> {(activeStat.mdd_rate ?? 0) <= 0 ? '저렴' : '비쌈'}
                             </div>
                         </div>
 
