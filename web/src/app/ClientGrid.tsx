@@ -117,7 +117,7 @@ function ComplexCard({ complex, stats, rank }: { complex: any, stats: any[], ran
             <div className="card-body">
                 <div className="rep-badge">
                     <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg>
-                    대표 주력 타입 (전용 {activeStat.match_key_area}㎡{activeStat.pyeong_name ? ` / 공급 ${activeStat.pyeong_name.replace(/[^0-9]/g, '')}㎡` : ''})
+                    대표 주력 타입 ({activeStat.match_key_area}㎡{activeStat.pyeong_name ? ` / ${activeStat.pyeong_name}㎡` : ''})
                 </div>
 
                 <div className="data-split">

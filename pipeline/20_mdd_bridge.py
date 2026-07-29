@@ -51,12 +51,16 @@ def run_mdd_bridge():
         
         node_key = f"{cid}_{match_key}"
         if node_key not in grouped_asks or price < grouped_asks[node_key]["price"]:
+            import re as _re
+            ptp_nm = ask.get("ptp_name", "") or ""
+            m = _re.match(r'^(\d+)', ptp_nm)
+            supply_area = int(m.group(1)) if m else 0
             grouped_asks[node_key] = {
                 "cid": cid,
                 "match_key_area": match_key,
                 "price": price,
                 "ptp_no": ask.get("ptp_no", "0"),
-                "pyeong_name": ask.get("ptp_name", f"{match_key}㎡")
+                "pyeong_name": str(supply_area) if supply_area > 0 else ""
             }
             
     # 3. 국토부 실거래 DB에서 대표 평형별 '최고가(ATH)' 추출

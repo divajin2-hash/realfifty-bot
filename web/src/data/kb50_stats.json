@@ -8,7 +8,7 @@
     "stats": [
       {
         "match_key_area": 40,
-        "pyeong_name": "62C",
+        "pyeong_name": "62",
         "highest_deal_price": 1570000000,
         "highest_deal_date": "2025-08-09",
         "recent_deal_absolute": {
@@ -25,7 +25,7 @@
       },
       {
         "match_key_area": 85,
-        "pyeong_name": "107A",
+        "pyeong_name": "107",
         "highest_deal_price": 3150000000,
         "highest_deal_date": "2026-02-19",
         "recent_deal_absolute": {
@@ -49,7 +49,7 @@
       },
       {
         "match_key_area": 110,
-        "pyeong_name": "141B",
+        "pyeong_name": "141",
         "highest_deal_price": 3350000000,
         "highest_deal_date": "2026-06-29",
         "recent_deal_absolute": {
@@ -66,7 +66,7 @@
       },
       {
         "match_key_area": 100,
-        "pyeong_name": "126A",
+        "pyeong_name": "126",
         "highest_deal_price": 3250000000,
         "highest_deal_date": "2025-11-03",
         "recent_deal_absolute": {
@@ -83,7 +83,7 @@
       },
       {
         "match_key_area": 60,
-        "pyeong_name": "84A",
+        "pyeong_name": "84",
         "highest_deal_price": 2780000000,
         "highest_deal_date": "2025-11-03",
         "recent_deal_absolute": {
@@ -100,7 +100,7 @@
       },
       {
         "match_key_area": 111,
-        "pyeong_name": "140A",
+        "pyeong_name": "140",
         "highest_deal_price": 3515000000,
         "highest_deal_date": "2025-12-20",
         "recent_deal_absolute": {
@@ -117,7 +117,7 @@
       },
       {
         "match_key_area": 39,
-        "pyeong_name": "61A",
+        "pyeong_name": "61",
         "highest_deal_price": 1980000000,
         "highest_deal_date": "2026-05-02",
         "recent_deal_absolute": {
@@ -134,7 +134,7 @@
       },
       {
         "match_key_area": 49,
-        "pyeong_name": "72B",
+        "pyeong_name": "72",
         "highest_deal_price": 2450000000,
         "highest_deal_date": "2026-02-07",
         "recent_deal_absolute": {
@@ -151,7 +151,7 @@
       },
       {
         "match_key_area": 130,
-        "pyeong_name": "163A",
+        "pyeong_name": "163",
         "highest_deal_price": 3700000000,
         "highest_deal_date": "2025-07-15",
         "recent_deal_absolute": {
@@ -168,7 +168,7 @@
       },
       {
         "match_key_area": 150,
-        "pyeong_name": "193C",
+        "pyeong_name": "193",
         "highest_deal_price": 4500000000,
         "highest_deal_date": "2026-02-09",
         "recent_deal_absolute": {
@@ -242,7 +242,7 @@
     "stats": [
       {
         "match_key_area": 35,
-        "pyeong_name": "50A",
+        "pyeong_name": "50",
         "highest_deal_price": 1650000000,
         "highest_deal_date": "2026-02-05",
         "recent_deal_absolute": {
@@ -259,7 +259,7 @@
       },
       {
         "match_key_area": 60,
-        "pyeong_name": "85A",
+        "pyeong_name": "85",
         "highest_deal_price": 2980000000,
         "highest_deal_date": "2026-05-10",
         "recent_deal_absolute": {
@@ -276,7 +276,7 @@
       },
       {
         "match_key_area": 50,
-        "pyeong_name": "70A",
+        "pyeong_name": "70",
         "highest_deal_price": 1800000000,
         "highest_deal_date": "2025-03-22",
         "recent_deal_absolute": {
@@ -293,7 +293,7 @@
       },
       {
         "match_key_area": 113,
-        "pyeong_name": "144A",
+        "pyeong_name": "144",
         "highest_deal_price": 4650000000,
         "highest_deal_date": "2026-06-03",
         "recent_deal_absolute": {
@@ -310,7 +310,7 @@
       },
       {
         "match_key_area": 133,
-        "pyeong_name": "169A",
+        "pyeong_name": "169",
         "highest_deal_price": 5600000000,
         "highest_deal_date": "2026-06-21",
         "recent_deal_absolute": {
@@ -327,7 +327,7 @@
       },
       {
         "match_key_area": 85,
-        "pyeong_name": "111B",
+        "pyeong_name": "111",
         "highest_deal_price": 3935000000,
         "highest_deal_date": "2026-02-14",
         "recent_deal_absolute": {
@@ -344,7 +344,7 @@
       },
       {
         "match_key_area": 97,
-        "pyeong_name": "125A",
+        "pyeong_name": "125",
         "highest_deal_price": 4100000000,
         "highest_deal_date": "2026-06-06",
         "recent_deal_absolute": {
@@ -361,7 +361,7 @@
       },
       {
         "match_key_area": 157,
-        "pyeong_name": "201A",
+        "pyeong_name": "201",
         "highest_deal_price": 7950000000,
         "highest_deal_date": "2024-02-16",
         "recent_deal_absolute": {
@@ -378,7 +378,7 @@
       },
       {
         "match_key_area": 172,
-        "pyeong_name": "220A",
+        "pyeong_name": "220",
         "highest_deal_price": 7100000000,
         "highest_deal_date": "2026-04-20",
         "recent_deal_absolute": {
@@ -438,7 +438,7 @@
     "stats": [
       {
         "match_key_area": 60,
-        "pyeong_name": "86A",
+        "pyeong_name": "86",
         "highest_deal_price": 2800000000,
         "highest_deal_date": "2025-10-31",
         "recent_deal_absolute": {
@@ -455,7 +455,7 @@
       },
       {
         "match_key_area": 85,
-        "pyeong_name": "108B",
+        "pyeong_name": "108",
         "highest_deal_price": 3220000000,
         "highest_deal_date": "2026-01-26",
         "recent_deal_absolute": {
@@ -622,7 +622,7 @@
     "stats": [
       {
         "match_key_area": 85,
-        "pyeong_name": "111C",
+        "pyeong_name": "111",
         "highest_deal_price": 3700000000,
         "highest_deal_date": "2026-02-20",
         "recent_deal_absolute": {
@@ -848,7 +848,7 @@
       },
       {
         "match_key_area": 100,
-        "pyeong_name": "132A",
+        "pyeong_name": "132",
         "highest_deal_price": 3450000000,
         "highest_deal_date": "2025-10-29",
         "recent_deal_absolute": {
@@ -899,7 +899,7 @@
       },
       {
         "match_key_area": 101,
-        "pyeong_name": "132B",
+        "pyeong_name": "132",
         "highest_deal_price": 3300000000,
         "highest_deal_date": "2026-01-03",
         "recent_deal_absolute": {
@@ -916,7 +916,7 @@
       },
       {
         "match_key_area": 121,
-        "pyeong_name": "155A",
+        "pyeong_name": "155",
         "highest_deal_price": 3850000000,
         "highest_deal_date": "2026-02-23",
         "recent_deal_absolute": {
@@ -1112,7 +1112,7 @@
     "stats": [
       {
         "match_key_area": 85,
-        "pyeong_name": "112K",
+        "pyeong_name": "112",
         "highest_deal_price": 7200000000,
         "highest_deal_date": "2025-06-27",
         "recent_deal_absolute": {
@@ -1129,7 +1129,7 @@
       },
       {
         "match_key_area": 60,
-        "pyeong_name": "80A",
+        "pyeong_name": "80",
         "highest_deal_price": 4950000000,
         "highest_deal_date": "2026-02-06",
         "recent_deal_absolute": {
@@ -1146,7 +1146,7 @@
       },
       {
         "match_key_area": 117,
-        "pyeong_name": "154E",
+        "pyeong_name": "154",
         "highest_deal_price": 9200000000,
         "highest_deal_date": "2025-07-02",
         "recent_deal_absolute": {
@@ -1170,7 +1170,7 @@
       },
       {
         "match_key_area": 102,
-        "pyeong_name": "136D",
+        "pyeong_name": "136",
         "highest_deal_price": 8210000000,
         "highest_deal_date": "2025-08-06",
         "recent_deal_absolute": {
@@ -1194,7 +1194,7 @@
       },
       {
         "match_key_area": 134,
-        "pyeong_name": "175C",
+        "pyeong_name": "175",
         "highest_deal_price": 10600000000,
         "highest_deal_date": "2024-12-26",
         "recent_deal_absolute": {
@@ -1211,7 +1211,7 @@
       },
       {
         "match_key_area": 75,
-        "pyeong_name": "99C",
+        "pyeong_name": "99",
         "highest_deal_price": 5120000000,
         "highest_deal_date": "2026-05-01",
         "recent_deal_absolute": {
@@ -1245,7 +1245,7 @@
       },
       {
         "match_key_area": 169,
-        "pyeong_name": "220D",
+        "pyeong_name": "220",
         "highest_deal_price": 13000000000,
         "highest_deal_date": "2026-06-12",
         "recent_deal_absolute": {
@@ -1387,7 +1387,7 @@
     "stats": [
       {
         "match_key_area": 28,
-        "pyeong_name": "42A",
+        "pyeong_name": "42",
         "highest_deal_price": 1830000000,
         "highest_deal_date": "2026-04-04",
         "recent_deal_absolute": {
@@ -1404,7 +1404,7 @@
       },
       {
         "match_key_area": 85,
-        "pyeong_name": "109A",
+        "pyeong_name": "109",
         "highest_deal_price": 3600000000,
         "highest_deal_date": "2025-11-28",
         "recent_deal_absolute": {
@@ -1428,7 +1428,7 @@
       },
       {
         "match_key_area": 124,
-        "pyeong_name": "158B",
+        "pyeong_name": "158",
         "highest_deal_price": 4700000000,
         "highest_deal_date": "2026-01-26",
         "recent_deal_absolute": {
@@ -1445,7 +1445,7 @@
       },
       {
         "match_key_area": 60,
-        "pyeong_name": "82D",
+        "pyeong_name": "82",
         "highest_deal_price": 3100000000,
         "highest_deal_date": "2026-02-14",
         "recent_deal_absolute": {
@@ -1630,7 +1630,7 @@
     "stats": [
       {
         "match_key_area": 85,
-        "pyeong_name": "116A",
+        "pyeong_name": "116",
         "highest_deal_price": 5200000000,
         "highest_deal_date": "2026-01-19",
         "recent_deal_absolute": {
@@ -1664,7 +1664,7 @@
       },
       {
         "match_key_area": 165,
-        "pyeong_name": "199B",
+        "pyeong_name": "199",
         "highest_deal_price": 6500000000,
         "highest_deal_date": "2025-11-06",
         "recent_deal_absolute": {
@@ -1681,7 +1681,7 @@
       },
       {
         "match_key_area": 132,
-        "pyeong_name": "165A",
+        "pyeong_name": "165",
         "highest_deal_price": 6200000000,
         "highest_deal_date": "2026-03-09",
         "recent_deal_absolute": {
@@ -1715,7 +1715,7 @@
       },
       {
         "match_key_area": 60,
-        "pyeong_name": "84A",
+        "pyeong_name": "84",
         "highest_deal_price": 3800000000,
         "highest_deal_date": "2025-07-10",
         "recent_deal_absolute": {
@@ -1732,7 +1732,7 @@
       },
       {
         "match_key_area": 195,
-        "pyeong_name": "232B",
+        "pyeong_name": "232",
         "highest_deal_price": 7700000000,
         "highest_deal_date": "2026-02-10",
         "recent_deal_absolute": {
@@ -1809,7 +1809,7 @@
     "stats": [
       {
         "match_key_area": 83,
-        "pyeong_name": "119B",
+        "pyeong_name": "119",
         "highest_deal_price": 4625000000,
         "highest_deal_date": "2025-12-27",
         "recent_deal_absolute": {
@@ -1826,7 +1826,7 @@
       },
       {
         "match_key_area": 76,
-        "pyeong_name": "112A",
+        "pyeong_name": "112",
         "highest_deal_price": 4227000000,
         "highest_deal_date": "2025-07-10",
         "recent_deal_absolute": {
@@ -1850,7 +1850,7 @@
       },
       {
         "match_key_area": 82,
-        "pyeong_name": "115T",
+        "pyeong_name": "115",
         "highest_deal_price": 4225000000,
         "highest_deal_date": "2025-06-24",
         "recent_deal_absolute": {
@@ -1893,7 +1893,7 @@
       },
       {
         "match_key_area": 109,
-        "pyeong_name": "116E",
+        "pyeong_name": "116",
         "highest_deal_price": 5000000000,
         "highest_deal_date": "2024-10-29",
         "recent_deal_absolute": {
@@ -1910,7 +1910,7 @@
       },
       {
         "match_key_area": 152,
-        "pyeong_name": "165B",
+        "pyeong_name": "165",
         "highest_deal_price": 8400000000,
         "highest_deal_date": "2026-03-14",
         "recent_deal_absolute": {
@@ -1927,7 +1927,7 @@
       },
       {
         "match_key_area": 171,
-        "pyeong_name": "188B",
+        "pyeong_name": "188",
         "highest_deal_price": 10000000000,
         "highest_deal_date": "2025-05-20",
         "recent_deal_absolute": {
@@ -1944,7 +1944,7 @@
       },
       {
         "match_key_area": 156,
-        "pyeong_name": "167A",
+        "pyeong_name": "167",
         "highest_deal_price": 8300000000,
         "highest_deal_date": "2025-07-14",
         "recent_deal_absolute": {
@@ -1961,7 +1961,7 @@
       },
       {
         "match_key_area": 111,
-        "pyeong_name": "119D",
+        "pyeong_name": "119",
         "highest_deal_price": 7500000000,
         "highest_deal_date": "2025-07-11",
         "recent_deal_absolute": {
@@ -1995,7 +1995,7 @@
       },
       {
         "match_key_area": 107,
-        "pyeong_name": "114A",
+        "pyeong_name": "114",
         "highest_deal_price": 6380000000,
         "highest_deal_date": "2026-02-27",
         "recent_deal_absolute": {
@@ -2012,7 +2012,7 @@
       },
       {
         "match_key_area": 108,
-        "pyeong_name": "115C",
+        "pyeong_name": "115",
         "highest_deal_price": 6620000000,
         "highest_deal_date": "2026-03-30",
         "recent_deal_absolute": {
@@ -2038,7 +2038,7 @@
     "stats": [
       {
         "match_key_area": 85,
-        "pyeong_name": "103B",
+        "pyeong_name": "103",
         "highest_deal_price": 2830000000,
         "highest_deal_date": "2025-11-03",
         "recent_deal_absolute": {
@@ -2228,7 +2228,7 @@
     "stats": [
       {
         "match_key_area": 117,
-        "pyeong_name": "148T2",
+        "pyeong_name": "148",
         "highest_deal_price": 5640000000,
         "highest_deal_date": "2025-02-01",
         "recent_deal_absolute": {
@@ -2245,7 +2245,7 @@
       },
       {
         "match_key_area": 85,
-        "pyeong_name": "113L1",
+        "pyeong_name": "113",
         "highest_deal_price": 5750000000,
         "highest_deal_date": "2026-02-03",
         "recent_deal_absolute": {
@@ -2262,7 +2262,7 @@
       },
       {
         "match_key_area": 116,
-        "pyeong_name": "147T1",
+        "pyeong_name": "147",
         "highest_deal_price": 4930000000,
         "highest_deal_date": "2022-09-21",
         "recent_deal_absolute": {
@@ -2279,7 +2279,7 @@
       },
       {
         "match_key_area": 169,
-        "pyeong_name": "205T2",
+        "pyeong_name": "205",
         "highest_deal_price": 8100000000,
         "highest_deal_date": "2026-02-23",
         "recent_deal_absolute": {
@@ -2296,7 +2296,7 @@
       },
       {
         "match_key_area": 60,
-        "pyeong_name": "86T2",
+        "pyeong_name": "86",
         "highest_deal_price": 4450000000,
         "highest_deal_date": "2026-02-03",
         "recent_deal_absolute": {
@@ -2313,7 +2313,7 @@
       },
       {
         "match_key_area": 198,
-        "pyeong_name": "238T1",
+        "pyeong_name": "238",
         "highest_deal_price": 8500000000,
         "highest_deal_date": "2025-06-27",
         "recent_deal_absolute": {
@@ -2330,7 +2330,7 @@
       },
       {
         "match_key_area": 223,
-        "pyeong_name": "268T1",
+        "pyeong_name": "268",
         "highest_deal_price": 9600000000,
         "highest_deal_date": "2026-01-13",
         "recent_deal_absolute": {
@@ -2347,7 +2347,7 @@
       },
       {
         "match_key_area": 136,
-        "pyeong_name": "172T1",
+        "pyeong_name": "172",
         "highest_deal_price": 7500000000,
         "highest_deal_date": "2025-09-09",
         "recent_deal_absolute": {
@@ -2364,7 +2364,7 @@
       },
       {
         "match_key_area": 222,
-        "pyeong_name": "268T2",
+        "pyeong_name": "268",
         "highest_deal_price": 8000000000,
         "highest_deal_date": "2026-06-03",
         "recent_deal_absolute": {
@@ -2381,7 +2381,7 @@
       },
       {
         "match_key_area": 137,
-        "pyeong_name": "173T2",
+        "pyeong_name": "173",
         "highest_deal_price": 3800000000,
         "highest_deal_date": "2020-06-10",
         "recent_deal_absolute": {
@@ -2661,7 +2661,7 @@
       },
       {
         "match_key_area": 78,
-        "pyeong_name": "102B",
+        "pyeong_name": "102",
         "highest_deal_price": 3500000000,
         "highest_deal_date": "2026-05-07",
         "recent_deal_absolute": {
@@ -2678,7 +2678,7 @@
       },
       {
         "match_key_area": 60,
-        "pyeong_name": "79A",
+        "pyeong_name": "79",
         "highest_deal_price": 3350000000,
         "highest_deal_date": "2025-11-01",
         "recent_deal_absolute": {
@@ -2736,7 +2736,7 @@
       },
       {
         "match_key_area": 85,
-        "pyeong_name": "110A",
+        "pyeong_name": "110",
         "highest_deal_price": 4270000000,
         "highest_deal_date": "2025-12-19",
         "recent_deal_absolute": {
@@ -2753,7 +2753,7 @@
       },
       {
         "match_key_area": 79,
-        "pyeong_name": "102A",
+        "pyeong_name": "102",
         "highest_deal_price": 3850000000,
         "highest_deal_date": "2026-01-17",
         "recent_deal_absolute": {
@@ -2794,7 +2794,7 @@
       },
       {
         "match_key_area": 115,
-        "pyeong_name": "149C",
+        "pyeong_name": "149",
         "highest_deal_price": 5200000000,
         "highest_deal_date": "2025-06-25",
         "recent_deal_absolute": {
@@ -2811,7 +2811,7 @@
       },
       {
         "match_key_area": 103,
-        "pyeong_name": "133A",
+        "pyeong_name": "133",
         "highest_deal_price": 4750000000,
         "highest_deal_date": "2025-06-11",
         "recent_deal_absolute": {
@@ -2987,7 +2987,7 @@
     "stats": [
       {
         "match_key_area": 85,
-        "pyeong_name": "110B",
+        "pyeong_name": "110",
         "highest_deal_price": 4000000000,
         "highest_deal_date": "2025-11-08",
         "recent_deal_absolute": {
@@ -3021,7 +3021,7 @@
       },
       {
         "match_key_area": 60,
-        "pyeong_name": "86A",
+        "pyeong_name": "86",
         "highest_deal_price": 3170000000,
         "highest_deal_date": "2025-10-02",
         "recent_deal_absolute": {
@@ -3045,7 +3045,7 @@
       },
       {
         "match_key_area": 121,
-        "pyeong_name": "143B",
+        "pyeong_name": "143",
         "highest_deal_price": 4500000000,
         "highest_deal_date": "2025-10-27",
         "recent_deal_absolute": {
@@ -3069,7 +3069,7 @@
       },
       {
         "match_key_area": 115,
-        "pyeong_name": "143A",
+        "pyeong_name": "143",
         "highest_deal_price": 4500000000,
         "highest_deal_date": "2025-08-23",
         "recent_deal_absolute": {
@@ -3086,7 +3086,7 @@
       },
       {
         "match_key_area": 120,
-        "pyeong_name": "143C",
+        "pyeong_name": "143",
         "highest_deal_price": 4500000000,
         "highest_deal_date": "2026-06-29",
         "recent_deal_absolute": {
@@ -3322,7 +3322,7 @@
     "stats": [
       {
         "match_key_area": 197,
-        "pyeong_name": "212A",
+        "pyeong_name": "212",
         "highest_deal_price": 11750000000,
         "highest_deal_date": "2025-07-17",
         "recent_deal_absolute": {
@@ -3356,7 +3356,7 @@
       },
       {
         "match_key_area": 144,
-        "pyeong_name": "156C",
+        "pyeong_name": "156",
         "highest_deal_price": 8100000000,
         "highest_deal_date": "2025-07-02",
         "recent_deal_absolute": {
@@ -3373,7 +3373,7 @@
       },
       {
         "match_key_area": 145,
-        "pyeong_name": "156B",
+        "pyeong_name": "156",
         "highest_deal_price": 8100000000,
         "highest_deal_date": "2025-07-14",
         "recent_deal_absolute": {
@@ -3416,7 +3416,7 @@
     "stats": [
       {
         "match_key_area": 74,
-        "pyeong_name": "100A",
+        "pyeong_name": "100",
         "highest_deal_price": 2320000000,
         "highest_deal_date": "2026-03-02",
         "recent_deal_absolute": {
@@ -3433,7 +3433,7 @@
       },
       {
         "match_key_area": 60,
-        "pyeong_name": "82A",
+        "pyeong_name": "82",
         "highest_deal_price": 2100000000,
         "highest_deal_date": "2026-01-24",
         "recent_deal_absolute": {
@@ -3450,7 +3450,7 @@
       },
       {
         "match_key_area": 59,
-        "pyeong_name": "82D",
+        "pyeong_name": "82",
         "highest_deal_price": 2100000000,
         "highest_deal_date": "2025-12-18",
         "recent_deal_absolute": {
@@ -3467,7 +3467,7 @@
       },
       {
         "match_key_area": 84,
-        "pyeong_name": "114A",
+        "pyeong_name": "114",
         "highest_deal_price": 2600000000,
         "highest_deal_date": "2025-10-02",
         "recent_deal_absolute": {
@@ -3484,7 +3484,7 @@
       },
       {
         "match_key_area": 98,
-        "pyeong_name": "132B",
+        "pyeong_name": "132",
         "highest_deal_price": 2800000000,
         "highest_deal_date": "2025-09-23",
         "recent_deal_absolute": {
@@ -3501,7 +3501,7 @@
       },
       {
         "match_key_area": 113,
-        "pyeong_name": "154C",
+        "pyeong_name": "154",
         "highest_deal_price": 2900000000,
         "highest_deal_date": "2025-10-12",
         "recent_deal_absolute": {
@@ -3747,7 +3747,7 @@
       },
       {
         "match_key_area": 136,
-        "pyeong_name": "166A",
+        "pyeong_name": "166",
         "highest_deal_price": 4280000000,
         "highest_deal_date": "2025-10-30",
         "recent_deal_absolute": {
@@ -3764,7 +3764,7 @@
       },
       {
         "match_key_area": 137,
-        "pyeong_name": "167B",
+        "pyeong_name": "167",
         "highest_deal_price": 4000000000,
         "highest_deal_date": "2026-01-07",
         "recent_deal_absolute": {
@@ -3781,7 +3781,7 @@
       },
       {
         "match_key_area": 60,
-        "pyeong_name": "86A",
+        "pyeong_name": "86",
         "highest_deal_price": 2875000000,
         "highest_deal_date": "2025-07-08",
         "recent_deal_absolute": {
@@ -3841,7 +3841,7 @@
     "stats": [
       {
         "match_key_area": 130,
-        "pyeong_name": "168C",
+        "pyeong_name": "168",
         "highest_deal_price": 8500000000,
         "highest_deal_date": "2026-04-01",
         "recent_deal_absolute": {
@@ -3858,7 +3858,7 @@
       },
       {
         "match_key_area": 85,
-        "pyeong_name": "112A",
+        "pyeong_name": "112",
         "highest_deal_price": 6300000000,
         "highest_deal_date": "2026-05-19",
         "recent_deal_absolute": {
@@ -3875,7 +3875,7 @@
       },
       {
         "match_key_area": 113,
-        "pyeong_name": "145F",
+        "pyeong_name": "145",
         "highest_deal_price": 6800000000,
         "highest_deal_date": "2025-02-24",
         "recent_deal_absolute": {
@@ -3892,7 +3892,7 @@
       },
       {
         "match_key_area": 60,
-        "pyeong_name": "80A",
+        "pyeong_name": "80",
         "highest_deal_price": 4700000000,
         "highest_deal_date": "2025-11-06",
         "recent_deal_absolute": {
@@ -3909,7 +3909,7 @@
       },
       {
         "match_key_area": 155,
-        "pyeong_name": "205A",
+        "pyeong_name": "205",
         "highest_deal_price": 10000000000,
         "highest_deal_date": "2025-02-25",
         "recent_deal_absolute": {
@@ -3926,7 +3926,7 @@
       },
       {
         "match_key_area": 169,
-        "pyeong_name": "223A",
+        "pyeong_name": "223",
         "highest_deal_price": 9500000000,
         "highest_deal_date": "2025-07-13",
         "recent_deal_absolute": {
@@ -3943,7 +3943,7 @@
       },
       {
         "match_key_area": 164,
-        "pyeong_name": "211A",
+        "pyeong_name": "211",
         "highest_deal_price": 6800000000,
         "highest_deal_date": "2024-11-21",
         "recent_deal_absolute": {
@@ -3960,7 +3960,7 @@
       },
       {
         "match_key_area": 179,
-        "pyeong_name": "236A",
+        "pyeong_name": "236",
         "highest_deal_price": 9800000000,
         "highest_deal_date": "2026-06-29",
         "recent_deal_absolute": {
@@ -4020,7 +4020,7 @@
     "stats": [
       {
         "match_key_area": 85,
-        "pyeong_name": "113A",
+        "pyeong_name": "113",
         "highest_deal_price": 2400000000,
         "highest_deal_date": "2026-02-06",
         "recent_deal_absolute": {
@@ -4037,7 +4037,7 @@
       },
       {
         "match_key_area": 60,
-        "pyeong_name": "81A",
+        "pyeong_name": "81",
         "highest_deal_price": 1945000000,
         "highest_deal_date": "2025-10-18",
         "recent_deal_absolute": {
@@ -4114,7 +4114,7 @@
     "stats": [
       {
         "match_key_area": 85,
-        "pyeong_name": "113B",
+        "pyeong_name": "113",
         "highest_deal_price": 2700000000,
         "highest_deal_date": "2025-09-28",
         "recent_deal_absolute": {
@@ -4131,7 +4131,7 @@
       },
       {
         "match_key_area": 115,
-        "pyeong_name": "150C",
+        "pyeong_name": "150",
         "highest_deal_price": 3090000000,
         "highest_deal_date": "2025-09-19",
         "recent_deal_absolute": {
@@ -4148,7 +4148,7 @@
       },
       {
         "match_key_area": 84,
-        "pyeong_name": "110A",
+        "pyeong_name": "110",
         "highest_deal_price": 2650000000,
         "highest_deal_date": "2026-06-05",
         "recent_deal_absolute": {
@@ -4165,7 +4165,7 @@
       },
       {
         "match_key_area": 60,
-        "pyeong_name": "80A",
+        "pyeong_name": "80",
         "highest_deal_price": 2350000000,
         "highest_deal_date": "2026-01-29",
         "recent_deal_absolute": {
@@ -4195,7 +4195,7 @@
       },
       {
         "match_key_area": 114,
-        "pyeong_name": "149A",
+        "pyeong_name": "149",
         "highest_deal_price": 2650000000,
         "highest_deal_date": "2026-06-11",
         "recent_deal_absolute": {
@@ -4212,7 +4212,7 @@
       },
       {
         "match_key_area": 145,
-        "pyeong_name": "189A",
+        "pyeong_name": "189",
         "highest_deal_price": 3100000000,
         "highest_deal_date": "2025-10-13",
         "recent_deal_absolute": {
@@ -4413,7 +4413,7 @@
     "stats": [
       {
         "match_key_area": 108,
-        "pyeong_name": "129A",
+        "pyeong_name": "129",
         "highest_deal_price": 2830000000,
         "highest_deal_date": "2026-01-26",
         "recent_deal_absolute": {
@@ -4430,7 +4430,7 @@
       },
       {
         "match_key_area": 71,
-        "pyeong_name": "91C",
+        "pyeong_name": "91",
         "highest_deal_price": 2300000000,
         "highest_deal_date": "2025-10-28",
         "recent_deal_absolute": {
@@ -4447,7 +4447,7 @@
       },
       {
         "match_key_area": 85,
-        "pyeong_name": "109C",
+        "pyeong_name": "109",
         "highest_deal_price": 2310000000,
         "highest_deal_date": "2025-10-01",
         "recent_deal_absolute": {
@@ -4522,7 +4522,7 @@
       },
       {
         "match_key_area": 84,
-        "pyeong_name": "109A",
+        "pyeong_name": "109",
         "highest_deal_price": 2450000000,
         "highest_deal_date": "2026-07-09",
         "recent_deal_absolute": {
@@ -4580,7 +4580,7 @@
       },
       {
         "match_key_area": 93,
-        "pyeong_name": "110B",
+        "pyeong_name": "110",
         "highest_deal_price": 2040000000,
         "highest_deal_date": "2025-04-05",
         "recent_deal_absolute": {
@@ -4792,7 +4792,7 @@
     "stats": [
       {
         "match_key_area": 67,
-        "pyeong_name": "89A",
+        "pyeong_name": "89",
         "highest_deal_price": 2780000000,
         "highest_deal_date": "2025-10-25",
         "recent_deal_absolute": {
@@ -4914,7 +4914,7 @@
       },
       {
         "match_key_area": 74,
-        "pyeong_name": "90C",
+        "pyeong_name": "90",
         "highest_deal_price": 2820000000,
         "highest_deal_date": "2026-03-03",
         "recent_deal_absolute": {
@@ -4991,7 +4991,7 @@
       },
       {
         "match_key_area": 99,
-        "pyeong_name": "124A",
+        "pyeong_name": "124",
         "highest_deal_price": 4450000000,
         "highest_deal_date": "2026-06-02",
         "recent_deal_absolute": {
@@ -5015,7 +5015,7 @@
       },
       {
         "match_key_area": 134,
-        "pyeong_name": "168B",
+        "pyeong_name": "168",
         "highest_deal_price": 5450000000,
         "highest_deal_date": "2026-04-30",
         "recent_deal_absolute": {
@@ -5032,7 +5032,7 @@
       },
       {
         "match_key_area": 151,
-        "pyeong_name": "185C",
+        "pyeong_name": "185",
         "highest_deal_price": 6000000000,
         "highest_deal_date": "2026-03-31",
         "recent_deal_absolute": {
@@ -5056,7 +5056,7 @@
       },
       {
         "match_key_area": 178,
-        "pyeong_name": "213D",
+        "pyeong_name": "213",
         "highest_deal_price": 6700000000,
         "highest_deal_date": "2025-10-02",
         "recent_deal_absolute": {
@@ -5073,7 +5073,7 @@
       },
       {
         "match_key_area": 140,
-        "pyeong_name": "171C",
+        "pyeong_name": "171",
         "highest_deal_price": 4300000000,
         "highest_deal_date": "2025-03-21",
         "recent_deal_absolute": {
@@ -5099,7 +5099,7 @@
     "stats": [
       {
         "match_key_area": 60,
-        "pyeong_name": "86A",
+        "pyeong_name": "86",
         "highest_deal_price": 3080000000,
         "highest_deal_date": "2026-07-10",
         "recent_deal_absolute": {
@@ -5174,7 +5174,7 @@
       },
       {
         "match_key_area": 102,
-        "pyeong_name": "136B",
+        "pyeong_name": "136",
         "highest_deal_price": 3920000000,
         "highest_deal_date": "2025-11-15",
         "recent_deal_absolute": {
@@ -5198,7 +5198,7 @@
       },
       {
         "match_key_area": 85,
-        "pyeong_name": "115A",
+        "pyeong_name": "115",
         "highest_deal_price": 3600000000,
         "highest_deal_date": "2026-01-19",
         "recent_deal_absolute": {
@@ -5215,7 +5215,7 @@
       },
       {
         "match_key_area": 97,
-        "pyeong_name": "128A",
+        "pyeong_name": "128",
         "highest_deal_price": 3900000000,
         "highest_deal_date": "2026-02-12",
         "recent_deal_absolute": {
@@ -5239,7 +5239,7 @@
       },
       {
         "match_key_area": 113,
-        "pyeong_name": "148A",
+        "pyeong_name": "148",
         "highest_deal_price": 4000000000,
         "highest_deal_date": "2026-06-06",
         "recent_deal_absolute": {
@@ -5347,7 +5347,7 @@
     "stats": [
       {
         "match_key_area": 85,
-        "pyeong_name": "115D",
+        "pyeong_name": "115",
         "highest_deal_price": 2270000000,
         "highest_deal_date": "2026-02-07",
         "recent_deal_absolute": {
@@ -5371,7 +5371,7 @@
       },
       {
         "match_key_area": 72,
-        "pyeong_name": "99P",
+        "pyeong_name": "99",
         "highest_deal_price": 2000000000,
         "highest_deal_date": "2026-02-26",
         "recent_deal_absolute": {
@@ -5388,7 +5388,7 @@
       },
       {
         "match_key_area": 60,
-        "pyeong_name": "94TR",
+        "pyeong_name": "94",
         "highest_deal_price": 1840000000,
         "highest_deal_date": "2026-03-28",
         "recent_deal_absolute": {
@@ -5405,7 +5405,7 @@
       },
       {
         "match_key_area": 59,
-        "pyeong_name": "82P",
+        "pyeong_name": "82",
         "highest_deal_price": 1935000000,
         "highest_deal_date": "2025-10-15",
         "recent_deal_absolute": {
@@ -5422,7 +5422,7 @@
       },
       {
         "match_key_area": 97,
-        "pyeong_name": "132A",
+        "pyeong_name": "132",
         "highest_deal_price": 2440000000,
         "highest_deal_date": "2026-01-13",
         "recent_deal_absolute": {
@@ -5523,7 +5523,7 @@
     "stats": [
       {
         "match_key_area": 85,
-        "pyeong_name": "108B",
+        "pyeong_name": "108",
         "highest_deal_price": 3900000000,
         "highest_deal_date": "2025-11-03",
         "recent_deal_absolute": {
@@ -5540,7 +5540,7 @@
       },
       {
         "match_key_area": 64,
-        "pyeong_name": "82C",
+        "pyeong_name": "82",
         "highest_deal_price": 3300000000,
         "highest_deal_date": "2025-11-21",
         "recent_deal_absolute": {
@@ -5557,7 +5557,7 @@
       },
       {
         "match_key_area": 104,
-        "pyeong_name": "132B",
+        "pyeong_name": "132",
         "highest_deal_price": 4470000000,
         "highest_deal_date": "2026-01-03",
         "recent_deal_absolute": {
@@ -5574,7 +5574,7 @@
       },
       {
         "match_key_area": 76,
-        "pyeong_name": "99D",
+        "pyeong_name": "99",
         "highest_deal_price": 3425000000,
         "highest_deal_date": "2025-07-07",
         "recent_deal_absolute": {
@@ -5591,7 +5591,7 @@
       },
       {
         "match_key_area": 133,
-        "pyeong_name": "166A",
+        "pyeong_name": "166",
         "highest_deal_price": 5300000000,
         "highest_deal_date": "2025-06-18",
         "recent_deal_absolute": {
@@ -5608,7 +5608,7 @@
       },
       {
         "match_key_area": 119,
-        "pyeong_name": "149A",
+        "pyeong_name": "149",
         "highest_deal_price": 5150000000,
         "highest_deal_date": "2025-12-13",
         "recent_deal_absolute": {
@@ -5625,7 +5625,7 @@
       },
       {
         "match_key_area": 77,
-        "pyeong_name": "97A",
+        "pyeong_name": "97",
         "highest_deal_price": 3550000000,
         "highest_deal_date": "2025-09-11",
         "recent_deal_absolute": {
@@ -5719,7 +5719,7 @@
       },
       {
         "match_key_area": 165,
-        "pyeong_name": "220B",
+        "pyeong_name": "220",
         "highest_deal_price": 5400000000,
         "highest_deal_date": "2025-09-17",
         "recent_deal_absolute": {
@@ -5753,7 +5753,7 @@
       },
       {
         "match_key_area": 84,
-        "pyeong_name": "112B",
+        "pyeong_name": "112",
         "highest_deal_price": 3200010000,
         "highest_deal_date": "2025-12-22",
         "recent_deal_absolute": {
@@ -5770,7 +5770,7 @@
       },
       {
         "match_key_area": 121,
-        "pyeong_name": "161A",
+        "pyeong_name": "161",
         "highest_deal_price": 4200000000,
         "highest_deal_date": "2024-10-22",
         "recent_deal_absolute": {
@@ -5898,7 +5898,7 @@
       },
       {
         "match_key_area": 97,
-        "pyeong_name": "104A",
+        "pyeong_name": "104",
         "highest_deal_price": 3470000000,
         "highest_deal_date": "2026-02-12",
         "recent_deal_absolute": {
@@ -5915,7 +5915,7 @@
       },
       {
         "match_key_area": 81,
-        "pyeong_name": "86C",
+        "pyeong_name": "86",
         "highest_deal_price": 2300000000,
         "highest_deal_date": "2025-04-23",
         "recent_deal_absolute": {
@@ -5949,7 +5949,7 @@
       },
       {
         "match_key_area": 82,
-        "pyeong_name": "87E",
+        "pyeong_name": "87",
         "highest_deal_price": 2850000000,
         "highest_deal_date": "2026-05-29",
         "recent_deal_absolute": {
@@ -6000,7 +6000,7 @@
       },
       {
         "match_key_area": 80,
-        "pyeong_name": "86A",
+        "pyeong_name": "86",
         "highest_deal_price": 3100000000,
         "highest_deal_date": "2025-10-27",
         "recent_deal_absolute": {
@@ -6067,7 +6067,7 @@
     "stats": [
       {
         "match_key_area": 92,
-        "pyeong_name": "123A",
+        "pyeong_name": "123",
         "highest_deal_price": 4700000000,
         "highest_deal_date": "2025-11-05",
         "recent_deal_absolute": {
@@ -6084,7 +6084,7 @@
       },
       {
         "match_key_area": 94,
-        "pyeong_name": "126A",
+        "pyeong_name": "126",
         "highest_deal_price": 5300000000,
         "highest_deal_date": "2025-06-19",
         "recent_deal_absolute": {
@@ -6101,7 +6101,7 @@
       },
       {
         "match_key_area": 60,
-        "pyeong_name": "88B",
+        "pyeong_name": "88",
         "highest_deal_price": 2500000000,
         "highest_deal_date": "2020-06-20",
         "recent_deal_absolute": {
@@ -6118,7 +6118,7 @@
       },
       {
         "match_key_area": 151,
-        "pyeong_name": "181A",
+        "pyeong_name": "181",
         "highest_deal_price": 6550000000,
         "highest_deal_date": "2026-02-21",
         "recent_deal_absolute": {
@@ -6135,7 +6135,7 @@
       },
       {
         "match_key_area": 114,
-        "pyeong_name": "149C",
+        "pyeong_name": "149",
         "highest_deal_price": 6375000000,
         "highest_deal_date": "2026-05-15",
         "recent_deal_absolute": {
@@ -6152,7 +6152,7 @@
       },
       {
         "match_key_area": 85,
-        "pyeong_name": "113A",
+        "pyeong_name": "113",
         "highest_deal_price": 4750000000,
         "highest_deal_date": "2025-11-06",
         "recent_deal_absolute": {
@@ -6193,7 +6193,7 @@
       },
       {
         "match_key_area": 95,
-        "pyeong_name": "126E",
+        "pyeong_name": "126",
         "highest_deal_price": 5300000000,
         "highest_deal_date": "2025-07-15",
         "recent_deal_absolute": {
@@ -6270,7 +6270,7 @@
     "stats": [
       {
         "match_key_area": 100,
-        "pyeong_name": "134C",
+        "pyeong_name": "134",
         "highest_deal_price": 3920000000,
         "highest_deal_date": "2026-06-13",
         "recent_deal_absolute": {
@@ -6287,7 +6287,7 @@
       },
       {
         "match_key_area": 60,
-        "pyeong_name": "80B",
+        "pyeong_name": "80",
         "highest_deal_price": 3200000000,
         "highest_deal_date": "2026-01-31",
         "recent_deal_absolute": {
@@ -6304,7 +6304,7 @@
       },
       {
         "match_key_area": 85,
-        "pyeong_name": "113C",
+        "pyeong_name": "113",
         "highest_deal_price": 3740000000,
         "highest_deal_date": "2026-02-25",
         "recent_deal_absolute": {
@@ -6321,7 +6321,7 @@
       },
       {
         "match_key_area": 114,
-        "pyeong_name": "150A",
+        "pyeong_name": "150",
         "highest_deal_price": 4490000000,
         "highest_deal_date": "2025-08-14",
         "recent_deal_absolute": {
@@ -6338,7 +6338,7 @@
       },
       {
         "match_key_area": 127,
-        "pyeong_name": "169A",
+        "pyeong_name": "169",
         "highest_deal_price": 4600000000,
         "highest_deal_date": "2025-05-10",
         "recent_deal_absolute": {
@@ -6355,7 +6355,7 @@
       },
       {
         "match_key_area": 50,
-        "pyeong_name": "67A",
+        "pyeong_name": "67",
         "highest_deal_price": 2580000000,
         "highest_deal_date": "2025-10-30",
         "recent_deal_absolute": {
@@ -6483,7 +6483,7 @@
     "stats": [
       {
         "match_key_area": 117,
-        "pyeong_name": "145TB",
+        "pyeong_name": "145",
         "highest_deal_price": 2535000000,
         "highest_deal_date": "2026-02-13",
         "recent_deal_absolute": {
@@ -6500,7 +6500,7 @@
       },
       {
         "match_key_area": 85,
-        "pyeong_name": "109TA",
+        "pyeong_name": "109",
         "highest_deal_price": 2300000000,
         "highest_deal_date": "2025-10-05",
         "recent_deal_absolute": {
@@ -6554,7 +6554,7 @@
       },
       {
         "match_key_area": 137,
-        "pyeong_name": "168T",
+        "pyeong_name": "168",
         "highest_deal_price": 2525000000,
         "highest_deal_date": "2025-09-13",
         "recent_deal_absolute": {
@@ -6657,7 +6657,7 @@
     "stats": [
       {
         "match_key_area": 105,
-        "pyeong_name": "113A",
+        "pyeong_name": "113",
         "highest_deal_price": 4650000000,
         "highest_deal_date": "2026-05-14",
         "recent_deal_absolute": {
@@ -6708,7 +6708,7 @@
       },
       {
         "match_key_area": 106,
-        "pyeong_name": "113C",
+        "pyeong_name": "113",
         "highest_deal_price": 5500000000,
         "highest_deal_date": "2025-09-04",
         "recent_deal_absolute": {
@@ -6742,7 +6742,7 @@
       },
       {
         "match_key_area": 96,
-        "pyeong_name": "103A",
+        "pyeong_name": "103",
         "highest_deal_price": 4880000000,
         "highest_deal_date": "2025-07-08",
         "recent_deal_absolute": {
@@ -6776,7 +6776,7 @@
       },
       {
         "match_key_area": 107,
-        "pyeong_name": "115B",
+        "pyeong_name": "115",
         "highest_deal_price": 4700000000,
         "highest_deal_date": "2025-03-21",
         "recent_deal_absolute": {
@@ -6793,7 +6793,7 @@
       },
       {
         "match_key_area": 97,
-        "pyeong_name": "103B",
+        "pyeong_name": "103",
         "highest_deal_price": 4280000000,
         "highest_deal_date": "2025-05-12",
         "recent_deal_absolute": {
@@ -6819,7 +6819,7 @@
     "stats": [
       {
         "match_key_area": 141,
-        "pyeong_name": "151A",
+        "pyeong_name": "151",
         "highest_deal_price": 4900000000,
         "highest_deal_date": "2025-11-01",
         "recent_deal_absolute": {
@@ -6836,7 +6836,7 @@
       },
       {
         "match_key_area": 167,
-        "pyeong_name": "179A",
+        "pyeong_name": "179",
         "highest_deal_price": 5030000000,
         "highest_deal_date": "2026-04-16",
         "recent_deal_absolute": {
@@ -6870,7 +6870,7 @@
       },
       {
         "match_key_area": 210,
-        "pyeong_name": "226A",
+        "pyeong_name": "226",
         "highest_deal_price": 6800000000,
         "highest_deal_date": "2026-02-25",
         "recent_deal_absolute": {
@@ -6937,7 +6937,7 @@
     "stats": [
       {
         "match_key_area": 85,
-        "pyeong_name": "113D",
+        "pyeong_name": "113",
         "highest_deal_price": 1950000000,
         "highest_deal_date": "2026-03-02",
         "recent_deal_absolute": {
@@ -6961,7 +6961,7 @@
       },
       {
         "match_key_area": 112,
-        "pyeong_name": "145I",
+        "pyeong_name": "145",
         "highest_deal_price": 2075000000,
         "highest_deal_date": "2026-02-20",
         "recent_deal_absolute": {
@@ -6978,7 +6978,7 @@
       },
       {
         "match_key_area": 60,
-        "pyeong_name": "87A",
+        "pyeong_name": "87",
         "highest_deal_price": 1760000000,
         "highest_deal_date": "2026-04-17",
         "recent_deal_absolute": {
@@ -7002,7 +7002,7 @@
       },
       {
         "match_key_area": 111,
-        "pyeong_name": "145A",
+        "pyeong_name": "145",
         "highest_deal_price": 2180000000,
         "highest_deal_date": "2026-02-27",
         "recent_deal_absolute": {
@@ -7019,7 +7019,7 @@
       },
       {
         "match_key_area": 134,
-        "pyeong_name": "169I",
+        "pyeong_name": "169",
         "highest_deal_price": 2200000000,
         "highest_deal_date": "2026-04-25",
         "recent_deal_absolute": {
@@ -7036,7 +7036,7 @@
       },
       {
         "match_key_area": 102,
-        "pyeong_name": "132I",
+        "pyeong_name": "132",
         "highest_deal_price": 1985000000,
         "highest_deal_date": "2026-06-03",
         "recent_deal_absolute": {
@@ -7053,7 +7053,7 @@
       },
       {
         "match_key_area": 103,
-        "pyeong_name": "134A",
+        "pyeong_name": "134",
         "highest_deal_price": 1950000000,
         "highest_deal_date": "2025-12-11",
         "recent_deal_absolute": {
@@ -7070,7 +7070,7 @@
       },
       {
         "match_key_area": 161,
-        "pyeong_name": "198I",
+        "pyeong_name": "198",
         "highest_deal_price": 2200000000,
         "highest_deal_date": "2025-09-19",
         "recent_deal_absolute": {
@@ -7144,7 +7144,7 @@
     "stats": [
       {
         "match_key_area": 143,
-        "pyeong_name": "178D",
+        "pyeong_name": "178",
         "highest_deal_price": 3920000000,
         "highest_deal_date": "2025-11-21",
         "recent_deal_absolute": {
@@ -7219,7 +7219,7 @@
       },
       {
         "match_key_area": 95,
-        "pyeong_name": "113A",
+        "pyeong_name": "113",
         "highest_deal_price": 3270000000,
         "highest_deal_date": "2025-07-13",
         "recent_deal_absolute": {
@@ -7253,7 +7253,7 @@
       },
       {
         "match_key_area": 115,
-        "pyeong_name": "144C",
+        "pyeong_name": "144",
         "highest_deal_price": 3540000000,
         "highest_deal_date": "2025-10-17",
         "recent_deal_absolute": {
@@ -7270,7 +7270,7 @@
       },
       {
         "match_key_area": 122,
-        "pyeong_name": "142A",
+        "pyeong_name": "142",
         "highest_deal_price": 2410000000,
         "highest_deal_date": "2023-03-28",
         "recent_deal_absolute": {
@@ -7371,7 +7371,7 @@
       },
       {
         "match_key_area": 85,
-        "pyeong_name": "111B",
+        "pyeong_name": "111",
         "highest_deal_price": 3200000000,
         "highest_deal_date": "2026-04-18",
         "recent_deal_absolute": {
@@ -7486,7 +7486,7 @@
     "stats": [
       {
         "match_key_area": 157,
-        "pyeong_name": "193A",
+        "pyeong_name": "193",
         "highest_deal_price": 1800000000,
         "highest_deal_date": "2019-07-31",
         "recent_deal_absolute": {
@@ -7503,7 +7503,7 @@
       },
       {
         "match_key_area": 122,
-        "pyeong_name": "149C",
+        "pyeong_name": "149",
         "highest_deal_price": 3075000000,
         "highest_deal_date": "2026-02-10",
         "recent_deal_absolute": {
@@ -7520,7 +7520,7 @@
       },
       {
         "match_key_area": 71,
-        "pyeong_name": "92B",
+        "pyeong_name": "92",
         "highest_deal_price": 2300000000,
         "highest_deal_date": "2026-02-13",
         "recent_deal_absolute": {
@@ -7574,7 +7574,7 @@
       },
       {
         "match_key_area": 99,
-        "pyeong_name": "128A",
+        "pyeong_name": "128",
         "highest_deal_price": 2650000000,
         "highest_deal_date": "2025-07-06",
         "recent_deal_absolute": {
@@ -7842,7 +7842,7 @@
     "stats": [
       {
         "match_key_area": 68,
-        "pyeong_name": "86A",
+        "pyeong_name": "86",
         "highest_deal_price": 1500000000,
         "highest_deal_date": "2026-06-30",
         "recent_deal_absolute": {
@@ -7859,7 +7859,7 @@
       },
       {
         "match_key_area": 75,
-        "pyeong_name": "95B",
+        "pyeong_name": "95",
         "highest_deal_price": 1600000000,
         "highest_deal_date": "2026-07-05",
         "recent_deal_absolute": {
@@ -7919,7 +7919,7 @@
       },
       {
         "match_key_area": 60,
-        "pyeong_name": "77A",
+        "pyeong_name": "77",
         "highest_deal_price": 1445000000,
         "highest_deal_date": "2026-06-11",
         "recent_deal_absolute": {
@@ -7943,7 +7943,7 @@
       },
       {
         "match_key_area": 85,
-        "pyeong_name": "108A",
+        "pyeong_name": "108",
         "highest_deal_price": 1710000000,
         "highest_deal_date": "2025-12-17",
         "recent_deal_absolute": {
@@ -7973,7 +7973,7 @@
       },
       {
         "match_key_area": 99,
-        "pyeong_name": "125A",
+        "pyeong_name": "125",
         "highest_deal_price": 1645000000,
         "highest_deal_date": "2026-04-15",
         "recent_deal_absolute": {
@@ -8377,7 +8377,7 @@
       },
       {
         "match_key_area": 71,
-        "pyeong_name": "94A",
+        "pyeong_name": "94",
         "highest_deal_price": 2350000000,
         "highest_deal_date": "2025-10-28",
         "recent_deal_absolute": {
@@ -8394,7 +8394,7 @@
       },
       {
         "match_key_area": 107,
-        "pyeong_name": "128B",
+        "pyeong_name": "128",
         "highest_deal_price": 2930000000,
         "highest_deal_date": "2026-02-23",
         "recent_deal_absolute": {
@@ -8428,7 +8428,7 @@
       },
       {
         "match_key_area": 106,
-        "pyeong_name": "129A",
+        "pyeong_name": "129",
         "highest_deal_price": 2260000000,
         "highest_deal_date": "2025-02-26",
         "recent_deal_absolute": {
@@ -8496,7 +8496,7 @@
       },
       {
         "match_key_area": 100,
-        "pyeong_name": "122A",
+        "pyeong_name": "122",
         "highest_deal_price": 2730000000,
         "highest_deal_date": "2026-05-12",
         "recent_deal_absolute": {
@@ -8513,7 +8513,7 @@
       },
       {
         "match_key_area": 91,
-        "pyeong_name": "108B",
+        "pyeong_name": "108",
         "highest_deal_price": 1247000000,
         "highest_deal_date": "2019-06-08",
         "recent_deal_absolute": {
@@ -8590,7 +8590,7 @@
       },
       {
         "match_key_area": 140,
-        "pyeong_name": "177B",
+        "pyeong_name": "177",
         "highest_deal_price": 3270000000,
         "highest_deal_date": "2026-02-22",
         "recent_deal_absolute": {
@@ -8631,7 +8631,7 @@
       },
       {
         "match_key_area": 182,
-        "pyeong_name": "231A",
+        "pyeong_name": "231",
         "highest_deal_price": 3710000000,
         "highest_deal_date": "2026-04-28",
         "recent_deal_absolute": {
@@ -8648,7 +8648,7 @@
       },
       {
         "match_key_area": 200,
-        "pyeong_name": "254A",
+        "pyeong_name": "254",
         "highest_deal_price": 3950000000,
         "highest_deal_date": "2025-06-27",
         "recent_deal_absolute": {
@@ -8672,7 +8672,7 @@
       },
       {
         "match_key_area": 245,
-        "pyeong_name": "310F",
+        "pyeong_name": "310",
         "highest_deal_price": 4800000000,
         "highest_deal_date": "2022-02-03",
         "recent_deal_absolute": {
@@ -8831,7 +8831,7 @@
       },
       {
         "match_key_area": 85,
-        "pyeong_name": "102B",
+        "pyeong_name": "102",
         "highest_deal_price": 4550000000,
         "highest_deal_date": "2025-09-27",
         "recent_deal_absolute": {
@@ -9026,7 +9026,7 @@
       },
       {
         "match_key_area": 82,
-        "pyeong_name": "108A",
+        "pyeong_name": "108",
         "highest_deal_price": 5200000000,
         "highest_deal_date": "2025-04-01",
         "recent_deal_absolute": {
@@ -9043,7 +9043,7 @@
       },
       {
         "match_key_area": 163,
-        "pyeong_name": "176A",
+        "pyeong_name": "176",
         "highest_deal_price": 8000000000,
         "highest_deal_date": "2025-04-22",
         "recent_deal_absolute": {
