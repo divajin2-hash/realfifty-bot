@@ -121,19 +121,27 @@ function ComplexCard({ complex, stats, rank }: { complex: any, stats: any[], ran
                 </div>
 
                 <div className="data-split">
-                    <div className="data-block">
+                    <div className="data-block" style={{ flex: 1 }}>
                         <span className="data-label">역대최고가 <span className="num-font" style={{ fontSize: "0.85em", opacity: 0.6 }}>({athDateStr})</span></span>
                         <span className="data-value">
                             <span className="num-font">{formatPriceNum(ath)}</span><span className="kr-unit">억</span>
                         </span>
-                        <span className="data-value-sub" style={{ fontSize: "0.85rem" }}>최근 실거래 <span className="num-font" style={{ fontSize: "0.9em", opacity: 0.75 }}>({lastDealDateStr})</span>: <span className="num-font">{absoluteRecent ? formatPriceNum(absoluteRecent.price) : '-'}</span><span className="kr-unit">억</span></span>
+                        <div style={{ marginTop: '12px', fontSize: "0.85rem", color: '#76777d' }}>
+                            최근 실거래 <span className="num-font" style={{ fontSize: "0.9em", opacity: 0.75 }}>({lastDealDateStr})</span>:
+                            <div style={{ marginTop: '4px' }}>
+                                <span className="num-font" style={{ fontSize: '1.4rem', fontWeight: 800, color: '#191c1e', letterSpacing: '-0.5px' }}>
+                                    {absoluteRecent ? formatPriceNum(absoluteRecent.price) : '-'}
+                                </span>
+                                <span className="kr-unit" style={{ fontSize: '1.1rem', fontWeight: 700, color: '#191c1e', marginLeft: '2px' }}>억</span>
+                            </div>
+                        </div>
                     </div>
-                    <div className="alert-box">
+                    <div className="alert-box" style={{ padding: '12px 14px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minWidth: '95px' }}>
                         {absDrop === '0.0' && absoluteRecent && absoluteRecent.price ? (
-                            <div style={{ paddingTop: '5px', fontSize: '1.2rem', fontWeight: 800, color: '#ba1a1a', whiteSpace: 'nowrap', textAlign: 'center' }}>최고가</div>
+                            <div style={{ fontSize: '1.2rem', fontWeight: 800, color: '#ba1a1a', whiteSpace: 'nowrap' }}>최고가</div>
                         ) : (
                             <>
-                                <div style={{ fontSize: '0.65rem', color: '#ba1a1a', whiteSpace: 'nowrap' }}>고점대비 실거래</div>
+                                <div style={{ fontSize: '0.65rem', color: '#ba1a1a', whiteSpace: 'nowrap', fontWeight: 700 }}>고점대비 실거래</div>
                                 <div className="num-font" style={{ marginTop: '4px', fontSize: '1.4rem' }}>{absDrop === '0.0' ? '-' : `-${absDrop}%`}</div>
                             </>
                         )}
@@ -143,7 +151,7 @@ function ComplexCard({ complex, stats, rank }: { complex: any, stats: any[], ran
                 <div className="dashed-divider"></div>
 
                 <div className="data-block" style={{ minHeight: '70px' }}>
-                    <span className="data-label">당월({currentMonth}월) 체결된 실거래</span>
+                    <span className="data-label">당월({currentMonth}월) 체결된 실거래 <span style={{ color: '#ba1a1a', fontWeight: 'bold' }}>({formattedDeals.length}건)</span></span>
 
                     {formattedDeals.length > 0 ? (
                         <div key={dealAnimationKey} style={{ animation: 'flashUpdate 0.8s ease-out', padding: '6px 8px', marginLeft: '-8px', borderRadius: '4px', display: 'flex', alignItems: 'baseline', gap: '8px' }}>
@@ -163,20 +171,20 @@ function ComplexCard({ complex, stats, rank }: { complex: any, stats: any[], ran
                 </div>
 
                 <div className="data-split" style={{ marginTop: '15px' }}>
-                    <div className="data-block">
+                    <div className="data-block" style={{ flex: 1 }}>
                         <span className="data-label">현재 시장 최저 호가</span>
-                        <span className="data-value" style={{ fontSize: '1.3rem' }}>
+                        <span className="data-value" style={{ fontSize: '1.3rem', marginTop: '6px' }}>
                             <span className="num-font">{formatPriceNum(currentAsk)}</span><span className="kr-unit">억</span>
                         </span>
                     </div>
-                    <div className="alert-box safe" style={{ padding: '8px 12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <div className="alert-box safe" style={{ padding: '12px 14px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minWidth: '95px' }}>
                         {mddValue === '0.0' && currentAsk > 0 ? (
                             <div style={{ fontSize: '1.2rem', fontWeight: 800, color: '#131b2e', whiteSpace: 'nowrap' }}>최고가</div>
                         ) : (
-                            <div>
-                                <div style={{ fontSize: '0.6rem', color: '#131b2e', opacity: 0.8, whiteSpace: 'nowrap', textAlign: 'right' }}>고점대비 호가</div>
-                                <div className="num-font" style={{ marginTop: '2px', fontSize: '1.2rem' }}>{mddValue === '0.0' ? '-' : `${mddValue}%`}</div>
-                            </div>
+                            <>
+                                <div style={{ fontSize: '0.65rem', color: '#131b2e', opacity: 0.8, whiteSpace: 'nowrap', fontWeight: 700 }}>고점대비 호가</div>
+                                <div className="num-font" style={{ marginTop: '4px', fontSize: '1.4rem' }}>{mddValue === '0.0' ? '-' : `${mddValue}%`}</div>
+                            </>
                         )}
                     </div>
                 </div>
