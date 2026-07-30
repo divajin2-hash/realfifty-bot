@@ -5,7 +5,7 @@ import { useParams, useRouter } from 'next/navigation';
 import rawData from '@/data/kb50_stats.json';
 import TickerClient from '../../TickerClient';
 import '@/app/globals.css';
-import { ComposedChart, Line, Bar, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer } from 'recharts';
+import { ComposedChart, Line, Bar, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer, BarChart } from 'recharts';
 
 function formatPriceNum(num: number) {
     if (!num) return '-';
@@ -82,6 +82,7 @@ export default function DetailPage() {
 
     const [activeIndex, setActiveIndex] = useState(() => getRepIndex(sortedStats));
     const [chartPeriod, setChartPeriod] = useState<1 | 5 | 10>(10);
+    const [chartType, setChartType] = useState<'price' | 'volume' | 'ask'>('price');
     const [chartDataState, setChartDataState] = useState<any>(null);
 
     const complexIdStr = Array.isArray(complexId) ? complexId[0] : complexId;
@@ -112,6 +113,32 @@ export default function DetailPage() {
     const currentMonth = new Date().getMonth() + 1;
 
     const currentArea = activeStat?.match_key_area;
+
+    const miniVolumeData = useMemo(() => {
+        if (!chartDataState || !currentArea || !chartDataState[currentArea]) return [];
+        const volume = chartDataState[currentArea].volume || [];
+        const now = new Date();
+        const past = new Date(now.getFullYear(), now.getMonth() - 11, 1);
+        const limitTimestamp = past.getTime();
+        
+        const res: any[] = [];
+        volume.forEach((v: any) => {
+            const time = new Date(v.month + "-15").getTime();
+            if (time >= limitTimestamp) {
+                const monthNum = new Date(time).getMonth() + 1;
+                res.push({ name: `${monthNum}월`, count: v.count });
+            }
+        });
+        
+        const filled = [];
+        for (let i = 11; i >= 0; i--) {
+            const d = new Date(now.getFullYear(), now.getMonth() - i, 1);
+            const label = `${d.getMonth() + 1}월`;
+            const found = res.find(r => r.name === label);
+            filled.push({ name: label, count: found ? found.count : 0 });
+        }
+        return filled;
+    }, [chartDataState, currentArea]);
 
     const chartData = useMemo(() => {
         if (!chartDataState || !currentArea || !chartDataState[currentArea]) return [];
@@ -299,12 +326,13 @@ export default function DetailPage() {
                             </div>
 
                             <div style={{ height: '70px', width: '100%', position: 'relative', borderBottom: '2px solid #e0e3e6', marginTop: 'auto' }}>
-                                <svg width="100%" height="100%" viewBox="0 0 100 60" preserveAspectRatio="none" style={{ overflow: 'visible' }}>
-                                    <path d="M 0 10 Q 15 5, 30 20 T 60 40 T 100 55" fill="none" stroke="#ba1a1a" strokeWidth="2.5" />
-                                    <circle cx="100" cy="55" r="4.5" fill="#ba1a1a" />
-                                    <circle cx="100" cy="55" r="9" fill="#ba1a1a" opacity="0.2" />
-                                </svg>
-                                <div style={{ position: 'absolute', bottom: '-22px', right: '0', fontSize: '0.7rem', color: '#76777d', fontWeight: 600 }}>최근 실거래 추이</div>
+                                <ResponsiveContainer width="100%" height="85%">
+                                    <BarChart data={miniVolumeData}>
+                                        <Bar dataKey="count" fill="#4ade80" radius={[2,2,0,0]} />
+                                        <RechartsTooltip cursor={{fill: '#f2f4f7'}} contentStyle={{ fontSize: '0.8rem', padding: '4px 8px', borderRadius: '4px', border: 'none', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }} formatter={(val: any) => [`${val}건`, '거래량']} labelStyle={{display: 'none'}} />
+                                    </BarChart>
+                                </ResponsiveContainer>
+                                <div style={{ position: 'absolute', bottom: '-22px', right: '0', fontSize: '0.7rem', color: '#76777d', fontWeight: 600 }}>최근 12개월 월별 거래량</div>
                             </div>
 
                         </div>
@@ -339,7 +367,32 @@ export default function DetailPage() {
 
                     <div className="ap-card" style={{ padding: '30px', marginBottom: '24px' }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
-                            <h2 style={{ fontSize: '1.4rem', fontWeight: 800 }}>📊 최근 {chartPeriod}년 롱텀 가격 궤적 (Trend)</h2>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+                                <h2 style={{ fontSize: '1.4rem', fontWeight: 800 }}>📊 장기 분석 궤적</h2>
+                                <div style={{ display: 'flex', gap: '6px' }}>
+                                    {[
+                                        { id: 'price', label: '실거래가' },
+                                        { id: 'volume', label: '거래량' },
+                                        { id: 'ask', label: '최저호가' }
+                                    ].map(tab => (
+                                        <button
+                                            key={tab.id}
+                                            onClick={() => setChartType(tab.id as any)}
+                                            style={{
+                                                border: 'none',
+                                                background: chartType === tab.id ? '#131b2e' : '#f2f4f7',
+                                                color: chartType === tab.id ? 'white' : '#76777d',
+                                                padding: '6px 14px', fontSize: '0.85rem', borderRadius: '20px',
+                                                cursor: 'pointer', fontWeight: 700,
+                                                transition: 'all 0.2s',
+                                                boxShadow: chartType === tab.id ? '0 2px 8px rgba(0,0,0,0.1)' : 'none'
+                                            }}
+                                        >
+                                            {tab.label}
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
                             <div style={{ display: 'flex', gap: '8px' }}>
                                 {[10, 5, 1].map((p) => (
                                     <span
@@ -361,7 +414,7 @@ export default function DetailPage() {
                         </div>
                         <div style={{ width: '100%', height: '400px', position: 'relative', overflow: 'hidden' }}>
                             <ResponsiveContainer width="100%" height="100%">
-                                <ComposedChart data={chartData} margin={{ top: 30, right: 20, left: 0, bottom: 0 }}>
+                                <ComposedChart data={chartData} margin={{ top: 30, right: 30, left: 10, bottom: 0 }}>
                                     <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e0e3e6" />
                                     <XAxis
                                         dataKey="time"
@@ -378,19 +431,9 @@ export default function DetailPage() {
                                         minTickGap={30}
                                     />
                                     <YAxis
-                                        yAxisId="left"
-                                        domain={['auto', 'auto']}
+                                        domain={chartType === 'volume' ? [0, (dataMax: number) => dataMax === 0 ? 10 : Math.ceil(dataMax * 1.5)] : ['auto', 'auto']}
                                         tick={{ fontSize: 13, fill: '#76777d', fontWeight: 600 }}
-                                        tickFormatter={(v) => `${v}억`}
-                                        axisLine={false}
-                                        tickLine={false}
-                                    />
-                                    <YAxis
-                                        yAxisId="right"
-                                        orientation="right"
-                                        domain={[0, (dataMax: number) => dataMax === 0 ? 10 : Math.ceil(dataMax * 3.5)]}
-                                        tick={{ fontSize: 12, fill: '#76777d' }}
-                                        tickFormatter={(v) => `${v}건`}
+                                        tickFormatter={(v) => chartType === 'volume' ? `${v}건` : `${v}억`}
                                         axisLine={false}
                                         tickLine={false}
                                     />
@@ -408,13 +451,13 @@ export default function DetailPage() {
                                             return [value, name];
                                         }}
                                     />
-                                    <Bar yAxisId="right" dataKey="volumeCount" fill="#f87171" barSize={8} opacity={0.6} radius={[2, 2, 0, 0]} />
-                                    <Line yAxisId="left" connectNulls type="linear" dataKey="askPrice" stroke="#f97316" strokeWidth={2} dot={{ r: 2.5, fill: '#f97316' }} activeDot={{ r: 6 }} />
-                                    <Line yAxisId="left" connectNulls type="linear" dataKey="dealPrice" stroke="#60a5fa" strokeWidth={2.5} dot={{ r: 3, fill: '#3b82f6' }} activeDot={{ r: 7 }} />
+                                    {chartType === 'volume' && <Bar dataKey="volumeCount" fill="#f87171" barSize={16} opacity={0.9} radius={[4, 4, 0, 0]} />}
+                                    {chartType === 'ask' && <Line connectNulls type="linear" dataKey="askPrice" stroke="#f97316" strokeWidth={2} dot={{ r: 2.5, fill: '#f97316' }} activeDot={{ r: 6 }} />}
+                                    {chartType === 'price' && <Line connectNulls type="linear" dataKey="dealPrice" stroke="#60a5fa" strokeWidth={2.5} dot={{ r: 3, fill: '#3b82f6' }} activeDot={{ r: 7 }} />}
                                 </ComposedChart>
                             </ResponsiveContainer>
                         </div>
-                        <div style={{ textAlign: 'center', marginTop: '16px', fontSize: '0.85rem', color: '#76777d' }}>* 과거 10년의 실거래가, 호가 이력 및 거래량 원장 데이터를 통합하여 분석합니다.</div>
+                        <div style={{ textAlign: 'center', marginTop: '16px', fontSize: '0.85rem', color: '#76777d' }}>* 과거 {chartPeriod}년간의 {chartType === 'price' ? '실거래가' : (chartType === 'volume' ? '월간 거래량' : '네이버 최저호가')} 변화 추이입니다.</div>
                     </div>
 
                     <div className="ap-card">

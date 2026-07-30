@@ -29,6 +29,9 @@ if __name__ == "__main__":
     # 5. Take a snapshot
     run_script("30_daily_snapshot.py")
     
+    # 6. Build chart data
+    run_script("36_build_chart_data.py")
+    
     print("\n✅ All daily master bot scripts executed successfully!")
 
     # 6. Send Telegram Notification

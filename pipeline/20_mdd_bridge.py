@@ -49,10 +49,17 @@ def run_mdd_bridge():
         
         # 특정 단지의 match_key(평형) 중 절대적 최저호가 발굴
         price = ask.get("lowest_ask", 0)
-        if price == 0: continue
         
         node_key = f"{cid}_{match_key}"
-        if node_key not in grouped_asks or price < grouped_asks[node_key]["price"]:
+        should_update = False
+        if node_key not in grouped_asks:
+            should_update = True
+        else:
+            prev_price = grouped_asks[node_key]["price"]
+            if price > 0 and (prev_price == 0 or price < prev_price):
+                should_update = True
+
+        if should_update:
             import re as _re
             ptp_nm = ask.get("ptp_name", "") or ""
             m = _re.match(r'^(\d+)', ptp_nm)
@@ -127,7 +134,7 @@ def run_mdd_bridge():
         ath_price = ath["price"]
         current_ask = ask_data["price"]
         
-        if ath_price > 0:
+        if ath_price > 0 and current_ask > 0:
             mdd = round(((current_ask - ath_price) / ath_price) * 100, 2)
         else:
             mdd = 0

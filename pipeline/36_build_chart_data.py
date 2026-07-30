@@ -18,11 +18,25 @@ for c in c_res:
     cid = c['id']
     # print(f"Processing {c['name']}...")
     
-    # trades
-    trades = sb.table('rtms_transactions').select('match_key_area, deal_date, deal_price').eq('complex_id', cid).order('deal_date').execute().data
+    # trades (Pagination to bypass 1000 limit)
+    trades = []
+    offset = 0
+    while True:
+        chunk = sb.table('rtms_transactions').select('match_key_area, deal_date, deal_price').eq('complex_id', cid).order('deal_date').range(offset, offset + 999).execute().data
+        if not chunk: break
+        trades.extend(chunk)
+        if len(chunk) < 1000: break
+        offset += 1000
     
-    # daily asks (history)
-    history = sb.table('daily_history').select('area, base_date, lowest_ask').eq('complex_id', cid).order('base_date').execute().data
+    # daily asks (history) limit bypass
+    history = []
+    offset = 0
+    while True:
+        chunk = sb.table('daily_history').select('area, base_date, lowest_ask').eq('complex_id', cid).order('base_date').range(offset, offset + 999).execute().data
+        if not chunk: break
+        history.extend(chunk)
+        if len(chunk) < 1000: break
+        offset += 1000
     
     # Valid areas from pyeong_stats
     py_stats = sb.table('pyeong_stats').select('match_key_area').eq('complex_id', cid).execute().data

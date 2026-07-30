@@ -1,0 +1,938 @@
+{
+  "complexTypeName": "아파트",
+  "complexType": "A01",
+  "complexName": "헬리오시티",
+  "complexNo": "111515",
+  "totalHouseHoldCount": 9510,
+  "totalDongCount": 84,
+  "useApproveYmd": "20181228",
+  "minArea": 61.37,
+  "maxArea": 194.2,
+  "minPrice": 195000,
+  "maxPrice": 550000,
+  "minLeasePrice": 73000,
+  "maxLeasePrice": 175000,
+  "minPriceByLetter": "19억 5,000",
+  "maxPriceByLetter": "55억",
+  "minLeasePriceByLetter": "7억 3,000",
+  "maxLeasePriceByLetter": "17억 5,000",
+  "leasePerDealRate": 0.0,
+  "isaleDealRestrictionCode": "N",
+  "rebuildMembershipTransYn": "N",
+  "livingResidenceYn": "N",
+  "latitude": 37.497624,
+  "longitude": 127.107268,
+  "realPrice": {
+    "tradeType": "A1",
+    "tradeYear": "2026",
+    "tradeMonth": 7,
+    "tradeDate": "23",
+    "dealPrice": 193000,
+    "leasePrice": 0,
+    "rentPrice": 0,
+    "floor": 19,
+    "representativeArea": 84.0,
+    "exclusiveArea": 59.96,
+    "formattedPrice": "19억 3,000",
+    "formattedTradeYearMonth": "2026.07.23"
+  },
+  "pyeongs": [
+    {
+      "pyeongNo": 1,
+      "supplyAreaDouble": 61.37,
+      "supplyArea": "61.37",
+      "pyeongName": "61A",
+      "pyeongName2": "18A",
+      "grandPlanUrl": "/20160112_239/hscp_img_1452576978127s7VOt_JPEG/photoinfra_1452576977843.jpg",
+      "exclusiveArea": "39.1",
+      "exclusivePyeong": "11.82"
+    },
+    {
+      "pyeongNo": 3,
+      "supplyAreaDouble": 61.52,
+      "supplyArea": "61.52",
+      "pyeongName": "61B",
+      "pyeongName2": "18B",
+      "grandPlanUrl": "/20160112_245/hscp_img_1452577042775FmhuR_JPEG/photoinfra_1452577042518.jpg",
+      "exclusiveArea": "39.12",
+      "exclusivePyeong": "11.83"
+    },
+    {
+      "pyeongNo": 2,
+      "supplyAreaDouble": 61.44,
+      "supplyArea": "61.44",
+      "pyeongName": "61D",
+      "pyeongName2": "18D",
+      "grandPlanUrl": "/20160112_192/hscp_img_1452577202848d8jKx_JPEG/photoinfra_1452577202527.jpg",
+      "exclusiveArea": "39.17",
+      "exclusivePyeong": "11.84"
+    },
+    {
+      "pyeongNo": 4,
+      "supplyAreaDouble": 62.46,
+      "supplyArea": "62.46",
+      "pyeongName": "62C",
+      "pyeongName2": "18C",
+      "grandPlanUrl": "/20160112_229/hscp_img_14525771036237e5aG_JPEG/photoinfra_1452577103284.jpg",
+      "exclusiveArea": "39.86",
+      "exclusivePyeong": "12.05"
+    },
+    {
+      "pyeongNo": 6,
+      "supplyAreaDouble": 72.91,
+      "supplyArea": "72.91",
+      "pyeongName": "72C",
+      "pyeongName2": "22C",
+      "grandPlanUrl": "/20160112_279/hscp_img_1452577302972n3TtR_JPEG/photoinfra_1452577302672.jpg",
+      "exclusiveArea": "49.29",
+      "exclusivePyeong": "14.91"
+    },
+    {
+      "pyeongNo": 25,
+      "supplyAreaDouble": 72.52,
+      "supplyArea": "72.52",
+      "pyeongName": "72D",
+      "pyeongName2": "21D",
+      "grandPlanUrl": "/20210624_78/hscp_img_1624499492717SDmh4_JPEG/photoinfra_1624499492486.jpg",
+      "exclusiveArea": "49.21",
+      "exclusivePyeong": "14.88"
+    },
+    {
+      "pyeongNo": 24,
+      "supplyAreaDouble": 72.62,
+      "supplyArea": "72.62",
+      "pyeongName": "72B",
+      "pyeongName2": "21B",
+      "grandPlanUrl": "/20210624_57/hscp_img_16244995061295p4fe_JPEG/photoinfra_1624499505952.jpg",
+      "exclusiveArea": "49.32",
+      "exclusivePyeong": "14.91"
+    },
+    {
+      "pyeongNo": 5,
+      "supplyAreaDouble": 72.46,
+      "supplyArea": "72.46",
+      "pyeongName": "72A",
+      "pyeongName2": "21A",
+      "grandPlanUrl": "/20160112_155/hscp_img_1452577270951K1dX5_JPEG/photoinfra_1452577270715.jpg",
+      "exclusiveArea": "49.19",
+      "exclusivePyeong": "14.87"
+    },
+    {
+      "pyeongNo": 7,
+      "supplyAreaDouble": 84.1,
+      "supplyArea": "84.1",
+      "pyeongName": "84A",
+      "pyeongName2": "25A",
+      "grandPlanUrl": "/20160112_67/hscp_img_145257747569763adc_JPEG/photoinfra_1452577475404.jpg",
+      "exclusiveArea": "59.96",
+      "exclusivePyeong": "18.13"
+    },
+    {
+      "pyeongNo": 11,
+      "supplyAreaDouble": 107.97,
+      "supplyArea": "107.97",
+      "pyeongName": "107A",
+      "pyeongName2": "32A",
+      "grandPlanUrl": "/20160112_129/hscp_img_14525775095823Bmxr_JPEG/photoinfra_1452577509311.jpg",
+      "exclusiveArea": "84.98",
+      "exclusivePyeong": "25.7"
+    },
+    {
+      "pyeongNo": 9,
+      "supplyAreaDouble": 107.66,
+      "supplyArea": "107.66",
+      "pyeongName": "107J1",
+      "pyeongName2": "32J1",
+      "grandPlanUrl": "/20160112_17/hscp_img_1452577553218j8d9I_JPEG/photoinfra_1452577552915.jpg",
+      "exclusiveArea": "84.96",
+      "exclusivePyeong": "25.7"
+    },
+    {
+      "pyeongNo": 10,
+      "supplyAreaDouble": 107.66,
+      "supplyArea": "107.66",
+      "pyeongName": "107J2",
+      "pyeongName2": "32J2",
+      "grandPlanUrl": "/20160112_125/hscp_img_1452577565825zeTHv_JPEG/photoinfra_1452577565548.jpg",
+      "exclusiveArea": "84.96",
+      "exclusivePyeong": "25.7"
+    },
+    {
+      "pyeongNo": 8,
+      "supplyAreaDouble": 107.66,
+      "supplyArea": "107.66",
+      "pyeongName": "107I",
+      "pyeongName2": "32I",
+      "grandPlanUrl": "/20160112_251/hscp_img_14525775309176eYrL_JPEG/photoinfra_1452577530636.jpg",
+      "exclusiveArea": "84.94",
+      "exclusivePyeong": "25.69"
+    },
+    {
+      "pyeongNo": 13,
+      "supplyAreaDouble": 108.43,
+      "supplyArea": "108.43",
+      "pyeongName": "108G",
+      "pyeongName2": "32G",
+      "grandPlanUrl": "/20160112_120/hscp_img_1452577609426RFLcp_JPEG/photoinfra_1452577609164.jpg",
+      "exclusiveArea": "84.98",
+      "exclusivePyeong": "25.7"
+    },
+    {
+      "pyeongNo": 12,
+      "supplyAreaDouble": 108.01,
+      "supplyArea": "108.01",
+      "pyeongName": "108K",
+      "pyeongName2": "32K",
+      "grandPlanUrl": "/20160112_47/hscp_img_1452577590670osBen_JPEG/photoinfra_1452577590405.jpg",
+      "exclusiveArea": "84.98",
+      "exclusivePyeong": "25.7"
+    },
+    {
+      "pyeongNo": 15,
+      "supplyAreaDouble": 108.72,
+      "supplyArea": "108.72",
+      "pyeongName": "108L",
+      "pyeongName2": "32L",
+      "grandPlanUrl": "/20160112_212/hscp_img_1452577649716JdSJE_JPEG/photoinfra_1452577649413.jpg",
+      "exclusiveArea": "84.97",
+      "exclusivePyeong": "25.7"
+    },
+    {
+      "pyeongNo": 14,
+      "supplyAreaDouble": 108.71,
+      "supplyArea": "108.71",
+      "pyeongName": "108H",
+      "pyeongName2": "32H",
+      "grandPlanUrl": "/20160112_222/hscp_img_14525776324472JPyr_JPEG/photoinfra_1452577632151.jpg",
+      "exclusiveArea": "84.98",
+      "exclusivePyeong": "25.7"
+    },
+    {
+      "pyeongNo": 16,
+      "supplyAreaDouble": 109.73,
+      "supplyArea": "109.73",
+      "pyeongName": "109E",
+      "pyeongName2": "33E",
+      "grandPlanUrl": "/20160112_21/hscp_img_14525776825412LE1R_JPEG/photoinfra_1452577682258.jpg",
+      "exclusiveArea": "84.98",
+      "exclusivePyeong": "25.7"
+    },
+    {
+      "pyeongNo": 18,
+      "supplyAreaDouble": 109.87,
+      "supplyArea": "109.87",
+      "pyeongName": "109C",
+      "pyeongName2": "33C",
+      "grandPlanUrl": "/20160112_46/hscp_img_1452577756495iKRiB_JPEG/photoinfra_1452577756076.jpg",
+      "exclusiveArea": "84.99",
+      "exclusivePyeong": "25.7"
+    },
+    {
+      "pyeongNo": 17,
+      "supplyAreaDouble": 109.76,
+      "supplyArea": "109.76",
+      "pyeongName": "109B",
+      "pyeongName2": "33B",
+      "grandPlanUrl": "/20160112_212/hscp_img_1452577704918IHzk8_JPEG/photoinfra_1452577704636.jpg",
+      "exclusiveArea": "84.99",
+      "exclusivePyeong": "25.7"
+    },
+    {
+      "pyeongNo": 19,
+      "supplyAreaDouble": 110.1,
+      "supplyArea": "110.1",
+      "pyeongName": "110D",
+      "pyeongName2": "33D",
+      "grandPlanUrl": "/20160112_121/hscp_img_1452577788359TscF4_JPEG/photoinfra_1452577788109.jpg",
+      "exclusiveArea": "84.99",
+      "exclusivePyeong": "25.7"
+    },
+    {
+      "pyeongNo": 20,
+      "supplyAreaDouble": 110.17,
+      "supplyArea": "110.17",
+      "pyeongName": "110F",
+      "pyeongName2": "33F",
+      "grandPlanUrl": "/20160112_19/hscp_img_1452578201632Kee1h_JPEG/photoinfra_1452578201297.jpg",
+      "exclusiveArea": "84.95",
+      "exclusivePyeong": "25.69"
+    },
+    {
+      "pyeongNo": 26,
+      "supplyAreaDouble": 126.35,
+      "supplyArea": "126.35",
+      "pyeongName": "126A",
+      "pyeongName2": "38A",
+      "grandPlanUrl": "/20210624_201/hscp_img_1624499519549f2ndX_JPEG/photoinfra_1624499519003.jpg",
+      "exclusiveArea": "99.6",
+      "exclusivePyeong": "30.12"
+    },
+    {
+      "pyeongNo": 21,
+      "supplyAreaDouble": 140.26,
+      "supplyArea": "140.26",
+      "pyeongName": "140A",
+      "pyeongName2": "42A",
+      "grandPlanUrl": "/20160112_245/hscp_img_1452577845493VmSDT_JPEG/photoinfra_1452577845208.jpg",
+      "exclusiveArea": "110.66",
+      "exclusivePyeong": "33.47"
+    },
+    {
+      "pyeongNo": 22,
+      "supplyAreaDouble": 141.08,
+      "supplyArea": "141.08",
+      "pyeongName": "141B",
+      "pyeongName2": "42B",
+      "grandPlanUrl": "/20160112_160/hscp_img_1452577867148fQOOy_JPEG/photoinfra_1452577866822.jpg",
+      "exclusiveArea": "110.44",
+      "exclusivePyeong": "33.4"
+    },
+    {
+      "pyeongNo": 23,
+      "supplyAreaDouble": 163.91,
+      "supplyArea": "163.91",
+      "pyeongName": "163A",
+      "pyeongName2": "49A",
+      "grandPlanUrl": "/20160112_118/hscp_img_1452577886497JuxDV_JPEG/photoinfra_1452577886216.jpg",
+      "exclusiveArea": "130.06",
+      "exclusivePyeong": "39.34"
+    },
+    {
+      "pyeongNo": 29,
+      "supplyAreaDouble": 193.96,
+      "supplyArea": "193.96",
+      "pyeongName": "193C",
+      "pyeongName2": "58C",
+      "grandPlanUrl": "/20210624_221/hscp_img_162449944994734XWU_JPEG/photoinfra_1624499449467.jpg",
+      "exclusiveArea": "150.09",
+      "exclusivePyeong": "45.4"
+    },
+    {
+      "pyeongNo": 28,
+      "supplyAreaDouble": 193.02,
+      "supplyArea": "193.02",
+      "pyeongName": "193B",
+      "pyeongName2": "58B",
+      "grandPlanUrl": "/20210624_168/hscp_img_1624499434712xERJp_JPEG/photoinfra_1624499434213.jpg",
+      "exclusiveArea": "150.07",
+      "exclusivePyeong": "45.39"
+    },
+    {
+      "pyeongNo": 27,
+      "supplyAreaDouble": 193.06,
+      "supplyArea": "193.06",
+      "pyeongName": "193A",
+      "pyeongName2": "58A",
+      "grandPlanUrl": "/20210624_254/hscp_img_1624499479204CHkPf_JPEG/photoinfra_1624499478711.jpg",
+      "exclusiveArea": "150.21",
+      "exclusivePyeong": "45.43"
+    },
+    {
+      "pyeongNo": 30,
+      "supplyAreaDouble": 194.2,
+      "supplyArea": "194.2",
+      "pyeongName": "194D",
+      "pyeongName2": "58D",
+      "grandPlanUrl": "/20210624_202/hscp_img_1624499464367TGqA6_JPEG/photoinfra_1624499463876.jpg",
+      "exclusiveArea": "150.09",
+      "exclusivePyeong": "45.4"
+    }
+  ],
+  "dongs": [
+    {
+      "dongNo": "1",
+      "bildName": "101",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "101101"
+    },
+    {
+      "dongNo": "2",
+      "bildName": "102",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "102102"
+    },
+    {
+      "dongNo": "3",
+      "bildName": "103",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "103103"
+    },
+    {
+      "dongNo": "4",
+      "bildName": "104",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "104104"
+    },
+    {
+      "dongNo": "5",
+      "bildName": "105",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "105105"
+    },
+    {
+      "dongNo": "6",
+      "bildName": "106",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "106106"
+    },
+    {
+      "dongNo": "7",
+      "bildName": "107",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "107107"
+    },
+    {
+      "dongNo": "8",
+      "bildName": "108",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "108108"
+    },
+    {
+      "dongNo": "9",
+      "bildName": "109",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "109109"
+    },
+    {
+      "dongNo": "10",
+      "bildName": "110",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "110110"
+    },
+    {
+      "dongNo": "11",
+      "bildName": "111",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "111111"
+    },
+    {
+      "dongNo": "12",
+      "bildName": "112",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "112112"
+    },
+    {
+      "dongNo": "13",
+      "bildName": "201",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "201201"
+    },
+    {
+      "dongNo": "14",
+      "bildName": "202",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "202202"
+    },
+    {
+      "dongNo": "15",
+      "bildName": "203",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "203203"
+    },
+    {
+      "dongNo": "16",
+      "bildName": "204",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "204204"
+    },
+    {
+      "dongNo": "17",
+      "bildName": "205",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "205205"
+    },
+    {
+      "dongNo": "18",
+      "bildName": "206",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "206206"
+    },
+    {
+      "dongNo": "19",
+      "bildName": "207",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "207207"
+    },
+    {
+      "dongNo": "20",
+      "bildName": "208",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "208208"
+    },
+    {
+      "dongNo": "83",
+      "bildName": "209",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "209209"
+    },
+    {
+      "dongNo": "21",
+      "bildName": "210",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "210210"
+    },
+    {
+      "dongNo": "22",
+      "bildName": "211",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "211211"
+    },
+    {
+      "dongNo": "23",
+      "bildName": "212",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "212212"
+    },
+    {
+      "dongNo": "84",
+      "bildName": "213",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "213213"
+    },
+    {
+      "dongNo": "24",
+      "bildName": "214",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "214214"
+    },
+    {
+      "dongNo": "25",
+      "bildName": "215",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "215215"
+    },
+    {
+      "dongNo": "26",
+      "bildName": "216",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "216216"
+    },
+    {
+      "dongNo": "27",
+      "bildName": "217",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "217217"
+    },
+    {
+      "dongNo": "28",
+      "bildName": "218",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "218218"
+    },
+    {
+      "dongNo": "29",
+      "bildName": "219",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "219219"
+    },
+    {
+      "dongNo": "30",
+      "bildName": "301",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "301301"
+    },
+    {
+      "dongNo": "31",
+      "bildName": "302",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "302302"
+    },
+    {
+      "dongNo": "32",
+      "bildName": "303",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "303303"
+    },
+    {
+      "dongNo": "33",
+      "bildName": "304",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "304304"
+    },
+    {
+      "dongNo": "34",
+      "bildName": "305",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "305305"
+    },
+    {
+      "dongNo": "35",
+      "bildName": "306",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "306306"
+    },
+    {
+      "dongNo": "36",
+      "bildName": "307",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "307307"
+    },
+    {
+      "dongNo": "37",
+      "bildName": "308",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "308308"
+    },
+    {
+      "dongNo": "38",
+      "bildName": "309",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "309309"
+    },
+    {
+      "dongNo": "39",
+      "bildName": "310",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "310310"
+    },
+    {
+      "dongNo": "40",
+      "bildName": "311",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "311311"
+    },
+    {
+      "dongNo": "41",
+      "bildName": "312",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "312312"
+    },
+    {
+      "dongNo": "42",
+      "bildName": "313",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "313313"
+    },
+    {
+      "dongNo": "43",
+      "bildName": "314",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "314314"
+    },
+    {
+      "dongNo": "44",
+      "bildName": "315",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "315315"
+    },
+    {
+      "dongNo": "45",
+      "bildName": "316",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "316316"
+    },
+    {
+      "dongNo": "46",
+      "bildName": "317",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "317317"
+    },
+    {
+      "dongNo": "47",
+      "bildName": "318",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "318318"
+    },
+    {
+      "dongNo": "48",
+      "bildName": "401",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "401401"
+    },
+    {
+      "dongNo": "49",
+      "bildName": "402",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "402402"
+    },
+    {
+      "dongNo": "50",
+      "bildName": "403",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "403403"
+    },
+    {
+      "dongNo": "51",
+      "bildName": "404",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "404404"
+    },
+    {
+      "dongNo": "52",
+      "bildName": "405",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "405405"
+    },
+    {
+      "dongNo": "53",
+      "bildName": "406",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "406406"
+    },
+    {
+      "dongNo": "54",
+      "bildName": "407",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "407407"
+    },
+    {
+      "dongNo": "55",
+      "bildName": "408",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "408408"
+    },
+    {
+      "dongNo": "56",
+      "bildName": "409",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "409409"
+    },
+    {
+      "dongNo": "57",
+      "bildName": "410",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "410410"
+    },
+    {
+      "dongNo": "58",
+      "bildName": "411",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "411411"
+    },
+    {
+      "dongNo": "59",
+      "bildName": "412",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "412412"
+    },
+    {
+      "dongNo": "60",
+      "bildName": "413",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "413413"
+    },
+    {
+      "dongNo": "61",
+      "bildName": "414",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "414414"
+    },
+    {
+      "dongNo": "62",
+      "bildName": "415",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "415415"
+    },
+    {
+      "dongNo": "63",
+      "bildName": "416",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "416416"
+    },
+    {
+      "dongNo": "64",
+      "bildName": "417",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "417417"
+    },
+    {
+      "dongNo": "65",
+      "bildName": "418",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "418418"
+    },
+    {
+      "dongNo": "66",
+      "bildName": "501",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "501501"
+    },
+    {
+      "dongNo": "67",
+      "bildName": "502",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "502502"
+    },
+    {
+      "dongNo": "68",
+      "bildName": "503",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "503503"
+    },
+    {
+      "dongNo": "69",
+      "bildName": "504",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "504504"
+    },
+    {
+      "dongNo": "70",
+      "bildName": "505",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "505505"
+    },
+    {
+      "dongNo": "71",
+      "bildName": "506",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "506506"
+    },
+    {
+      "dongNo": "72",
+      "bildName": "507",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "507507"
+    },
+    {
+      "dongNo": "73",
+      "bildName": "508",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "508508"
+    },
+    {
+      "dongNo": "74",
+      "bildName": "509",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "509509"
+    },
+    {
+      "dongNo": "75",
+      "bildName": "510",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "510510"
+    },
+    {
+      "dongNo": "76",
+      "bildName": "511",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "511511"
+    },
+    {
+      "dongNo": "77",
+      "bildName": "512",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "512512"
+    },
+    {
+      "dongNo": "78",
+      "bildName": "513",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "513513"
+    },
+    {
+      "dongNo": "79",
+      "bildName": "514",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "514514"
+    },
+    {
+      "dongNo": "80",
+      "bildName": "515",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "515515"
+    },
+    {
+      "dongNo": "81",
+      "bildName": "516",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "516516"
+    },
+    {
+      "dongNo": "82",
+      "bildName": "517",
+      "highFloor": 0,
+      "lowFloor": 0,
+      "sortNo": "517517"
+    }
+  ],
+  "complexExistTabs": [
+    "detail",
+    "prices",
+    "buildingLandprice",
+    "schools",
+    "photos"
+  ]
+}

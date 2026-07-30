@@ -82,7 +82,9 @@ def run():
     print("==================================================================")
     
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False, args=["--disable-blink-features=AutomationControlled"])
+        # Run headlessly in CI (like Github Actions) by checking env var
+        is_ci = os.environ.get("GITHUB_ACTIONS") == "true"
+        browser = p.chromium.launch(headless=is_ci, args=["--disable-blink-features=AutomationControlled"])
         context = browser.new_context(user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0 Safari/537.36")
         context.add_init_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
         

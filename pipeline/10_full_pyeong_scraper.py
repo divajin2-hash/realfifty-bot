@@ -127,6 +127,7 @@ def run_master():
                 ptp_no = p_type.get('pyeongNo') or p_type.get('ptpNo')
                 ptp_nm = p_type.get('pyeongName') or p_type.get('pyeongNm')
                 ex_area = float(p_type.get('exclusiveArea', 0))
+                sup_area = float(p_type.get('supplyArea') or p_type.get('supplySpace') or 0)
                 nid = p_type.get('_naver_id')
                 
                 target_url = f"https://new.land.naver.com/complexes/{nid}?a=APT:ABYG:JGC&b=A1&ptpNo={ptp_no}"
@@ -178,12 +179,25 @@ def run_master():
                             "ptp_name": ptp_nm,
                             "ptp_no": ptp_no,
                             "exclusive_area": ex_area,
+                            "supply_area": sup_area,
                             "lowest_ask": found_price,
                             "article_url": article_url
                         })
                         return True
                     else:
-                        print(f"   [{ptp_nm:<7} / 전용 {ex_area:>5}] -> 정상매물 없음")
+                        print(f"   [{ptp_nm:<7} / 전용 {ex_area:>5}] -> 정상매물 없음 (메타데이터 보존)")
+                        all_results.append({
+                            "crawled_date": today_str,
+                            "complex_no": complex_no_db,
+                            "naver_complex_no": nid,
+                            "complex_name": apt_name,
+                            "ptp_name": ptp_nm,
+                            "ptp_no": ptp_no,
+                            "exclusive_area": ex_area,
+                            "supply_area": sup_area,
+                            "lowest_ask": 0,
+                            "article_url": None
+                        })
                         return True
                         
                 except Exception as e:
@@ -213,8 +227,10 @@ def run_master():
                         failed_queue.append(p_type)
 
                     
-        main_page.close()
-        browser.close()
+        try:
+            if 'context' in locals(): context.close()
+            if 'browser' in locals(): browser.close()
+        except: pass
         
     print(f"\n✅ 진짜 시세 검증 완료! 총 {len(all_results)}건 수집됨.")
     

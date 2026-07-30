@@ -1,0 +1,3 @@
+TAG: a, CLASS: ['filter_btn_select'], TEXT: 가격대
+TAG: button, CLASS: ['complex_link'], TEXT: 동호수/공시가격
+TAG: a, CLASS: ['sorting_type', 'is-descending'], TEXT: 가격순

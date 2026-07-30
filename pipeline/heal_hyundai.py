@@ -2,26 +2,28 @@ import os, sys, requests, xml.etree.ElementTree as ET
 from urllib.parse import unquote
 import json
 from supabase import create_client
+from dotenv import load_dotenv
 
+load_dotenv('pipeline/.env')
 url = os.environ.get("SUPABASE_URL")
 key = os.environ.get("SUPABASE_KEY")
 if not url or not key: sys.exit(0)
 sb = create_client(url, key)
 molit_key = unquote(os.environ.get("RTMS_API_KEY"))
 
-# Wipe existing corrupted trades for both
 cid_1_5 = '94379391-ef97-4ce2-a4a1-bcb00a070ba7'
 cid_shin = 'dd976eb4-fbfd-4fce-acae-e043a72c21c9'
 
 sb.table('rtms_transactions').delete().in_('complex_id', [cid_1_5, cid_shin]).execute()
 
 aliases = {
-    cid_1_5: ["현대1,2차", "현대3차", "현대4차", "현대5차", "현대1차", "현대2차", "압구정현대1차"],
-    cid_shin: ["현대", "현대9차", "현대11차", "현대12차", "신현대", "현대(신현대)", "현대아파트"]
+    cid_1_5: ["현대1,2차", "현대3차", "현대4차", "현대5차", "현대1차", "현대3", "현대4", "현대5", "구현대", "현대(1", "현대(3", "현대(4", "현대1", "현대2"],
+    cid_shin: ["현대", "현대9차", "현대11차", "현대12차", "신현대9차", "신현대11차", "신현대12차", "신현대", "현대아파트"]
 }
 
 def clean_name(n):
-    return n.replace("(", "").replace(")", "").replace(" ", "").strip()
+    import re
+    return re.sub(r'\(.*?\)', '', n).replace(' ', '').strip()
 
 def get_cid(api_name):
     ci = clean_name(api_name)
@@ -42,13 +44,15 @@ for year in [2023, 2024, 2025, 2026]:
         ym = f"{year}{month:02d}"
         if ym > "202607": break
         
-        req_url = 'http://openapi.molit.go.kr/OpenAPI_ToolInstallPackage/service/rest/RTMSOBJSvc/getRTMSDataSvcAptTradeDev'
-        params = {'serviceKey': molit_key, 'LAWD_CD': '11680', 'DEAL_YMD': ym}
+        req_url = 'http://apis.data.go.kr/1613000/RTMSDataSvcAptTradeDev/getRTMSDataSvcAptTradeDev'
+        params = {'serviceKey': molit_key, 'LAWD_CD': '11680', 'DEAL_YMD': ym, 'numOfRows': 2000}
         r = requests.get(req_url, params=params)
         
         try:
             root = ET.fromstring(r.content)
             for item in root.findall('.//item'):
+                umdNm = item.findtext('umdNm')
+                if not umdNm or '압구정' not in umdNm: continue
                 aptNm = item.findtext('aptNm')
                 c_id = get_cid(aptNm)
                 if c_id:
@@ -69,6 +73,7 @@ for year in [2023, 2024, 2025, 2026]:
                         "transaction_type": t_type
                     }).execute()
                     ins_count += 1
+                    print(f"[{ym}] Inserted {aptNm} {area} -> {c_id}")
         except Exception as e:
             pass
 
