@@ -2,14 +2,16 @@ import os
 import sys
 
 def run_script(script_name):
-    print(f"\n{'='*50}\n▶ RUNNING: {script_name}\n{'='*50}")
+    print(f"\n{'='*50}\n> RUNNING: {script_name}\n{'='*50}")
     # Using python module execution to stay in the same env
     res = os.system(f"python pipeline/{script_name}")
     if res != 0:
-        print(f"❌ Failed at {script_name}. Stop pipeline.")
+        print(f"FAILED at {script_name}. Stop pipeline.")
         sys.exit(1)
 
 if __name__ == "__main__":
+    import io
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', line_buffering=True)
     # Ensure we are in root dir (kb50_mdd)
     
     # 1. Update MOTIE recent deals (This Month & Last Month)

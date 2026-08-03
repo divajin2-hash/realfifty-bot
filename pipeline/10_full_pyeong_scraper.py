@@ -51,12 +51,12 @@ def run_master():
     
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=False, args=["--disable-blink-features=AutomationControlled"])
-        context = browser.new_context(user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0 Safari/537.36")
-        context.add_init_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
-        
-        main_page = context.new_page()
 
         for c_meta in complexes_data:
+            context = browser.new_context(user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0 Safari/537.36")
+            context.add_init_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+            main_page = context.new_page()
+
             complex_no_db = str(c_meta["complex_no"])
             apt_name = c_meta["name"]
             
@@ -132,8 +132,9 @@ def run_master():
                 
                 target_url = f"https://new.land.naver.com/complexes/{nid}?a=APT:ABYG:JGC&b=A1&ptpNo={ptp_no}"
                 
-                target_page = context.new_page()
+                target_page = None
                 try:
+                    target_page = context.new_page()
                     target_page.goto(target_url, wait_until="networkidle", timeout=12000)
                     
                     try:
@@ -204,7 +205,8 @@ def run_master():
                     print(f"   [{ptp_nm:<7} / 전용 {ex_area:>5}] ⚠️ 수집 에러 발생 (재시도 큐 대기): {e}")
                     return False
                 finally:
-                    target_page.close()
+                    if target_page:
+                        target_page.close()
             
             for p_type in combined_ptps:
                 success = process_ptp(p_type, 0)
@@ -226,10 +228,14 @@ def run_master():
                     if not success:
                         failed_queue.append(p_type)
 
-                    
+            
+            try:
+                context.close()
+            except:
+                pass
+                
         try:
-            if 'context' in locals(): context.close()
-            if 'browser' in locals(): browser.close()
+            browser.close()
         except: pass
         
     print(f"\n✅ 진짜 시세 검증 완료! 총 {len(all_results)}건 수집됨.")

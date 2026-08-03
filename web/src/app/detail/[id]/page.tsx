@@ -78,7 +78,10 @@ export default function DetailPage() {
     const sortedStats = group ? [...group.stats].map(s => {
         const mdd_rate = s.highest_deal_price > 0 ? -Math.abs(((s.highest_deal_price - s.current_lowest_ask) / s.highest_deal_price) * 100) : 0;
         return { ...s, mdd_rate };
-    }).sort((a, b) => a.match_key_area - b.match_key_area) : [];
+    }).sort((a, b) => {
+        if (a.match_key_area !== b.match_key_area) return a.match_key_area - b.match_key_area;
+        return (a.pyeong_name || "").localeCompare(b.pyeong_name || "");
+    }) : [];
 
     const [activeIndex, setActiveIndex] = useState(() => getRepIndex(sortedStats));
     const [chartPeriod, setChartPeriod] = useState<1 | 5 | 10>(10);
@@ -120,7 +123,7 @@ export default function DetailPage() {
         const now = new Date();
         const past = new Date(now.getFullYear(), now.getMonth() - 11, 1);
         const limitTimestamp = past.getTime();
-        
+
         const res: any[] = [];
         volume.forEach((v: any) => {
             const time = new Date(v.month + "-15").getTime();
@@ -129,7 +132,7 @@ export default function DetailPage() {
                 res.push({ name: `${monthNum}월`, count: v.count });
             }
         });
-        
+
         const filled = [];
         for (let i = 11; i >= 0; i--) {
             const d = new Date(now.getFullYear(), now.getMonth() - i, 1);
@@ -278,8 +281,8 @@ export default function DetailPage() {
                                         }}
                                     >
                                         {s.pyeong_name && (
-                                            <span style={{ fontSize: '0.75rem', opacity: isActive ? 0.9 : 0.5, marginBottom: '2px' }}>
-                                                공급 {s.pyeong_name}㎡
+                                            <span style={{ fontSize: '1rem', fontWeight: 900, opacity: isActive ? 1 : 0.7, marginBottom: '2px', color: isActive ? '#ba1a1a' : '#fff' }}>
+                                                {s.pyeong_name.includes('㎡') || s.pyeong_name.includes('형') ? s.pyeong_name : `${s.pyeong_name}형`}
                                             </span>
                                         )}
                                         <div style={{ display: 'flex', alignItems: 'baseline', gap: '3px' }}>
@@ -328,8 +331,8 @@ export default function DetailPage() {
                             <div style={{ height: '70px', width: '100%', position: 'relative', borderBottom: '2px solid #e0e3e6', marginTop: 'auto' }}>
                                 <ResponsiveContainer width="100%" height="85%">
                                     <BarChart data={miniVolumeData}>
-                                        <Bar dataKey="count" fill="#4ade80" radius={[2,2,0,0]} />
-                                        <RechartsTooltip cursor={{fill: '#f2f4f7'}} contentStyle={{ fontSize: '0.8rem', padding: '4px 8px', borderRadius: '4px', border: 'none', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }} formatter={(val: any) => [`${val}건`, '거래량']} labelStyle={{display: 'none'}} />
+                                        <Bar dataKey="count" fill="#4ade80" radius={[2, 2, 0, 0]} />
+                                        <RechartsTooltip cursor={{ fill: '#f2f4f7' }} contentStyle={{ fontSize: '0.8rem', padding: '4px 8px', borderRadius: '4px', border: 'none', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }} formatter={(val: any) => [`${val}건`, '거래량']} labelStyle={{ display: 'none' }} />
                                     </BarChart>
                                 </ResponsiveContainer>
                                 <div style={{ position: 'absolute', bottom: '-22px', right: '0', fontSize: '0.7rem', color: '#76777d', fontWeight: 600 }}>최근 12개월 월별 거래량</div>
@@ -478,7 +481,10 @@ export default function DetailPage() {
                                     <tr key={i} style={{ borderBottom: '1px solid #e0e3e6', transition: 'background 0.2s', cursor: 'pointer' }}>
                                         <td className="num-font" style={{ padding: '20px 16px', fontWeight: 700 }}>{tx.date?.slice(0, 10)}</td>
                                         <td style={{ padding: '20px 16px', fontSize: '1.1rem', fontWeight: 800 }}><span className="num-font">{(tx.price / 100000000).toFixed(1)}</span><span className="kr-unit">억</span></td>
-                                        <td style={{ padding: '20px 16px', color: '#45464d' }}><span className="num-font">{activeStat.match_key_area}</span>m² / <span className="num-font">{tx.floor || '-'}</span>층</td>
+                                        <td style={{ padding: '20px 16px', color: '#45464d' }}>
+                                            <span style={{ fontWeight: 700, color: '#131b2e', marginRight: '6px' }}>{activeStat.pyeong_name}</span>
+                                            <span className="num-font">{activeStat.match_key_area}</span>m² / <span className="num-font">{tx.floor || '-'}</span>층
+                                        </td>
                                         <td style={{ padding: '20px 16px', color: '#76777d' }}>{tx.type || '중개거래'}</td>
                                     </tr>
                                 ))}
@@ -500,3 +506,4 @@ export default function DetailPage() {
         </div>
     );
 }
+// trigger HMR

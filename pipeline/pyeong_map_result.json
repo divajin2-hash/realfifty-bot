@@ -23,5 +23,5027 @@
       ],
       "unmapped_naver": []
     }
+  },
+  "0f20c700-14a2-4506-a86e-64ca429d6a52_111515_1": {
+    "cid": "0f20c700-14a2-4506-a86e-64ca429d6a52",
+    "nid": "111515",
+    "ptp_no": "1",
+    "ptp_name": "61A",
+    "match_key_area": 39,
+    "supply_area": 61.37,
+    "exclusive_area": 39.1
+  },
+  "0f20c700-14a2-4506-a86e-64ca429d6a52_111515_3": {
+    "cid": "0f20c700-14a2-4506-a86e-64ca429d6a52",
+    "nid": "111515",
+    "ptp_no": "3",
+    "ptp_name": "61B",
+    "match_key_area": 39,
+    "supply_area": 61.52,
+    "exclusive_area": 39.12
+  },
+  "0f20c700-14a2-4506-a86e-64ca429d6a52_111515_2": {
+    "cid": "0f20c700-14a2-4506-a86e-64ca429d6a52",
+    "nid": "111515",
+    "ptp_no": "2",
+    "ptp_name": "61D",
+    "match_key_area": 39,
+    "supply_area": 61.44,
+    "exclusive_area": 39.17
+  },
+  "0f20c700-14a2-4506-a86e-64ca429d6a52_111515_4": {
+    "cid": "0f20c700-14a2-4506-a86e-64ca429d6a52",
+    "nid": "111515",
+    "ptp_no": "4",
+    "ptp_name": "62C",
+    "match_key_area": 40,
+    "supply_area": 62.46,
+    "exclusive_area": 39.86
+  },
+  "0f20c700-14a2-4506-a86e-64ca429d6a52_111515_6": {
+    "cid": "0f20c700-14a2-4506-a86e-64ca429d6a52",
+    "nid": "111515",
+    "ptp_no": "6",
+    "ptp_name": "72C",
+    "match_key_area": 49,
+    "supply_area": 72.91,
+    "exclusive_area": 49.29
+  },
+  "0f20c700-14a2-4506-a86e-64ca429d6a52_111515_25": {
+    "cid": "0f20c700-14a2-4506-a86e-64ca429d6a52",
+    "nid": "111515",
+    "ptp_no": "25",
+    "ptp_name": "72D",
+    "match_key_area": 49,
+    "supply_area": 72.52,
+    "exclusive_area": 49.21
+  },
+  "0f20c700-14a2-4506-a86e-64ca429d6a52_111515_24": {
+    "cid": "0f20c700-14a2-4506-a86e-64ca429d6a52",
+    "nid": "111515",
+    "ptp_no": "24",
+    "ptp_name": "72B",
+    "match_key_area": 49,
+    "supply_area": 72.62,
+    "exclusive_area": 49.32
+  },
+  "0f20c700-14a2-4506-a86e-64ca429d6a52_111515_5": {
+    "cid": "0f20c700-14a2-4506-a86e-64ca429d6a52",
+    "nid": "111515",
+    "ptp_no": "5",
+    "ptp_name": "72A",
+    "match_key_area": 49,
+    "supply_area": 72.46,
+    "exclusive_area": 49.19
+  },
+  "0f20c700-14a2-4506-a86e-64ca429d6a52_111515_7": {
+    "cid": "0f20c700-14a2-4506-a86e-64ca429d6a52",
+    "nid": "111515",
+    "ptp_no": "7",
+    "ptp_name": "84A",
+    "match_key_area": 60,
+    "supply_area": 84.1,
+    "exclusive_area": 59.96
+  },
+  "0f20c700-14a2-4506-a86e-64ca429d6a52_111515_11": {
+    "cid": "0f20c700-14a2-4506-a86e-64ca429d6a52",
+    "nid": "111515",
+    "ptp_no": "11",
+    "ptp_name": "107A",
+    "match_key_area": 85,
+    "supply_area": 107.97,
+    "exclusive_area": 84.98
+  },
+  "0f20c700-14a2-4506-a86e-64ca429d6a52_111515_9": {
+    "cid": "0f20c700-14a2-4506-a86e-64ca429d6a52",
+    "nid": "111515",
+    "ptp_no": "9",
+    "ptp_name": "107J1",
+    "match_key_area": 85,
+    "supply_area": 107.66,
+    "exclusive_area": 84.96
+  },
+  "0f20c700-14a2-4506-a86e-64ca429d6a52_111515_10": {
+    "cid": "0f20c700-14a2-4506-a86e-64ca429d6a52",
+    "nid": "111515",
+    "ptp_no": "10",
+    "ptp_name": "107J2",
+    "match_key_area": 85,
+    "supply_area": 107.66,
+    "exclusive_area": 84.96
+  },
+  "0f20c700-14a2-4506-a86e-64ca429d6a52_111515_8": {
+    "cid": "0f20c700-14a2-4506-a86e-64ca429d6a52",
+    "nid": "111515",
+    "ptp_no": "8",
+    "ptp_name": "107I",
+    "match_key_area": 85,
+    "supply_area": 107.66,
+    "exclusive_area": 84.94
+  },
+  "0f20c700-14a2-4506-a86e-64ca429d6a52_111515_13": {
+    "cid": "0f20c700-14a2-4506-a86e-64ca429d6a52",
+    "nid": "111515",
+    "ptp_no": "13",
+    "ptp_name": "108G",
+    "match_key_area": 85,
+    "supply_area": 108.43,
+    "exclusive_area": 84.98
+  },
+  "0f20c700-14a2-4506-a86e-64ca429d6a52_111515_12": {
+    "cid": "0f20c700-14a2-4506-a86e-64ca429d6a52",
+    "nid": "111515",
+    "ptp_no": "12",
+    "ptp_name": "108K",
+    "match_key_area": 85,
+    "supply_area": 108.01,
+    "exclusive_area": 84.98
+  },
+  "0f20c700-14a2-4506-a86e-64ca429d6a52_111515_15": {
+    "cid": "0f20c700-14a2-4506-a86e-64ca429d6a52",
+    "nid": "111515",
+    "ptp_no": "15",
+    "ptp_name": "108L",
+    "match_key_area": 85,
+    "supply_area": 108.72,
+    "exclusive_area": 84.97
+  },
+  "0f20c700-14a2-4506-a86e-64ca429d6a52_111515_14": {
+    "cid": "0f20c700-14a2-4506-a86e-64ca429d6a52",
+    "nid": "111515",
+    "ptp_no": "14",
+    "ptp_name": "108H",
+    "match_key_area": 85,
+    "supply_area": 108.71,
+    "exclusive_area": 84.98
+  },
+  "0f20c700-14a2-4506-a86e-64ca429d6a52_111515_16": {
+    "cid": "0f20c700-14a2-4506-a86e-64ca429d6a52",
+    "nid": "111515",
+    "ptp_no": "16",
+    "ptp_name": "109E",
+    "match_key_area": 85,
+    "supply_area": 109.73,
+    "exclusive_area": 84.98
+  },
+  "0f20c700-14a2-4506-a86e-64ca429d6a52_111515_18": {
+    "cid": "0f20c700-14a2-4506-a86e-64ca429d6a52",
+    "nid": "111515",
+    "ptp_no": "18",
+    "ptp_name": "109C",
+    "match_key_area": 85,
+    "supply_area": 109.87,
+    "exclusive_area": 84.99
+  },
+  "0f20c700-14a2-4506-a86e-64ca429d6a52_111515_17": {
+    "cid": "0f20c700-14a2-4506-a86e-64ca429d6a52",
+    "nid": "111515",
+    "ptp_no": "17",
+    "ptp_name": "109B",
+    "match_key_area": 85,
+    "supply_area": 109.76,
+    "exclusive_area": 84.99
+  },
+  "0f20c700-14a2-4506-a86e-64ca429d6a52_111515_19": {
+    "cid": "0f20c700-14a2-4506-a86e-64ca429d6a52",
+    "nid": "111515",
+    "ptp_no": "19",
+    "ptp_name": "110D",
+    "match_key_area": 85,
+    "supply_area": 110.1,
+    "exclusive_area": 84.99
+  },
+  "0f20c700-14a2-4506-a86e-64ca429d6a52_111515_20": {
+    "cid": "0f20c700-14a2-4506-a86e-64ca429d6a52",
+    "nid": "111515",
+    "ptp_no": "20",
+    "ptp_name": "110F",
+    "match_key_area": 85,
+    "supply_area": 110.17,
+    "exclusive_area": 84.95
+  },
+  "0f20c700-14a2-4506-a86e-64ca429d6a52_111515_26": {
+    "cid": "0f20c700-14a2-4506-a86e-64ca429d6a52",
+    "nid": "111515",
+    "ptp_no": "26",
+    "ptp_name": "126A",
+    "match_key_area": 100,
+    "supply_area": 126.35,
+    "exclusive_area": 99.6
+  },
+  "0f20c700-14a2-4506-a86e-64ca429d6a52_111515_21": {
+    "cid": "0f20c700-14a2-4506-a86e-64ca429d6a52",
+    "nid": "111515",
+    "ptp_no": "21",
+    "ptp_name": "140A",
+    "match_key_area": 111,
+    "supply_area": 140.26,
+    "exclusive_area": 110.66
+  },
+  "0f20c700-14a2-4506-a86e-64ca429d6a52_111515_22": {
+    "cid": "0f20c700-14a2-4506-a86e-64ca429d6a52",
+    "nid": "111515",
+    "ptp_no": "22",
+    "ptp_name": "141B",
+    "match_key_area": 110,
+    "supply_area": 141.08,
+    "exclusive_area": 110.44
+  },
+  "0f20c700-14a2-4506-a86e-64ca429d6a52_111515_23": {
+    "cid": "0f20c700-14a2-4506-a86e-64ca429d6a52",
+    "nid": "111515",
+    "ptp_no": "23",
+    "ptp_name": "163A",
+    "match_key_area": 130,
+    "supply_area": 163.91,
+    "exclusive_area": 130.06
+  },
+  "0f20c700-14a2-4506-a86e-64ca429d6a52_111515_29": {
+    "cid": "0f20c700-14a2-4506-a86e-64ca429d6a52",
+    "nid": "111515",
+    "ptp_no": "29",
+    "ptp_name": "193C",
+    "match_key_area": 150,
+    "supply_area": 193.96,
+    "exclusive_area": 150.09
+  },
+  "0f20c700-14a2-4506-a86e-64ca429d6a52_111515_30": {
+    "cid": "0f20c700-14a2-4506-a86e-64ca429d6a52",
+    "nid": "111515",
+    "ptp_no": "30",
+    "ptp_name": "194D",
+    "match_key_area": 150,
+    "supply_area": 194.2,
+    "exclusive_area": 150.09
+  },
+  "36ec2b6c-d95b-4309-b8ea-1d053cac3d02_134062_1": {
+    "cid": "36ec2b6c-d95b-4309-b8ea-1d053cac3d02",
+    "nid": "134062",
+    "ptp_no": "1",
+    "ptp_name": "50A",
+    "match_key_area": 35,
+    "supply_area": 50.73,
+    "exclusive_area": 34.99
+  },
+  "36ec2b6c-d95b-4309-b8ea-1d053cac3d02_134062_2": {
+    "cid": "36ec2b6c-d95b-4309-b8ea-1d053cac3d02",
+    "nid": "134062",
+    "ptp_no": "2",
+    "ptp_name": "50B",
+    "match_key_area": 35,
+    "supply_area": 50.87,
+    "exclusive_area": 34.99
+  },
+  "36ec2b6c-d95b-4309-b8ea-1d053cac3d02_134062_4": {
+    "cid": "36ec2b6c-d95b-4309-b8ea-1d053cac3d02",
+    "nid": "134062",
+    "ptp_no": "4",
+    "ptp_name": "70A",
+    "match_key_area": 50,
+    "supply_area": 70.91,
+    "exclusive_area": 49.69
+  },
+  "36ec2b6c-d95b-4309-b8ea-1d053cac3d02_134062_3": {
+    "cid": "36ec2b6c-d95b-4309-b8ea-1d053cac3d02",
+    "nid": "134062",
+    "ptp_no": "3",
+    "ptp_name": "70B",
+    "match_key_area": 50,
+    "supply_area": 70.87,
+    "exclusive_area": 49.69
+  },
+  "36ec2b6c-d95b-4309-b8ea-1d053cac3d02_134062_5": {
+    "cid": "36ec2b6c-d95b-4309-b8ea-1d053cac3d02",
+    "nid": "134062",
+    "ptp_no": "5",
+    "ptp_name": "85A",
+    "match_key_area": 60,
+    "supply_area": 85.59,
+    "exclusive_area": 59.97
+  },
+  "36ec2b6c-d95b-4309-b8ea-1d053cac3d02_134062_6": {
+    "cid": "36ec2b6c-d95b-4309-b8ea-1d053cac3d02",
+    "nid": "134062",
+    "ptp_no": "6",
+    "ptp_name": "86B",
+    "match_key_area": 60,
+    "supply_area": 86.99,
+    "exclusive_area": 59.98
+  },
+  "36ec2b6c-d95b-4309-b8ea-1d053cac3d02_134062_12": {
+    "cid": "36ec2b6c-d95b-4309-b8ea-1d053cac3d02",
+    "nid": "134062",
+    "ptp_no": "12",
+    "ptp_name": "110A",
+    "match_key_area": 85,
+    "supply_area": 110.41,
+    "exclusive_area": 84.82
+  },
+  "36ec2b6c-d95b-4309-b8ea-1d053cac3d02_134062_13": {
+    "cid": "36ec2b6c-d95b-4309-b8ea-1d053cac3d02",
+    "nid": "134062",
+    "ptp_no": "13",
+    "ptp_name": "111B",
+    "match_key_area": 85,
+    "supply_area": 111.53,
+    "exclusive_area": 84.85
+  },
+  "36ec2b6c-d95b-4309-b8ea-1d053cac3d02_134062_14": {
+    "cid": "36ec2b6c-d95b-4309-b8ea-1d053cac3d02",
+    "nid": "134062",
+    "ptp_no": "14",
+    "ptp_name": "111C",
+    "match_key_area": 85,
+    "supply_area": 111.91,
+    "exclusive_area": 84.9
+  },
+  "36ec2b6c-d95b-4309-b8ea-1d053cac3d02_134062_16": {
+    "cid": "36ec2b6c-d95b-4309-b8ea-1d053cac3d02",
+    "nid": "134062",
+    "ptp_no": "16",
+    "ptp_name": "124A",
+    "match_key_area": 97,
+    "supply_area": 124.23,
+    "exclusive_area": 96.95
+  },
+  "36ec2b6c-d95b-4309-b8ea-1d053cac3d02_134062_17": {
+    "cid": "36ec2b6c-d95b-4309-b8ea-1d053cac3d02",
+    "nid": "134062",
+    "ptp_no": "17",
+    "ptp_name": "124B",
+    "match_key_area": 97,
+    "supply_area": 124.13,
+    "exclusive_area": 96.91
+  },
+  "36ec2b6c-d95b-4309-b8ea-1d053cac3d02_134062_7": {
+    "cid": "36ec2b6c-d95b-4309-b8ea-1d053cac3d02",
+    "nid": "134062",
+    "ptp_no": "7",
+    "ptp_name": "144A",
+    "match_key_area": 113,
+    "supply_area": 144.05,
+    "exclusive_area": 112.85
+  },
+  "36ec2b6c-d95b-4309-b8ea-1d053cac3d02_134062_8": {
+    "cid": "36ec2b6c-d95b-4309-b8ea-1d053cac3d02",
+    "nid": "134062",
+    "ptp_no": "8",
+    "ptp_name": "145B",
+    "match_key_area": 113,
+    "supply_area": 145.25,
+    "exclusive_area": 112.99
+  },
+  "36ec2b6c-d95b-4309-b8ea-1d053cac3d02_134062_10": {
+    "cid": "36ec2b6c-d95b-4309-b8ea-1d053cac3d02",
+    "nid": "134062",
+    "ptp_no": "10",
+    "ptp_name": "169A",
+    "match_key_area": 133,
+    "supply_area": 169.52,
+    "exclusive_area": 132.81
+  },
+  "36ec2b6c-d95b-4309-b8ea-1d053cac3d02_134062_11": {
+    "cid": "36ec2b6c-d95b-4309-b8ea-1d053cac3d02",
+    "nid": "134062",
+    "ptp_no": "11",
+    "ptp_name": "170C",
+    "match_key_area": 133,
+    "supply_area": 170.24,
+    "exclusive_area": 132.99
+  },
+  "36ec2b6c-d95b-4309-b8ea-1d053cac3d02_134062_19": {
+    "cid": "36ec2b6c-d95b-4309-b8ea-1d053cac3d02",
+    "nid": "134062",
+    "ptp_no": "19",
+    "ptp_name": "201A",
+    "match_key_area": 157,
+    "supply_area": 201.84,
+    "exclusive_area": 156.96
+  },
+  "36ec2b6c-d95b-4309-b8ea-1d053cac3d02_134062_20": {
+    "cid": "36ec2b6c-d95b-4309-b8ea-1d053cac3d02",
+    "nid": "134062",
+    "ptp_no": "20",
+    "ptp_name": "202B",
+    "match_key_area": 157,
+    "supply_area": 202.02,
+    "exclusive_area": 156.62
+  },
+  "36ec2b6c-d95b-4309-b8ea-1d053cac3d02_134062_21": {
+    "cid": "36ec2b6c-d95b-4309-b8ea-1d053cac3d02",
+    "nid": "134062",
+    "ptp_no": "21",
+    "ptp_name": "220A",
+    "match_key_area": 172,
+    "supply_area": 220.23,
+    "exclusive_area": 171.65
+  },
+  "36ec2b6c-d95b-4309-b8ea-1d053cac3d02_134062_22": {
+    "cid": "36ec2b6c-d95b-4309-b8ea-1d053cac3d02",
+    "nid": "134062",
+    "ptp_no": "22",
+    "ptp_name": "220B",
+    "match_key_area": 172,
+    "supply_area": 220.45,
+    "exclusive_area": 171.64
+  },
+  "36ec2b6c-d95b-4309-b8ea-1d053cac3d02_134062_26": {
+    "cid": "36ec2b6c-d95b-4309-b8ea-1d053cac3d02",
+    "nid": "134062",
+    "ptp_no": "26",
+    "ptp_name": "230P1",
+    "match_key_area": 180,
+    "supply_area": 230.22,
+    "exclusive_area": 179.56
+  },
+  "10753132-1423-495f-9154-13137240675c_22675_1": {
+    "cid": "10753132-1423-495f-9154-13137240675c",
+    "nid": "22675",
+    "ptp_no": "1",
+    "ptp_name": "52",
+    "match_key_area": 35,
+    "supply_area": 52.99,
+    "exclusive_area": 35.24
+  },
+  "10753132-1423-495f-9154-13137240675c_22675_3": {
+    "cid": "10753132-1423-495f-9154-13137240675c",
+    "nid": "22675",
+    "ptp_no": "3",
+    "ptp_name": "86A",
+    "match_key_area": 60,
+    "supply_area": 86.85,
+    "exclusive_area": 59.95
+  },
+  "10753132-1423-495f-9154-13137240675c_22675_4": {
+    "cid": "10753132-1423-495f-9154-13137240675c",
+    "nid": "22675",
+    "ptp_no": "4",
+    "ptp_name": "86B",
+    "match_key_area": 60,
+    "supply_area": 86.74,
+    "exclusive_area": 59.86
+  },
+  "10753132-1423-495f-9154-13137240675c_22675_2": {
+    "cid": "10753132-1423-495f-9154-13137240675c",
+    "nid": "22675",
+    "ptp_no": "2",
+    "ptp_name": "87C",
+    "match_key_area": 60,
+    "supply_area": 87.14,
+    "exclusive_area": 59.64
+  },
+  "10753132-1423-495f-9154-13137240675c_22675_6": {
+    "cid": "10753132-1423-495f-9154-13137240675c",
+    "nid": "22675",
+    "ptp_no": "6",
+    "ptp_name": "108B",
+    "match_key_area": 85,
+    "supply_area": 108.82,
+    "exclusive_area": 84.79
+  },
+  "10753132-1423-495f-9154-13137240675c_22675_5": {
+    "cid": "10753132-1423-495f-9154-13137240675c",
+    "nid": "22675",
+    "ptp_no": "5",
+    "ptp_name": "108A",
+    "match_key_area": 85,
+    "supply_area": 108.23,
+    "exclusive_area": 84.97
+  },
+  "10753132-1423-495f-9154-13137240675c_22675_7": {
+    "cid": "10753132-1423-495f-9154-13137240675c",
+    "nid": "22675",
+    "ptp_no": "7",
+    "ptp_name": "108B1",
+    "match_key_area": 85,
+    "supply_area": 108.82,
+    "exclusive_area": 84.79
+  },
+  "10753132-1423-495f-9154-13137240675c_22675_8": {
+    "cid": "10753132-1423-495f-9154-13137240675c",
+    "nid": "22675",
+    "ptp_no": "8",
+    "ptp_name": "109C",
+    "match_key_area": 85,
+    "supply_area": 109.62,
+    "exclusive_area": 84.9
+  },
+  "10753132-1423-495f-9154-13137240675c_22675_9": {
+    "cid": "10753132-1423-495f-9154-13137240675c",
+    "nid": "22675",
+    "ptp_no": "9",
+    "ptp_name": "149",
+    "match_key_area": 122,
+    "supply_area": 149.93,
+    "exclusive_area": 121.63
+  },
+  "10753132-1423-495f-9154-13137240675c_22675_10": {
+    "cid": "10753132-1423-495f-9154-13137240675c",
+    "nid": "22675",
+    "ptp_no": "10",
+    "ptp_name": "174",
+    "match_key_area": 145,
+    "supply_area": 174.08,
+    "exclusive_area": 144.77
+  },
+  "5d63680e-a950-45e3-ac92-7d7728b3d6de_22627_1": {
+    "cid": "5d63680e-a950-45e3-ac92-7d7728b3d6de",
+    "nid": "22627",
+    "ptp_no": "1",
+    "ptp_name": "84",
+    "match_key_area": 60,
+    "supply_area": 84.75,
+    "exclusive_area": 59.96
+  },
+  "5d63680e-a950-45e3-ac92-7d7728b3d6de_22627_4": {
+    "cid": "5d63680e-a950-45e3-ac92-7d7728b3d6de",
+    "nid": "22627",
+    "ptp_no": "4",
+    "ptp_name": "109B",
+    "match_key_area": 85,
+    "supply_area": 109.47,
+    "exclusive_area": 84.97
+  },
+  "5d63680e-a950-45e3-ac92-7d7728b3d6de_22627_3": {
+    "cid": "5d63680e-a950-45e3-ac92-7d7728b3d6de",
+    "nid": "22627",
+    "ptp_no": "3",
+    "ptp_name": "109A",
+    "match_key_area": 85,
+    "supply_area": 109.29,
+    "exclusive_area": 84.88
+  },
+  "5d63680e-a950-45e3-ac92-7d7728b3d6de_22627_2": {
+    "cid": "5d63680e-a950-45e3-ac92-7d7728b3d6de",
+    "nid": "22627",
+    "ptp_no": "2",
+    "ptp_name": "111C",
+    "match_key_area": 85,
+    "supply_area": 111.52,
+    "exclusive_area": 84.8
+  },
+  "5d63680e-a950-45e3-ac92-7d7728b3d6de_22627_5": {
+    "cid": "5d63680e-a950-45e3-ac92-7d7728b3d6de",
+    "nid": "22627",
+    "ptp_no": "5",
+    "ptp_name": "149",
+    "match_key_area": 120,
+    "supply_area": 149.88,
+    "exclusive_area": 119.93
+  },
+  "6fc83398-a59a-4cd2-a79a-6f747be26dc6_634_4": {
+    "cid": "6fc83398-a59a-4cd2-a79a-6f747be26dc6",
+    "nid": "634",
+    "ptp_no": "4",
+    "ptp_name": "112",
+    "match_key_area": 83,
+    "supply_area": 112.4,
+    "exclusive_area": 83.06
+  },
+  "6fc83398-a59a-4cd2-a79a-6f747be26dc6_634_5": {
+    "cid": "6fc83398-a59a-4cd2-a79a-6f747be26dc6",
+    "nid": "634",
+    "ptp_no": "5",
+    "ptp_name": "132A",
+    "match_key_area": 100,
+    "supply_area": 132.23,
+    "exclusive_area": 100.31
+  },
+  "6fc83398-a59a-4cd2-a79a-6f747be26dc6_634_6": {
+    "cid": "6fc83398-a59a-4cd2-a79a-6f747be26dc6",
+    "nid": "634",
+    "ptp_no": "6",
+    "ptp_name": "132B",
+    "match_key_area": 101,
+    "supply_area": 132.23,
+    "exclusive_area": 100.82
+  },
+  "6fc83398-a59a-4cd2-a79a-6f747be26dc6_634_7": {
+    "cid": "6fc83398-a59a-4cd2-a79a-6f747be26dc6",
+    "nid": "634",
+    "ptp_no": "7",
+    "ptp_name": "142",
+    "match_key_area": 110,
+    "supply_area": 142.15,
+    "exclusive_area": 110.25
+  },
+  "6fc83398-a59a-4cd2-a79a-6f747be26dc6_634_8": {
+    "cid": "6fc83398-a59a-4cd2-a79a-6f747be26dc6",
+    "nid": "634",
+    "ptp_no": "8",
+    "ptp_name": "155A",
+    "match_key_area": 121,
+    "supply_area": 155.37,
+    "exclusive_area": 121.23
+  },
+  "6fc83398-a59a-4cd2-a79a-6f747be26dc6_634_9": {
+    "cid": "6fc83398-a59a-4cd2-a79a-6f747be26dc6",
+    "nid": "634",
+    "ptp_no": "9",
+    "ptp_name": "161",
+    "match_key_area": 126,
+    "supply_area": 161.98,
+    "exclusive_area": 126.18
+  },
+  "6fc83398-a59a-4cd2-a79a-6f747be26dc6_634_10": {
+    "cid": "6fc83398-a59a-4cd2-a79a-6f747be26dc6",
+    "nid": "634",
+    "ptp_no": "10",
+    "ptp_name": "165",
+    "match_key_area": 129,
+    "supply_area": 165.29,
+    "exclusive_area": 128.97
+  },
+  "6fc83398-a59a-4cd2-a79a-6f747be26dc6_634_11": {
+    "cid": "6fc83398-a59a-4cd2-a79a-6f747be26dc6",
+    "nid": "634",
+    "ptp_no": "11",
+    "ptp_name": "168",
+    "match_key_area": 132,
+    "supply_area": 168.6,
+    "exclusive_area": 131.76
+  },
+  "6fc83398-a59a-4cd2-a79a-6f747be26dc6_634_12": {
+    "cid": "6fc83398-a59a-4cd2-a79a-6f747be26dc6",
+    "nid": "634",
+    "ptp_no": "12",
+    "ptp_name": "171",
+    "match_key_area": 136,
+    "supply_area": 171.9,
+    "exclusive_area": 135.99
+  },
+  "6fc83398-a59a-4cd2-a79a-6f747be26dc6_634_13": {
+    "cid": "6fc83398-a59a-4cd2-a79a-6f747be26dc6",
+    "nid": "634",
+    "ptp_no": "13",
+    "ptp_name": "175",
+    "match_key_area": 137,
+    "supply_area": 175.21,
+    "exclusive_area": 136.98
+  },
+  "6fc83398-a59a-4cd2-a79a-6f747be26dc6_634_14": {
+    "cid": "6fc83398-a59a-4cd2-a79a-6f747be26dc6",
+    "nid": "634",
+    "ptp_no": "14",
+    "ptp_name": "188",
+    "match_key_area": 149,
+    "supply_area": 188.43,
+    "exclusive_area": 148.77
+  },
+  "6fc83398-a59a-4cd2-a79a-6f747be26dc6_634_15": {
+    "cid": "6fc83398-a59a-4cd2-a79a-6f747be26dc6",
+    "nid": "634",
+    "ptp_no": "15",
+    "ptp_name": "211",
+    "match_key_area": 163,
+    "supply_area": 211.57,
+    "exclusive_area": 163.44
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_3": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "3",
+    "ptp_name": "80A",
+    "match_key_area": 60,
+    "supply_area": 80.63,
+    "exclusive_area": 59.96
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_2": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "2",
+    "ptp_name": "80B",
+    "match_key_area": 60,
+    "supply_area": 80.38,
+    "exclusive_area": 59.96
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_4": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "4",
+    "ptp_name": "99C",
+    "match_key_area": 75,
+    "supply_area": 99.45,
+    "exclusive_area": 74.92
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_6": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "6",
+    "ptp_name": "100A",
+    "match_key_area": 75,
+    "supply_area": 100.28,
+    "exclusive_area": 74.97
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_5": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "5",
+    "ptp_name": "100B",
+    "match_key_area": 75,
+    "supply_area": 100.26,
+    "exclusive_area": 74.97
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_10": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "10",
+    "ptp_name": "111D",
+    "match_key_area": 85,
+    "supply_area": 111.79,
+    "exclusive_area": 84.95
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_21": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "21",
+    "ptp_name": "111O",
+    "match_key_area": 85,
+    "supply_area": 111.72,
+    "exclusive_area": 84.97
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_17": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "17",
+    "ptp_name": "112K",
+    "match_key_area": 85,
+    "supply_area": 112.85,
+    "exclusive_area": 84.95
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_8": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "8",
+    "ptp_name": "112B",
+    "match_key_area": 85,
+    "supply_area": 112.65,
+    "exclusive_area": 84.98
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_7": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "7",
+    "ptp_name": "112A",
+    "match_key_area": 85,
+    "supply_area": 112.73,
+    "exclusive_area": 84.98
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_25": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "25",
+    "ptp_name": "112S",
+    "match_key_area": 85,
+    "supply_area": 112.21,
+    "exclusive_area": 84.96
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_12": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "12",
+    "ptp_name": "112F1",
+    "match_key_area": 85,
+    "supply_area": 112.96,
+    "exclusive_area": 84.98
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_11": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "11",
+    "ptp_name": "112E",
+    "match_key_area": 85,
+    "supply_area": 112.38,
+    "exclusive_area": 84.96
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_13": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "13",
+    "ptp_name": "112G",
+    "match_key_area": 85,
+    "supply_area": 112.46,
+    "exclusive_area": 84.98
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_23": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "23",
+    "ptp_name": "112Q",
+    "match_key_area": 85,
+    "supply_area": 112.51,
+    "exclusive_area": 84.98
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_22": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "22",
+    "ptp_name": "112P",
+    "match_key_area": 85,
+    "supply_area": 112.6,
+    "exclusive_area": 84.98
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_24": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "24",
+    "ptp_name": "112R",
+    "match_key_area": 85,
+    "supply_area": 112.18,
+    "exclusive_area": 84.96
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_9": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "9",
+    "ptp_name": "112C",
+    "match_key_area": 85,
+    "supply_area": 112.27,
+    "exclusive_area": 84.94
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_20": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "20",
+    "ptp_name": "113N",
+    "match_key_area": 85,
+    "supply_area": 113.4,
+    "exclusive_area": 84.98
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_18": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "18",
+    "ptp_name": "113L",
+    "match_key_area": 85,
+    "supply_area": 113.31,
+    "exclusive_area": 84.99
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_19": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "19",
+    "ptp_name": "113M",
+    "match_key_area": 85,
+    "supply_area": 113.76,
+    "exclusive_area": 84.93
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_14": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "14",
+    "ptp_name": "113H",
+    "match_key_area": 85,
+    "supply_area": 113.43,
+    "exclusive_area": 84.97
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_15": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "15",
+    "ptp_name": "113I",
+    "match_key_area": 85,
+    "supply_area": 113.73,
+    "exclusive_area": 84.92
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_33": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "33",
+    "ptp_name": "133H",
+    "match_key_area": 102,
+    "supply_area": 133.8,
+    "exclusive_area": 101.99
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_27": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "27",
+    "ptp_name": "135B",
+    "match_key_area": 102,
+    "supply_area": 135.8,
+    "exclusive_area": 101.94
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_26": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "26",
+    "ptp_name": "135A",
+    "match_key_area": 102,
+    "supply_area": 135.36,
+    "exclusive_area": 101.96
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_28": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "28",
+    "ptp_name": "135C",
+    "match_key_area": 102,
+    "supply_area": 135.23,
+    "exclusive_area": 101.94
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_29": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "29",
+    "ptp_name": "136D",
+    "match_key_area": 102,
+    "supply_area": 136.21,
+    "exclusive_area": 101.97
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_30": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "30",
+    "ptp_name": "136E",
+    "match_key_area": 102,
+    "supply_area": 136.21,
+    "exclusive_area": 101.97
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_31": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "31",
+    "ptp_name": "136F",
+    "match_key_area": 102,
+    "supply_area": 136.13,
+    "exclusive_area": 101.94
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_32": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "32",
+    "ptp_name": "136G",
+    "match_key_area": 102,
+    "supply_area": 136.13,
+    "exclusive_area": 101.94
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_40": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "40",
+    "ptp_name": "152G",
+    "match_key_area": 117,
+    "supply_area": 152.7,
+    "exclusive_area": 116.92
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_37": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "37",
+    "ptp_name": "153D",
+    "match_key_area": 117,
+    "supply_area": 153.43,
+    "exclusive_area": 116.95
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_34": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "34",
+    "ptp_name": "153A",
+    "match_key_area": 117,
+    "supply_area": 153.25,
+    "exclusive_area": 116.96
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_35": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "35",
+    "ptp_name": "153B",
+    "match_key_area": 117,
+    "supply_area": 153.27,
+    "exclusive_area": 116.88
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_41": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "41",
+    "ptp_name": "153H",
+    "match_key_area": 117,
+    "supply_area": 153.95,
+    "exclusive_area": 116.92
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_38": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "38",
+    "ptp_name": "154E",
+    "match_key_area": 117,
+    "supply_area": 154.18,
+    "exclusive_area": 116.93
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_39": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "39",
+    "ptp_name": "154F",
+    "match_key_area": 117,
+    "supply_area": 154.87,
+    "exclusive_area": 116.95
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_36": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "36",
+    "ptp_name": "154C",
+    "match_key_area": 117,
+    "supply_area": 154.62,
+    "exclusive_area": 116.97
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_45": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "45",
+    "ptp_name": "174D",
+    "match_key_area": 134,
+    "supply_area": 174.19,
+    "exclusive_area": 133.95
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_44": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "44",
+    "ptp_name": "175C",
+    "match_key_area": 134,
+    "supply_area": 175.85,
+    "exclusive_area": 133.91
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_49": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "49",
+    "ptp_name": "220D",
+    "match_key_area": 169,
+    "supply_area": 220.21,
+    "exclusive_area": 168.65
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_50": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "50",
+    "ptp_name": "222E",
+    "match_key_area": 169,
+    "supply_area": 222.51,
+    "exclusive_area": 168.94
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_48": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "48",
+    "ptp_name": "224C",
+    "match_key_area": 169,
+    "supply_area": 224.88,
+    "exclusive_area": 168.9
+  },
+  "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a_142155_53": {
+    "cid": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
+    "nid": "142155",
+    "ptp_no": "53",
+    "ptp_name": "226H",
+    "match_key_area": 169,
+    "supply_area": 226.17,
+    "exclusive_area": 168.87
+  },
+  "ad9ab58d-da86-408f-8f29-a65f46707133_22746_1": {
+    "cid": "ad9ab58d-da86-408f-8f29-a65f46707133",
+    "nid": "22746",
+    "ptp_no": "1",
+    "ptp_name": "42A",
+    "match_key_area": 28,
+    "supply_area": 42.28,
+    "exclusive_area": 27.68
+  },
+  "ad9ab58d-da86-408f-8f29-a65f46707133_22746_2": {
+    "cid": "ad9ab58d-da86-408f-8f29-a65f46707133",
+    "nid": "22746",
+    "ptp_no": "2",
+    "ptp_name": "42B",
+    "match_key_area": 28,
+    "supply_area": 42.6,
+    "exclusive_area": 27.68
+  },
+  "ad9ab58d-da86-408f-8f29-a65f46707133_22746_3": {
+    "cid": "ad9ab58d-da86-408f-8f29-a65f46707133",
+    "nid": "22746",
+    "ptp_no": "3",
+    "ptp_name": "42C",
+    "match_key_area": 28,
+    "supply_area": 42.52,
+    "exclusive_area": 27.68
+  },
+  "ad9ab58d-da86-408f-8f29-a65f46707133_22746_5": {
+    "cid": "ad9ab58d-da86-408f-8f29-a65f46707133",
+    "nid": "22746",
+    "ptp_no": "5",
+    "ptp_name": "82B",
+    "match_key_area": 60,
+    "supply_area": 82.32,
+    "exclusive_area": 59.99
+  },
+  "ad9ab58d-da86-408f-8f29-a65f46707133_22746_7": {
+    "cid": "ad9ab58d-da86-408f-8f29-a65f46707133",
+    "nid": "22746",
+    "ptp_no": "7",
+    "ptp_name": "82D",
+    "match_key_area": 60,
+    "supply_area": 82.13,
+    "exclusive_area": 59.99
+  },
+  "ad9ab58d-da86-408f-8f29-a65f46707133_22746_10": {
+    "cid": "ad9ab58d-da86-408f-8f29-a65f46707133",
+    "nid": "22746",
+    "ptp_no": "10",
+    "ptp_name": "109A",
+    "match_key_area": 85,
+    "supply_area": 109.2,
+    "exclusive_area": 84.99
+  },
+  "ad9ab58d-da86-408f-8f29-a65f46707133_22746_11": {
+    "cid": "ad9ab58d-da86-408f-8f29-a65f46707133",
+    "nid": "22746",
+    "ptp_no": "11",
+    "ptp_name": "109B",
+    "match_key_area": 85,
+    "supply_area": 109.35,
+    "exclusive_area": 84.99
+  },
+  "ad9ab58d-da86-408f-8f29-a65f46707133_22746_12": {
+    "cid": "ad9ab58d-da86-408f-8f29-a65f46707133",
+    "nid": "22746",
+    "ptp_no": "12",
+    "ptp_name": "109C",
+    "match_key_area": 85,
+    "supply_area": 109.34,
+    "exclusive_area": 84.99
+  },
+  "ad9ab58d-da86-408f-8f29-a65f46707133_22746_19": {
+    "cid": "ad9ab58d-da86-408f-8f29-a65f46707133",
+    "nid": "22746",
+    "ptp_no": "19",
+    "ptp_name": "109J",
+    "match_key_area": 85,
+    "supply_area": 109.31,
+    "exclusive_area": 84.99
+  },
+  "ad9ab58d-da86-408f-8f29-a65f46707133_22746_15": {
+    "cid": "ad9ab58d-da86-408f-8f29-a65f46707133",
+    "nid": "22746",
+    "ptp_no": "15",
+    "ptp_name": "109F",
+    "match_key_area": 85,
+    "supply_area": 109.26,
+    "exclusive_area": 84.99
+  },
+  "ad9ab58d-da86-408f-8f29-a65f46707133_22746_16": {
+    "cid": "ad9ab58d-da86-408f-8f29-a65f46707133",
+    "nid": "22746",
+    "ptp_no": "16",
+    "ptp_name": "109G",
+    "match_key_area": 85,
+    "supply_area": 109.4,
+    "exclusive_area": 84.99
+  },
+  "ad9ab58d-da86-408f-8f29-a65f46707133_22746_17": {
+    "cid": "ad9ab58d-da86-408f-8f29-a65f46707133",
+    "nid": "22746",
+    "ptp_no": "17",
+    "ptp_name": "110H",
+    "match_key_area": 85,
+    "supply_area": 110.3,
+    "exclusive_area": 84.99
+  },
+  "ad9ab58d-da86-408f-8f29-a65f46707133_22746_20": {
+    "cid": "ad9ab58d-da86-408f-8f29-a65f46707133",
+    "nid": "22746",
+    "ptp_no": "20",
+    "ptp_name": "126",
+    "match_key_area": 99,
+    "supply_area": 126.59,
+    "exclusive_area": 98.55
+  },
+  "ad9ab58d-da86-408f-8f29-a65f46707133_22746_22": {
+    "cid": "ad9ab58d-da86-408f-8f29-a65f46707133",
+    "nid": "22746",
+    "ptp_no": "22",
+    "ptp_name": "158B",
+    "match_key_area": 124,
+    "supply_area": 158.87,
+    "exclusive_area": 124.22
+  },
+  "ad9ab58d-da86-408f-8f29-a65f46707133_22746_21": {
+    "cid": "ad9ab58d-da86-408f-8f29-a65f46707133",
+    "nid": "22746",
+    "ptp_no": "21",
+    "ptp_name": "158A",
+    "match_key_area": 124,
+    "supply_area": 158.69,
+    "exclusive_area": 124.22
+  },
+  "6283dd45-f83e-4d9c-9c2b-e8def0ac29d1_236_1": {
+    "cid": "6283dd45-f83e-4d9c-9c2b-e8def0ac29d1",
+    "nid": "236",
+    "ptp_no": "1",
+    "ptp_name": "101",
+    "match_key_area": 77,
+    "supply_area": 101.52,
+    "exclusive_area": 76.79
+  },
+  "6283dd45-f83e-4d9c-9c2b-e8def0ac29d1_236_2": {
+    "cid": "6283dd45-f83e-4d9c-9c2b-e8def0ac29d1",
+    "nid": "236",
+    "ptp_no": "2",
+    "ptp_name": "115",
+    "match_key_area": 84,
+    "supply_area": 115.54,
+    "exclusive_area": 84.43
+  },
+  "3b36a481-b36e-4263-add8-2138f291430d_22853_1": {
+    "cid": "3b36a481-b36e-4263-add8-2138f291430d",
+    "nid": "22853",
+    "ptp_no": "1",
+    "ptp_name": "84A",
+    "match_key_area": 60,
+    "supply_area": 84.74,
+    "exclusive_area": 59.98
+  },
+  "3b36a481-b36e-4263-add8-2138f291430d_22853_2": {
+    "cid": "3b36a481-b36e-4263-add8-2138f291430d",
+    "nid": "22853",
+    "ptp_no": "2",
+    "ptp_name": "84B",
+    "match_key_area": 60,
+    "supply_area": 84.23,
+    "exclusive_area": 59.97
+  },
+  "3b36a481-b36e-4263-add8-2138f291430d_22853_3": {
+    "cid": "3b36a481-b36e-4263-add8-2138f291430d",
+    "nid": "22853",
+    "ptp_no": "3",
+    "ptp_name": "116A",
+    "match_key_area": 85,
+    "supply_area": 116.87,
+    "exclusive_area": 84.94
+  },
+  "3b36a481-b36e-4263-add8-2138f291430d_22853_5": {
+    "cid": "3b36a481-b36e-4263-add8-2138f291430d",
+    "nid": "22853",
+    "ptp_no": "5",
+    "ptp_name": "116C",
+    "match_key_area": 85,
+    "supply_area": 116.11,
+    "exclusive_area": 84.98
+  },
+  "3b36a481-b36e-4263-add8-2138f291430d_22853_4": {
+    "cid": "3b36a481-b36e-4263-add8-2138f291430d",
+    "nid": "22853",
+    "ptp_no": "4",
+    "ptp_name": "116B",
+    "match_key_area": 85,
+    "supply_area": 116.71,
+    "exclusive_area": 84.99
+  },
+  "3b36a481-b36e-4263-add8-2138f291430d_22853_6": {
+    "cid": "3b36a481-b36e-4263-add8-2138f291430d",
+    "nid": "22853",
+    "ptp_no": "6",
+    "ptp_name": "116D",
+    "match_key_area": 85,
+    "supply_area": 116.7,
+    "exclusive_area": 84.98
+  },
+  "3b36a481-b36e-4263-add8-2138f291430d_22853_7": {
+    "cid": "3b36a481-b36e-4263-add8-2138f291430d",
+    "nid": "22853",
+    "ptp_no": "7",
+    "ptp_name": "165A",
+    "match_key_area": 132,
+    "supply_area": 165.52,
+    "exclusive_area": 132.43
+  },
+  "3b36a481-b36e-4263-add8-2138f291430d_22853_8": {
+    "cid": "3b36a481-b36e-4263-add8-2138f291430d",
+    "nid": "22853",
+    "ptp_no": "8",
+    "ptp_name": "166B",
+    "match_key_area": 132,
+    "supply_area": 166.05,
+    "exclusive_area": 132.17
+  },
+  "3b36a481-b36e-4263-add8-2138f291430d_22853_10": {
+    "cid": "3b36a481-b36e-4263-add8-2138f291430d",
+    "nid": "22853",
+    "ptp_no": "10",
+    "ptp_name": "199B",
+    "match_key_area": 165,
+    "supply_area": 199.8,
+    "exclusive_area": 165.05
+  },
+  "3b36a481-b36e-4263-add8-2138f291430d_22853_9": {
+    "cid": "3b36a481-b36e-4263-add8-2138f291430d",
+    "nid": "22853",
+    "ptp_no": "9",
+    "ptp_name": "200A",
+    "match_key_area": 165,
+    "supply_area": 200.12,
+    "exclusive_area": 165.44
+  },
+  "3b36a481-b36e-4263-add8-2138f291430d_22853_11": {
+    "cid": "3b36a481-b36e-4263-add8-2138f291430d",
+    "nid": "22853",
+    "ptp_no": "11",
+    "ptp_name": "232A",
+    "match_key_area": 195,
+    "supply_area": 232.68,
+    "exclusive_area": 194.51
+  },
+  "3b36a481-b36e-4263-add8-2138f291430d_22853_12": {
+    "cid": "3b36a481-b36e-4263-add8-2138f291430d",
+    "nid": "22853",
+    "ptp_no": "12",
+    "ptp_name": "232B",
+    "match_key_area": 195,
+    "supply_area": 232.69,
+    "exclusive_area": 194.69
+  },
+  "3b36a481-b36e-4263-add8-2138f291430d_22853_13": {
+    "cid": "3b36a481-b36e-4263-add8-2138f291430d",
+    "nid": "22853",
+    "ptp_no": "13",
+    "ptp_name": "264",
+    "match_key_area": 216,
+    "supply_area": 264.8,
+    "exclusive_area": 216.49
+  },
+  "3b36a481-b36e-4263-add8-2138f291430d_22853_14": {
+    "cid": "3b36a481-b36e-4263-add8-2138f291430d",
+    "nid": "22853",
+    "ptp_no": "14",
+    "ptp_name": "297",
+    "match_key_area": 245,
+    "supply_area": 297.53,
+    "exclusive_area": 244.54
+  },
+  "3b36a481-b36e-4263-add8-2138f291430d_22853_15": {
+    "cid": "3b36a481-b36e-4263-add8-2138f291430d",
+    "nid": "22853",
+    "ptp_no": "15",
+    "ptp_name": "301A",
+    "match_key_area": 245,
+    "supply_area": 301.06,
+    "exclusive_area": 244.62
+  },
+  "3b36a481-b36e-4263-add8-2138f291430d_22853_16": {
+    "cid": "3b36a481-b36e-4263-add8-2138f291430d",
+    "nid": "22853",
+    "ptp_no": "16",
+    "ptp_name": "301B",
+    "match_key_area": 245,
+    "supply_area": 301.38,
+    "exclusive_area": 244.97
+  },
+  "730f97b4-f4fb-49f4-96bb-a556eeb48ef4_639_1": {
+    "cid": "730f97b4-f4fb-49f4-96bb-a556eeb48ef4",
+    "nid": "639",
+    "ptp_no": "1",
+    "ptp_name": "112A",
+    "match_key_area": 76,
+    "supply_area": 112.39,
+    "exclusive_area": 76.49
+  },
+  "730f97b4-f4fb-49f4-96bb-a556eeb48ef4_639_5": {
+    "cid": "730f97b4-f4fb-49f4-96bb-a556eeb48ef4",
+    "nid": "639",
+    "ptp_no": "5",
+    "ptp_name": "112B",
+    "match_key_area": 76,
+    "supply_area": 112.39,
+    "exclusive_area": 76.49
+  },
+  "730f97b4-f4fb-49f4-96bb-a556eeb48ef4_639_2": {
+    "cid": "730f97b4-f4fb-49f4-96bb-a556eeb48ef4",
+    "nid": "639",
+    "ptp_no": "2",
+    "ptp_name": "115T",
+    "match_key_area": 82,
+    "supply_area": 115.7,
+    "exclusive_area": 81.75
+  },
+  "730f97b4-f4fb-49f4-96bb-a556eeb48ef4_639_3": {
+    "cid": "730f97b4-f4fb-49f4-96bb-a556eeb48ef4",
+    "nid": "639",
+    "ptp_no": "3",
+    "ptp_name": "119B",
+    "match_key_area": 83,
+    "supply_area": 119.0,
+    "exclusive_area": 82.61
+  },
+  "730f97b4-f4fb-49f4-96bb-a556eeb48ef4_639_4": {
+    "cid": "730f97b4-f4fb-49f4-96bb-a556eeb48ef4",
+    "nid": "639",
+    "ptp_no": "4",
+    "ptp_name": "119A",
+    "match_key_area": 83,
+    "supply_area": 119.0,
+    "exclusive_area": 82.51
+  },
+  "dd976eb4-fbfd-4fce-acae-e043a72c21c9_3037_12": {
+    "cid": "dd976eb4-fbfd-4fce-acae-e043a72c21c9",
+    "nid": "3037",
+    "ptp_no": "12",
+    "ptp_name": "114A",
+    "match_key_area": 107,
+    "supply_area": 114.08,
+    "exclusive_area": 107.16
+  },
+  "dd976eb4-fbfd-4fce-acae-e043a72c21c9_3037_14": {
+    "cid": "dd976eb4-fbfd-4fce-acae-e043a72c21c9",
+    "nid": "3037",
+    "ptp_no": "14",
+    "ptp_name": "115C",
+    "match_key_area": 108,
+    "supply_area": 115.41,
+    "exclusive_area": 108.31
+  },
+  "dd976eb4-fbfd-4fce-acae-e043a72c21c9_3037_13": {
+    "cid": "dd976eb4-fbfd-4fce-acae-e043a72c21c9",
+    "nid": "3037",
+    "ptp_no": "13",
+    "ptp_name": "115B",
+    "match_key_area": 108,
+    "supply_area": 115.4,
+    "exclusive_area": 108.3
+  },
+  "dd976eb4-fbfd-4fce-acae-e043a72c21c9_3037_1": {
+    "cid": "dd976eb4-fbfd-4fce-acae-e043a72c21c9",
+    "nid": "3037",
+    "ptp_no": "1",
+    "ptp_name": "115D",
+    "match_key_area": 108,
+    "supply_area": 115.42,
+    "exclusive_area": 108.32
+  },
+  "dd976eb4-fbfd-4fce-acae-e043a72c21c9_3037_16": {
+    "cid": "dd976eb4-fbfd-4fce-acae-e043a72c21c9",
+    "nid": "3037",
+    "ptp_no": "16",
+    "ptp_name": "116E",
+    "match_key_area": 109,
+    "supply_area": 116.54,
+    "exclusive_area": 108.88
+  },
+  "dd976eb4-fbfd-4fce-acae-e043a72c21c9_3037_17": {
+    "cid": "dd976eb4-fbfd-4fce-acae-e043a72c21c9",
+    "nid": "3037",
+    "ptp_no": "17",
+    "ptp_name": "116F",
+    "match_key_area": 109,
+    "supply_area": 116.94,
+    "exclusive_area": 109.24
+  },
+  "dd976eb4-fbfd-4fce-acae-e043a72c21c9_3037_18": {
+    "cid": "dd976eb4-fbfd-4fce-acae-e043a72c21c9",
+    "nid": "3037",
+    "ptp_no": "18",
+    "ptp_name": "116G",
+    "match_key_area": 109,
+    "supply_area": 116.39,
+    "exclusive_area": 109.29
+  },
+  "dd976eb4-fbfd-4fce-acae-e043a72c21c9_3037_19": {
+    "cid": "dd976eb4-fbfd-4fce-acae-e043a72c21c9",
+    "nid": "3037",
+    "ptp_no": "19",
+    "ptp_name": "118C",
+    "match_key_area": 111,
+    "supply_area": 118.1,
+    "exclusive_area": 110.82
+  },
+  "dd976eb4-fbfd-4fce-acae-e043a72c21c9_3037_2": {
+    "cid": "dd976eb4-fbfd-4fce-acae-e043a72c21c9",
+    "nid": "3037",
+    "ptp_no": "2",
+    "ptp_name": "119D",
+    "match_key_area": 111,
+    "supply_area": 119.26,
+    "exclusive_area": 111.38
+  },
+  "dd976eb4-fbfd-4fce-acae-e043a72c21c9_3037_15": {
+    "cid": "dd976eb4-fbfd-4fce-acae-e043a72c21c9",
+    "nid": "3037",
+    "ptp_no": "15",
+    "ptp_name": "119B",
+    "match_key_area": 108,
+    "supply_area": 119.37,
+    "exclusive_area": 108.36
+  },
+  "dd976eb4-fbfd-4fce-acae-e043a72c21c9_3037_20": {
+    "cid": "dd976eb4-fbfd-4fce-acae-e043a72c21c9",
+    "nid": "3037",
+    "ptp_no": "20",
+    "ptp_name": "119E",
+    "match_key_area": 112,
+    "supply_area": 119.33,
+    "exclusive_area": 112.05
+  },
+  "dd976eb4-fbfd-4fce-acae-e043a72c21c9_3037_21": {
+    "cid": "dd976eb4-fbfd-4fce-acae-e043a72c21c9",
+    "nid": "3037",
+    "ptp_no": "21",
+    "ptp_name": "126",
+    "match_key_area": 115,
+    "supply_area": 126.98,
+    "exclusive_area": 115.23
+  },
+  "dd976eb4-fbfd-4fce-acae-e043a72c21c9_3037_3": {
+    "cid": "dd976eb4-fbfd-4fce-acae-e043a72c21c9",
+    "nid": "3037",
+    "ptp_no": "3",
+    "ptp_name": "128A",
+    "match_key_area": 121,
+    "supply_area": 128.28,
+    "exclusive_area": 121.18
+  },
+  "dd976eb4-fbfd-4fce-acae-e043a72c21c9_3037_22": {
+    "cid": "dd976eb4-fbfd-4fce-acae-e043a72c21c9",
+    "nid": "3037",
+    "ptp_no": "22",
+    "ptp_name": "129C",
+    "match_key_area": 122,
+    "supply_area": 129.37,
+    "exclusive_area": 122.27
+  },
+  "dd976eb4-fbfd-4fce-acae-e043a72c21c9_3037_4": {
+    "cid": "dd976eb4-fbfd-4fce-acae-e043a72c21c9",
+    "nid": "3037",
+    "ptp_no": "4",
+    "ptp_name": "129B",
+    "match_key_area": 122,
+    "supply_area": 129.08,
+    "exclusive_area": 121.98
+  },
+  "dd976eb4-fbfd-4fce-acae-e043a72c21c9_3037_23": {
+    "cid": "dd976eb4-fbfd-4fce-acae-e043a72c21c9",
+    "nid": "3037",
+    "ptp_no": "23",
+    "ptp_name": "164A",
+    "match_key_area": 152,
+    "supply_area": 164.96,
+    "exclusive_area": 152.28
+  },
+  "dd976eb4-fbfd-4fce-acae-e043a72c21c9_3037_5": {
+    "cid": "dd976eb4-fbfd-4fce-acae-e043a72c21c9",
+    "nid": "3037",
+    "ptp_no": "5",
+    "ptp_name": "165B",
+    "match_key_area": 152,
+    "supply_area": 165.09,
+    "exclusive_area": 152.39
+  },
+  "dd976eb4-fbfd-4fce-acae-e043a72c21c9_3037_24": {
+    "cid": "dd976eb4-fbfd-4fce-acae-e043a72c21c9",
+    "nid": "3037",
+    "ptp_no": "24",
+    "ptp_name": "167A",
+    "match_key_area": 156,
+    "supply_area": 167.48,
+    "exclusive_area": 155.52
+  },
+  "dd976eb4-fbfd-4fce-acae-e043a72c21c9_3037_7": {
+    "cid": "dd976eb4-fbfd-4fce-acae-e043a72c21c9",
+    "nid": "3037",
+    "ptp_no": "7",
+    "ptp_name": "183",
+    "match_key_area": 170,
+    "supply_area": 183.49,
+    "exclusive_area": 170.38
+  },
+  "dd976eb4-fbfd-4fce-acae-e043a72c21c9_3037_25": {
+    "cid": "dd976eb4-fbfd-4fce-acae-e043a72c21c9",
+    "nid": "3037",
+    "ptp_no": "25",
+    "ptp_name": "188B",
+    "match_key_area": 171,
+    "supply_area": 188.94,
+    "exclusive_area": 171.43
+  },
+  "dd976eb4-fbfd-4fce-acae-e043a72c21c9_3037_8": {
+    "cid": "dd976eb4-fbfd-4fce-acae-e043a72c21c9",
+    "nid": "3037",
+    "ptp_no": "8",
+    "ptp_name": "188A",
+    "match_key_area": 171,
+    "supply_area": 188.25,
+    "exclusive_area": 170.81
+  },
+  "dd976eb4-fbfd-4fce-acae-e043a72c21c9_3037_9": {
+    "cid": "dd976eb4-fbfd-4fce-acae-e043a72c21c9",
+    "nid": "3037",
+    "ptp_no": "9",
+    "ptp_name": "197",
+    "match_key_area": 183,
+    "supply_area": 197.02,
+    "exclusive_area": 182.95
+  },
+  "dd976eb4-fbfd-4fce-acae-e043a72c21c9_3037_10": {
+    "cid": "dd976eb4-fbfd-4fce-acae-e043a72c21c9",
+    "nid": "3037",
+    "ptp_no": "10",
+    "ptp_name": "202",
+    "match_key_area": 183,
+    "supply_area": 202.05,
+    "exclusive_area": 183.41
+  },
+  "c863b7d6-2da5-4cbb-8a86-9679531c4367_610_2": {
+    "cid": "c863b7d6-2da5-4cbb-8a86-9679531c4367",
+    "nid": "610",
+    "ptp_no": "2",
+    "ptp_name": "103B",
+    "match_key_area": 85,
+    "supply_area": 103.12,
+    "exclusive_area": 84.7
+  },
+  "c863b7d6-2da5-4cbb-8a86-9679531c4367_610_1": {
+    "cid": "c863b7d6-2da5-4cbb-8a86-9679531c4367",
+    "nid": "610",
+    "ptp_no": "1",
+    "ptp_name": "104A",
+    "match_key_area": 85,
+    "supply_area": 104.39,
+    "exclusive_area": 84.75
+  },
+  "c863b7d6-2da5-4cbb-8a86-9679531c4367_610_3": {
+    "cid": "c863b7d6-2da5-4cbb-8a86-9679531c4367",
+    "nid": "610",
+    "ptp_no": "3",
+    "ptp_name": "138",
+    "match_key_area": 118,
+    "supply_area": 138.73,
+    "exclusive_area": 117.58
+  },
+  "c863b7d6-2da5-4cbb-8a86-9679531c4367_610_4": {
+    "cid": "c863b7d6-2da5-4cbb-8a86-9679531c4367",
+    "nid": "610",
+    "ptp_no": "4",
+    "ptp_name": "158",
+    "match_key_area": 136,
+    "supply_area": 158.84,
+    "exclusive_area": 136.32
+  },
+  "c863b7d6-2da5-4cbb-8a86-9679531c4367_610_5": {
+    "cid": "c863b7d6-2da5-4cbb-8a86-9679531c4367",
+    "nid": "610",
+    "ptp_no": "5",
+    "ptp_name": "182",
+    "match_key_area": 159,
+    "supply_area": 182.8,
+    "exclusive_area": 158.7
+  },
+  "c863b7d6-2da5-4cbb-8a86-9679531c4367_610_6": {
+    "cid": "c863b7d6-2da5-4cbb-8a86-9679531c4367",
+    "nid": "610",
+    "ptp_no": "6",
+    "ptp_name": "219",
+    "match_key_area": 192,
+    "supply_area": 219.66,
+    "exclusive_area": 192.23
+  },
+  "98ffcadd-764f-48cb-8f7f-d65326a88f06_23759_16": {
+    "cid": "98ffcadd-764f-48cb-8f7f-d65326a88f06",
+    "nid": "23759",
+    "ptp_no": "16",
+    "ptp_name": "86T2",
+    "match_key_area": 60,
+    "supply_area": 86.57,
+    "exclusive_area": 59.96
+  },
+  "98ffcadd-764f-48cb-8f7f-d65326a88f06_23759_17": {
+    "cid": "98ffcadd-764f-48cb-8f7f-d65326a88f06",
+    "nid": "23759",
+    "ptp_no": "17",
+    "ptp_name": "87P",
+    "match_key_area": 60,
+    "supply_area": 87.33,
+    "exclusive_area": 59.98
+  },
+  "98ffcadd-764f-48cb-8f7f-d65326a88f06_23759_1": {
+    "cid": "98ffcadd-764f-48cb-8f7f-d65326a88f06",
+    "nid": "23759",
+    "ptp_no": "1",
+    "ptp_name": "87T1",
+    "match_key_area": 60,
+    "supply_area": 87.46,
+    "exclusive_area": 59.89
+  },
+  "98ffcadd-764f-48cb-8f7f-d65326a88f06_23759_2": {
+    "cid": "98ffcadd-764f-48cb-8f7f-d65326a88f06",
+    "nid": "23759",
+    "ptp_no": "2",
+    "ptp_name": "113L1",
+    "match_key_area": 85,
+    "supply_area": 113.15,
+    "exclusive_area": 84.93
+  },
+  "98ffcadd-764f-48cb-8f7f-d65326a88f06_23759_5": {
+    "cid": "98ffcadd-764f-48cb-8f7f-d65326a88f06",
+    "nid": "23759",
+    "ptp_no": "5",
+    "ptp_name": "113T2",
+    "match_key_area": 85,
+    "supply_area": 113.07,
+    "exclusive_area": 84.76
+  },
+  "98ffcadd-764f-48cb-8f7f-d65326a88f06_23759_4": {
+    "cid": "98ffcadd-764f-48cb-8f7f-d65326a88f06",
+    "nid": "23759",
+    "ptp_no": "4",
+    "ptp_name": "113T1",
+    "match_key_area": 85,
+    "supply_area": 113.73,
+    "exclusive_area": 84.85
+  },
+  "98ffcadd-764f-48cb-8f7f-d65326a88f06_23759_3": {
+    "cid": "98ffcadd-764f-48cb-8f7f-d65326a88f06",
+    "nid": "23759",
+    "ptp_no": "3",
+    "ptp_name": "114L2",
+    "match_key_area": 85,
+    "supply_area": 114.01,
+    "exclusive_area": 84.93
+  },
+  "98ffcadd-764f-48cb-8f7f-d65326a88f06_23759_18": {
+    "cid": "98ffcadd-764f-48cb-8f7f-d65326a88f06",
+    "nid": "23759",
+    "ptp_no": "18",
+    "ptp_name": "114P",
+    "match_key_area": 85,
+    "supply_area": 114.06,
+    "exclusive_area": 84.93
+  },
+  "98ffcadd-764f-48cb-8f7f-d65326a88f06_23759_6": {
+    "cid": "98ffcadd-764f-48cb-8f7f-d65326a88f06",
+    "nid": "23759",
+    "ptp_no": "6",
+    "ptp_name": "147T1",
+    "match_key_area": 116,
+    "supply_area": 147.17,
+    "exclusive_area": 115.65
+  },
+  "98ffcadd-764f-48cb-8f7f-d65326a88f06_23759_7": {
+    "cid": "98ffcadd-764f-48cb-8f7f-d65326a88f06",
+    "nid": "23759",
+    "ptp_no": "7",
+    "ptp_name": "148T2",
+    "match_key_area": 117,
+    "supply_area": 148.43,
+    "exclusive_area": 117.12
+  },
+  "98ffcadd-764f-48cb-8f7f-d65326a88f06_23759_8": {
+    "cid": "98ffcadd-764f-48cb-8f7f-d65326a88f06",
+    "nid": "23759",
+    "ptp_no": "8",
+    "ptp_name": "172T1",
+    "match_key_area": 136,
+    "supply_area": 172.74,
+    "exclusive_area": 135.92
+  },
+  "98ffcadd-764f-48cb-8f7f-d65326a88f06_23759_9": {
+    "cid": "98ffcadd-764f-48cb-8f7f-d65326a88f06",
+    "nid": "23759",
+    "ptp_no": "9",
+    "ptp_name": "173T2",
+    "match_key_area": 137,
+    "supply_area": 173.33,
+    "exclusive_area": 136.65
+  },
+  "98ffcadd-764f-48cb-8f7f-d65326a88f06_23759_10": {
+    "cid": "98ffcadd-764f-48cb-8f7f-d65326a88f06",
+    "nid": "23759",
+    "ptp_no": "10",
+    "ptp_name": "205T1",
+    "match_key_area": 169,
+    "supply_area": 205.62,
+    "exclusive_area": 169.31
+  },
+  "98ffcadd-764f-48cb-8f7f-d65326a88f06_23759_11": {
+    "cid": "98ffcadd-764f-48cb-8f7f-d65326a88f06",
+    "nid": "23759",
+    "ptp_no": "11",
+    "ptp_name": "205T2",
+    "match_key_area": 169,
+    "supply_area": 205.03,
+    "exclusive_area": 168.65
+  },
+  "98ffcadd-764f-48cb-8f7f-d65326a88f06_23759_12": {
+    "cid": "98ffcadd-764f-48cb-8f7f-d65326a88f06",
+    "nid": "23759",
+    "ptp_no": "12",
+    "ptp_name": "238T1",
+    "match_key_area": 198,
+    "supply_area": 238.21,
+    "exclusive_area": 198.04
+  },
+  "98ffcadd-764f-48cb-8f7f-d65326a88f06_23759_13": {
+    "cid": "98ffcadd-764f-48cb-8f7f-d65326a88f06",
+    "nid": "23759",
+    "ptp_no": "13",
+    "ptp_name": "238T2",
+    "match_key_area": 198,
+    "supply_area": 238.85,
+    "exclusive_area": 198.22
+  },
+  "98ffcadd-764f-48cb-8f7f-d65326a88f06_23759_14": {
+    "cid": "98ffcadd-764f-48cb-8f7f-d65326a88f06",
+    "nid": "23759",
+    "ptp_no": "14",
+    "ptp_name": "268T1",
+    "match_key_area": 223,
+    "supply_area": 268.8,
+    "exclusive_area": 222.76
+  },
+  "98ffcadd-764f-48cb-8f7f-d65326a88f06_23759_15": {
+    "cid": "98ffcadd-764f-48cb-8f7f-d65326a88f06",
+    "nid": "23759",
+    "ptp_no": "15",
+    "ptp_name": "268T2",
+    "match_key_area": 222,
+    "supply_area": 268.46,
+    "exclusive_area": 222.15
+  },
+  "3eef39e4-35da-458a-a429-677dcbe9bc18_105_1": {
+    "cid": "3eef39e4-35da-458a-a429-677dcbe9bc18",
+    "nid": "105",
+    "ptp_no": "1",
+    "ptp_name": "113",
+    "match_key_area": 84,
+    "supply_area": 113.31,
+    "exclusive_area": 84.48
+  },
+  "3eef39e4-35da-458a-a429-677dcbe9bc18_105_5": {
+    "cid": "3eef39e4-35da-458a-a429-677dcbe9bc18",
+    "nid": "105",
+    "ptp_no": "5",
+    "ptp_name": "114",
+    "match_key_area": 85,
+    "supply_area": 114.77,
+    "exclusive_area": 84.96
+  },
+  "3eef39e4-35da-458a-a429-677dcbe9bc18_105_6": {
+    "cid": "3eef39e4-35da-458a-a429-677dcbe9bc18",
+    "nid": "105",
+    "ptp_no": "6",
+    "ptp_name": "135",
+    "match_key_area": 115,
+    "supply_area": 135.89,
+    "exclusive_area": 115.05
+  },
+  "3eef39e4-35da-458a-a429-677dcbe9bc18_105_7": {
+    "cid": "3eef39e4-35da-458a-a429-677dcbe9bc18",
+    "nid": "105",
+    "ptp_no": "7",
+    "ptp_name": "148",
+    "match_key_area": 126,
+    "supply_area": 148.17,
+    "exclusive_area": 126.33
+  },
+  "3eef39e4-35da-458a-a429-677dcbe9bc18_105_2": {
+    "cid": "3eef39e4-35da-458a-a429-677dcbe9bc18",
+    "nid": "105",
+    "ptp_no": "2",
+    "ptp_name": "152",
+    "match_key_area": 128,
+    "supply_area": 152.72,
+    "exclusive_area": 128.01
+  },
+  "3eef39e4-35da-458a-a429-677dcbe9bc18_105_8": {
+    "cid": "3eef39e4-35da-458a-a429-677dcbe9bc18",
+    "nid": "105",
+    "ptp_no": "8",
+    "ptp_name": "183",
+    "match_key_area": 159,
+    "supply_area": 183.8,
+    "exclusive_area": 159.15
+  },
+  "3eef39e4-35da-458a-a429-677dcbe9bc18_105_3": {
+    "cid": "3eef39e4-35da-458a-a429-677dcbe9bc18",
+    "nid": "105",
+    "ptp_no": "3",
+    "ptp_name": "188",
+    "match_key_area": 161,
+    "supply_area": 188.85,
+    "exclusive_area": 161.36
+  },
+  "3eef39e4-35da-458a-a429-677dcbe9bc18_105_9": {
+    "cid": "3eef39e4-35da-458a-a429-677dcbe9bc18",
+    "nid": "105",
+    "ptp_no": "9",
+    "ptp_name": "217",
+    "match_key_area": 190,
+    "supply_area": 217.81,
+    "exclusive_area": 190.47
+  },
+  "3eef39e4-35da-458a-a429-677dcbe9bc18_105_4": {
+    "cid": "3eef39e4-35da-458a-a429-677dcbe9bc18",
+    "nid": "105",
+    "ptp_no": "4",
+    "ptp_name": "220",
+    "match_key_area": 191,
+    "supply_area": 220.92,
+    "exclusive_area": 191.06
+  },
+  "cd0be7dd-faac-473d-ac09-e4250b328fdc_128527_1": {
+    "cid": "cd0be7dd-faac-473d-ac09-e4250b328fdc",
+    "nid": "128527",
+    "ptp_no": "1",
+    "ptp_name": "59",
+    "match_key_area": 40,
+    "supply_area": 59.86,
+    "exclusive_area": 39.94
+  },
+  "cd0be7dd-faac-473d-ac09-e4250b328fdc_128527_3": {
+    "cid": "cd0be7dd-faac-473d-ac09-e4250b328fdc",
+    "nid": "128527",
+    "ptp_no": "3",
+    "ptp_name": "74",
+    "match_key_area": 50,
+    "supply_area": 74.3,
+    "exclusive_area": 49.95
+  },
+  "cd0be7dd-faac-473d-ac09-e4250b328fdc_128527_6": {
+    "cid": "cd0be7dd-faac-473d-ac09-e4250b328fdc",
+    "nid": "128527",
+    "ptp_no": "6",
+    "ptp_name": "79A",
+    "match_key_area": 60,
+    "supply_area": 79.52,
+    "exclusive_area": 59.97
+  },
+  "cd0be7dd-faac-473d-ac09-e4250b328fdc_128527_4": {
+    "cid": "cd0be7dd-faac-473d-ac09-e4250b328fdc",
+    "nid": "128527",
+    "ptp_no": "4",
+    "ptp_name": "79B",
+    "match_key_area": 60,
+    "supply_area": 79.4,
+    "exclusive_area": 59.83
+  },
+  "cd0be7dd-faac-473d-ac09-e4250b328fdc_128527_7": {
+    "cid": "cd0be7dd-faac-473d-ac09-e4250b328fdc",
+    "nid": "128527",
+    "ptp_no": "7",
+    "ptp_name": "102A",
+    "match_key_area": 79,
+    "supply_area": 102.59,
+    "exclusive_area": 78.77
+  },
+  "cd0be7dd-faac-473d-ac09-e4250b328fdc_128527_15": {
+    "cid": "cd0be7dd-faac-473d-ac09-e4250b328fdc",
+    "nid": "128527",
+    "ptp_no": "15",
+    "ptp_name": "102B",
+    "match_key_area": 78,
+    "supply_area": 102.73,
+    "exclusive_area": 78.32
+  },
+  "cd0be7dd-faac-473d-ac09-e4250b328fdc_128527_8": {
+    "cid": "cd0be7dd-faac-473d-ac09-e4250b328fdc",
+    "nid": "128527",
+    "ptp_no": "8",
+    "ptp_name": "102C",
+    "match_key_area": 79,
+    "supply_area": 102.72,
+    "exclusive_area": 78.72
+  },
+  "cd0be7dd-faac-473d-ac09-e4250b328fdc_128527_9": {
+    "cid": "cd0be7dd-faac-473d-ac09-e4250b328fdc",
+    "nid": "128527",
+    "ptp_no": "9",
+    "ptp_name": "110A",
+    "match_key_area": 85,
+    "supply_area": 110.79,
+    "exclusive_area": 84.59
+  },
+  "cd0be7dd-faac-473d-ac09-e4250b328fdc_128527_16": {
+    "cid": "cd0be7dd-faac-473d-ac09-e4250b328fdc",
+    "nid": "128527",
+    "ptp_no": "16",
+    "ptp_name": "110B",
+    "match_key_area": 85,
+    "supply_area": 110.79,
+    "exclusive_area": 84.75
+  },
+  "cd0be7dd-faac-473d-ac09-e4250b328fdc_128527_10": {
+    "cid": "cd0be7dd-faac-473d-ac09-e4250b328fdc",
+    "nid": "128527",
+    "ptp_no": "10",
+    "ptp_name": "133A",
+    "match_key_area": 103,
+    "supply_area": 133.25,
+    "exclusive_area": 102.76
+  },
+  "cd0be7dd-faac-473d-ac09-e4250b328fdc_128527_11": {
+    "cid": "cd0be7dd-faac-473d-ac09-e4250b328fdc",
+    "nid": "128527",
+    "ptp_no": "11",
+    "ptp_name": "134B",
+    "match_key_area": 103,
+    "supply_area": 134.21,
+    "exclusive_area": 102.57
+  },
+  "cd0be7dd-faac-473d-ac09-e4250b328fdc_128527_18": {
+    "cid": "cd0be7dd-faac-473d-ac09-e4250b328fdc",
+    "nid": "128527",
+    "ptp_no": "18",
+    "ptp_name": "143",
+    "match_key_area": 110,
+    "supply_area": 143.12,
+    "exclusive_area": 109.88
+  },
+  "cd0be7dd-faac-473d-ac09-e4250b328fdc_128527_12": {
+    "cid": "cd0be7dd-faac-473d-ac09-e4250b328fdc",
+    "nid": "128527",
+    "ptp_no": "12",
+    "ptp_name": "148A",
+    "match_key_area": 115,
+    "supply_area": 148.92,
+    "exclusive_area": 114.81
+  },
+  "cd0be7dd-faac-473d-ac09-e4250b328fdc_128527_13": {
+    "cid": "cd0be7dd-faac-473d-ac09-e4250b328fdc",
+    "nid": "128527",
+    "ptp_no": "13",
+    "ptp_name": "149C",
+    "match_key_area": 115,
+    "supply_area": 149.0,
+    "exclusive_area": 114.99
+  },
+  "cd0be7dd-faac-473d-ac09-e4250b328fdc_128527_14": {
+    "cid": "cd0be7dd-faac-473d-ac09-e4250b328fdc",
+    "nid": "128527",
+    "ptp_no": "14",
+    "ptp_name": "149B",
+    "match_key_area": 115,
+    "supply_area": 149.36,
+    "exclusive_area": 114.8
+  },
+  "7c2d972b-1ae9-4d4b-9969-c1b0d889af03_11698_3": {
+    "cid": "7c2d972b-1ae9-4d4b-9969-c1b0d889af03",
+    "nid": "11698",
+    "ptp_no": "3",
+    "ptp_name": "86B",
+    "match_key_area": 60,
+    "supply_area": 86.92,
+    "exclusive_area": 59.98
+  },
+  "7c2d972b-1ae9-4d4b-9969-c1b0d889af03_11698_1": {
+    "cid": "7c2d972b-1ae9-4d4b-9969-c1b0d889af03",
+    "nid": "11698",
+    "ptp_no": "1",
+    "ptp_name": "86A",
+    "match_key_area": 60,
+    "supply_area": 86.43,
+    "exclusive_area": 59.97
+  },
+  "7c2d972b-1ae9-4d4b-9969-c1b0d889af03_11698_6": {
+    "cid": "7c2d972b-1ae9-4d4b-9969-c1b0d889af03",
+    "nid": "11698",
+    "ptp_no": "6",
+    "ptp_name": "86D",
+    "match_key_area": 60,
+    "supply_area": 86.76,
+    "exclusive_area": 59.99
+  },
+  "7c2d972b-1ae9-4d4b-9969-c1b0d889af03_11698_4": {
+    "cid": "7c2d972b-1ae9-4d4b-9969-c1b0d889af03",
+    "nid": "11698",
+    "ptp_no": "4",
+    "ptp_name": "88B1",
+    "match_key_area": 60,
+    "supply_area": 88.72,
+    "exclusive_area": 59.98
+  },
+  "7c2d972b-1ae9-4d4b-9969-c1b0d889af03_11698_9": {
+    "cid": "7c2d972b-1ae9-4d4b-9969-c1b0d889af03",
+    "nid": "11698",
+    "ptp_no": "9",
+    "ptp_name": "109B1",
+    "match_key_area": 85,
+    "supply_area": 109.37,
+    "exclusive_area": 84.92
+  },
+  "7c2d972b-1ae9-4d4b-9969-c1b0d889af03_11698_7": {
+    "cid": "7c2d972b-1ae9-4d4b-9969-c1b0d889af03",
+    "nid": "11698",
+    "ptp_no": "7",
+    "ptp_name": "111A",
+    "match_key_area": 85,
+    "supply_area": 111.08,
+    "exclusive_area": 84.99
+  },
+  "7c2d972b-1ae9-4d4b-9969-c1b0d889af03_11698_11": {
+    "cid": "7c2d972b-1ae9-4d4b-9969-c1b0d889af03",
+    "nid": "11698",
+    "ptp_no": "11",
+    "ptp_name": "143A",
+    "match_key_area": 115,
+    "supply_area": 143.06,
+    "exclusive_area": 114.99
+  },
+  "7c2d972b-1ae9-4d4b-9969-c1b0d889af03_11698_13": {
+    "cid": "7c2d972b-1ae9-4d4b-9969-c1b0d889af03",
+    "nid": "11698",
+    "ptp_no": "13",
+    "ptp_name": "143C",
+    "match_key_area": 120,
+    "supply_area": 143.26,
+    "exclusive_area": 119.89
+  },
+  "7c2d972b-1ae9-4d4b-9969-c1b0d889af03_11698_12": {
+    "cid": "7c2d972b-1ae9-4d4b-9969-c1b0d889af03",
+    "nid": "11698",
+    "ptp_no": "12",
+    "ptp_name": "143B",
+    "match_key_area": 121,
+    "supply_area": 143.87,
+    "exclusive_area": 120.82
+  },
+  "7c2d972b-1ae9-4d4b-9969-c1b0d889af03_11698_14": {
+    "cid": "7c2d972b-1ae9-4d4b-9969-c1b0d889af03",
+    "nid": "11698",
+    "ptp_no": "14",
+    "ptp_name": "167",
+    "match_key_area": 135,
+    "supply_area": 167.32,
+    "exclusive_area": 134.9
+  },
+  "58204975-386c-4da3-82bf-cf416d066703_19127_1": {
+    "cid": "58204975-386c-4da3-82bf-cf416d066703",
+    "nid": "19127",
+    "ptp_no": "1",
+    "ptp_name": "84",
+    "match_key_area": 60,
+    "supply_area": 84.7,
+    "exclusive_area": 59.88
+  },
+  "58204975-386c-4da3-82bf-cf416d066703_19127_2": {
+    "cid": "58204975-386c-4da3-82bf-cf416d066703",
+    "nid": "19127",
+    "ptp_no": "2",
+    "ptp_name": "110",
+    "match_key_area": 85,
+    "supply_area": 110.54,
+    "exclusive_area": 84.83
+  },
+  "58204975-386c-4da3-82bf-cf416d066703_19127_3": {
+    "cid": "58204975-386c-4da3-82bf-cf416d066703",
+    "nid": "19127",
+    "ptp_no": "3",
+    "ptp_name": "110A",
+    "match_key_area": 85,
+    "supply_area": 110.84,
+    "exclusive_area": 84.95
+  },
+  "58204975-386c-4da3-82bf-cf416d066703_19127_4": {
+    "cid": "58204975-386c-4da3-82bf-cf416d066703",
+    "nid": "19127",
+    "ptp_no": "4",
+    "ptp_name": "110B",
+    "match_key_area": 85,
+    "supply_area": 110.86,
+    "exclusive_area": 84.97
+  },
+  "58204975-386c-4da3-82bf-cf416d066703_19127_5": {
+    "cid": "58204975-386c-4da3-82bf-cf416d066703",
+    "nid": "19127",
+    "ptp_no": "5",
+    "ptp_name": "143",
+    "match_key_area": 115,
+    "supply_area": 143.14,
+    "exclusive_area": 114.7
+  },
+  "58204975-386c-4da3-82bf-cf416d066703_19127_6": {
+    "cid": "58204975-386c-4da3-82bf-cf416d066703",
+    "nid": "19127",
+    "ptp_no": "6",
+    "ptp_name": "180",
+    "match_key_area": 149,
+    "supply_area": 180.31,
+    "exclusive_area": 149.45
+  },
+  "fa6d031a-c79e-44e6-9611-01a14307b7a4_724_6": {
+    "cid": "fa6d031a-c79e-44e6-9611-01a14307b7a4",
+    "nid": "724",
+    "ptp_no": "6",
+    "ptp_name": "156B",
+    "match_key_area": 145,
+    "supply_area": 156.67,
+    "exclusive_area": 144.7
+  },
+  "fa6d031a-c79e-44e6-9611-01a14307b7a4_724_1": {
+    "cid": "fa6d031a-c79e-44e6-9611-01a14307b7a4",
+    "nid": "724",
+    "ptp_no": "1",
+    "ptp_name": "156A",
+    "match_key_area": 144,
+    "supply_area": 156.13,
+    "exclusive_area": 144.2
+  },
+  "fa6d031a-c79e-44e6-9611-01a14307b7a4_724_8": {
+    "cid": "fa6d031a-c79e-44e6-9611-01a14307b7a4",
+    "nid": "724",
+    "ptp_no": "8",
+    "ptp_name": "156C",
+    "match_key_area": 144,
+    "supply_area": 156.13,
+    "exclusive_area": 144.2
+  },
+  "fa6d031a-c79e-44e6-9611-01a14307b7a4_724_2": {
+    "cid": "fa6d031a-c79e-44e6-9611-01a14307b7a4",
+    "nid": "724",
+    "ptp_no": "2",
+    "ptp_name": "170",
+    "match_key_area": 157,
+    "supply_area": 170.23,
+    "exclusive_area": 157.36
+  },
+  "fa6d031a-c79e-44e6-9611-01a14307b7a4_724_3": {
+    "cid": "fa6d031a-c79e-44e6-9611-01a14307b7a4",
+    "nid": "724",
+    "ptp_no": "3",
+    "ptp_name": "212A",
+    "match_key_area": 197,
+    "supply_area": 212.93,
+    "exclusive_area": 196.7
+  },
+  "fa6d031a-c79e-44e6-9611-01a14307b7a4_724_7": {
+    "cid": "fa6d031a-c79e-44e6-9611-01a14307b7a4",
+    "nid": "724",
+    "ptp_no": "7",
+    "ptp_name": "212B",
+    "match_key_area": 197,
+    "supply_area": 212.93,
+    "exclusive_area": 196.7
+  },
+  "fa6d031a-c79e-44e6-9611-01a14307b7a4_724_4": {
+    "cid": "fa6d031a-c79e-44e6-9611-01a14307b7a4",
+    "nid": "724",
+    "ptp_no": "4",
+    "ptp_name": "264",
+    "match_key_area": 245,
+    "supply_area": 264.87,
+    "exclusive_area": 245.2
+  },
+  "e100a1a0-3166-4348-a2ab-ecbeb9dba82a_113907_3": {
+    "cid": "e100a1a0-3166-4348-a2ab-ecbeb9dba82a",
+    "nid": "113907",
+    "ptp_no": "3",
+    "ptp_name": "82A",
+    "match_key_area": 60,
+    "supply_area": 82.55,
+    "exclusive_area": 59.78
+  },
+  "e100a1a0-3166-4348-a2ab-ecbeb9dba82a_113907_2": {
+    "cid": "e100a1a0-3166-4348-a2ab-ecbeb9dba82a",
+    "nid": "113907",
+    "ptp_no": "2",
+    "ptp_name": "82C",
+    "match_key_area": 59,
+    "supply_area": 82.4,
+    "exclusive_area": 59.02
+  },
+  "e100a1a0-3166-4348-a2ab-ecbeb9dba82a_113907_1": {
+    "cid": "e100a1a0-3166-4348-a2ab-ecbeb9dba82a",
+    "nid": "113907",
+    "ptp_no": "1",
+    "ptp_name": "82D",
+    "match_key_area": 59,
+    "supply_area": 82.36,
+    "exclusive_area": 59.05
+  },
+  "e100a1a0-3166-4348-a2ab-ecbeb9dba82a_113907_5": {
+    "cid": "e100a1a0-3166-4348-a2ab-ecbeb9dba82a",
+    "nid": "113907",
+    "ptp_no": "5",
+    "ptp_name": "100A",
+    "match_key_area": 74,
+    "supply_area": 100.95,
+    "exclusive_area": 73.87
+  },
+  "e100a1a0-3166-4348-a2ab-ecbeb9dba82a_113907_6": {
+    "cid": "e100a1a0-3166-4348-a2ab-ecbeb9dba82a",
+    "nid": "113907",
+    "ptp_no": "6",
+    "ptp_name": "101B",
+    "match_key_area": 74,
+    "supply_area": 101.76,
+    "exclusive_area": 73.56
+  },
+  "e100a1a0-3166-4348-a2ab-ecbeb9dba82a_113907_7": {
+    "cid": "e100a1a0-3166-4348-a2ab-ecbeb9dba82a",
+    "nid": "113907",
+    "ptp_no": "7",
+    "ptp_name": "114A",
+    "match_key_area": 84,
+    "supply_area": 114.66,
+    "exclusive_area": 84.24
+  },
+  "e100a1a0-3166-4348-a2ab-ecbeb9dba82a_113907_9": {
+    "cid": "e100a1a0-3166-4348-a2ab-ecbeb9dba82a",
+    "nid": "113907",
+    "ptp_no": "9",
+    "ptp_name": "115D",
+    "match_key_area": 84,
+    "supply_area": 115.63,
+    "exclusive_area": 84.24
+  },
+  "e100a1a0-3166-4348-a2ab-ecbeb9dba82a_113907_10": {
+    "cid": "e100a1a0-3166-4348-a2ab-ecbeb9dba82a",
+    "nid": "113907",
+    "ptp_no": "10",
+    "ptp_name": "115C",
+    "match_key_area": 84,
+    "supply_area": 115.67,
+    "exclusive_area": 84.04
+  },
+  "e100a1a0-3166-4348-a2ab-ecbeb9dba82a_113907_11": {
+    "cid": "e100a1a0-3166-4348-a2ab-ecbeb9dba82a",
+    "nid": "113907",
+    "ptp_no": "11",
+    "ptp_name": "132B",
+    "match_key_area": 98,
+    "supply_area": 132.69,
+    "exclusive_area": 97.78
+  },
+  "e100a1a0-3166-4348-a2ab-ecbeb9dba82a_113907_12": {
+    "cid": "e100a1a0-3166-4348-a2ab-ecbeb9dba82a",
+    "nid": "113907",
+    "ptp_no": "12",
+    "ptp_name": "133A",
+    "match_key_area": 98,
+    "supply_area": 133.41,
+    "exclusive_area": 97.8
+  },
+  "e100a1a0-3166-4348-a2ab-ecbeb9dba82a_113907_14": {
+    "cid": "e100a1a0-3166-4348-a2ab-ecbeb9dba82a",
+    "nid": "113907",
+    "ptp_no": "14",
+    "ptp_name": "154C",
+    "match_key_area": 113,
+    "supply_area": 154.34,
+    "exclusive_area": 113.39
+  },
+  "e100a1a0-3166-4348-a2ab-ecbeb9dba82a_113907_15": {
+    "cid": "e100a1a0-3166-4348-a2ab-ecbeb9dba82a",
+    "nid": "113907",
+    "ptp_no": "15",
+    "ptp_name": "155B",
+    "match_key_area": 113,
+    "supply_area": 155.27,
+    "exclusive_area": 113.19
+  },
+  "e100a1a0-3166-4348-a2ab-ecbeb9dba82a_113907_16": {
+    "cid": "e100a1a0-3166-4348-a2ab-ecbeb9dba82a",
+    "nid": "113907",
+    "ptp_no": "16",
+    "ptp_name": "172",
+    "match_key_area": 128,
+    "supply_area": 172.99,
+    "exclusive_area": 127.76
+  },
+  "d86695fd-9dbb-4820-8149-d85dbbf677a5_481_1": {
+    "cid": "d86695fd-9dbb-4820-8149-d85dbbf677a5",
+    "nid": "481",
+    "ptp_no": "1",
+    "ptp_name": "105",
+    "match_key_area": 79,
+    "supply_area": 105.63,
+    "exclusive_area": 79.47
+  },
+  "d86695fd-9dbb-4820-8149-d85dbbf677a5_481_2": {
+    "cid": "d86695fd-9dbb-4820-8149-d85dbbf677a5",
+    "nid": "481",
+    "ptp_no": "2",
+    "ptp_name": "151",
+    "match_key_area": 131,
+    "supply_area": 151.07,
+    "exclusive_area": 130.73
+  },
+  "d86695fd-9dbb-4820-8149-d85dbbf677a5_481_3": {
+    "cid": "d86695fd-9dbb-4820-8149-d85dbbf677a5",
+    "nid": "481",
+    "ptp_no": "3",
+    "ptp_name": "151",
+    "match_key_area": 130,
+    "supply_area": 151.0,
+    "exclusive_area": 130.23
+  },
+  "d86695fd-9dbb-4820-8149-d85dbbf677a5_481_4": {
+    "cid": "d86695fd-9dbb-4820-8149-d85dbbf677a5",
+    "nid": "481",
+    "ptp_no": "4",
+    "ptp_name": "185",
+    "match_key_area": 164,
+    "supply_area": 185.91,
+    "exclusive_area": 163.81
+  },
+  "d86695fd-9dbb-4820-8149-d85dbbf677a5_481_5": {
+    "cid": "d86695fd-9dbb-4820-8149-d85dbbf677a5",
+    "nid": "481",
+    "ptp_no": "5",
+    "ptp_name": "189",
+    "match_key_area": 166,
+    "supply_area": 189.05,
+    "exclusive_area": 165.92
+  },
+  "3a37f16c-137b-4eac-9827-7e8a82f125d0_15011_1": {
+    "cid": "3a37f16c-137b-4eac-9827-7e8a82f125d0",
+    "nid": "15011",
+    "ptp_no": "1",
+    "ptp_name": "86A",
+    "match_key_area": 60,
+    "supply_area": 86.43,
+    "exclusive_area": 59.97
+  },
+  "3a37f16c-137b-4eac-9827-7e8a82f125d0_15011_2": {
+    "cid": "3a37f16c-137b-4eac-9827-7e8a82f125d0",
+    "nid": "15011",
+    "ptp_no": "2",
+    "ptp_name": "86B",
+    "match_key_area": 60,
+    "supply_area": 86.43,
+    "exclusive_area": 59.97
+  },
+  "3a37f16c-137b-4eac-9827-7e8a82f125d0_15011_3": {
+    "cid": "3a37f16c-137b-4eac-9827-7e8a82f125d0",
+    "nid": "15011",
+    "ptp_no": "3",
+    "ptp_name": "114",
+    "match_key_area": 85,
+    "supply_area": 114.8,
+    "exclusive_area": 84.82
+  },
+  "3a37f16c-137b-4eac-9827-7e8a82f125d0_15011_4": {
+    "cid": "3a37f16c-137b-4eac-9827-7e8a82f125d0",
+    "nid": "15011",
+    "ptp_no": "4",
+    "ptp_name": "144",
+    "match_key_area": 116,
+    "supply_area": 144.32,
+    "exclusive_area": 116.19
+  },
+  "3a37f16c-137b-4eac-9827-7e8a82f125d0_15011_5": {
+    "cid": "3a37f16c-137b-4eac-9827-7e8a82f125d0",
+    "nid": "15011",
+    "ptp_no": "5",
+    "ptp_name": "166A",
+    "match_key_area": 136,
+    "supply_area": 166.86,
+    "exclusive_area": 135.82
+  },
+  "3a37f16c-137b-4eac-9827-7e8a82f125d0_15011_6": {
+    "cid": "3a37f16c-137b-4eac-9827-7e8a82f125d0",
+    "nid": "15011",
+    "ptp_no": "6",
+    "ptp_name": "167B",
+    "match_key_area": 137,
+    "supply_area": 167.9,
+    "exclusive_area": 136.74
+  },
+  "3fe5e650-0d85-4c37-b754-eeae7e20e6e6_107613_30": {
+    "cid": "3fe5e650-0d85-4c37-b754-eeae7e20e6e6",
+    "nid": "107613",
+    "ptp_no": "30",
+    "ptp_name": "78D",
+    "match_key_area": 60,
+    "supply_area": 78.68,
+    "exclusive_area": 59.98
+  },
+  "3fe5e650-0d85-4c37-b754-eeae7e20e6e6_107613_31": {
+    "cid": "3fe5e650-0d85-4c37-b754-eeae7e20e6e6",
+    "nid": "107613",
+    "ptp_no": "31",
+    "ptp_name": "79E",
+    "match_key_area": 60,
+    "supply_area": 79.24,
+    "exclusive_area": 59.98
+  },
+  "3fe5e650-0d85-4c37-b754-eeae7e20e6e6_107613_1": {
+    "cid": "3fe5e650-0d85-4c37-b754-eeae7e20e6e6",
+    "nid": "107613",
+    "ptp_no": "1",
+    "ptp_name": "80A",
+    "match_key_area": 60,
+    "supply_area": 80.21,
+    "exclusive_area": 59.97
+  },
+  "3fe5e650-0d85-4c37-b754-eeae7e20e6e6_107613_3": {
+    "cid": "3fe5e650-0d85-4c37-b754-eeae7e20e6e6",
+    "nid": "107613",
+    "ptp_no": "3",
+    "ptp_name": "80B",
+    "match_key_area": 60,
+    "supply_area": 80.54,
+    "exclusive_area": 59.98
+  },
+  "3fe5e650-0d85-4c37-b754-eeae7e20e6e6_107613_19": {
+    "cid": "3fe5e650-0d85-4c37-b754-eeae7e20e6e6",
+    "nid": "107613",
+    "ptp_no": "19",
+    "ptp_name": "110E",
+    "match_key_area": 85,
+    "supply_area": 110.68,
+    "exclusive_area": 84.98
+  },
+  "3fe5e650-0d85-4c37-b754-eeae7e20e6e6_107613_32": {
+    "cid": "3fe5e650-0d85-4c37-b754-eeae7e20e6e6",
+    "nid": "107613",
+    "ptp_no": "32",
+    "ptp_name": "110G",
+    "match_key_area": 85,
+    "supply_area": 110.66,
+    "exclusive_area": 84.97
+  },
+  "3fe5e650-0d85-4c37-b754-eeae7e20e6e6_107613_4": {
+    "cid": "3fe5e650-0d85-4c37-b754-eeae7e20e6e6",
+    "nid": "107613",
+    "ptp_no": "4",
+    "ptp_name": "112A",
+    "match_key_area": 85,
+    "supply_area": 112.74,
+    "exclusive_area": 84.97
+  },
+  "3fe5e650-0d85-4c37-b754-eeae7e20e6e6_107613_5": {
+    "cid": "3fe5e650-0d85-4c37-b754-eeae7e20e6e6",
+    "nid": "107613",
+    "ptp_no": "5",
+    "ptp_name": "112B",
+    "match_key_area": 85,
+    "supply_area": 112.83,
+    "exclusive_area": 84.95
+  },
+  "3fe5e650-0d85-4c37-b754-eeae7e20e6e6_107613_6": {
+    "cid": "3fe5e650-0d85-4c37-b754-eeae7e20e6e6",
+    "nid": "107613",
+    "ptp_no": "6",
+    "ptp_name": "113D",
+    "match_key_area": 85,
+    "supply_area": 113.69,
+    "exclusive_area": 84.95
+  },
+  "3fe5e650-0d85-4c37-b754-eeae7e20e6e6_107613_7": {
+    "cid": "3fe5e650-0d85-4c37-b754-eeae7e20e6e6",
+    "nid": "107613",
+    "ptp_no": "7",
+    "ptp_name": "114C",
+    "match_key_area": 85,
+    "supply_area": 114.05,
+    "exclusive_area": 84.99
+  },
+  "3fe5e650-0d85-4c37-b754-eeae7e20e6e6_107613_8": {
+    "cid": "3fe5e650-0d85-4c37-b754-eeae7e20e6e6",
+    "nid": "107613",
+    "ptp_no": "8",
+    "ptp_name": "114F",
+    "match_key_area": 85,
+    "supply_area": 114.2,
+    "exclusive_area": 84.94
+  },
+  "3fe5e650-0d85-4c37-b754-eeae7e20e6e6_107613_20": {
+    "cid": "3fe5e650-0d85-4c37-b754-eeae7e20e6e6",
+    "nid": "107613",
+    "ptp_no": "20",
+    "ptp_name": "145F",
+    "match_key_area": 113,
+    "supply_area": 145.95,
+    "exclusive_area": 112.96
+  },
+  "3fe5e650-0d85-4c37-b754-eeae7e20e6e6_107613_9": {
+    "cid": "3fe5e650-0d85-4c37-b754-eeae7e20e6e6",
+    "nid": "107613",
+    "ptp_no": "9",
+    "ptp_name": "148A",
+    "match_key_area": 113,
+    "supply_area": 148.8,
+    "exclusive_area": 112.99
+  },
+  "3fe5e650-0d85-4c37-b754-eeae7e20e6e6_107613_10": {
+    "cid": "3fe5e650-0d85-4c37-b754-eeae7e20e6e6",
+    "nid": "107613",
+    "ptp_no": "10",
+    "ptp_name": "149C",
+    "match_key_area": 113,
+    "supply_area": 149.29,
+    "exclusive_area": 112.96
+  },
+  "3fe5e650-0d85-4c37-b754-eeae7e20e6e6_107613_11": {
+    "cid": "3fe5e650-0d85-4c37-b754-eeae7e20e6e6",
+    "nid": "107613",
+    "ptp_no": "11",
+    "ptp_name": "150D",
+    "match_key_area": 113,
+    "supply_area": 150.26,
+    "exclusive_area": 112.93
+  },
+  "3fe5e650-0d85-4c37-b754-eeae7e20e6e6_107613_12": {
+    "cid": "3fe5e650-0d85-4c37-b754-eeae7e20e6e6",
+    "nid": "107613",
+    "ptp_no": "12",
+    "ptp_name": "150E",
+    "match_key_area": 113,
+    "supply_area": 150.74,
+    "exclusive_area": 112.98
+  },
+  "3fe5e650-0d85-4c37-b754-eeae7e20e6e6_107613_13": {
+    "cid": "3fe5e650-0d85-4c37-b754-eeae7e20e6e6",
+    "nid": "107613",
+    "ptp_no": "13",
+    "ptp_name": "152B",
+    "match_key_area": 113,
+    "supply_area": 152.9,
+    "exclusive_area": 112.97
+  },
+  "3fe5e650-0d85-4c37-b754-eeae7e20e6e6_107613_21": {
+    "cid": "3fe5e650-0d85-4c37-b754-eeae7e20e6e6",
+    "nid": "107613",
+    "ptp_no": "21",
+    "ptp_name": "168C",
+    "match_key_area": 130,
+    "supply_area": 168.95,
+    "exclusive_area": 129.96
+  },
+  "3fe5e650-0d85-4c37-b754-eeae7e20e6e6_107613_22": {
+    "cid": "3fe5e650-0d85-4c37-b754-eeae7e20e6e6",
+    "nid": "107613",
+    "ptp_no": "22",
+    "ptp_name": "168D",
+    "match_key_area": 130,
+    "supply_area": 168.66,
+    "exclusive_area": 129.95
+  },
+  "3fe5e650-0d85-4c37-b754-eeae7e20e6e6_107613_14": {
+    "cid": "3fe5e650-0d85-4c37-b754-eeae7e20e6e6",
+    "nid": "107613",
+    "ptp_no": "14",
+    "ptp_name": "172A",
+    "match_key_area": 130,
+    "supply_area": 172.49,
+    "exclusive_area": 129.92
+  },
+  "3fe5e650-0d85-4c37-b754-eeae7e20e6e6_107613_15": {
+    "cid": "3fe5e650-0d85-4c37-b754-eeae7e20e6e6",
+    "nid": "107613",
+    "ptp_no": "15",
+    "ptp_name": "172B",
+    "match_key_area": 130,
+    "supply_area": 172.95,
+    "exclusive_area": 129.97
+  },
+  "3fe5e650-0d85-4c37-b754-eeae7e20e6e6_107613_16": {
+    "cid": "3fe5e650-0d85-4c37-b754-eeae7e20e6e6",
+    "nid": "107613",
+    "ptp_no": "16",
+    "ptp_name": "205A",
+    "match_key_area": 155,
+    "supply_area": 205.35,
+    "exclusive_area": 154.97
+  },
+  "3fe5e650-0d85-4c37-b754-eeae7e20e6e6_107613_23": {
+    "cid": "3fe5e650-0d85-4c37-b754-eeae7e20e6e6",
+    "nid": "107613",
+    "ptp_no": "23",
+    "ptp_name": "211A",
+    "match_key_area": 164,
+    "supply_area": 211.99,
+    "exclusive_area": 164.39
+  },
+  "3fe5e650-0d85-4c37-b754-eeae7e20e6e6_107613_24": {
+    "cid": "3fe5e650-0d85-4c37-b754-eeae7e20e6e6",
+    "nid": "107613",
+    "ptp_no": "24",
+    "ptp_name": "223A",
+    "match_key_area": 169,
+    "supply_area": 223.31,
+    "exclusive_area": 168.98
+  },
+  "3fe5e650-0d85-4c37-b754-eeae7e20e6e6_107613_18": {
+    "cid": "3fe5e650-0d85-4c37-b754-eeae7e20e6e6",
+    "nid": "107613",
+    "ptp_no": "18",
+    "ptp_name": "236A",
+    "match_key_area": 179,
+    "supply_area": 236.68,
+    "exclusive_area": 178.94
+  },
+  "3fe5e650-0d85-4c37-b754-eeae7e20e6e6_107613_17": {
+    "cid": "3fe5e650-0d85-4c37-b754-eeae7e20e6e6",
+    "nid": "107613",
+    "ptp_no": "17",
+    "ptp_name": "225B",
+    "match_key_area": 169,
+    "supply_area": 225.87,
+    "exclusive_area": 168.96
+  },
+  "7dec4785-3842-40d4-be2c-934a82e61553_119341_1": {
+    "cid": "7dec4785-3842-40d4-be2c-934a82e61553",
+    "nid": "119341",
+    "ptp_no": "1",
+    "ptp_name": "80D",
+    "match_key_area": 60,
+    "supply_area": 80.86,
+    "exclusive_area": 59.83
+  },
+  "7dec4785-3842-40d4-be2c-934a82e61553_119341_2": {
+    "cid": "7dec4785-3842-40d4-be2c-934a82e61553",
+    "nid": "119341",
+    "ptp_no": "2",
+    "ptp_name": "81A",
+    "match_key_area": 60,
+    "supply_area": 81.05,
+    "exclusive_area": 59.98
+  },
+  "7dec4785-3842-40d4-be2c-934a82e61553_119341_3": {
+    "cid": "7dec4785-3842-40d4-be2c-934a82e61553",
+    "nid": "119341",
+    "ptp_no": "3",
+    "ptp_name": "81B",
+    "match_key_area": 60,
+    "supply_area": 81.4,
+    "exclusive_area": 59.96
+  },
+  "7dec4785-3842-40d4-be2c-934a82e61553_119341_5": {
+    "cid": "7dec4785-3842-40d4-be2c-934a82e61553",
+    "nid": "119341",
+    "ptp_no": "5",
+    "ptp_name": "113A",
+    "match_key_area": 85,
+    "supply_area": 113.98,
+    "exclusive_area": 84.97
+  },
+  "7dec4785-3842-40d4-be2c-934a82e61553_119341_7": {
+    "cid": "7dec4785-3842-40d4-be2c-934a82e61553",
+    "nid": "119341",
+    "ptp_no": "7",
+    "ptp_name": "114B",
+    "match_key_area": 85,
+    "supply_area": 114.35,
+    "exclusive_area": 84.93
+  },
+  "7dec4785-3842-40d4-be2c-934a82e61553_119341_8": {
+    "cid": "7dec4785-3842-40d4-be2c-934a82e61553",
+    "nid": "119341",
+    "ptp_no": "8",
+    "ptp_name": "114D",
+    "match_key_area": 85,
+    "supply_area": 114.58,
+    "exclusive_area": 84.95
+  },
+  "7dec4785-3842-40d4-be2c-934a82e61553_119341_6": {
+    "cid": "7dec4785-3842-40d4-be2c-934a82e61553",
+    "nid": "119341",
+    "ptp_no": "6",
+    "ptp_name": "114C",
+    "match_key_area": 85,
+    "supply_area": 114.14,
+    "exclusive_area": 84.94
+  },
+  "7dec4785-3842-40d4-be2c-934a82e61553_119341_9": {
+    "cid": "7dec4785-3842-40d4-be2c-934a82e61553",
+    "nid": "119341",
+    "ptp_no": "9",
+    "ptp_name": "152",
+    "match_key_area": 115,
+    "supply_area": 152.72,
+    "exclusive_area": 114.86
+  },
+  "4c4374dd-00e0-4891-af25-1c8f0f73c63d_104917_1": {
+    "cid": "4c4374dd-00e0-4891-af25-1c8f0f73c63d",
+    "nid": "104917",
+    "ptp_no": "1",
+    "ptp_name": "80A",
+    "match_key_area": 60,
+    "supply_area": 80.16,
+    "exclusive_area": 59.96
+  },
+  "4c4374dd-00e0-4891-af25-1c8f0f73c63d_104917_3": {
+    "cid": "4c4374dd-00e0-4891-af25-1c8f0f73c63d",
+    "nid": "104917",
+    "ptp_no": "3",
+    "ptp_name": "80C",
+    "match_key_area": 60,
+    "supply_area": 80.19,
+    "exclusive_area": 59.92
+  },
+  "4c4374dd-00e0-4891-af25-1c8f0f73c63d_104917_2": {
+    "cid": "4c4374dd-00e0-4891-af25-1c8f0f73c63d",
+    "nid": "104917",
+    "ptp_no": "2",
+    "ptp_name": "80B",
+    "match_key_area": 60,
+    "supply_area": 80.18,
+    "exclusive_area": 59.94
+  },
+  "4c4374dd-00e0-4891-af25-1c8f0f73c63d_104917_4": {
+    "cid": "4c4374dd-00e0-4891-af25-1c8f0f73c63d",
+    "nid": "104917",
+    "ptp_no": "4",
+    "ptp_name": "80E",
+    "match_key_area": 60,
+    "supply_area": 80.63,
+    "exclusive_area": 59.97
+  },
+  "4c4374dd-00e0-4891-af25-1c8f0f73c63d_104917_15": {
+    "cid": "4c4374dd-00e0-4891-af25-1c8f0f73c63d",
+    "nid": "104917",
+    "ptp_no": "15",
+    "ptp_name": "81D",
+    "match_key_area": 60,
+    "supply_area": 81.17,
+    "exclusive_area": 59.9
+  },
+  "4c4374dd-00e0-4891-af25-1c8f0f73c63d_104917_6": {
+    "cid": "4c4374dd-00e0-4891-af25-1c8f0f73c63d",
+    "nid": "104917",
+    "ptp_no": "6",
+    "ptp_name": "110A",
+    "match_key_area": 84,
+    "supply_area": 110.95,
+    "exclusive_area": 84.38
+  },
+  "4c4374dd-00e0-4891-af25-1c8f0f73c63d_104917_8": {
+    "cid": "4c4374dd-00e0-4891-af25-1c8f0f73c63d",
+    "nid": "104917",
+    "ptp_no": "8",
+    "ptp_name": "112C",
+    "match_key_area": 85,
+    "supply_area": 112.71,
+    "exclusive_area": 84.59
+  },
+  "4c4374dd-00e0-4891-af25-1c8f0f73c63d_104917_7": {
+    "cid": "4c4374dd-00e0-4891-af25-1c8f0f73c63d",
+    "nid": "104917",
+    "ptp_no": "7",
+    "ptp_name": "113B",
+    "match_key_area": 85,
+    "supply_area": 113.0,
+    "exclusive_area": 84.89
+  },
+  "4c4374dd-00e0-4891-af25-1c8f0f73c63d_104917_9": {
+    "cid": "4c4374dd-00e0-4891-af25-1c8f0f73c63d",
+    "nid": "104917",
+    "ptp_no": "9",
+    "ptp_name": "113E",
+    "match_key_area": 85,
+    "supply_area": 113.05,
+    "exclusive_area": 84.59
+  },
+  "4c4374dd-00e0-4891-af25-1c8f0f73c63d_104917_10": {
+    "cid": "4c4374dd-00e0-4891-af25-1c8f0f73c63d",
+    "nid": "104917",
+    "ptp_no": "10",
+    "ptp_name": "149A",
+    "match_key_area": 114,
+    "supply_area": 149.28,
+    "exclusive_area": 114.28
+  },
+  "4c4374dd-00e0-4891-af25-1c8f0f73c63d_104917_12": {
+    "cid": "4c4374dd-00e0-4891-af25-1c8f0f73c63d",
+    "nid": "104917",
+    "ptp_no": "12",
+    "ptp_name": "150C",
+    "match_key_area": 115,
+    "supply_area": 150.5,
+    "exclusive_area": 114.72
+  },
+  "4c4374dd-00e0-4891-af25-1c8f0f73c63d_104917_11": {
+    "cid": "4c4374dd-00e0-4891-af25-1c8f0f73c63d",
+    "nid": "104917",
+    "ptp_no": "11",
+    "ptp_name": "150B",
+    "match_key_area": 115,
+    "supply_area": 150.66,
+    "exclusive_area": 114.58
+  },
+  "4c4374dd-00e0-4891-af25-1c8f0f73c63d_104917_13": {
+    "cid": "4c4374dd-00e0-4891-af25-1c8f0f73c63d",
+    "nid": "104917",
+    "ptp_no": "13",
+    "ptp_name": "189A",
+    "match_key_area": 145,
+    "supply_area": 189.33,
+    "exclusive_area": 145.2
+  },
+  "77289f19-d7f3-4be6-8a7b-cd4d52a150c5_531_1": {
+    "cid": "77289f19-d7f3-4be6-8a7b-cd4d52a150c5",
+    "nid": "531",
+    "ptp_no": "1",
+    "ptp_name": "74",
+    "match_key_area": 69,
+    "supply_area": 74.18,
+    "exclusive_area": 68.91
+  },
+  "77289f19-d7f3-4be6-8a7b-cd4d52a150c5_531_2": {
+    "cid": "77289f19-d7f3-4be6-8a7b-cd4d52a150c5",
+    "nid": "531",
+    "ptp_no": "2",
+    "ptp_name": "85",
+    "match_key_area": 79,
+    "supply_area": 85.52,
+    "exclusive_area": 79.42
+  },
+  "77289f19-d7f3-4be6-8a7b-cd4d52a150c5_531_3": {
+    "cid": "77289f19-d7f3-4be6-8a7b-cd4d52a150c5",
+    "nid": "531",
+    "ptp_no": "3",
+    "ptp_name": "99",
+    "match_key_area": 92,
+    "supply_area": 99.13,
+    "exclusive_area": 92.2
+  },
+  "77289f19-d7f3-4be6-8a7b-cd4d52a150c5_531_7": {
+    "cid": "77289f19-d7f3-4be6-8a7b-cd4d52a150c5",
+    "nid": "531",
+    "ptp_no": "7",
+    "ptp_name": "100",
+    "match_key_area": 94,
+    "supply_area": 100.92,
+    "exclusive_area": 93.71
+  },
+  "77289f19-d7f3-4be6-8a7b-cd4d52a150c5_531_4": {
+    "cid": "77289f19-d7f3-4be6-8a7b-cd4d52a150c5",
+    "nid": "531",
+    "ptp_no": "4",
+    "ptp_name": "115",
+    "match_key_area": 107,
+    "supply_area": 115.58,
+    "exclusive_area": 107.31
+  },
+  "77289f19-d7f3-4be6-8a7b-cd4d52a150c5_531_8": {
+    "cid": "77289f19-d7f3-4be6-8a7b-cd4d52a150c5",
+    "nid": "531",
+    "ptp_no": "8",
+    "ptp_name": "146",
+    "match_key_area": 136,
+    "supply_area": 146.49,
+    "exclusive_area": 135.97
+  },
+  "77289f19-d7f3-4be6-8a7b-cd4d52a150c5_531_5": {
+    "cid": "77289f19-d7f3-4be6-8a7b-cd4d52a150c5",
+    "nid": "531",
+    "ptp_no": "5",
+    "ptp_name": "147",
+    "match_key_area": 138,
+    "supply_area": 147.5,
+    "exclusive_area": 137.66
+  },
+  "77289f19-d7f3-4be6-8a7b-cd4d52a150c5_531_6": {
+    "cid": "77289f19-d7f3-4be6-8a7b-cd4d52a150c5",
+    "nid": "531",
+    "ptp_no": "6",
+    "ptp_name": "164",
+    "match_key_area": 151,
+    "supply_area": 164.72,
+    "exclusive_area": 150.58
+  },
+  "d12ab9ce-50c4-4b05-b2e0-3757855a06ab_669_1": {
+    "cid": "d12ab9ce-50c4-4b05-b2e0-3757855a06ab",
+    "nid": "669",
+    "ptp_no": "1",
+    "ptp_name": "75",
+    "match_key_area": 55,
+    "supply_area": 75.22,
+    "exclusive_area": 55.02
+  },
+  "d12ab9ce-50c4-4b05-b2e0-3757855a06ab_669_2": {
+    "cid": "d12ab9ce-50c4-4b05-b2e0-3757855a06ab",
+    "nid": "669",
+    "ptp_no": "2",
+    "ptp_name": "91C",
+    "match_key_area": 71,
+    "supply_area": 91.82,
+    "exclusive_area": 71.37
+  },
+  "d12ab9ce-50c4-4b05-b2e0-3757855a06ab_669_23": {
+    "cid": "d12ab9ce-50c4-4b05-b2e0-3757855a06ab",
+    "nid": "669",
+    "ptp_no": "23",
+    "ptp_name": "93B",
+    "match_key_area": 71,
+    "supply_area": 93.13,
+    "exclusive_area": 71.4
+  },
+  "d12ab9ce-50c4-4b05-b2e0-3757855a06ab_669_21": {
+    "cid": "d12ab9ce-50c4-4b05-b2e0-3757855a06ab",
+    "nid": "669",
+    "ptp_no": "21",
+    "ptp_name": "93A",
+    "match_key_area": 71,
+    "supply_area": 93.13,
+    "exclusive_area": 71.4
+  },
+  "d12ab9ce-50c4-4b05-b2e0-3757855a06ab_669_3": {
+    "cid": "d12ab9ce-50c4-4b05-b2e0-3757855a06ab",
+    "nid": "669",
+    "ptp_no": "3",
+    "ptp_name": "107",
+    "match_key_area": 83,
+    "supply_area": 107.03,
+    "exclusive_area": 83.31
+  },
+  "d12ab9ce-50c4-4b05-b2e0-3757855a06ab_669_17": {
+    "cid": "d12ab9ce-50c4-4b05-b2e0-3757855a06ab",
+    "nid": "669",
+    "ptp_no": "17",
+    "ptp_name": "109A",
+    "match_key_area": 84,
+    "supply_area": 109.27,
+    "exclusive_area": 83.89
+  },
+  "d12ab9ce-50c4-4b05-b2e0-3757855a06ab_669_19": {
+    "cid": "d12ab9ce-50c4-4b05-b2e0-3757855a06ab",
+    "nid": "669",
+    "ptp_no": "19",
+    "ptp_name": "109C",
+    "match_key_area": 85,
+    "supply_area": 109.02,
+    "exclusive_area": 84.87
+  },
+  "d12ab9ce-50c4-4b05-b2e0-3757855a06ab_669_15": {
+    "cid": "d12ab9ce-50c4-4b05-b2e0-3757855a06ab",
+    "nid": "669",
+    "ptp_no": "15",
+    "ptp_name": "110B",
+    "match_key_area": 93,
+    "supply_area": 110.84,
+    "exclusive_area": 92.67
+  },
+  "d12ab9ce-50c4-4b05-b2e0-3757855a06ab_669_10": {
+    "cid": "d12ab9ce-50c4-4b05-b2e0-3757855a06ab",
+    "nid": "669",
+    "ptp_no": "10",
+    "ptp_name": "129A",
+    "match_key_area": 108,
+    "supply_area": 129.41,
+    "exclusive_area": 108.28
+  },
+  "d12ab9ce-50c4-4b05-b2e0-3757855a06ab_669_12": {
+    "cid": "d12ab9ce-50c4-4b05-b2e0-3757855a06ab",
+    "nid": "669",
+    "ptp_no": "12",
+    "ptp_name": "153",
+    "match_key_area": 129,
+    "supply_area": 153.56,
+    "exclusive_area": 129.33
+  },
+  "953a4a5d-6923-4719-bc28-5a20a52df040_389_9": {
+    "cid": "953a4a5d-6923-4719-bc28-5a20a52df040",
+    "nid": "389",
+    "ptp_no": "9",
+    "ptp_name": "92",
+    "match_key_area": 71,
+    "supply_area": 92.59,
+    "exclusive_area": 71.2
+  },
+  "953a4a5d-6923-4719-bc28-5a20a52df040_389_2": {
+    "cid": "953a4a5d-6923-4719-bc28-5a20a52df040",
+    "nid": "389",
+    "ptp_no": "2",
+    "ptp_name": "108",
+    "match_key_area": 82,
+    "supply_area": 108.43,
+    "exclusive_area": 82.45
+  },
+  "953a4a5d-6923-4719-bc28-5a20a52df040_389_23": {
+    "cid": "953a4a5d-6923-4719-bc28-5a20a52df040",
+    "nid": "389",
+    "ptp_no": "23",
+    "ptp_name": "126",
+    "match_key_area": 99,
+    "supply_area": 126.78,
+    "exclusive_area": 99.0
+  },
+  "953a4a5d-6923-4719-bc28-5a20a52df040_389_41": {
+    "cid": "953a4a5d-6923-4719-bc28-5a20a52df040",
+    "nid": "389",
+    "ptp_no": "41",
+    "ptp_name": "150",
+    "match_key_area": 120,
+    "supply_area": 150.05,
+    "exclusive_area": 120.0
+  },
+  "953a4a5d-6923-4719-bc28-5a20a52df040_389_54": {
+    "cid": "953a4a5d-6923-4719-bc28-5a20a52df040",
+    "nid": "389",
+    "ptp_no": "54",
+    "ptp_name": "212",
+    "match_key_area": 197,
+    "supply_area": 212.56,
+    "exclusive_area": 196.76
+  },
+  "5eaa149f-38d5-4849-9c2c-7a45f0ad1ec8_659_10": {
+    "cid": "5eaa149f-38d5-4849-9c2c-7a45f0ad1ec8",
+    "nid": "659",
+    "ptp_no": "10",
+    "ptp_name": "72",
+    "match_key_area": 59,
+    "supply_area": 72.19,
+    "exclusive_area": 59.39
+  },
+  "5eaa149f-38d5-4849-9c2c-7a45f0ad1ec8_659_1": {
+    "cid": "5eaa149f-38d5-4849-9c2c-7a45f0ad1ec8",
+    "nid": "659",
+    "ptp_no": "1",
+    "ptp_name": "74",
+    "match_key_area": 54,
+    "supply_area": 74.74,
+    "exclusive_area": 53.88
+  },
+  "5eaa149f-38d5-4849-9c2c-7a45f0ad1ec8_659_6": {
+    "cid": "5eaa149f-38d5-4849-9c2c-7a45f0ad1ec8",
+    "nid": "659",
+    "ptp_no": "6",
+    "ptp_name": "78",
+    "match_key_area": 64,
+    "supply_area": 78.27,
+    "exclusive_area": 64.4
+  },
+  "5eaa149f-38d5-4849-9c2c-7a45f0ad1ec8_659_2": {
+    "cid": "5eaa149f-38d5-4849-9c2c-7a45f0ad1ec8",
+    "nid": "659",
+    "ptp_no": "2",
+    "ptp_name": "89A",
+    "match_key_area": 67,
+    "supply_area": 89.88,
+    "exclusive_area": 66.6
+  },
+  "5eaa149f-38d5-4849-9c2c-7a45f0ad1ec8_659_8": {
+    "cid": "5eaa149f-38d5-4849-9c2c-7a45f0ad1ec8",
+    "nid": "659",
+    "ptp_no": "8",
+    "ptp_name": "90C",
+    "match_key_area": 74,
+    "supply_area": 90.09,
+    "exclusive_area": 74.12
+  },
+  "5eaa149f-38d5-4849-9c2c-7a45f0ad1ec8_659_3": {
+    "cid": "5eaa149f-38d5-4849-9c2c-7a45f0ad1ec8",
+    "nid": "659",
+    "ptp_no": "3",
+    "ptp_name": "106",
+    "match_key_area": 89,
+    "supply_area": 106.67,
+    "exclusive_area": 89.05
+  },
+  "5eaa149f-38d5-4849-9c2c-7a45f0ad1ec8_659_4": {
+    "cid": "5eaa149f-38d5-4849-9c2c-7a45f0ad1ec8",
+    "nid": "659",
+    "ptp_no": "4",
+    "ptp_name": "121",
+    "match_key_area": 101,
+    "supply_area": 121.19,
+    "exclusive_area": 101.2
+  },
+  "28a6e73e-9e7c-417e-bc55-9aadf587c249_635_1": {
+    "cid": "28a6e73e-9e7c-417e-bc55-9aadf587c249",
+    "nid": "635",
+    "ptp_no": "1",
+    "ptp_name": "124A",
+    "match_key_area": 99,
+    "supply_area": 124.77,
+    "exclusive_area": 99.38
+  },
+  "28a6e73e-9e7c-417e-bc55-9aadf587c249_635_3": {
+    "cid": "28a6e73e-9e7c-417e-bc55-9aadf587c249",
+    "nid": "635",
+    "ptp_no": "3",
+    "ptp_name": "168B",
+    "match_key_area": 134,
+    "supply_area": 168.84,
+    "exclusive_area": 134.48
+  },
+  "28a6e73e-9e7c-417e-bc55-9aadf587c249_635_4": {
+    "cid": "28a6e73e-9e7c-417e-bc55-9aadf587c249",
+    "nid": "635",
+    "ptp_no": "4",
+    "ptp_name": "171C",
+    "match_key_area": 140,
+    "supply_area": 171.64,
+    "exclusive_area": 139.66
+  },
+  "28a6e73e-9e7c-417e-bc55-9aadf587c249_635_5": {
+    "cid": "28a6e73e-9e7c-417e-bc55-9aadf587c249",
+    "nid": "635",
+    "ptp_no": "5",
+    "ptp_name": "185C",
+    "match_key_area": 151,
+    "supply_area": 185.58,
+    "exclusive_area": 151.0
+  },
+  "28a6e73e-9e7c-417e-bc55-9aadf587c249_635_6": {
+    "cid": "28a6e73e-9e7c-417e-bc55-9aadf587c249",
+    "nid": "635",
+    "ptp_no": "6",
+    "ptp_name": "213D",
+    "match_key_area": 178,
+    "supply_area": 213.36,
+    "exclusive_area": 178.32
+  },
+  "13d743dd-4987-42db-aa88-6857ec3b2fb9_119219_9": {
+    "cid": "13d743dd-4987-42db-aa88-6857ec3b2fb9",
+    "nid": "119219",
+    "ptp_no": "9",
+    "ptp_name": "74",
+    "match_key_area": 50,
+    "supply_area": 74.31,
+    "exclusive_area": 49.92
+  },
+  "13d743dd-4987-42db-aa88-6857ec3b2fb9_119219_1": {
+    "cid": "13d743dd-4987-42db-aa88-6857ec3b2fb9",
+    "nid": "119219",
+    "ptp_no": "1",
+    "ptp_name": "86A",
+    "match_key_area": 60,
+    "supply_area": 86.05,
+    "exclusive_area": 59.92
+  },
+  "13d743dd-4987-42db-aa88-6857ec3b2fb9_119219_10": {
+    "cid": "13d743dd-4987-42db-aa88-6857ec3b2fb9",
+    "nid": "119219",
+    "ptp_no": "10",
+    "ptp_name": "86B",
+    "match_key_area": 60,
+    "supply_area": 86.11,
+    "exclusive_area": 59.96
+  },
+  "13d743dd-4987-42db-aa88-6857ec3b2fb9_119219_11": {
+    "cid": "13d743dd-4987-42db-aa88-6857ec3b2fb9",
+    "nid": "119219",
+    "ptp_no": "11",
+    "ptp_name": "101",
+    "match_key_area": 75,
+    "supply_area": 101.09,
+    "exclusive_area": 74.66
+  },
+  "13d743dd-4987-42db-aa88-6857ec3b2fb9_119219_12": {
+    "cid": "13d743dd-4987-42db-aa88-6857ec3b2fb9",
+    "nid": "119219",
+    "ptp_no": "12",
+    "ptp_name": "115A",
+    "match_key_area": 85,
+    "supply_area": 115.41,
+    "exclusive_area": 84.86
+  },
+  "13d743dd-4987-42db-aa88-6857ec3b2fb9_119219_13": {
+    "cid": "13d743dd-4987-42db-aa88-6857ec3b2fb9",
+    "nid": "119219",
+    "ptp_no": "13",
+    "ptp_name": "115B",
+    "match_key_area": 85,
+    "supply_area": 115.37,
+    "exclusive_area": 84.83
+  },
+  "13d743dd-4987-42db-aa88-6857ec3b2fb9_119219_2": {
+    "cid": "13d743dd-4987-42db-aa88-6857ec3b2fb9",
+    "nid": "119219",
+    "ptp_no": "2",
+    "ptp_name": "128A",
+    "match_key_area": 97,
+    "supply_area": 128.91,
+    "exclusive_area": 96.93
+  },
+  "13d743dd-4987-42db-aa88-6857ec3b2fb9_119219_3": {
+    "cid": "13d743dd-4987-42db-aa88-6857ec3b2fb9",
+    "nid": "119219",
+    "ptp_no": "3",
+    "ptp_name": "129B",
+    "match_key_area": 97,
+    "supply_area": 129.78,
+    "exclusive_area": 96.91
+  },
+  "13d743dd-4987-42db-aa88-6857ec3b2fb9_119219_4": {
+    "cid": "13d743dd-4987-42db-aa88-6857ec3b2fb9",
+    "nid": "119219",
+    "ptp_no": "4",
+    "ptp_name": "135A",
+    "match_key_area": 102,
+    "supply_area": 135.96,
+    "exclusive_area": 102.32
+  },
+  "13d743dd-4987-42db-aa88-6857ec3b2fb9_119219_5": {
+    "cid": "13d743dd-4987-42db-aa88-6857ec3b2fb9",
+    "nid": "119219",
+    "ptp_no": "5",
+    "ptp_name": "136B",
+    "match_key_area": 102,
+    "supply_area": 136.79,
+    "exclusive_area": 102.41
+  },
+  "13d743dd-4987-42db-aa88-6857ec3b2fb9_119219_6": {
+    "cid": "13d743dd-4987-42db-aa88-6857ec3b2fb9",
+    "nid": "119219",
+    "ptp_no": "6",
+    "ptp_name": "148A",
+    "match_key_area": 113,
+    "supply_area": 148.96,
+    "exclusive_area": 112.97
+  },
+  "13d743dd-4987-42db-aa88-6857ec3b2fb9_119219_7": {
+    "cid": "13d743dd-4987-42db-aa88-6857ec3b2fb9",
+    "nid": "119219",
+    "ptp_no": "7",
+    "ptp_name": "149B",
+    "match_key_area": 113,
+    "supply_area": 149.85,
+    "exclusive_area": 112.73
+  },
+  "13d743dd-4987-42db-aa88-6857ec3b2fb9_119219_8": {
+    "cid": "13d743dd-4987-42db-aa88-6857ec3b2fb9",
+    "nid": "119219",
+    "ptp_no": "8",
+    "ptp_name": "174",
+    "match_key_area": 136,
+    "supply_area": 174.19,
+    "exclusive_area": 136.06
+  },
+  "5f2d4553-bab3-43c1-9e6a-774d287e3ca9_108187_3": {
+    "cid": "5f2d4553-bab3-43c1-9e6a-774d287e3ca9",
+    "nid": "108187",
+    "ptp_no": "3",
+    "ptp_name": "82P",
+    "match_key_area": 59,
+    "supply_area": 82.55,
+    "exclusive_area": 59.35
+  },
+  "5f2d4553-bab3-43c1-9e6a-774d287e3ca9_108187_2": {
+    "cid": "5f2d4553-bab3-43c1-9e6a-774d287e3ca9",
+    "nid": "108187",
+    "ptp_no": "2",
+    "ptp_name": "82TWB",
+    "match_key_area": 60,
+    "supply_area": 82.55,
+    "exclusive_area": 59.96
+  },
+  "5f2d4553-bab3-43c1-9e6a-774d287e3ca9_108187_1": {
+    "cid": "5f2d4553-bab3-43c1-9e6a-774d287e3ca9",
+    "nid": "108187",
+    "ptp_no": "1",
+    "ptp_name": "82TWA",
+    "match_key_area": 59,
+    "supply_area": 82.57,
+    "exclusive_area": 59.23
+  },
+  "5f2d4553-bab3-43c1-9e6a-774d287e3ca9_108187_4": {
+    "cid": "5f2d4553-bab3-43c1-9e6a-774d287e3ca9",
+    "nid": "108187",
+    "ptp_no": "4",
+    "ptp_name": "94TR",
+    "match_key_area": 60,
+    "supply_area": 94.2,
+    "exclusive_area": 59.92
+  },
+  "5f2d4553-bab3-43c1-9e6a-774d287e3ca9_108187_5": {
+    "cid": "5f2d4553-bab3-43c1-9e6a-774d287e3ca9",
+    "nid": "108187",
+    "ptp_no": "5",
+    "ptp_name": "99P",
+    "match_key_area": 72,
+    "supply_area": 99.01,
+    "exclusive_area": 72.02
+  },
+  "5f2d4553-bab3-43c1-9e6a-774d287e3ca9_108187_10": {
+    "cid": "5f2d4553-bab3-43c1-9e6a-774d287e3ca9",
+    "nid": "108187",
+    "ptp_no": "10",
+    "ptp_name": "115D",
+    "match_key_area": 85,
+    "supply_area": 115.47,
+    "exclusive_area": 84.88
+  },
+  "5f2d4553-bab3-43c1-9e6a-774d287e3ca9_108187_11": {
+    "cid": "5f2d4553-bab3-43c1-9e6a-774d287e3ca9",
+    "nid": "108187",
+    "ptp_no": "11",
+    "ptp_name": "115P",
+    "match_key_area": 85,
+    "supply_area": 115.54,
+    "exclusive_area": 84.9
+  },
+  "5f2d4553-bab3-43c1-9e6a-774d287e3ca9_108187_7": {
+    "cid": "5f2d4553-bab3-43c1-9e6a-774d287e3ca9",
+    "nid": "108187",
+    "ptp_no": "7",
+    "ptp_name": "115A",
+    "match_key_area": 85,
+    "supply_area": 115.36,
+    "exclusive_area": 84.83
+  },
+  "5f2d4553-bab3-43c1-9e6a-774d287e3ca9_108187_8": {
+    "cid": "5f2d4553-bab3-43c1-9e6a-774d287e3ca9",
+    "nid": "108187",
+    "ptp_no": "8",
+    "ptp_name": "115B",
+    "match_key_area": 85,
+    "supply_area": 115.64,
+    "exclusive_area": 84.94
+  },
+  "5f2d4553-bab3-43c1-9e6a-774d287e3ca9_108187_13": {
+    "cid": "5f2d4553-bab3-43c1-9e6a-774d287e3ca9",
+    "nid": "108187",
+    "ptp_no": "13",
+    "ptp_name": "132A",
+    "match_key_area": 97,
+    "supply_area": 132.08,
+    "exclusive_area": 97.26
+  },
+  "5f2d4553-bab3-43c1-9e6a-774d287e3ca9_108187_14": {
+    "cid": "5f2d4553-bab3-43c1-9e6a-774d287e3ca9",
+    "nid": "108187",
+    "ptp_no": "14",
+    "ptp_name": "132B",
+    "match_key_area": 97,
+    "supply_area": 132.08,
+    "exclusive_area": 97.26
+  },
+  "5f2d4553-bab3-43c1-9e6a-774d287e3ca9_108187_22": {
+    "cid": "5f2d4553-bab3-43c1-9e6a-774d287e3ca9",
+    "nid": "108187",
+    "ptp_no": "22",
+    "ptp_name": "138PH",
+    "match_key_area": 101,
+    "supply_area": 138.54,
+    "exclusive_area": 101.14
+  },
+  "5f2d4553-bab3-43c1-9e6a-774d287e3ca9_108187_16": {
+    "cid": "5f2d4553-bab3-43c1-9e6a-774d287e3ca9",
+    "nid": "108187",
+    "ptp_no": "16",
+    "ptp_name": "148",
+    "match_key_area": 110,
+    "supply_area": 148.63,
+    "exclusive_area": 109.81
+  },
+  "5f2d4553-bab3-43c1-9e6a-774d287e3ca9_108187_18": {
+    "cid": "5f2d4553-bab3-43c1-9e6a-774d287e3ca9",
+    "nid": "108187",
+    "ptp_no": "18",
+    "ptp_name": "194",
+    "match_key_area": 142,
+    "supply_area": 194.06,
+    "exclusive_area": 141.64
+  },
+  "831f71b9-7c81-44d0-9f3c-068f2e80c39e_121971_3": {
+    "cid": "831f71b9-7c81-44d0-9f3c-068f2e80c39e",
+    "nid": "121971",
+    "ptp_no": "3",
+    "ptp_name": "82C",
+    "match_key_area": 64,
+    "supply_area": 82.06,
+    "exclusive_area": 63.76
+  },
+  "831f71b9-7c81-44d0-9f3c-068f2e80c39e_121971_2": {
+    "cid": "831f71b9-7c81-44d0-9f3c-068f2e80c39e",
+    "nid": "121971",
+    "ptp_no": "2",
+    "ptp_name": "82B",
+    "match_key_area": 64,
+    "supply_area": 82.06,
+    "exclusive_area": 63.76
+  },
+  "831f71b9-7c81-44d0-9f3c-068f2e80c39e_121971_4": {
+    "cid": "831f71b9-7c81-44d0-9f3c-068f2e80c39e",
+    "nid": "121971",
+    "ptp_no": "4",
+    "ptp_name": "97A",
+    "match_key_area": 77,
+    "supply_area": 97.22,
+    "exclusive_area": 76.6
+  },
+  "831f71b9-7c81-44d0-9f3c-068f2e80c39e_121971_6": {
+    "cid": "831f71b9-7c81-44d0-9f3c-068f2e80c39e",
+    "nid": "121971",
+    "ptp_no": "6",
+    "ptp_name": "98C",
+    "match_key_area": 77,
+    "supply_area": 98.67,
+    "exclusive_area": 76.55
+  },
+  "831f71b9-7c81-44d0-9f3c-068f2e80c39e_121971_7": {
+    "cid": "831f71b9-7c81-44d0-9f3c-068f2e80c39e",
+    "nid": "121971",
+    "ptp_no": "7",
+    "ptp_name": "99D",
+    "match_key_area": 76,
+    "supply_area": 99.0,
+    "exclusive_area": 76.46
+  },
+  "831f71b9-7c81-44d0-9f3c-068f2e80c39e_121971_8": {
+    "cid": "831f71b9-7c81-44d0-9f3c-068f2e80c39e",
+    "nid": "121971",
+    "ptp_no": "8",
+    "ptp_name": "99B",
+    "match_key_area": 77,
+    "supply_area": 99.12,
+    "exclusive_area": 76.77
+  },
+  "831f71b9-7c81-44d0-9f3c-068f2e80c39e_121971_15": {
+    "cid": "831f71b9-7c81-44d0-9f3c-068f2e80c39e",
+    "nid": "121971",
+    "ptp_no": "15",
+    "ptp_name": "108B",
+    "match_key_area": 85,
+    "supply_area": 108.3,
+    "exclusive_area": 84.73
+  },
+  "831f71b9-7c81-44d0-9f3c-068f2e80c39e_121971_12": {
+    "cid": "831f71b9-7c81-44d0-9f3c-068f2e80c39e",
+    "nid": "121971",
+    "ptp_no": "12",
+    "ptp_name": "108A",
+    "match_key_area": 85,
+    "supply_area": 108.01,
+    "exclusive_area": 84.94
+  },
+  "831f71b9-7c81-44d0-9f3c-068f2e80c39e_121971_17": {
+    "cid": "831f71b9-7c81-44d0-9f3c-068f2e80c39e",
+    "nid": "121971",
+    "ptp_no": "17",
+    "ptp_name": "108F",
+    "match_key_area": 85,
+    "supply_area": 108.96,
+    "exclusive_area": 84.81
+  },
+  "831f71b9-7c81-44d0-9f3c-068f2e80c39e_121971_14": {
+    "cid": "831f71b9-7c81-44d0-9f3c-068f2e80c39e",
+    "nid": "121971",
+    "ptp_no": "14",
+    "ptp_name": "108C",
+    "match_key_area": 85,
+    "supply_area": 108.2,
+    "exclusive_area": 84.71
+  },
+  "831f71b9-7c81-44d0-9f3c-068f2e80c39e_121971_19": {
+    "cid": "831f71b9-7c81-44d0-9f3c-068f2e80c39e",
+    "nid": "121971",
+    "ptp_no": "19",
+    "ptp_name": "131C",
+    "match_key_area": 104,
+    "supply_area": 131.87,
+    "exclusive_area": 103.77
+  },
+  "831f71b9-7c81-44d0-9f3c-068f2e80c39e_121971_20": {
+    "cid": "831f71b9-7c81-44d0-9f3c-068f2e80c39e",
+    "nid": "121971",
+    "ptp_no": "20",
+    "ptp_name": "132B",
+    "match_key_area": 104,
+    "supply_area": 132.14,
+    "exclusive_area": 103.86
+  },
+  "831f71b9-7c81-44d0-9f3c-068f2e80c39e_121971_21": {
+    "cid": "831f71b9-7c81-44d0-9f3c-068f2e80c39e",
+    "nid": "121971",
+    "ptp_no": "21",
+    "ptp_name": "149A",
+    "match_key_area": 119,
+    "supply_area": 149.04,
+    "exclusive_area": 118.68
+  },
+  "831f71b9-7c81-44d0-9f3c-068f2e80c39e_121971_22": {
+    "cid": "831f71b9-7c81-44d0-9f3c-068f2e80c39e",
+    "nid": "121971",
+    "ptp_no": "22",
+    "ptp_name": "166A",
+    "match_key_area": 133,
+    "supply_area": 166.41,
+    "exclusive_area": 132.92
+  },
+  "831f71b9-7c81-44d0-9f3c-068f2e80c39e_121971_23": {
+    "cid": "831f71b9-7c81-44d0-9f3c-068f2e80c39e",
+    "nid": "121971",
+    "ptp_no": "23",
+    "ptp_name": "222A",
+    "match_key_area": 173,
+    "supply_area": 222.18,
+    "exclusive_area": 173.48
+  },
+  "65f738e4-13e4-4878-9a10-427ad16144cf_3038_2": {
+    "cid": "65f738e4-13e4-4878-9a10-427ad16144cf",
+    "nid": "3038",
+    "ptp_no": "2",
+    "ptp_name": "112A",
+    "match_key_area": 84,
+    "supply_area": 112.72,
+    "exclusive_area": 84.16
+  },
+  "65f738e4-13e4-4878-9a10-427ad16144cf_3038_1": {
+    "cid": "65f738e4-13e4-4878-9a10-427ad16144cf",
+    "nid": "3038",
+    "ptp_no": "1",
+    "ptp_name": "112B",
+    "match_key_area": 84,
+    "supply_area": 112.71,
+    "exclusive_area": 84.15
+  },
+  "65f738e4-13e4-4878-9a10-427ad16144cf_3038_3": {
+    "cid": "65f738e4-13e4-4878-9a10-427ad16144cf",
+    "nid": "3038",
+    "ptp_no": "3",
+    "ptp_name": "161A",
+    "match_key_area": 121,
+    "supply_area": 161.76,
+    "exclusive_area": 120.78
+  },
+  "65f738e4-13e4-4878-9a10-427ad16144cf_3038_4": {
+    "cid": "65f738e4-13e4-4878-9a10-427ad16144cf",
+    "nid": "3038",
+    "ptp_no": "4",
+    "ptp_name": "162B",
+    "match_key_area": 121,
+    "supply_area": 162.62,
+    "exclusive_area": 121.42
+  },
+  "65f738e4-13e4-4878-9a10-427ad16144cf_3038_5": {
+    "cid": "65f738e4-13e4-4878-9a10-427ad16144cf",
+    "nid": "3038",
+    "ptp_no": "5",
+    "ptp_name": "183",
+    "match_key_area": 137,
+    "supply_area": 183.81,
+    "exclusive_area": 137.24
+  },
+  "65f738e4-13e4-4878-9a10-427ad16144cf_3038_7": {
+    "cid": "65f738e4-13e4-4878-9a10-427ad16144cf",
+    "nid": "3038",
+    "ptp_no": "7",
+    "ptp_name": "220B",
+    "match_key_area": 165,
+    "supply_area": 220.95,
+    "exclusive_area": 164.97
+  },
+  "65f738e4-13e4-4878-9a10-427ad16144cf_3038_6": {
+    "cid": "65f738e4-13e4-4878-9a10-427ad16144cf",
+    "nid": "3038",
+    "ptp_no": "6",
+    "ptp_name": "220A",
+    "match_key_area": 165,
+    "supply_area": 220.92,
+    "exclusive_area": 164.95
+  },
+  "65f738e4-13e4-4878-9a10-427ad16144cf_3038_8": {
+    "cid": "65f738e4-13e4-4878-9a10-427ad16144cf",
+    "nid": "3038",
+    "ptp_no": "8",
+    "ptp_name": "233",
+    "match_key_area": 175,
+    "supply_area": 233.94,
+    "exclusive_area": 174.67
+  },
+  "65f738e4-13e4-4878-9a10-427ad16144cf_3038_10": {
+    "cid": "65f738e4-13e4-4878-9a10-427ad16144cf",
+    "nid": "3038",
+    "ptp_no": "10",
+    "ptp_name": "327",
+    "match_key_area": 245,
+    "supply_area": 327.68,
+    "exclusive_area": 244.66
+  },
+  "65f738e4-13e4-4878-9a10-427ad16144cf_3038_12": {
+    "cid": "65f738e4-13e4-4878-9a10-427ad16144cf",
+    "nid": "3038",
+    "ptp_no": "12",
+    "ptp_name": "403",
+    "match_key_area": 301,
+    "supply_area": 403.76,
+    "exclusive_area": 301.47
+  },
+  "6c5f66fc-302b-4a9a-bb42-694a299e0bb8_12861_1": {
+    "cid": "6c5f66fc-302b-4a9a-bb42-694a299e0bb8",
+    "nid": "12861",
+    "ptp_no": "1",
+    "ptp_name": "86A",
+    "match_key_area": 80,
+    "supply_area": 86.13,
+    "exclusive_area": 80.35
+  },
+  "6c5f66fc-302b-4a9a-bb42-694a299e0bb8_12861_7": {
+    "cid": "6c5f66fc-302b-4a9a-bb42-694a299e0bb8",
+    "nid": "12861",
+    "ptp_no": "7",
+    "ptp_name": "86C",
+    "match_key_area": 81,
+    "supply_area": 86.46,
+    "exclusive_area": 80.76
+  },
+  "6c5f66fc-302b-4a9a-bb42-694a299e0bb8_12861_9": {
+    "cid": "6c5f66fc-302b-4a9a-bb42-694a299e0bb8",
+    "nid": "12861",
+    "ptp_no": "9",
+    "ptp_name": "87E",
+    "match_key_area": 82,
+    "supply_area": 87.93,
+    "exclusive_area": 82.06
+  },
+  "6c5f66fc-302b-4a9a-bb42-694a299e0bb8_12861_2": {
+    "cid": "6c5f66fc-302b-4a9a-bb42-694a299e0bb8",
+    "nid": "12861",
+    "ptp_no": "2",
+    "ptp_name": "104A",
+    "match_key_area": 97,
+    "supply_area": 104.6,
+    "exclusive_area": 96.65
+  },
+  "6c5f66fc-302b-4a9a-bb42-694a299e0bb8_12861_3": {
+    "cid": "6c5f66fc-302b-4a9a-bb42-694a299e0bb8",
+    "nid": "12861",
+    "ptp_no": "3",
+    "ptp_name": "141",
+    "match_key_area": 131,
+    "supply_area": 141.57,
+    "exclusive_area": 131.08
+  },
+  "6c5f66fc-302b-4a9a-bb42-694a299e0bb8_12861_4": {
+    "cid": "6c5f66fc-302b-4a9a-bb42-694a299e0bb8",
+    "nid": "12861",
+    "ptp_no": "4",
+    "ptp_name": "144",
+    "match_key_area": 136,
+    "supply_area": 144.85,
+    "exclusive_area": 136.34
+  },
+  "6c5f66fc-302b-4a9a-bb42-694a299e0bb8_12861_5": {
+    "cid": "6c5f66fc-302b-4a9a-bb42-694a299e0bb8",
+    "nid": "12861",
+    "ptp_no": "5",
+    "ptp_name": "173",
+    "match_key_area": 161,
+    "supply_area": 173.63,
+    "exclusive_area": 160.74
+  },
+  "91a441a6-1421-474f-bd80-0a4d78cbce26_180280_2": {
+    "cid": "91a441a6-1421-474f-bd80-0a4d78cbce26",
+    "nid": "180280",
+    "ptp_no": "2",
+    "ptp_name": "88B",
+    "match_key_area": 60,
+    "supply_area": 88.0,
+    "exclusive_area": 59.99
+  },
+  "91a441a6-1421-474f-bd80-0a4d78cbce26_180280_7": {
+    "cid": "91a441a6-1421-474f-bd80-0a4d78cbce26",
+    "nid": "180280",
+    "ptp_no": "7",
+    "ptp_name": "111C",
+    "match_key_area": 85,
+    "supply_area": 111.83,
+    "exclusive_area": 84.99
+  },
+  "91a441a6-1421-474f-bd80-0a4d78cbce26_180280_6": {
+    "cid": "91a441a6-1421-474f-bd80-0a4d78cbce26",
+    "nid": "180280",
+    "ptp_no": "6",
+    "ptp_name": "112B",
+    "match_key_area": 85,
+    "supply_area": 112.24,
+    "exclusive_area": 84.98
+  },
+  "91a441a6-1421-474f-bd80-0a4d78cbce26_180280_5": {
+    "cid": "91a441a6-1421-474f-bd80-0a4d78cbce26",
+    "nid": "180280",
+    "ptp_no": "5",
+    "ptp_name": "113A",
+    "match_key_area": 85,
+    "supply_area": 113.15,
+    "exclusive_area": 84.97
+  },
+  "91a441a6-1421-474f-bd80-0a4d78cbce26_180280_10": {
+    "cid": "91a441a6-1421-474f-bd80-0a4d78cbce26",
+    "nid": "180280",
+    "ptp_no": "10",
+    "ptp_name": "118",
+    "match_key_area": 89,
+    "supply_area": 118.79,
+    "exclusive_area": 89.03
+  },
+  "91a441a6-1421-474f-bd80-0a4d78cbce26_180280_14": {
+    "cid": "91a441a6-1421-474f-bd80-0a4d78cbce26",
+    "nid": "180280",
+    "ptp_no": "14",
+    "ptp_name": "122C",
+    "match_key_area": 92,
+    "supply_area": 122.74,
+    "exclusive_area": 91.93
+  },
+  "91a441a6-1421-474f-bd80-0a4d78cbce26_180280_13": {
+    "cid": "91a441a6-1421-474f-bd80-0a4d78cbce26",
+    "nid": "180280",
+    "ptp_no": "13",
+    "ptp_name": "122E",
+    "match_key_area": 92,
+    "supply_area": 122.58,
+    "exclusive_area": 91.91
+  },
+  "91a441a6-1421-474f-bd80-0a4d78cbce26_180280_12": {
+    "cid": "91a441a6-1421-474f-bd80-0a4d78cbce26",
+    "nid": "180280",
+    "ptp_no": "12",
+    "ptp_name": "123A",
+    "match_key_area": 92,
+    "supply_area": 123.48,
+    "exclusive_area": 91.89
+  },
+  "91a441a6-1421-474f-bd80-0a4d78cbce26_180280_15": {
+    "cid": "91a441a6-1421-474f-bd80-0a4d78cbce26",
+    "nid": "180280",
+    "ptp_no": "15",
+    "ptp_name": "123B",
+    "match_key_area": 92,
+    "supply_area": 123.01,
+    "exclusive_area": 91.93
+  },
+  "91a441a6-1421-474f-bd80-0a4d78cbce26_180280_17": {
+    "cid": "91a441a6-1421-474f-bd80-0a4d78cbce26",
+    "nid": "180280",
+    "ptp_no": "17",
+    "ptp_name": "124",
+    "match_key_area": 93,
+    "supply_area": 124.11,
+    "exclusive_area": 93.18
+  },
+  "91a441a6-1421-474f-bd80-0a4d78cbce26_180280_19": {
+    "cid": "91a441a6-1421-474f-bd80-0a4d78cbce26",
+    "nid": "180280",
+    "ptp_no": "19",
+    "ptp_name": "125C1",
+    "match_key_area": 94,
+    "supply_area": 125.23,
+    "exclusive_area": 94.49
+  },
+  "91a441a6-1421-474f-bd80-0a4d78cbce26_180280_21": {
+    "cid": "91a441a6-1421-474f-bd80-0a4d78cbce26",
+    "nid": "180280",
+    "ptp_no": "21",
+    "ptp_name": "125B1",
+    "match_key_area": 94,
+    "supply_area": 125.57,
+    "exclusive_area": 94.5
+  },
+  "91a441a6-1421-474f-bd80-0a4d78cbce26_180280_20": {
+    "cid": "91a441a6-1421-474f-bd80-0a4d78cbce26",
+    "nid": "180280",
+    "ptp_no": "20",
+    "ptp_name": "126A",
+    "match_key_area": 94,
+    "supply_area": 126.22,
+    "exclusive_area": 94.49
+  },
+  "91a441a6-1421-474f-bd80-0a4d78cbce26_180280_22": {
+    "cid": "91a441a6-1421-474f-bd80-0a4d78cbce26",
+    "nid": "180280",
+    "ptp_no": "22",
+    "ptp_name": "126E",
+    "match_key_area": 95,
+    "supply_area": 126.12,
+    "exclusive_area": 94.51
+  },
+  "91a441a6-1421-474f-bd80-0a4d78cbce26_180280_25": {
+    "cid": "91a441a6-1421-474f-bd80-0a4d78cbce26",
+    "nid": "180280",
+    "ptp_no": "25",
+    "ptp_name": "149C",
+    "match_key_area": 114,
+    "supply_area": 149.36,
+    "exclusive_area": 114.15
+  },
+  "91a441a6-1421-474f-bd80-0a4d78cbce26_180280_26": {
+    "cid": "91a441a6-1421-474f-bd80-0a4d78cbce26",
+    "nid": "180280",
+    "ptp_no": "26",
+    "ptp_name": "149B",
+    "match_key_area": 114,
+    "supply_area": 149.4,
+    "exclusive_area": 114.17
+  },
+  "91a441a6-1421-474f-bd80-0a4d78cbce26_180280_23": {
+    "cid": "91a441a6-1421-474f-bd80-0a4d78cbce26",
+    "nid": "180280",
+    "ptp_no": "23",
+    "ptp_name": "150A",
+    "match_key_area": 114,
+    "supply_area": 150.36,
+    "exclusive_area": 114.14
+  },
+  "91a441a6-1421-474f-bd80-0a4d78cbce26_180280_28": {
+    "cid": "91a441a6-1421-474f-bd80-0a4d78cbce26",
+    "nid": "180280",
+    "ptp_no": "28",
+    "ptp_name": "181A",
+    "match_key_area": 151,
+    "supply_area": 181.45,
+    "exclusive_area": 151.31
+  },
+  "91a441a6-1421-474f-bd80-0a4d78cbce26_180280_27": {
+    "cid": "91a441a6-1421-474f-bd80-0a4d78cbce26",
+    "nid": "180280",
+    "ptp_no": "27",
+    "ptp_name": "183B",
+    "match_key_area": 151,
+    "supply_area": 183.59,
+    "exclusive_area": 151.27
+  },
+  "71a7c268-298a-4257-b3a8-d96cf0af12d4_112228_1": {
+    "cid": "71a7c268-298a-4257-b3a8-d96cf0af12d4",
+    "nid": "112228",
+    "ptp_no": "1",
+    "ptp_name": "67A",
+    "match_key_area": 50,
+    "supply_area": 67.77,
+    "exclusive_area": 49.9
+  },
+  "71a7c268-298a-4257-b3a8-d96cf0af12d4_112228_2": {
+    "cid": "71a7c268-298a-4257-b3a8-d96cf0af12d4",
+    "nid": "112228",
+    "ptp_no": "2",
+    "ptp_name": "80A",
+    "match_key_area": 60,
+    "supply_area": 80.92,
+    "exclusive_area": 59.96
+  },
+  "71a7c268-298a-4257-b3a8-d96cf0af12d4_112228_3": {
+    "cid": "71a7c268-298a-4257-b3a8-d96cf0af12d4",
+    "nid": "112228",
+    "ptp_no": "3",
+    "ptp_name": "80B",
+    "match_key_area": 60,
+    "supply_area": 80.79,
+    "exclusive_area": 59.88
+  },
+  "71a7c268-298a-4257-b3a8-d96cf0af12d4_112228_17": {
+    "cid": "71a7c268-298a-4257-b3a8-d96cf0af12d4",
+    "nid": "112228",
+    "ptp_no": "17",
+    "ptp_name": "80C",
+    "match_key_area": 60,
+    "supply_area": 80.77,
+    "exclusive_area": 59.83
+  },
+  "71a7c268-298a-4257-b3a8-d96cf0af12d4_112228_5": {
+    "cid": "71a7c268-298a-4257-b3a8-d96cf0af12d4",
+    "nid": "112228",
+    "ptp_no": "5",
+    "ptp_name": "113C",
+    "match_key_area": 85,
+    "supply_area": 113.84,
+    "exclusive_area": 84.94
+  },
+  "71a7c268-298a-4257-b3a8-d96cf0af12d4_112228_4": {
+    "cid": "71a7c268-298a-4257-b3a8-d96cf0af12d4",
+    "nid": "112228",
+    "ptp_no": "4",
+    "ptp_name": "113B",
+    "match_key_area": 85,
+    "supply_area": 113.3,
+    "exclusive_area": 84.94
+  },
+  "71a7c268-298a-4257-b3a8-d96cf0af12d4_112228_18": {
+    "cid": "71a7c268-298a-4257-b3a8-d96cf0af12d4",
+    "nid": "112228",
+    "ptp_no": "18",
+    "ptp_name": "113A",
+    "match_key_area": 85,
+    "supply_area": 113.3,
+    "exclusive_area": 84.94
+  },
+  "71a7c268-298a-4257-b3a8-d96cf0af12d4_112228_19": {
+    "cid": "71a7c268-298a-4257-b3a8-d96cf0af12d4",
+    "nid": "112228",
+    "ptp_no": "19",
+    "ptp_name": "113B-1",
+    "match_key_area": 85,
+    "supply_area": 113.3,
+    "exclusive_area": 84.94
+  },
+  "71a7c268-298a-4257-b3a8-d96cf0af12d4_112228_20": {
+    "cid": "71a7c268-298a-4257-b3a8-d96cf0af12d4",
+    "nid": "112228",
+    "ptp_no": "20",
+    "ptp_name": "113B-2",
+    "match_key_area": 85,
+    "supply_area": 113.3,
+    "exclusive_area": 84.94
+  },
+  "71a7c268-298a-4257-b3a8-d96cf0af12d4_112228_6": {
+    "cid": "71a7c268-298a-4257-b3a8-d96cf0af12d4",
+    "nid": "112228",
+    "ptp_no": "6",
+    "ptp_name": "115D",
+    "match_key_area": 85,
+    "supply_area": 115.07,
+    "exclusive_area": 84.95
+  },
+  "71a7c268-298a-4257-b3a8-d96cf0af12d4_112228_7": {
+    "cid": "71a7c268-298a-4257-b3a8-d96cf0af12d4",
+    "nid": "112228",
+    "ptp_no": "7",
+    "ptp_name": "133A",
+    "match_key_area": 100,
+    "supply_area": 133.55,
+    "exclusive_area": 99.96
+  },
+  "71a7c268-298a-4257-b3a8-d96cf0af12d4_112228_10": {
+    "cid": "71a7c268-298a-4257-b3a8-d96cf0af12d4",
+    "nid": "112228",
+    "ptp_no": "10",
+    "ptp_name": "133D",
+    "match_key_area": 100,
+    "supply_area": 133.72,
+    "exclusive_area": 99.97
+  },
+  "71a7c268-298a-4257-b3a8-d96cf0af12d4_112228_9": {
+    "cid": "71a7c268-298a-4257-b3a8-d96cf0af12d4",
+    "nid": "112228",
+    "ptp_no": "9",
+    "ptp_name": "134C",
+    "match_key_area": 100,
+    "supply_area": 134.02,
+    "exclusive_area": 99.91
+  },
+  "71a7c268-298a-4257-b3a8-d96cf0af12d4_112228_8": {
+    "cid": "71a7c268-298a-4257-b3a8-d96cf0af12d4",
+    "nid": "112228",
+    "ptp_no": "8",
+    "ptp_name": "134B",
+    "match_key_area": 100,
+    "supply_area": 134.36,
+    "exclusive_area": 99.99
+  },
+  "71a7c268-298a-4257-b3a8-d96cf0af12d4_112228_11": {
+    "cid": "71a7c268-298a-4257-b3a8-d96cf0af12d4",
+    "nid": "112228",
+    "ptp_no": "11",
+    "ptp_name": "150A",
+    "match_key_area": 114,
+    "supply_area": 150.98,
+    "exclusive_area": 113.73
+  },
+  "71a7c268-298a-4257-b3a8-d96cf0af12d4_112228_13": {
+    "cid": "71a7c268-298a-4257-b3a8-d96cf0af12d4",
+    "nid": "112228",
+    "ptp_no": "13",
+    "ptp_name": "151C",
+    "match_key_area": 114,
+    "supply_area": 151.12,
+    "exclusive_area": 113.96
+  },
+  "71a7c268-298a-4257-b3a8-d96cf0af12d4_112228_14": {
+    "cid": "71a7c268-298a-4257-b3a8-d96cf0af12d4",
+    "nid": "112228",
+    "ptp_no": "14",
+    "ptp_name": "169A",
+    "match_key_area": 127,
+    "supply_area": 169.78,
+    "exclusive_area": 126.92
+  },
+  "71a7c268-298a-4257-b3a8-d96cf0af12d4_112228_15": {
+    "cid": "71a7c268-298a-4257-b3a8-d96cf0af12d4",
+    "nid": "112228",
+    "ptp_no": "15",
+    "ptp_name": "169B",
+    "match_key_area": 127,
+    "supply_area": 169.7,
+    "exclusive_area": 126.97
+  },
+  "b58df6e9-859e-499b-af0f-41e86c1cabe2_22781_5": {
+    "cid": "b58df6e9-859e-499b-af0f-41e86c1cabe2",
+    "nid": "22781",
+    "ptp_no": "5",
+    "ptp_name": "85",
+    "match_key_area": 60,
+    "supply_area": 85.43,
+    "exclusive_area": 59.97
+  },
+  "b58df6e9-859e-499b-af0f-41e86c1cabe2_22781_1": {
+    "cid": "b58df6e9-859e-499b-af0f-41e86c1cabe2",
+    "nid": "22781",
+    "ptp_no": "1",
+    "ptp_name": "86",
+    "match_key_area": 60,
+    "supply_area": 86.34,
+    "exclusive_area": 59.97
+  },
+  "b58df6e9-859e-499b-af0f-41e86c1cabe2_22781_13": {
+    "cid": "b58df6e9-859e-499b-af0f-41e86c1cabe2",
+    "nid": "22781",
+    "ptp_no": "13",
+    "ptp_name": "108C",
+    "match_key_area": 85,
+    "supply_area": 108.78,
+    "exclusive_area": 84.96
+  },
+  "b58df6e9-859e-499b-af0f-41e86c1cabe2_22781_6": {
+    "cid": "b58df6e9-859e-499b-af0f-41e86c1cabe2",
+    "nid": "22781",
+    "ptp_no": "6",
+    "ptp_name": "109TA",
+    "match_key_area": 85,
+    "supply_area": 109.7,
+    "exclusive_area": 84.94
+  },
+  "b58df6e9-859e-499b-af0f-41e86c1cabe2_22781_2": {
+    "cid": "b58df6e9-859e-499b-af0f-41e86c1cabe2",
+    "nid": "22781",
+    "ptp_no": "2",
+    "ptp_name": "109TB",
+    "match_key_area": 85,
+    "supply_area": 109.31,
+    "exclusive_area": 84.96
+  },
+  "b58df6e9-859e-499b-af0f-41e86c1cabe2_22781_7": {
+    "cid": "b58df6e9-859e-499b-af0f-41e86c1cabe2",
+    "nid": "22781",
+    "ptp_no": "7",
+    "ptp_name": "110A",
+    "match_key_area": 85,
+    "supply_area": 110.51,
+    "exclusive_area": 84.96
+  },
+  "b58df6e9-859e-499b-af0f-41e86c1cabe2_22781_3": {
+    "cid": "b58df6e9-859e-499b-af0f-41e86c1cabe2",
+    "nid": "22781",
+    "ptp_no": "3",
+    "ptp_name": "145",
+    "match_key_area": 117,
+    "supply_area": 145.13,
+    "exclusive_area": 116.99
+  },
+  "b58df6e9-859e-499b-af0f-41e86c1cabe2_22781_10": {
+    "cid": "b58df6e9-859e-499b-af0f-41e86c1cabe2",
+    "nid": "22781",
+    "ptp_no": "10",
+    "ptp_name": "145TB",
+    "match_key_area": 117,
+    "supply_area": 145.29,
+    "exclusive_area": 116.95
+  },
+  "b58df6e9-859e-499b-af0f-41e86c1cabe2_22781_11": {
+    "cid": "b58df6e9-859e-499b-af0f-41e86c1cabe2",
+    "nid": "22781",
+    "ptp_no": "11",
+    "ptp_name": "166",
+    "match_key_area": 137,
+    "supply_area": 166.95,
+    "exclusive_area": 136.62
+  },
+  "b58df6e9-859e-499b-af0f-41e86c1cabe2_22781_4": {
+    "cid": "b58df6e9-859e-499b-af0f-41e86c1cabe2",
+    "nid": "22781",
+    "ptp_no": "4",
+    "ptp_name": "168T",
+    "match_key_area": 137,
+    "supply_area": 168.7,
+    "exclusive_area": 137.21
+  },
+  "97030b5d-ee59-4c6c-a09b-ec38fc45e39f_532_5": {
+    "cid": "97030b5d-ee59-4c6c-a09b-ec38fc45e39f",
+    "nid": "532",
+    "ptp_no": "5",
+    "ptp_name": "103A",
+    "match_key_area": 96,
+    "supply_area": 103.57,
+    "exclusive_area": 96.48
+  },
+  "97030b5d-ee59-4c6c-a09b-ec38fc45e39f_532_6": {
+    "cid": "97030b5d-ee59-4c6c-a09b-ec38fc45e39f",
+    "nid": "532",
+    "ptp_no": "6",
+    "ptp_name": "103B",
+    "match_key_area": 97,
+    "supply_area": 103.87,
+    "exclusive_area": 96.78
+  },
+  "97030b5d-ee59-4c6c-a09b-ec38fc45e39f_532_1": {
+    "cid": "97030b5d-ee59-4c6c-a09b-ec38fc45e39f",
+    "nid": "532",
+    "ptp_no": "1",
+    "ptp_name": "108",
+    "match_key_area": 100,
+    "supply_area": 108.55,
+    "exclusive_area": 100.11
+  },
+  "97030b5d-ee59-4c6c-a09b-ec38fc45e39f_532_2": {
+    "cid": "97030b5d-ee59-4c6c-a09b-ec38fc45e39f",
+    "nid": "532",
+    "ptp_no": "2",
+    "ptp_name": "113C",
+    "match_key_area": 106,
+    "supply_area": 113.78,
+    "exclusive_area": 105.89
+  },
+  "97030b5d-ee59-4c6c-a09b-ec38fc45e39f_532_7": {
+    "cid": "97030b5d-ee59-4c6c-a09b-ec38fc45e39f",
+    "nid": "532",
+    "ptp_no": "7",
+    "ptp_name": "113A",
+    "match_key_area": 105,
+    "supply_area": 113.14,
+    "exclusive_area": 105.44
+  },
+  "97030b5d-ee59-4c6c-a09b-ec38fc45e39f_532_10": {
+    "cid": "97030b5d-ee59-4c6c-a09b-ec38fc45e39f",
+    "nid": "532",
+    "ptp_no": "10",
+    "ptp_name": "115B",
+    "match_key_area": 107,
+    "supply_area": 115.23,
+    "exclusive_area": 107.39
+  },
+  "97030b5d-ee59-4c6c-a09b-ec38fc45e39f_532_3": {
+    "cid": "97030b5d-ee59-4c6c-a09b-ec38fc45e39f",
+    "nid": "532",
+    "ptp_no": "3",
+    "ptp_name": "149",
+    "match_key_area": 137,
+    "supply_area": 149.53,
+    "exclusive_area": 137.1
+  },
+  "97030b5d-ee59-4c6c-a09b-ec38fc45e39f_532_4": {
+    "cid": "97030b5d-ee59-4c6c-a09b-ec38fc45e39f",
+    "nid": "532",
+    "ptp_no": "4",
+    "ptp_name": "168",
+    "match_key_area": 155,
+    "supply_area": 168.64,
+    "exclusive_area": 155.0
+  },
+  "cf184d81-92a3-4b24-ab1a-53c714295c60_757_1": {
+    "cid": "cf184d81-92a3-4b24-ab1a-53c714295c60",
+    "nid": "757",
+    "ptp_no": "1",
+    "ptp_name": "103",
+    "match_key_area": 96,
+    "supply_area": 103.02,
+    "exclusive_area": 95.66
+  },
+  "cf184d81-92a3-4b24-ab1a-53c714295c60_757_2": {
+    "cid": "cf184d81-92a3-4b24-ab1a-53c714295c60",
+    "nid": "757",
+    "ptp_no": "2",
+    "ptp_name": "151A",
+    "match_key_area": 141,
+    "supply_area": 151.94,
+    "exclusive_area": 140.81
+  },
+  "cf184d81-92a3-4b24-ab1a-53c714295c60_757_3": {
+    "cid": "cf184d81-92a3-4b24-ab1a-53c714295c60",
+    "nid": "757",
+    "ptp_no": "3",
+    "ptp_name": "179A",
+    "match_key_area": 167,
+    "supply_area": 179.86,
+    "exclusive_area": 166.98
+  },
+  "cf184d81-92a3-4b24-ab1a-53c714295c60_757_6": {
+    "cid": "cf184d81-92a3-4b24-ab1a-53c714295c60",
+    "nid": "757",
+    "ptp_no": "6",
+    "ptp_name": "179B",
+    "match_key_area": 167,
+    "supply_area": 179.98,
+    "exclusive_area": 167.08
+  },
+  "cf184d81-92a3-4b24-ab1a-53c714295c60_757_4": {
+    "cid": "cf184d81-92a3-4b24-ab1a-53c714295c60",
+    "nid": "757",
+    "ptp_no": "4",
+    "ptp_name": "226A",
+    "match_key_area": 210,
+    "supply_area": 226.44,
+    "exclusive_area": 210.25
+  },
+  "a78becbd-14be-4c0d-961f-fc30cbbc64c1_22570_1": {
+    "cid": "a78becbd-14be-4c0d-961f-fc30cbbc64c1",
+    "nid": "22570",
+    "ptp_no": "1",
+    "ptp_name": "87A",
+    "match_key_area": 60,
+    "supply_area": 87.41,
+    "exclusive_area": 59.99
+  },
+  "a78becbd-14be-4c0d-961f-fc30cbbc64c1_22570_2": {
+    "cid": "a78becbd-14be-4c0d-961f-fc30cbbc64c1",
+    "nid": "22570",
+    "ptp_no": "2",
+    "ptp_name": "87B",
+    "match_key_area": 60,
+    "supply_area": 87.41,
+    "exclusive_area": 59.99
+  },
+  "a78becbd-14be-4c0d-961f-fc30cbbc64c1_22570_5": {
+    "cid": "a78becbd-14be-4c0d-961f-fc30cbbc64c1",
+    "nid": "22570",
+    "ptp_no": "5",
+    "ptp_name": "113C",
+    "match_key_area": 85,
+    "supply_area": 113.0,
+    "exclusive_area": 84.81
+  },
+  "a78becbd-14be-4c0d-961f-fc30cbbc64c1_22570_6": {
+    "cid": "a78becbd-14be-4c0d-961f-fc30cbbc64c1",
+    "nid": "22570",
+    "ptp_no": "6",
+    "ptp_name": "113D",
+    "match_key_area": 85,
+    "supply_area": 113.0,
+    "exclusive_area": 84.81
+  },
+  "a78becbd-14be-4c0d-961f-fc30cbbc64c1_22570_9": {
+    "cid": "a78becbd-14be-4c0d-961f-fc30cbbc64c1",
+    "nid": "22570",
+    "ptp_no": "9",
+    "ptp_name": "132I",
+    "match_key_area": 102,
+    "supply_area": 132.81,
+    "exclusive_area": 102.34
+  },
+  "a78becbd-14be-4c0d-961f-fc30cbbc64c1_22570_8": {
+    "cid": "a78becbd-14be-4c0d-961f-fc30cbbc64c1",
+    "nid": "22570",
+    "ptp_no": "8",
+    "ptp_name": "134A",
+    "match_key_area": 103,
+    "supply_area": 134.57,
+    "exclusive_area": 103.01
+  },
+  "a78becbd-14be-4c0d-961f-fc30cbbc64c1_22570_10": {
+    "cid": "a78becbd-14be-4c0d-961f-fc30cbbc64c1",
+    "nid": "22570",
+    "ptp_no": "10",
+    "ptp_name": "145A",
+    "match_key_area": 111,
+    "supply_area": 145.47,
+    "exclusive_area": 111.22
+  },
+  "a78becbd-14be-4c0d-961f-fc30cbbc64c1_22570_11": {
+    "cid": "a78becbd-14be-4c0d-961f-fc30cbbc64c1",
+    "nid": "22570",
+    "ptp_no": "11",
+    "ptp_name": "145I",
+    "match_key_area": 112,
+    "supply_area": 145.76,
+    "exclusive_area": 112.11
+  },
+  "a78becbd-14be-4c0d-961f-fc30cbbc64c1_22570_12": {
+    "cid": "a78becbd-14be-4c0d-961f-fc30cbbc64c1",
+    "nid": "22570",
+    "ptp_no": "12",
+    "ptp_name": "169I",
+    "match_key_area": 134,
+    "supply_area": 169.22,
+    "exclusive_area": 133.97
+  },
+  "a78becbd-14be-4c0d-961f-fc30cbbc64c1_22570_13": {
+    "cid": "a78becbd-14be-4c0d-961f-fc30cbbc64c1",
+    "nid": "22570",
+    "ptp_no": "13",
+    "ptp_name": "198I",
+    "match_key_area": 161,
+    "supply_area": 198.51,
+    "exclusive_area": 160.63
+  },
+  "abe6937f-5826-4066-b2cc-647292d8e7fe_656_1": {
+    "cid": "abe6937f-5826-4066-b2cc-647292d8e7fe",
+    "nid": "656",
+    "ptp_no": "1",
+    "ptp_name": "84",
+    "match_key_area": 65,
+    "supply_area": 84.64,
+    "exclusive_area": 65.08
+  },
+  "abe6937f-5826-4066-b2cc-647292d8e7fe_656_9": {
+    "cid": "abe6937f-5826-4066-b2cc-647292d8e7fe",
+    "nid": "656",
+    "ptp_no": "9",
+    "ptp_name": "113F",
+    "match_key_area": 95,
+    "supply_area": 113.87,
+    "exclusive_area": 95.01
+  },
+  "abe6937f-5826-4066-b2cc-647292d8e7fe_656_4": {
+    "cid": "abe6937f-5826-4066-b2cc-647292d8e7fe",
+    "nid": "656",
+    "ptp_no": "4",
+    "ptp_name": "113A",
+    "match_key_area": 95,
+    "supply_area": 113.37,
+    "exclusive_area": 95.21
+  },
+  "abe6937f-5826-4066-b2cc-647292d8e7fe_656_6": {
+    "cid": "abe6937f-5826-4066-b2cc-647292d8e7fe",
+    "nid": "656",
+    "ptp_no": "6",
+    "ptp_name": "113C",
+    "match_key_area": 95,
+    "supply_area": 113.38,
+    "exclusive_area": 95.22
+  },
+  "abe6937f-5826-4066-b2cc-647292d8e7fe_656_7": {
+    "cid": "abe6937f-5826-4066-b2cc-647292d8e7fe",
+    "nid": "656",
+    "ptp_no": "7",
+    "ptp_name": "114D",
+    "match_key_area": 95,
+    "supply_area": 114.18,
+    "exclusive_area": 95.27
+  },
+  "abe6937f-5826-4066-b2cc-647292d8e7fe_656_11": {
+    "cid": "abe6937f-5826-4066-b2cc-647292d8e7fe",
+    "nid": "656",
+    "ptp_no": "11",
+    "ptp_name": "118H",
+    "match_key_area": 95,
+    "supply_area": 118.6,
+    "exclusive_area": 95.06
+  },
+  "abe6937f-5826-4066-b2cc-647292d8e7fe_656_10": {
+    "cid": "abe6937f-5826-4066-b2cc-647292d8e7fe",
+    "nid": "656",
+    "ptp_no": "10",
+    "ptp_name": "120G",
+    "match_key_area": 95,
+    "supply_area": 120.61,
+    "exclusive_area": 95.28
+  },
+  "abe6937f-5826-4066-b2cc-647292d8e7fe_656_12": {
+    "cid": "abe6937f-5826-4066-b2cc-647292d8e7fe",
+    "nid": "656",
+    "ptp_no": "12",
+    "ptp_name": "142A",
+    "match_key_area": 122,
+    "supply_area": 142.71,
+    "exclusive_area": 122.46
+  },
+  "abe6937f-5826-4066-b2cc-647292d8e7fe_656_14": {
+    "cid": "abe6937f-5826-4066-b2cc-647292d8e7fe",
+    "nid": "656",
+    "ptp_no": "14",
+    "ptp_name": "144C",
+    "match_key_area": 115,
+    "supply_area": 144.06,
+    "exclusive_area": 115.47
+  },
+  "abe6937f-5826-4066-b2cc-647292d8e7fe_656_19": {
+    "cid": "abe6937f-5826-4066-b2cc-647292d8e7fe",
+    "nid": "656",
+    "ptp_no": "19",
+    "ptp_name": "178D",
+    "match_key_area": 143,
+    "supply_area": 178.53,
+    "exclusive_area": 143.36
+  },
+  "5dbc36da-c73f-4f4f-bce8-06d9b7385188_867_1": {
+    "cid": "5dbc36da-c73f-4f4f-bce8-06d9b7385188",
+    "nid": "867",
+    "ptp_no": "1",
+    "ptp_name": "85",
+    "match_key_area": 60,
+    "supply_area": 85.12,
+    "exclusive_area": 59.88
+  },
+  "5dbc36da-c73f-4f4f-bce8-06d9b7385188_867_5": {
+    "cid": "5dbc36da-c73f-4f4f-bce8-06d9b7385188",
+    "nid": "867",
+    "ptp_no": "5",
+    "ptp_name": "111B",
+    "match_key_area": 85,
+    "supply_area": 111.39,
+    "exclusive_area": 84.96
+  },
+  "5dbc36da-c73f-4f4f-bce8-06d9b7385188_867_4": {
+    "cid": "5dbc36da-c73f-4f4f-bce8-06d9b7385188",
+    "nid": "867",
+    "ptp_no": "4",
+    "ptp_name": "111A",
+    "match_key_area": 85,
+    "supply_area": 111.3,
+    "exclusive_area": 84.89
+  },
+  "5dbc36da-c73f-4f4f-bce8-06d9b7385188_867_7": {
+    "cid": "5dbc36da-c73f-4f4f-bce8-06d9b7385188",
+    "nid": "867",
+    "ptp_no": "7",
+    "ptp_name": "142",
+    "match_key_area": 115,
+    "supply_area": 142.63,
+    "exclusive_area": 114.96
+  },
+  "b1b3a9fd-18c5-4975-ac45-8bf7fb595d9f_438_1": {
+    "cid": "b1b3a9fd-18c5-4975-ac45-8bf7fb595d9f",
+    "nid": "438",
+    "ptp_no": "1",
+    "ptp_name": "72",
+    "match_key_area": 54,
+    "supply_area": 72.37,
+    "exclusive_area": 53.9
+  },
+  "b1b3a9fd-18c5-4975-ac45-8bf7fb595d9f_438_2": {
+    "cid": "b1b3a9fd-18c5-4975-ac45-8bf7fb595d9f",
+    "nid": "438",
+    "ptp_no": "2",
+    "ptp_name": "92B",
+    "match_key_area": 71,
+    "supply_area": 92.43,
+    "exclusive_area": 70.73
+  },
+  "b1b3a9fd-18c5-4975-ac45-8bf7fb595d9f_438_4": {
+    "cid": "b1b3a9fd-18c5-4975-ac45-8bf7fb595d9f",
+    "nid": "438",
+    "ptp_no": "4",
+    "ptp_name": "128A",
+    "match_key_area": 99,
+    "supply_area": 128.89,
+    "exclusive_area": 98.63
+  },
+  "b1b3a9fd-18c5-4975-ac45-8bf7fb595d9f_438_7": {
+    "cid": "b1b3a9fd-18c5-4975-ac45-8bf7fb595d9f",
+    "nid": "438",
+    "ptp_no": "7",
+    "ptp_name": "193A",
+    "match_key_area": 157,
+    "supply_area": 193.93,
+    "exclusive_area": 156.62
+  },
+  "5b710963-0c7d-46b1-b1f0-b789c44acb84_118771_1": {
+    "cid": "5b710963-0c7d-46b1-b1f0-b789c44acb84",
+    "nid": "118771",
+    "ptp_no": "1",
+    "ptp_name": "77A",
+    "match_key_area": 60,
+    "supply_area": 77.18,
+    "exclusive_area": 59.84
+  },
+  "5b710963-0c7d-46b1-b1f0-b789c44acb84_118771_2": {
+    "cid": "5b710963-0c7d-46b1-b1f0-b789c44acb84",
+    "nid": "118771",
+    "ptp_no": "2",
+    "ptp_name": "86A",
+    "match_key_area": 68,
+    "supply_area": 86.99,
+    "exclusive_area": 67.86
+  },
+  "5b710963-0c7d-46b1-b1f0-b789c44acb84_118771_3": {
+    "cid": "5b710963-0c7d-46b1-b1f0-b789c44acb84",
+    "nid": "118771",
+    "ptp_no": "3",
+    "ptp_name": "95B",
+    "match_key_area": 75,
+    "supply_area": 95.99,
+    "exclusive_area": 74.98
+  },
+  "5b710963-0c7d-46b1-b1f0-b789c44acb84_118771_4": {
+    "cid": "5b710963-0c7d-46b1-b1f0-b789c44acb84",
+    "nid": "118771",
+    "ptp_no": "4",
+    "ptp_name": "96A",
+    "match_key_area": 75,
+    "supply_area": 96.59,
+    "exclusive_area": 74.96
+  },
+  "5b710963-0c7d-46b1-b1f0-b789c44acb84_118771_8": {
+    "cid": "5b710963-0c7d-46b1-b1f0-b789c44acb84",
+    "nid": "118771",
+    "ptp_no": "8",
+    "ptp_name": "107T",
+    "match_key_area": 85,
+    "supply_area": 107.37,
+    "exclusive_area": 84.77
+  },
+  "5b710963-0c7d-46b1-b1f0-b789c44acb84_118771_5": {
+    "cid": "5b710963-0c7d-46b1-b1f0-b789c44acb84",
+    "nid": "118771",
+    "ptp_no": "5",
+    "ptp_name": "108A",
+    "match_key_area": 85,
+    "supply_area": 108.52,
+    "exclusive_area": 84.92
+  },
+  "5b710963-0c7d-46b1-b1f0-b789c44acb84_118771_6": {
+    "cid": "5b710963-0c7d-46b1-b1f0-b789c44acb84",
+    "nid": "118771",
+    "ptp_no": "6",
+    "ptp_name": "108B",
+    "match_key_area": 85,
+    "supply_area": 108.99,
+    "exclusive_area": 84.96
+  },
+  "5b710963-0c7d-46b1-b1f0-b789c44acb84_118771_9": {
+    "cid": "5b710963-0c7d-46b1-b1f0-b789c44acb84",
+    "nid": "118771",
+    "ptp_no": "9",
+    "ptp_name": "112PA",
+    "match_key_area": 85,
+    "supply_area": 112.35,
+    "exclusive_area": 84.94
+  },
+  "5b710963-0c7d-46b1-b1f0-b789c44acb84_118771_11": {
+    "cid": "5b710963-0c7d-46b1-b1f0-b789c44acb84",
+    "nid": "118771",
+    "ptp_no": "11",
+    "ptp_name": "113PC",
+    "match_key_area": 85,
+    "supply_area": 113.06,
+    "exclusive_area": 84.92
+  },
+  "5b710963-0c7d-46b1-b1f0-b789c44acb84_118771_10": {
+    "cid": "5b710963-0c7d-46b1-b1f0-b789c44acb84",
+    "nid": "118771",
+    "ptp_no": "10",
+    "ptp_name": "113PB",
+    "match_key_area": 85,
+    "supply_area": 113.27,
+    "exclusive_area": 84.98
+  },
+  "5b710963-0c7d-46b1-b1f0-b789c44acb84_118771_12": {
+    "cid": "5b710963-0c7d-46b1-b1f0-b789c44acb84",
+    "nid": "118771",
+    "ptp_no": "12",
+    "ptp_name": "114PD",
+    "match_key_area": 85,
+    "supply_area": 114.01,
+    "exclusive_area": 84.94
+  },
+  "5b710963-0c7d-46b1-b1f0-b789c44acb84_118771_7": {
+    "cid": "5b710963-0c7d-46b1-b1f0-b789c44acb84",
+    "nid": "118771",
+    "ptp_no": "7",
+    "ptp_name": "125A",
+    "match_key_area": 99,
+    "supply_area": 125.26,
+    "exclusive_area": 98.68
+  },
+  "692a019f-0188-42a8-bcf4-fad8bbbbf26e_742_1": {
+    "cid": "692a019f-0188-42a8-bcf4-fad8bbbbf26e",
+    "nid": "742",
+    "ptp_no": "1",
+    "ptp_name": "95",
+    "match_key_area": 74,
+    "supply_area": 95.27,
+    "exclusive_area": 74.4
+  },
+  "692a019f-0188-42a8-bcf4-fad8bbbbf26e_742_2": {
+    "cid": "692a019f-0188-42a8-bcf4-fad8bbbbf26e",
+    "nid": "742",
+    "ptp_no": "2",
+    "ptp_name": "138",
+    "match_key_area": 119,
+    "supply_area": 138.47,
+    "exclusive_area": 118.63
+  },
+  "692a019f-0188-42a8-bcf4-fad8bbbbf26e_742_3": {
+    "cid": "692a019f-0188-42a8-bcf4-fad8bbbbf26e",
+    "nid": "742",
+    "ptp_no": "3",
+    "ptp_name": "163",
+    "match_key_area": 141,
+    "supply_area": 163.56,
+    "exclusive_area": 140.9
+  },
+  "62d0ddca-96d9-4c66-b0d9-1e8c6e6003d5_959_1": {
+    "cid": "62d0ddca-96d9-4c66-b0d9-1e8c6e6003d5",
+    "nid": "959",
+    "ptp_no": "1",
+    "ptp_name": "74",
+    "match_key_area": 54,
+    "supply_area": 74.33,
+    "exclusive_area": 53.82
+  },
+  "62d0ddca-96d9-4c66-b0d9-1e8c6e6003d5_959_2": {
+    "cid": "62d0ddca-96d9-4c66-b0d9-1e8c6e6003d5",
+    "nid": "959",
+    "ptp_no": "2",
+    "ptp_name": "94A",
+    "match_key_area": 71,
+    "supply_area": 94.87,
+    "exclusive_area": 71.37
+  },
+  "62d0ddca-96d9-4c66-b0d9-1e8c6e6003d5_959_4": {
+    "cid": "62d0ddca-96d9-4c66-b0d9-1e8c6e6003d5",
+    "nid": "959",
+    "ptp_no": "4",
+    "ptp_name": "103",
+    "match_key_area": 85,
+    "supply_area": 103.72,
+    "exclusive_area": 84.99
+  },
+  "62d0ddca-96d9-4c66-b0d9-1e8c6e6003d5_959_6": {
+    "cid": "62d0ddca-96d9-4c66-b0d9-1e8c6e6003d5",
+    "nid": "959",
+    "ptp_no": "6",
+    "ptp_name": "108B",
+    "match_key_area": 91,
+    "supply_area": 108.96,
+    "exclusive_area": 90.72
+  },
+  "62d0ddca-96d9-4c66-b0d9-1e8c6e6003d5_959_5": {
+    "cid": "62d0ddca-96d9-4c66-b0d9-1e8c6e6003d5",
+    "nid": "959",
+    "ptp_no": "5",
+    "ptp_name": "122A",
+    "match_key_area": 100,
+    "supply_area": 122.44,
+    "exclusive_area": 100.33
+  },
+  "62d0ddca-96d9-4c66-b0d9-1e8c6e6003d5_959_8": {
+    "cid": "62d0ddca-96d9-4c66-b0d9-1e8c6e6003d5",
+    "nid": "959",
+    "ptp_no": "8",
+    "ptp_name": "128B",
+    "match_key_area": 107,
+    "supply_area": 128.43,
+    "exclusive_area": 106.93
+  },
+  "62d0ddca-96d9-4c66-b0d9-1e8c6e6003d5_959_7": {
+    "cid": "62d0ddca-96d9-4c66-b0d9-1e8c6e6003d5",
+    "nid": "959",
+    "ptp_no": "7",
+    "ptp_name": "129A",
+    "match_key_area": 106,
+    "supply_area": 129.57,
+    "exclusive_area": 106.39
+  },
+  "e45bf510-adba-4168-ae48-6d556b42fe5f_3621_1": {
+    "cid": "e45bf510-adba-4168-ae48-6d556b42fe5f",
+    "nid": "3621",
+    "ptp_no": "1",
+    "ptp_name": "108",
+    "match_key_area": 85,
+    "supply_area": 108.16,
+    "exclusive_area": 84.99
+  },
+  "e45bf510-adba-4168-ae48-6d556b42fe5f_3621_2": {
+    "cid": "e45bf510-adba-4168-ae48-6d556b42fe5f",
+    "nid": "3621",
+    "ptp_no": "2",
+    "ptp_name": "158",
+    "match_key_area": 125,
+    "supply_area": 158.46,
+    "exclusive_area": 124.51
+  },
+  "e45bf510-adba-4168-ae48-6d556b42fe5f_3621_3": {
+    "cid": "e45bf510-adba-4168-ae48-6d556b42fe5f",
+    "nid": "3621",
+    "ptp_no": "3",
+    "ptp_name": "177A",
+    "match_key_area": 140,
+    "supply_area": 177.76,
+    "exclusive_area": 139.68
+  },
+  "e45bf510-adba-4168-ae48-6d556b42fe5f_3621_4": {
+    "cid": "e45bf510-adba-4168-ae48-6d556b42fe5f",
+    "nid": "3621",
+    "ptp_no": "4",
+    "ptp_name": "177B",
+    "match_key_area": 140,
+    "supply_area": 177.8,
+    "exclusive_area": 139.71
+  },
+  "e45bf510-adba-4168-ae48-6d556b42fe5f_3621_5": {
+    "cid": "e45bf510-adba-4168-ae48-6d556b42fe5f",
+    "nid": "3621",
+    "ptp_no": "5",
+    "ptp_name": "207",
+    "match_key_area": 163,
+    "supply_area": 207.27,
+    "exclusive_area": 162.86
+  },
+  "e45bf510-adba-4168-ae48-6d556b42fe5f_3621_6": {
+    "cid": "e45bf510-adba-4168-ae48-6d556b42fe5f",
+    "nid": "3621",
+    "ptp_no": "6",
+    "ptp_name": "231A",
+    "match_key_area": 182,
+    "supply_area": 231.91,
+    "exclusive_area": 182.23
+  },
+  "e45bf510-adba-4168-ae48-6d556b42fe5f_3621_7": {
+    "cid": "e45bf510-adba-4168-ae48-6d556b42fe5f",
+    "nid": "3621",
+    "ptp_no": "7",
+    "ptp_name": "254A",
+    "match_key_area": 200,
+    "supply_area": 254.24,
+    "exclusive_area": 199.77
+  },
+  "e45bf510-adba-4168-ae48-6d556b42fe5f_3621_14": {
+    "cid": "e45bf510-adba-4168-ae48-6d556b42fe5f",
+    "nid": "3621",
+    "ptp_no": "14",
+    "ptp_name": "310F",
+    "match_key_area": 245,
+    "supply_area": 310.93,
+    "exclusive_area": 244.57
+  },
+  "4c73c07e-7994-4c51-808b-7cf97dec3d06_154_1": {
+    "cid": "4c73c07e-7994-4c51-808b-7cf97dec3d06",
+    "nid": "154",
+    "ptp_no": "1",
+    "ptp_name": "101A",
+    "match_key_area": 95,
+    "supply_area": 101.66,
+    "exclusive_area": 94.89
+  },
+  "4c73c07e-7994-4c51-808b-7cf97dec3d06_154_6": {
+    "cid": "4c73c07e-7994-4c51-808b-7cf97dec3d06",
+    "nid": "154",
+    "ptp_no": "6",
+    "ptp_name": "102B",
+    "match_key_area": 85,
+    "supply_area": 102.27,
+    "exclusive_area": 84.55
+  },
+  "4c73c07e-7994-4c51-808b-7cf97dec3d06_154_2": {
+    "cid": "4c73c07e-7994-4c51-808b-7cf97dec3d06",
+    "nid": "154",
+    "ptp_no": "2",
+    "ptp_name": "137",
+    "match_key_area": 128,
+    "supply_area": 137.45,
+    "exclusive_area": 128.32
+  },
+  "4c73c07e-7994-4c51-808b-7cf97dec3d06_154_7": {
+    "cid": "4c73c07e-7994-4c51-808b-7cf97dec3d06",
+    "nid": "154",
+    "ptp_no": "7",
+    "ptp_name": "148",
+    "match_key_area": 128,
+    "supply_area": 148.6,
+    "exclusive_area": 127.75
+  },
+  "4c73c07e-7994-4c51-808b-7cf97dec3d06_154_3": {
+    "cid": "4c73c07e-7994-4c51-808b-7cf97dec3d06",
+    "nid": "154",
+    "ptp_no": "3",
+    "ptp_name": "157",
+    "match_key_area": 147,
+    "supply_area": 157.36,
+    "exclusive_area": 146.75
+  },
+  "4c73c07e-7994-4c51-808b-7cf97dec3d06_154_5": {
+    "cid": "4c73c07e-7994-4c51-808b-7cf97dec3d06",
+    "nid": "154",
+    "ptp_no": "5",
+    "ptp_name": "182",
+    "match_key_area": 161,
+    "supply_area": 182.22,
+    "exclusive_area": 160.76
+  },
+  "4c73c07e-7994-4c51-808b-7cf97dec3d06_154_4": {
+    "cid": "4c73c07e-7994-4c51-808b-7cf97dec3d06",
+    "nid": "154",
+    "ptp_no": "4",
+    "ptp_name": "186",
+    "match_key_area": 174,
+    "supply_area": 186.36,
+    "exclusive_area": 174.0
+  },
+  "d4a2c1e0-87b7-4ccb-b80e-a0b3d819db55_749_1": {
+    "cid": "d4a2c1e0-87b7-4ccb-b80e-a0b3d819db55",
+    "nid": "749",
+    "ptp_no": "1",
+    "ptp_name": "60",
+    "match_key_area": 61,
+    "supply_area": 60.96,
+    "exclusive_area": 60.96
+  },
+  "d4a2c1e0-87b7-4ccb-b80e-a0b3d819db55_749_2": {
+    "cid": "d4a2c1e0-87b7-4ccb-b80e-a0b3d819db55",
+    "nid": "749",
+    "ptp_no": "2",
+    "ptp_name": "79",
+    "match_key_area": 79,
+    "supply_area": 79.24,
+    "exclusive_area": 79.24
+  },
+  "d4a2c1e0-87b7-4ccb-b80e-a0b3d819db55_749_3": {
+    "cid": "d4a2c1e0-87b7-4ccb-b80e-a0b3d819db55",
+    "nid": "749",
+    "ptp_no": "3",
+    "ptp_name": "118",
+    "match_key_area": 118,
+    "supply_area": 118.12,
+    "exclusive_area": 118.12
+  },
+  "d4a2c1e0-87b7-4ccb-b80e-a0b3d819db55_749_4": {
+    "cid": "d4a2c1e0-87b7-4ccb-b80e-a0b3d819db55",
+    "nid": "749",
+    "ptp_no": "4",
+    "ptp_name": "156",
+    "match_key_area": 157,
+    "supply_area": 156.99,
+    "exclusive_area": 156.99
+  },
+  "94379391-ef97-4ce2-a4a1-bcb00a070ba7_712_1": {
+    "cid": "94379391-ef97-4ce2-a4a1-bcb00a070ba7",
+    "nid": "712",
+    "ptp_no": "1",
+    "ptp_name": "141",
+    "match_key_area": 131,
+    "supply_area": 141.74,
+    "exclusive_area": 131.48
+  },
+  "94379391-ef97-4ce2-a4a1-bcb00a070ba7_712_5": {
+    "cid": "94379391-ef97-4ce2-a4a1-bcb00a070ba7",
+    "nid": "712",
+    "ptp_no": "5",
+    "ptp_name": "172",
+    "match_key_area": 160,
+    "supply_area": 172.62,
+    "exclusive_area": 160.28
+  },
+  "94379391-ef97-4ce2-a4a1-bcb00a070ba7_712_6": {
+    "cid": "94379391-ef97-4ce2-a4a1-bcb00a070ba7",
+    "nid": "712",
+    "ptp_no": "6",
+    "ptp_name": "176",
+    "match_key_area": 161,
+    "supply_area": 176.88,
+    "exclusive_area": 161.19
+  },
+  "94379391-ef97-4ce2-a4a1-bcb00a070ba7_712_4": {
+    "cid": "94379391-ef97-4ce2-a4a1-bcb00a070ba7",
+    "nid": "712",
+    "ptp_no": "4",
+    "ptp_name": "176B",
+    "match_key_area": 161,
+    "supply_area": 176.87,
+    "exclusive_area": 161.18
+  },
+  "94379391-ef97-4ce2-a4a1-bcb00a070ba7_712_2": {
+    "cid": "94379391-ef97-4ce2-a4a1-bcb00a070ba7",
+    "nid": "712",
+    "ptp_no": "2",
+    "ptp_name": "176A",
+    "match_key_area": 163,
+    "supply_area": 176.87,
+    "exclusive_area": 162.94
+  },
+  "94379391-ef97-4ce2-a4a1-bcb00a070ba7_712_3": {
+    "cid": "94379391-ef97-4ce2-a4a1-bcb00a070ba7",
+    "nid": "712",
+    "ptp_no": "3",
+    "ptp_name": "211A",
+    "match_key_area": 196,
+    "supply_area": 211.23,
+    "exclusive_area": 196.21
+  },
+  "94379391-ef97-4ce2-a4a1-bcb00a070ba7_712_8": {
+    "cid": "94379391-ef97-4ce2-a4a1-bcb00a070ba7",
+    "nid": "712",
+    "ptp_no": "8",
+    "ptp_name": "211B",
+    "match_key_area": 197,
+    "supply_area": 211.78,
+    "exclusive_area": 196.84
+  },
+  "94379391-ef97-4ce2-a4a1-bcb00a070ba7_712_7": {
+    "cid": "94379391-ef97-4ce2-a4a1-bcb00a070ba7",
+    "nid": "712",
+    "ptp_no": "7",
+    "ptp_name": "213",
+    "match_key_area": 198,
+    "supply_area": 213.46,
+    "exclusive_area": 198.41
+  },
+  "94379391-ef97-4ce2-a4a1-bcb00a070ba7_705_2": {
+    "cid": "94379391-ef97-4ce2-a4a1-bcb00a070ba7",
+    "nid": "705",
+    "ptp_no": "2",
+    "ptp_name": "108A",
+    "match_key_area": 82,
+    "supply_area": 108.88,
+    "exclusive_area": 82.5
+  },
+  "94379391-ef97-4ce2-a4a1-bcb00a070ba7_495_1": {
+    "cid": "94379391-ef97-4ce2-a4a1-bcb00a070ba7",
+    "nid": "495",
+    "ptp_no": "1",
+    "ptp_name": "140",
+    "match_key_area": 118,
+    "supply_area": 140.26,
+    "exclusive_area": 117.91
+  },
+  "94379391-ef97-4ce2-a4a1-bcb00a070ba7_495_2": {
+    "cid": "94379391-ef97-4ce2-a4a1-bcb00a070ba7",
+    "nid": "495",
+    "ptp_no": "2",
+    "ptp_name": "140",
+    "match_key_area": 118,
+    "supply_area": 140.7,
+    "exclusive_area": 117.9
+  },
+  "94379391-ef97-4ce2-a4a1-bcb00a070ba7_708_1": {
+    "cid": "94379391-ef97-4ce2-a4a1-bcb00a070ba7",
+    "nid": "708",
+    "ptp_no": "1",
+    "ptp_name": "113",
+    "match_key_area": 82,
+    "supply_area": 113.96,
+    "exclusive_area": 82.23
   }
 }

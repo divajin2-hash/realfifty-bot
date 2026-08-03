@@ -3,11 +3,14 @@ import './globals.css'
 import ClientGrid from './ClientGrid'
 import SearchInput from './SearchInput'
 import TickerClient from './TickerClient'
-import rawData from '../data/kb50_stats.json'
+import fs from 'fs'
+import path from 'path'
 
 export const dynamic = 'force-dynamic';
 
 export default async function Dashboard({ searchParams }: { searchParams: { sort?: string } }) {
+    const jsonPath = path.join(process.cwd(), 'src', 'data', 'kb50_stats.json');
+    const rawData = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
 
     const groupedData = (rawData as any[]).map(group => {
         return {

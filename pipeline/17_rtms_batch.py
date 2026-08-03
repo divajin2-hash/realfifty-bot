@@ -85,17 +85,23 @@ def run_rtms_10y_batch():
                         if not matched_c: continue
                         
                         price = format_price(item.findtext("dealAmount"))
-                        mk = int(float(item.findtext("excluUseAr")))
+                        area_exact = float(item.findtext("excluUseAr"))
+                        mk = int(round(area_exact))
+                        if matched_c["id"] == '94379391-ef97-4ce2-a4a1-bcb00a070ba7' and abs(area_exact - 82.23) < 0.01:
+                            mk = 83
                         day = item.findtext("dealDay")
                         d_str = f"{y}-{m:02d}-{int(day):02d}"
                         floor = int(item.findtext("floor", "0"))
+                        deal_type = item.findtext("dealingGbn", " ") # '직거래' or '중개거래' or empty
                         
                         trades_to_insert.append({
                             "complex_id": matched_c["id"],
                             "match_key_area": mk,
                             "deal_date": d_str,
                             "deal_price": price,
-                            "floor": floor
+                            "floor": floor,
+                            "exclusive_area_exact": area_exact,
+                            "transaction_type": deal_type
                         })
                 except Exception as e:
                     pass
@@ -108,8 +114,7 @@ def run_rtms_10y_batch():
                 try:
                     supabase.table("rtms_transactions").upsert(
                         trades_to_insert, 
-                        on_conflict="complex_id, match_key_area, deal_date, deal_price, floor", 
-                        ignore_duplicates=True
+                        on_conflict="complex_id, match_key_area, deal_date, deal_price, floor"
                     ).execute()
                     total_inserted += len(trades_to_insert)
                     print(f"   ✅ {ymd} -> {len(trades_to_insert)}건의 50대장 거래 로그 적재 완료 (누적: {total_inserted}건)")

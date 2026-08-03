@@ -33,12 +33,16 @@ def run():
     
     KST = timezone(timedelta(hours=9))
     today_date = datetime.now(KST).strftime('%Y-%m-%d')
-    yesterday_date = (datetime.now(KST) - timedelta(days=1)).strftime('%Y-%m-%d')
+    res_dates = supabase.table('daily_history').select('base_date').lt('base_date', today_date).order('base_date', desc=True).limit(1).execute()
+    if res_dates.data:
+        prev_date = res_dates.data[0]['base_date']
+    else:
+        prev_date = (datetime.now(KST) - timedelta(days=1)).strftime('%Y-%m-%d')
     
-    print(f"Fetching summary stats for {today_date} vs {yesterday_date}...")
+    print(f"Fetching summary stats for {today_date} vs {prev_date}...")
     
     res_today = supabase.table('daily_history').select('*').eq('base_date', today_date).execute()
-    res_yest = supabase.table('daily_history').select('*').eq('base_date', yesterday_date).execute()
+    res_yest = supabase.table('daily_history').select('*').eq('base_date', prev_date).execute()
     
     if not res_today.data:
         print("No daily history data found for today.")
@@ -106,7 +110,7 @@ def run():
         if len(ask_changes) > 15:
             msg += f"...외 {len(ask_changes)-15}건 더 있음\n"
     else:
-        msg += "어제 대비 최저호가 변동 내역이 없습니다.\n"
+        msg += f"{prev_date} 대비 최저호가 변동 내역이 없습니다.\n"
         
     # Send
     t_url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
