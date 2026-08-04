@@ -49,8 +49,12 @@ def run():
         if not c_id:
             continue
             
+        seen_areas = set()
         for p in c['stats']:
             area = p['match_key_area']
+            if area in seen_areas:
+                continue
+            seen_areas.add(area)
             ath = p.get('highest_deal_price') or 0
             
             recent_deal = p.get('recent_deal_absolute')

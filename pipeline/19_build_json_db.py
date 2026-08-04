@@ -1,5 +1,6 @@
 import os
 import json
+from datetime import datetime, timedelta
 from dotenv import load_dotenv
 from supabase import create_client, Client
 
@@ -100,7 +101,9 @@ def build_db():
     # ---------------------------------------------------------
 
     final_data = []
-    current_date_str = "2026-07"
+    now = datetime.now()
+    # Rolling 30 days window for volume
+    thirty_days_ago = (now - timedelta(days=30)).strftime("%Y-%m-%d")
 
     for c in complexes:
         cid = str(c["id"])
@@ -163,7 +166,7 @@ def build_db():
                 }
 
             absolute_recent = map_t(trades_sorted[-1])
-            month_deals = [map_t(t) for t in trades_sorted if t["deal_date"].startswith(current_date_str)]
+            month_deals = [map_t(t) for t in trades_sorted if t["deal_date"] >= thirty_days_ago]
             
             final_ask = ask.get('lowest_ask', 0)
             # fallback logic omitted for brevity as it's Naver scraping source directly

@@ -3,6 +3,7 @@ import './globals.css'
 import ClientGrid from './ClientGrid'
 import SearchInput from './SearchInput'
 import TickerClient from './TickerClient'
+import Link from 'next/link'
 import fs from 'fs'
 import path from 'path'
 
@@ -17,7 +18,7 @@ export default async function Dashboard({ searchParams }: { searchParams: { sort
             complex: group.complex,
             stats: group.stats.map((s: any) => {
                 const recentPrice = s.recent_deal_absolute ? s.recent_deal_absolute.price : s.highest_deal_price;
-                // 최고가 대비 "최근 실거래가" 하락률
+                // 理쒓퀬媛 ?鍮?"理쒓렐 ?ㅺ굅?섍?" ?섎씫瑜?
                 const recent_drop_rate = (s.highest_deal_price > 0 && recentPrice) ? ((recentPrice - s.highest_deal_price) / s.highest_deal_price) * 100 : 0;
                 return {
                     id: group.complex.id + s.match_key_area,
@@ -37,7 +38,7 @@ export default async function Dashboard({ searchParams }: { searchParams: { sort
         }
     });
 
-    // 대표평형 추출 로직 (UI 표출 기준)
+    // ??쒗룊??異붿텧 濡쒖쭅 (UI ?쒖텧 湲곗?)
     function getRepresentativeStat(stats: any[]) {
         if (!stats || stats.length === 0) return null;
         const now = new Date().getTime();
@@ -56,19 +57,19 @@ export default async function Dashboard({ searchParams }: { searchParams: { sort
         });
 
         scoredStats.sort((a, b) => {
-            // 1. 1년 내 거래가 있었던 평형을 우대 (최근 거래 활성도)
+            // 1. 1????嫄곕옒媛 ?덉뿀???됲삎???곕? (理쒓렐 嫄곕옒 ?쒖꽦??
             if (a.isAlive !== b.isAlive) return a.isAlive ? -1 : 1;
 
-            // 2. 84㎡ (국민평형)에 가까운 것을 우선 (1순위)
+            // 2. 84??(援???됲삎)??媛源뚯슫 寃껋쓣 ?곗꽑 (1?쒖쐞)
             if (a.groupDist !== b.groupDist) return a.groupDist - b.groupDist;
 
-            // 3. 84㎡가 아니거나 거리가 같다면, 거래량이 가장 많은(압도적인) 평형을 우선 (2순위)
-            // max_month_volume은 해당 평형의 역사적 월간 최대 거래량이므로 세대수/활성도를 가장 잘 대변함
+            // 3. 84?↔? ?꾨땲嫄곕굹 嫄곕━媛 媛숇떎硫? 嫄곕옒?됱씠 媛??留롮?(?뺣룄?곸씤) ?됲삎???곗꽑 (2?쒖쐞)
+            // max_month_volume? ?대떦 ?됲삎????궗???붽컙 理쒕? 嫄곕옒?됱씠誘濡??몃????쒖꽦?꾨? 媛?????蹂??
             const volA = a.max_month_volume || 0;
             const volB = b.max_month_volume || 0;
             if (volA !== volB) return volB - volA;
 
-            // 4. 마지막 보루는 최고가 기준 정렬
+            // 4. 留덉?留?蹂대（??理쒓퀬媛 湲곗? ?뺣젹
             return b.highest_deal_price - a.highest_deal_price;
         });
 
@@ -77,7 +78,7 @@ export default async function Dashboard({ searchParams }: { searchParams: { sort
 
     const sortMethod = (await searchParams)?.sort || 'real_drop_high';
 
-    // 정렬 방식 설정
+    // ?뺣젹 諛⑹떇 ?ㅼ젙
     groupedData.sort((a, b) => {
         const repA = getRepresentativeStat(a.stats);
         const repB = getRepresentativeStat(b.stats);
@@ -89,19 +90,19 @@ export default async function Dashboard({ searchParams }: { searchParams: { sort
         const askDropB = repB ? repB.mdd_rate : 0;
 
         if (sortMethod === 'real_drop_less') {
-            return realDropB - realDropA; // 실거래가 하락률 적은 순 (내림차순, 예: 0% -> -10% -> -30%)
+            return realDropB - realDropA; // ?ㅺ굅?섍? ?섎씫瑜??곸? ??(?대┝李⑥닚, ?? 0% -> -10% -> -30%)
         } else if (sortMethod === 'ask_drop_high') {
-            return askDropA - askDropB; // 최저호가 하락률 높은 순 (오름차순, 예: -30% -> -10% -> 0%)
+            return askDropA - askDropB; // 理쒖??멸? ?섎씫瑜??믪? ??(?ㅻ쫫李⑥닚, ?? -30% -> -10% -> 0%)
         } else if (sortMethod === 'ask_drop_less') {
-            return askDropB - askDropA; // 최저호가 하락률 적은 순 (내림차순)
+            return askDropB - askDropA; // 理쒖??멸? ?섎씫瑜??곸? ??(?대┝李⑥닚)
         } else {
-            // 기본값: real_drop_high
-            return realDropA - realDropB; // 실거래가 하락률 높은 순 (오름차순)
+            // 湲곕낯媛? real_drop_high
+            return realDropA - realDropB; // ?ㅺ굅?섍? ?섎씫瑜??믪? ??(?ㅻ쫫李⑥닚)
         }
     });
     groupedData.forEach((g: any, idx: number) => g.rank = idx + 1);
 
-    // 전체 단지 평균 실거래가 하락률 (진짜 추출된 대표평형들 기준)
+    // ?꾩껜 ?⑥? ?됯퇏 ?ㅺ굅?섍? ?섎씫瑜?(吏꾩쭨 異붿텧????쒗룊?뺣뱾 湲곗?)
     const totalDropRates = groupedData.map(g => {
         const rep = getRepresentativeStat(g.stats);
         return rep ? rep.recent_drop_rate : null;
@@ -111,31 +112,31 @@ export default async function Dashboard({ searchParams }: { searchParams: { sort
         ? (totalDropRates.reduce((acc, val) => acc + val, 0) / totalDropRates.length).toFixed(2)
         : '0.00';
 
-    // 전체 단지 평균 최저호가 하락률 
+    // ?꾩껜 ?⑥? ?됯퇏 理쒖??멸? ?섎씫瑜?
     const totalAskDropRates = groupedData.map(g => {
         const rep = getRepresentativeStat(g.stats);
-        return rep ? rep.mdd_rate : null; // mdd_rate는 최고가 대비 현재 최저호가 하락률입니다.
+        return rep ? rep.mdd_rate : null; // mdd_rate??理쒓퀬媛 ?鍮??꾩옱 理쒖??멸? ?섎씫瑜좎엯?덈떎.
     }).filter(v => v !== null) as number[];
 
     const avgAskDrop = totalAskDropRates.length > 0
         ? (totalAskDropRates.reduce((acc, val) => acc + val, 0) / totalAskDropRates.length).toFixed(2)
         : '0.00';
 
-    // 시장 투자 심리 결정
+    // ?쒖옣 ?ъ옄 ?щ━ 寃곗젙
     const numAvgDrop = parseFloat(avgDrop);
-    let marketSentiment = "약세장";
+    let marketSentiment = "?쎌꽭??;
     let marketColor = "#005fb0";
     if (numAvgDrop >= 0) {
-        marketSentiment = "상승장";
+        marketSentiment = "?곸듅??;
         marketColor = "#ba1a1a";
     } else if (numAvgDrop < -10) {
-        marketSentiment = "하락장";
+        marketSentiment = "?섎씫??;
         marketColor = "#005fb0";
     }
 
     return (
         <div className="app-wrapper">
-            {/* 🔴 Left Sidebar */}
+            {/* ?뵶 Left Sidebar */}
             <aside className="sidebar">
                 <div className="sidebar-logo" style={{ padding: '32px 24px 12px 24px' }}>
                     <div style={{ fontSize: '2.2rem', fontWeight: 900, color: '#ffffff', letterSpacing: '1px', textShadow: '0 2px 10px rgba(0,0,0,0.2)' }}>
@@ -144,20 +145,18 @@ export default async function Dashboard({ searchParams }: { searchParams: { sort
 
                 </div>
                 <div className="sidebar-menu" style={{ marginTop: '10px' }}>
-                    <div className="menu-item active">📈 실시간 시장 현황</div>
-                    <div className="menu-item">📊 거래량 추이 통계</div>
-                    <div className="menu-item">🔔 급매물 알림</div>
-                    <div className="menu-item">💼 관심 단지 등록</div>
+                    <div className="menu-item active">?뱢 ?ㅼ떆媛??쒖옣 ?꾪솴</div>
+                    <div className="menu-item">?뱤 嫄곕옒??異붿씠 ?듦퀎</div>
+                    <div className="menu-item">?뵒 湲됰ℓ臾??뚮┝</div>
+                    <div className="menu-item">?뮳 愿???⑥? ?깅줉</div>
                 </div>
                 <div style={{ marginTop: 'auto', padding: '24px' }}>
                     <SearchInput />
-                    <div style={{ backgroundColor: '#ba1a1a', padding: '12px', textAlign: 'center', borderRadius: '4px', color: 'white', fontWeight: 'bold', cursor: 'pointer' }}>
-                        종합 마켓 리포트
-                    </div>
+                    <Link href="/reports" style={{ display: 'block', backgroundColor: 'var(--ticker-red)', padding: '12px', textAlign: 'center', borderRadius: '4px', color: 'white', fontWeight: 'bold', cursor: 'pointer', textDecoration: 'none' }}>종합 마켓 리포트</Link>
                 </div>
             </aside>
 
-            {/* 🔵 Main Content */}
+            {/* ?뵷 Main Content */}
             <div className="main-content">
                 <TickerClient items={(() => {
                     const avgNum = parseFloat(avgDrop);
@@ -186,33 +185,33 @@ export default async function Dashboard({ searchParams }: { searchParams: { sort
                 <div className="dashboard-area">
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                         <div>
-                            <h1 style={{ fontSize: '2.5rem', fontWeight: 800, letterSpacing: '-1px' }}>선도50 아파트 모니터링</h1>
+                            <h1 style={{ fontSize: '2.5rem', fontWeight: 800, letterSpacing: '-1px' }}>?좊룄50 ?꾪뙆??紐⑤땲?곕쭅</h1>
                             <p style={{ color: '#76777d', fontSize: '1rem', marginTop: '12px' }}>
-                                총 {groupedData.length}개 단지 추적 중
+                                珥?{groupedData.length}媛??⑥? 異붿쟻 以?
                             </p>
                             <div style={{ display: 'flex', gap: '8px', marginTop: '16px' }}>
-                                <a href="?sort=real_drop_high" style={{ padding: '6px 12px', fontSize: '0.9rem', borderRadius: '4px', textDecoration: 'none', backgroundColor: sortMethod === 'real_drop_high' ? '#2e2f32' : '#e6e8eb', color: sortMethod === 'real_drop_high' ? 'white' : '#2e2f32' }}>실거래가 하락 폭 큰 순</a>
-                                <a href="?sort=real_drop_less" style={{ padding: '6px 12px', fontSize: '0.9rem', borderRadius: '4px', textDecoration: 'none', backgroundColor: sortMethod === 'real_drop_less' ? '#2e2f32' : '#e6e8eb', color: sortMethod === 'real_drop_less' ? 'white' : '#2e2f32' }}>실거래가 하락 폭 적은 순</a>
-                                <a href="?sort=ask_drop_high" style={{ padding: '6px 12px', fontSize: '0.9rem', borderRadius: '4px', textDecoration: 'none', backgroundColor: sortMethod === 'ask_drop_high' ? '#2e2f32' : '#e6e8eb', color: sortMethod === 'ask_drop_high' ? 'white' : '#2e2f32' }}>최저호가 하락 폭 큰 순</a>
-                                <a href="?sort=ask_drop_less" style={{ padding: '6px 12px', fontSize: '0.9rem', borderRadius: '4px', textDecoration: 'none', backgroundColor: sortMethod === 'ask_drop_less' ? '#2e2f32' : '#e6e8eb', color: sortMethod === 'ask_drop_less' ? 'white' : '#2e2f32' }}>최저호가 하락 폭 적은 순</a>
+                                <a href="?sort=real_drop_high" style={{ padding: '6px 12px', fontSize: '0.9rem', borderRadius: '4px', textDecoration: 'none', backgroundColor: sortMethod === 'real_drop_high' ? '#2e2f32' : '#e6e8eb', color: sortMethod === 'real_drop_high' ? 'white' : '#2e2f32' }}>?ㅺ굅?섍? ?섎씫 ??????/a>
+                                <a href="?sort=real_drop_less" style={{ padding: '6px 12px', fontSize: '0.9rem', borderRadius: '4px', textDecoration: 'none', backgroundColor: sortMethod === 'real_drop_less' ? '#2e2f32' : '#e6e8eb', color: sortMethod === 'real_drop_less' ? 'white' : '#2e2f32' }}>?ㅺ굅?섍? ?섎씫 ???곸? ??/a>
+                                <a href="?sort=ask_drop_high" style={{ padding: '6px 12px', fontSize: '0.9rem', borderRadius: '4px', textDecoration: 'none', backgroundColor: sortMethod === 'ask_drop_high' ? '#2e2f32' : '#e6e8eb', color: sortMethod === 'ask_drop_high' ? 'white' : '#2e2f32' }}>理쒖??멸? ?섎씫 ??????/a>
+                                <a href="?sort=ask_drop_less" style={{ padding: '6px 12px', fontSize: '0.9rem', borderRadius: '4px', textDecoration: 'none', backgroundColor: sortMethod === 'ask_drop_less' ? '#2e2f32' : '#e6e8eb', color: sortMethod === 'ask_drop_less' ? 'white' : '#2e2f32' }}>理쒖??멸? ?섎씫 ???곸? ??/a>
                             </div>
                         </div>
 
                         <div style={{ display: 'flex', gap: '16px' }}>
                             <div style={{ backgroundColor: '#e6e8eb', padding: '16px 24px', borderRadius: '8px', minWidth: '220px' }}>
-                                <div style={{ fontSize: '0.8rem', color: '#76777d', fontWeight: 700 }}>평균 실거래가 / 최저호가</div>
+                                <div style={{ fontSize: '0.8rem', color: '#76777d', fontWeight: 700 }}>?됯퇏 ?ㅺ굅?섍? / 理쒖??멸?</div>
                                 <div className="num-font" style={{ fontSize: '1.2rem', color: parseFloat(avgDrop) > 0 ? '#ba1a1a' : '#005fb0', fontWeight: 800, marginTop: '4px' }}>
-                                    실거래가 등락률 {avgDrop}% {parseFloat(avgDrop) > 0 ? '상승' : '하락'}
+                                    ?ㅺ굅?섍? ?깅씫瑜?{avgDrop}% {parseFloat(avgDrop) > 0 ? '?곸듅' : '?섎씫'}
                                 </div>
                                 <div className="num-font" style={{ fontSize: '1.2rem', color: parseFloat(avgAskDrop) > 0 ? '#ba1a1a' : '#005fb0', fontWeight: 800, marginTop: '4px' }}>
-                                    최저호가 등락률 {avgAskDrop}% {parseFloat(avgAskDrop) > 0 ? '상승' : '하락'}
+                                    理쒖??멸? ?깅씫瑜?{avgAskDrop}% {parseFloat(avgAskDrop) > 0 ? '?곸듅' : '?섎씫'}
                                 </div>
                             </div>
                             <div
                                 style={{ backgroundColor: '#e6e8eb', padding: '16px 24px', borderRadius: '8px', minWidth: '160px', cursor: 'help' }}
-                                title="* 시장 기준 안내: 0% 이상(상승장), 0 ~ -10%(약세장), -10% 미만(하락장)"
+                                title="* ?쒖옣 湲곗? ?덈궡: 0% ?댁긽(?곸듅??, 0 ~ -10%(?쎌꽭??, -10% 誘몃쭔(?섎씫??"
                             >
-                                <div style={{ fontSize: '0.8rem', color: '#76777d', fontWeight: 700 }}>시장 투자 심리 <span style={{ fontSize: '0.6rem' }}>ⓘ</span></div>
+                                <div style={{ fontSize: '0.8rem', color: '#76777d', fontWeight: 700 }}>?쒖옣 ?ъ옄 ?щ━ <span style={{ fontSize: '0.6rem' }}>??/span></div>
                                 <div style={{ fontSize: '2rem', color: marketColor, fontWeight: 800 }}>{marketSentiment}</div>
                             </div>
                         </div>
