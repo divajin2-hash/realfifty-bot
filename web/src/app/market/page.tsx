@@ -29,6 +29,9 @@ export default async function MarketOverview() {
     try { newsData = JSON.parse(fs.readFileSync(newsPath, 'utf8')); } catch(e) {}
 
     let macroData = [];
+    const volPath = path.join(process.cwd(), 'src', 'data', 'macro_volume_index.json');
+    let volData: any = { timeline: [], ath_count: 0 };
+    try { volData = JSON.parse(fs.readFileSync(volPath, 'utf8')); } catch(e) {}
     try { macroData = JSON.parse(fs.readFileSync(macroPath, 'utf8')); } catch (e) { }
 
     return (
