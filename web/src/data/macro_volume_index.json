@@ -1,0 +1,126 @@
+{
+  "ath_month": "2017-05",
+  "ath_count": 1833,
+  "timeline": [
+    {
+      "month": "2024-09",
+      "trade_count": 266,
+      "volume_ratio": 14.5
+    },
+    {
+      "month": "2024-10",
+      "trade_count": 282,
+      "volume_ratio": 15.4
+    },
+    {
+      "month": "2024-11",
+      "trade_count": 308,
+      "volume_ratio": 16.8
+    },
+    {
+      "month": "2024-12",
+      "trade_count": 336,
+      "volume_ratio": 18.3
+    },
+    {
+      "month": "2025-01",
+      "trade_count": 341,
+      "volume_ratio": 18.6
+    },
+    {
+      "month": "2025-02",
+      "trade_count": 839,
+      "volume_ratio": 45.8
+    },
+    {
+      "month": "2025-03",
+      "trade_count": 967,
+      "volume_ratio": 52.8
+    },
+    {
+      "month": "2025-04",
+      "trade_count": 249,
+      "volume_ratio": 13.6
+    },
+    {
+      "month": "2025-05",
+      "trade_count": 490,
+      "volume_ratio": 26.7
+    },
+    {
+      "month": "2025-06",
+      "trade_count": 755,
+      "volume_ratio": 41.2
+    },
+    {
+      "month": "2025-07",
+      "trade_count": 251,
+      "volume_ratio": 13.7
+    },
+    {
+      "month": "2025-08",
+      "trade_count": 140,
+      "volume_ratio": 7.6
+    },
+    {
+      "month": "2025-09",
+      "trade_count": 476,
+      "volume_ratio": 26.0
+    },
+    {
+      "month": "2025-10",
+      "trade_count": 406,
+      "volume_ratio": 22.1
+    },
+    {
+      "month": "2025-11",
+      "trade_count": 236,
+      "volume_ratio": 12.9
+    },
+    {
+      "month": "2025-12",
+      "trade_count": 155,
+      "volume_ratio": 8.5
+    },
+    {
+      "month": "2026-01",
+      "trade_count": 197,
+      "volume_ratio": 10.7
+    },
+    {
+      "month": "2026-02",
+      "trade_count": 179,
+      "volume_ratio": 9.8
+    },
+    {
+      "month": "2026-03",
+      "trade_count": 223,
+      "volume_ratio": 12.2
+    },
+    {
+      "month": "2026-04",
+      "trade_count": 596,
+      "volume_ratio": 32.5
+    },
+    {
+      "month": "2026-05",
+      "trade_count": 582,
+      "volume_ratio": 31.8
+    },
+    {
+      "month": "2026-06",
+      "trade_count": 450,
+      "volume_ratio": 24.5
+    },
+    {
+      "month": "2026-07",
+      "trade_count": 200,
+      "volume_ratio": 10.9
+    },
+    {
+      "month": "2026-08",
+      "trade_count": 2,
+      "volume_ratio": 0.1
+    }
+  ]
+}

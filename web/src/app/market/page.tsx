@@ -3,6 +3,9 @@ import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
 import MacroIndexChart from '../MacroIndexChart';
+import MacroVolumeChart from '../MacroVolumeChart';
+import MacroGapRank from './MacroGapRank';
+import NewsSection from './NewsSection';
 
 export const dynamic = 'force-dynamic';
 
@@ -20,6 +23,11 @@ export default async function MarketOverview() {
     } catch (e) { }
 
     const macroPath = path.join(process.cwd(), 'src', 'data', 'macro_index.json');
+    const rawData = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'src', 'data', 'kb50_stats.json'), 'utf8'));
+    const newsPath = path.join(process.cwd(), 'src', 'data', 'latest_news.json');
+    let newsData = [];
+    try { newsData = JSON.parse(fs.readFileSync(newsPath, 'utf8')); } catch(e) {}
+
     let macroData = [];
     try { macroData = JSON.parse(fs.readFileSync(macroPath, 'utf8')); } catch (e) { }
 
@@ -37,14 +45,10 @@ export default async function MarketOverview() {
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '30px', marginBottom: '60px' }}>
                 <MacroIndexChart data={macroData} />
-                {/* Placeholder for Volume Chart */}
-                <div style={{ backgroundColor: 'white', padding: '24px', borderRadius: '12px', border: '1px solid var(--border-light)', boxShadow: '0 4px 20px rgba(0,0,0,0.03)' }}>
-                    <h2 style={{ fontSize: '1.2rem', fontWeight: 800, margin: '0 0 4px 0', color: 'var(--text-dark)' }}>🌊 역대 최대치 대비 월간 거래량 추이 (준비중)</h2>
-                    <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', margin: 0 }}>과거 폭등장 최다 거래량 월과 현재를 비교한 시장 유동성 분석 (데이터 연동 예정)</p>
-                    <div style={{ height: '180px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ccc', fontStyle: 'italic' }}>
-                        Volume Component Loading...
-                    </div>
-                </div>
+                <MacroVolumeChart data={volData.timeline} ath_count={volData.ath_count} />
+                <MacroGapRank kb50data={rawData} />
+                <NewsSection newsData={newsData} />
+                
             </div>
 
             <h2 style={{ fontSize: '24px', fontWeight: '800', margin: '0 0 20px 0', color: 'var(--text-dark)', borderBottom: '2px solid var(--text-dark)', paddingBottom: '12px' }}>📰 일일 마켓 브리핑 리포트</h2>
