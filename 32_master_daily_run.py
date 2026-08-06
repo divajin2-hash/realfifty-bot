@@ -40,4 +40,5 @@ if __name__ == "__main__":
     run_script("35_telegram_notify.py")
 
 run_script('pipeline/36_build_macro_index.py')
+run_script('pipeline/38_build_tx_index.py')
 run_script('pipeline/45_news_crawler.py')

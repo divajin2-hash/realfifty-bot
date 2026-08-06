@@ -6,6 +6,7 @@ import MacroIndexChart from '../MacroIndexChart';
 import MacroVolumeChart from '../MacroVolumeChart';
 import MacroGapRank from './MacroGapRank';
 import NewsSection from './NewsSection';
+import MacroTxChart from '../MacroTxChart';
 
 export const dynamic = 'force-dynamic';
 
@@ -26,13 +27,16 @@ export default async function MarketOverview() {
     const rawData = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'src', 'data', 'kb50_stats.json'), 'utf8'));
     const newsPath = path.join(process.cwd(), 'src', 'data', 'latest_news.json');
     let newsData = [];
-    try { newsData = JSON.parse(fs.readFileSync(newsPath, 'utf8')); } catch(e) {}
+    try { newsData = JSON.parse(fs.readFileSync(newsPath, 'utf8')); } catch (e) { }
 
     let macroData = [];
     const volPath = path.join(process.cwd(), 'src', 'data', 'macro_volume_index.json');
     let volData: any = { timeline: [], ath_count: 0 };
-    try { volData = JSON.parse(fs.readFileSync(volPath, 'utf8')); } catch(e) {}
+    const txPath = path.join(process.cwd(), 'src', 'data', 'macro_tx_index.json');
+    let txData: any[] = [];
+    try { volData = JSON.parse(fs.readFileSync(volPath, 'utf8')); } catch (e) { }
     try { macroData = JSON.parse(fs.readFileSync(macroPath, 'utf8')); } catch (e) { }
+    try { txData = JSON.parse(fs.readFileSync(txPath, 'utf8')); } catch (e) { }
 
     return (
         <div style={{ maxWidth: '900px', margin: '0 auto', padding: '40px 20px', fontFamily: 'var(--font-pretendard, sans-serif)' }}>
@@ -46,12 +50,12 @@ export default async function MarketOverview() {
                 <Link href="/" style={{ color: 'var(--text-muted)', textDecoration: 'none', fontSize: '14px', border: '1px solid var(--border-light)', padding: '8px 16px', borderRadius: '6px' }}>← 대시보드로 돌아가기</Link>
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '30px', marginBottom: '60px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', marginBottom: '60px' }}>
+                <MacroTxChart data={txData} />
                 <MacroIndexChart data={macroData} />
                 <MacroVolumeChart data={volData.timeline} ath_count={volData.ath_count} />
                 <MacroGapRank kb50data={rawData} />
                 <NewsSection newsData={newsData} />
-                
             </div>
 
             <h2 style={{ fontSize: '24px', fontWeight: '800', margin: '0 0 20px 0', color: 'var(--text-dark)', borderBottom: '2px solid var(--text-dark)', paddingBottom: '12px' }}>📰 일일 마켓 브리핑 리포트</h2>
