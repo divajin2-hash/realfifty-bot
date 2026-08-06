@@ -1,4 +1,4 @@
-﻿import React from 'react'
+import React from 'react'
 import './globals.css'
 import ClientGrid from './ClientGrid'
 import SearchInput from './SearchInput'
@@ -157,6 +157,7 @@ export default async function Dashboard({ searchParams }: { searchParams: { sort
                 </div>
                 <div style={{ marginTop: 'auto', padding: '24px' }}>
                     <SearchInput />
+                </div>
             </aside>
 
             {/* ?? Main Content */}
