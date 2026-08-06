@@ -1,8 +1,9 @@
-import React from 'react'
+ï»¿import React from 'react'
 import './globals.css'
 import ClientGrid from './ClientGrid'
 import SearchInput from './SearchInput'
 import TickerClient from './TickerClient'
+import MacroIndexChart from './MacroIndexChart'
 import Link from 'next/link'
 import fs from 'fs'
 import path from 'path'
@@ -11,6 +12,9 @@ export const dynamic = 'force-dynamic';
 
 export default async function Dashboard({ searchParams }: { searchParams: { sort?: string } }) {
     const jsonPath = path.join(process.cwd(), 'src', 'data', 'kb50_stats.json');
+    const macroPath = path.join(process.cwd(), 'src', 'data', 'macro_index.json');
+    let macroData = [];
+    try { macroData = JSON.parse(fs.readFileSync(macroPath, 'utf8')); } catch (e) { }
     const rawData = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
 
     const groupedData = (rawData as any[]).map(group => {
@@ -18,7 +22,7 @@ export default async function Dashboard({ searchParams }: { searchParams: { sort
             complex: group.complex,
             stats: group.stats.map((s: any) => {
                 const recentPrice = s.recent_deal_absolute ? s.recent_deal_absolute.price : s.highest_deal_price;
-                // ÃÖ°í°¡ ´ëºñ "ÃÖ±Ù ½Ç°Å·¡°¡" ÇÏ¶ô·ü
+                // ìµœê³ ê°€ ëŒ€ë¹„ "ìµœê·¼ ì‹¤ê±°ëž˜ê°€" í•˜ë½ë¥ 
                 const recent_drop_rate = (s.highest_deal_price > 0 && recentPrice) ? ((recentPrice - s.highest_deal_price) / s.highest_deal_price) * 100 : 0;
                 return {
                     id: group.complex.id + s.match_key_area,
@@ -38,7 +42,7 @@ export default async function Dashboard({ searchParams }: { searchParams: { sort
         }
     });
 
-    // ´ëÇ¥ÆòÇü ÃßÃâ ·ÎÁ÷ (UI Ç¥Ãâ ±âÁØ)
+    // ëŒ€í‘œí‰í˜• ì¶”ì¶œ ë¡œì§ (UI í‘œì¶œ ê¸°ì¤€)
     function getRepresentativeStat(stats: any[]) {
         if (!stats || stats.length === 0) return null;
         const now = new Date().getTime();
@@ -57,19 +61,19 @@ export default async function Dashboard({ searchParams }: { searchParams: { sort
         });
 
         scoredStats.sort((a, b) => {
-            // 1. 1³â ³» °Å·¡°¡ ÀÖ¾ú´ø ÆòÇüÀ» ¿ì´ë (ÃÖ±Ù °Å·¡ È°¼ºµµ)
+            // 1. 1ë…„ ë‚´ ê±°ëž˜ê°€ ìžˆì—ˆë˜ í‰í˜•ì„ ìš°ëŒ€ (ìµœê·¼ ê±°ëž˜ í™œì„±ë„)
             if (a.isAlive !== b.isAlive) return a.isAlive ? -1 : 1;
 
-            // 2. 84§³ (±¹¹ÎÆòÇü)¿¡ °¡±î¿î °ÍÀ» ¿ì¼± (1¼øÀ§)
+            // 2. 84ãŽ¡ (êµ­ë¯¼í‰í˜•)ì— ê°€ê¹Œìš´ ê²ƒì„ ìš°ì„  (1ìˆœìœ„)
             if (a.groupDist !== b.groupDist) return a.groupDist - b.groupDist;
 
-            // 3. 84§³°¡ ¾Æ´Ï°Å³ª °Å¸®°¡ °°´Ù¸é, °Å·¡·®ÀÌ °¡Àå ¸¹Àº(¾ÐµµÀûÀÎ) ÆòÇüÀ» ¿ì¼± (2¼øÀ§)
-            // max_month_volumeÀº ÇØ´ç ÆòÇüÀÇ ¿ª»çÀû ¿ù°£ ÃÖ´ë °Å·¡·®ÀÌ¹Ç·Î ¼¼´ë¼ö/È°¼ºµµ¸¦ °¡Àå Àß ´ëº¯ÇÔ
+            // 3. 84ãŽ¡ê°€ ì•„ë‹ˆê±°ë‚˜ ê±°ë¦¬ê°€ ê°™ë‹¤ë©´, ê±°ëž˜ëŸ‰ì´ ê°€ìž¥ ë§Žì€(ì••ë„ì ì¸) í‰í˜•ì„ ìš°ì„  (2ìˆœìœ„)
+            // max_month_volumeì€ í•´ë‹¹ í‰í˜•ì˜ ì—­ì‚¬ì  ì›”ê°„ ìµœëŒ€ ê±°ëž˜ëŸ‰ì´ë¯€ë¡œ ì„¸ëŒ€ìˆ˜/í™œì„±ë„ë¥¼ ê°€ìž¥ ìž˜ ëŒ€ë³€í•¨
             const volA = a.max_month_volume || 0;
             const volB = b.max_month_volume || 0;
             if (volA !== volB) return volB - volA;
 
-            // 4. ¸¶Áö¸· º¸·ç´Â ÃÖ°í°¡ ±âÁØ Á¤·Ä
+            // 4. ë§ˆì§€ë§‰ ë³´ë£¨ëŠ” ìµœê³ ê°€ ê¸°ì¤€ ì •ë ¬
             return b.highest_deal_price - a.highest_deal_price;
         });
 
@@ -78,7 +82,7 @@ export default async function Dashboard({ searchParams }: { searchParams: { sort
 
     const sortMethod = (await searchParams)?.sort || 'real_drop_high';
 
-    // Á¤·Ä ¹æ½Ä ¼³Á¤
+    // ì •ë ¬ ë°©ì‹ ì„¤ì •
     groupedData.sort((a, b) => {
         const repA = getRepresentativeStat(a.stats);
         const repB = getRepresentativeStat(b.stats);
@@ -90,19 +94,19 @@ export default async function Dashboard({ searchParams }: { searchParams: { sort
         const askDropB = repB ? repB.mdd_rate : 0;
 
         if (sortMethod === 'real_drop_less') {
-            return realDropB - realDropA; // ½Ç°Å·¡°¡ ÇÏ¶ô·ü ÀûÀº ¼ø (³»¸²Â÷¼ø, ¿¹: 0% -> -10% -> -30%)
+            return realDropB - realDropA; // ì‹¤ê±°ëž˜ê°€ í•˜ë½ë¥  ì ì€ ìˆœ (ë‚´ë¦¼ì°¨ìˆœ, ì˜ˆ: 0% -> -10% -> -30%)
         } else if (sortMethod === 'ask_drop_high') {
-            return askDropA - askDropB; // ÃÖÀúÈ£°¡ ÇÏ¶ô·ü ³ôÀº ¼ø (¿À¸§Â÷¼ø, ¿¹: -30% -> -10% -> 0%)
+            return askDropA - askDropB; // ìµœì €í˜¸ê°€ í•˜ë½ë¥  ë†’ì€ ìˆœ (ì˜¤ë¦„ì°¨ìˆœ, ì˜ˆ: -30% -> -10% -> 0%)
         } else if (sortMethod === 'ask_drop_less') {
-            return askDropB - askDropA; // ÃÖÀúÈ£°¡ ÇÏ¶ô·ü ÀûÀº ¼ø (³»¸²Â÷¼ø)
+            return askDropB - askDropA; // ìµœì €í˜¸ê°€ í•˜ë½ë¥  ì ì€ ìˆœ (ë‚´ë¦¼ì°¨ìˆœ)
         } else {
-            // ±âº»°ª: real_drop_high
-            return realDropA - realDropB; // ½Ç°Å·¡°¡ ÇÏ¶ô·ü ³ôÀº ¼ø (¿À¸§Â÷¼ø)
+            // ê¸°ë³¸ê°’: real_drop_high
+            return realDropA - realDropB; // ì‹¤ê±°ëž˜ê°€ í•˜ë½ë¥  ë†’ì€ ìˆœ (ì˜¤ë¦„ì°¨ìˆœ)
         }
     });
     groupedData.forEach((g: any, idx: number) => g.rank = idx + 1);
 
-    // ÀüÃ¼ ´ÜÁö Æò±Õ ½Ç°Å·¡°¡ ÇÏ¶ô·ü (ÁøÂ¥ ÃßÃâµÈ ´ëÇ¥ÆòÇüµé ±âÁØ)
+    // ì „ì²´ ë‹¨ì§€ í‰ê·  ì‹¤ê±°ëž˜ê°€ í•˜ë½ë¥  (ì§„ì§œ ì¶”ì¶œëœ ëŒ€í‘œí‰í˜•ë“¤ ê¸°ì¤€)
     const totalDropRates = groupedData.map(g => {
         const rep = getRepresentativeStat(g.stats);
         return rep ? rep.recent_drop_rate : null;
@@ -112,25 +116,25 @@ export default async function Dashboard({ searchParams }: { searchParams: { sort
         ? (totalDropRates.reduce((acc, val) => acc + val, 0) / totalDropRates.length).toFixed(2)
         : '0.00';
 
-    // ÀüÃ¼ ´ÜÁö Æò±Õ ÃÖÀúÈ£°¡ ÇÏ¶ô·ü 
+    // ì „ì²´ ë‹¨ì§€ í‰ê·  ìµœì €í˜¸ê°€ í•˜ë½ë¥  
     const totalAskDropRates = groupedData.map(g => {
         const rep = getRepresentativeStat(g.stats);
-        return rep ? rep.mdd_rate : null; // mdd_rate´Â ÃÖ°í°¡ ´ëºñ ÇöÀç ÃÖÀúÈ£°¡ ÇÏ¶ô·üÀÔ´Ï´Ù.
+        return rep ? rep.mdd_rate : null; // mdd_rateëŠ” ìµœê³ ê°€ ëŒ€ë¹„ í˜„ìž¬ ìµœì €í˜¸ê°€ í•˜ë½ë¥ ìž…ë‹ˆë‹¤.
     }).filter(v => v !== null) as number[];
 
     const avgAskDrop = totalAskDropRates.length > 0
         ? (totalAskDropRates.reduce((acc, val) => acc + val, 0) / totalAskDropRates.length).toFixed(2)
         : '0.00';
 
-    // ½ÃÀå ÅõÀÚ ½É¸® °áÁ¤
+    // ì‹œìž¥ íˆ¬ìž ì‹¬ë¦¬ ê²°ì •
     const numAvgDrop = parseFloat(avgDrop);
-    let marketSentiment = "¾à¼¼Àå";
+    let marketSentiment = "ì•½ì„¸ìž¥";
     let marketColor = "#005fb0";
     if (numAvgDrop >= 0) {
-        marketSentiment = "»ó½ÂÀå";
+        marketSentiment = "ìƒìŠ¹ìž¥";
         marketColor = "#ba1a1a";
     } else if (numAvgDrop < -10) {
-        marketSentiment = "ÇÏ¶ôÀå";
+        marketSentiment = "í•˜ë½ìž¥";
         marketColor = "#005fb0";
     }
 
@@ -145,11 +149,11 @@ export default async function Dashboard({ searchParams }: { searchParams: { sort
 
                 </div>
                 <div className="sidebar-menu" style={{ marginTop: '10px' }}>
-                    <div className="menu-item active">?? ½Ç½Ã°£ ½ÃÀå ÇöÈ²</div>
-                    <div className="menu-item">?? °Å·¡·® ÃßÀÌ Åë°è</div>
-                    <Link href="/reports" style={{ textDecoration: 'none', color: 'inherit' }}><div className="menu-item">?? Á¾ÇÕ ¸¶ÄÏ ¸®Æ÷Æ®</div></Link>
-                    <div className="menu-item">?? ±Þ¸Å¹° ¾Ë¸²</div>
-                    <div className="menu-item">?? °ü½É ´ÜÁö µî·Ï</div>
+                    <div className="menu-item active">?? ì‹¤ì‹œê°„ ì‹œìž¥ í˜„í™©</div>
+                    <div className="menu-item">?? ê±°ëž˜ëŸ‰ ì¶”ì´ í†µê³„</div>
+                    <Link href="/reports" style={{ textDecoration: 'none', color: 'inherit' }}><div className="menu-item">?? ì¢…í•© ë§ˆì¼“ ë¦¬í¬íŠ¸</div></Link>
+                    <div className="menu-item">?? ê¸‰ë§¤ë¬¼ ì•Œë¦¼</div>
+                    <div className="menu-item">?? ê´€ì‹¬ ë‹¨ì§€ ë“±ë¡</div>
                 </div>
                 <div style={{ marginTop: 'auto', padding: '24px' }}>
                     <SearchInput />
@@ -182,35 +186,36 @@ export default async function Dashboard({ searchParams }: { searchParams: { sort
                 })()} />
 
                 <div className="dashboard-area">
+                    <MacroIndexChart data={macroData} />
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                         <div>
-                            <h1 style={{ fontSize: '2.5rem', fontWeight: 800, letterSpacing: '-1px' }}>¼±µµ50 ¾ÆÆÄÆ® ¸ð´ÏÅÍ¸µ</h1>
+                            <h1 style={{ fontSize: '2.5rem', fontWeight: 800, letterSpacing: '-1px' }}>ì„ ë„50 ì•„íŒŒíŠ¸ ëª¨ë‹ˆí„°ë§</h1>
                             <p style={{ color: '#76777d', fontSize: '1rem', marginTop: '12px' }}>
-                                ÃÑ {groupedData.length}°³ ´ÜÁö ÃßÀû Áß
+                                ì´ {groupedData.length}ê°œ ë‹¨ì§€ ì¶”ì  ì¤‘
                             </p>
                             <div style={{ display: 'flex', gap: '8px', marginTop: '16px' }}>
-                                <a href="?sort=real_drop_high" style={{ padding: '6px 12px', fontSize: '0.9rem', borderRadius: '4px', textDecoration: 'none', backgroundColor: sortMethod === 'real_drop_high' ? '#2e2f32' : '#e6e8eb', color: sortMethod === 'real_drop_high' ? 'white' : '#2e2f32' }}>½Ç°Å·¡°¡ ÇÏ¶ô Æø Å« ¼ø</a>
-                                <a href="?sort=real_drop_less" style={{ padding: '6px 12px', fontSize: '0.9rem', borderRadius: '4px', textDecoration: 'none', backgroundColor: sortMethod === 'real_drop_less' ? '#2e2f32' : '#e6e8eb', color: sortMethod === 'real_drop_less' ? 'white' : '#2e2f32' }}>½Ç°Å·¡°¡ ÇÏ¶ô Æø ÀûÀº ¼ø</a>
-                                <a href="?sort=ask_drop_high" style={{ padding: '6px 12px', fontSize: '0.9rem', borderRadius: '4px', textDecoration: 'none', backgroundColor: sortMethod === 'ask_drop_high' ? '#2e2f32' : '#e6e8eb', color: sortMethod === 'ask_drop_high' ? 'white' : '#2e2f32' }}>ÃÖÀúÈ£°¡ ÇÏ¶ô Æø Å« ¼ø</a>
-                                <a href="?sort=ask_drop_less" style={{ padding: '6px 12px', fontSize: '0.9rem', borderRadius: '4px', textDecoration: 'none', backgroundColor: sortMethod === 'ask_drop_less' ? '#2e2f32' : '#e6e8eb', color: sortMethod === 'ask_drop_less' ? 'white' : '#2e2f32' }}>ÃÖÀúÈ£°¡ ÇÏ¶ô Æø ÀûÀº ¼ø</a>
+                                <a href="?sort=real_drop_high" style={{ padding: '6px 12px', fontSize: '0.9rem', borderRadius: '4px', textDecoration: 'none', backgroundColor: sortMethod === 'real_drop_high' ? '#2e2f32' : '#e6e8eb', color: sortMethod === 'real_drop_high' ? 'white' : '#2e2f32' }}>ì‹¤ê±°ëž˜ê°€ í•˜ë½ í­ í° ìˆœ</a>
+                                <a href="?sort=real_drop_less" style={{ padding: '6px 12px', fontSize: '0.9rem', borderRadius: '4px', textDecoration: 'none', backgroundColor: sortMethod === 'real_drop_less' ? '#2e2f32' : '#e6e8eb', color: sortMethod === 'real_drop_less' ? 'white' : '#2e2f32' }}>ì‹¤ê±°ëž˜ê°€ í•˜ë½ í­ ì ì€ ìˆœ</a>
+                                <a href="?sort=ask_drop_high" style={{ padding: '6px 12px', fontSize: '0.9rem', borderRadius: '4px', textDecoration: 'none', backgroundColor: sortMethod === 'ask_drop_high' ? '#2e2f32' : '#e6e8eb', color: sortMethod === 'ask_drop_high' ? 'white' : '#2e2f32' }}>ìµœì €í˜¸ê°€ í•˜ë½ í­ í° ìˆœ</a>
+                                <a href="?sort=ask_drop_less" style={{ padding: '6px 12px', fontSize: '0.9rem', borderRadius: '4px', textDecoration: 'none', backgroundColor: sortMethod === 'ask_drop_less' ? '#2e2f32' : '#e6e8eb', color: sortMethod === 'ask_drop_less' ? 'white' : '#2e2f32' }}>ìµœì €í˜¸ê°€ í•˜ë½ í­ ì ì€ ìˆœ</a>
                             </div>
                         </div>
 
                         <div style={{ display: 'flex', gap: '16px' }}>
                             <div style={{ backgroundColor: '#e6e8eb', padding: '16px 24px', borderRadius: '8px', minWidth: '220px' }}>
-                                <div style={{ fontSize: '0.8rem', color: '#76777d', fontWeight: 700 }}>Æò±Õ ½Ç°Å·¡°¡ / ÃÖÀúÈ£°¡</div>
+                                <div style={{ fontSize: '0.8rem', color: '#76777d', fontWeight: 700 }}>í‰ê·  ì‹¤ê±°ëž˜ê°€ / ìµœì €í˜¸ê°€</div>
                                 <div className="num-font" style={{ fontSize: '1.2rem', color: parseFloat(avgDrop) > 0 ? '#ba1a1a' : '#005fb0', fontWeight: 800, marginTop: '4px' }}>
-                                    ½Ç°Å·¡°¡ µî¶ô·ü {avgDrop}% {parseFloat(avgDrop) > 0 ? '»ó½Â' : 'ÇÏ¶ô'}
+                                    ì‹¤ê±°ëž˜ê°€ ë“±ë½ë¥  {avgDrop}% {parseFloat(avgDrop) > 0 ? 'ìƒìŠ¹' : 'í•˜ë½'}
                                 </div>
                                 <div className="num-font" style={{ fontSize: '1.2rem', color: parseFloat(avgAskDrop) > 0 ? '#ba1a1a' : '#005fb0', fontWeight: 800, marginTop: '4px' }}>
-                                    ÃÖÀúÈ£°¡ µî¶ô·ü {avgAskDrop}% {parseFloat(avgAskDrop) > 0 ? '»ó½Â' : 'ÇÏ¶ô'}
+                                    ìµœì €í˜¸ê°€ ë“±ë½ë¥  {avgAskDrop}% {parseFloat(avgAskDrop) > 0 ? 'ìƒìŠ¹' : 'í•˜ë½'}
                                 </div>
                             </div>
                             <div
                                 style={{ backgroundColor: '#e6e8eb', padding: '16px 24px', borderRadius: '8px', minWidth: '160px', cursor: 'help' }}
-                                title="* ½ÃÀå ±âÁØ ¾È³»: 0% ÀÌ»ó(»ó½ÂÀå), 0 ~ -10%(¾à¼¼Àå), -10% ¹Ì¸¸(ÇÏ¶ôÀå)"
+                                title="* ì‹œìž¥ ê¸°ì¤€ ì•ˆë‚´: 0% ì´ìƒ(ìƒìŠ¹ìž¥), 0 ~ -10%(ì•½ì„¸ìž¥), -10% ë¯¸ë§Œ(í•˜ë½ìž¥)"
                             >
-                                <div style={{ fontSize: '0.8rem', color: '#76777d', fontWeight: 700 }}>½ÃÀå ÅõÀÚ ½É¸® <span style={{ fontSize: '0.6rem' }}>¨Õ</span></div>
+                                <div style={{ fontSize: '0.8rem', color: '#76777d', fontWeight: 700 }}>ì‹œìž¥ íˆ¬ìž ì‹¬ë¦¬ <span style={{ fontSize: '0.6rem' }}>â“˜</span></div>
                                 <div style={{ fontSize: '2rem', color: marketColor, fontWeight: 800 }}>{marketSentiment}</div>
                             </div>
                         </div>
@@ -222,3 +227,4 @@ export default async function Dashboard({ searchParams }: { searchParams: { sort
         </div>
     )
 }
+
