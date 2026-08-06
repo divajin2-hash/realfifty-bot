@@ -10,17 +10,27 @@ export default function MacroGapRank({ kb50data }: { kb50data: ComplexStat[] }) 
     if (!kb50data || kb50data.length === 0) return null;
 
     const gapList: any[] = [];
+
+    // Only consider deals within the last 180 days for a true "standoff" indicator
+    const cutoffDate = new Date();
+    cutoffDate.setDate(cutoffDate.getDate() - 180);
+    const cutoffStr = cutoffDate.toISOString().substring(0, 10);
+
     kb50data.forEach(c => {
         c.stats.forEach(s => {
             const rPrice = s.recent_deal_absolute?.price;
+            const rDate = s.recent_deal_absolute?.date;
             const aPrice = s.current_lowest_ask;
-            if (rPrice && aPrice && rPrice > 0 && aPrice > 0) {
+
+            // Validate and enforce the recency cutoff
+            if (rPrice && aPrice && rPrice > 0 && aPrice > 0 && rDate && rDate >= cutoffStr) {
                 const gapPct = ((aPrice - rPrice) / rPrice) * 100;
                 if (gapPct > 5) {
                     gapList.push({
                         c_name: c.complex.name,
                         type_name: s.pyeong_name,
                         recent_deal: rPrice,
+                        deal_date: rDate.substring(2), // YY-MM-DD
                         lowest_ask: aPrice,
                         gap_pct: gapPct
                     });
@@ -38,17 +48,21 @@ export default function MacroGapRank({ kb50data }: { kb50data: ComplexStat[] }) 
         <div style={{ backgroundColor: 'white', padding: '24px', borderRadius: '12px', border: '1px solid var(--border-light)', boxShadow: '0 4px 20px rgba(0,0,0,0.03)' }}>
             <div style={{ marginBottom: '20px' }}>
                 <h2 style={{ fontSize: '1.2rem', fontWeight: 800, margin: '0 0 4px 0', color: 'var(--text-dark)' }}>🔥 호가 vs 실거래 갭 (버티기 장세) TOP 10</h2>
-                <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', margin: 0 }}>최근 실거래가 대비 현재 집주인이 제시하는 최저호가의 프리미엄 격차</p>
+                <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', margin: 0 }}>최근 6개월 내 체결가 대비 현재 호가의 프리미엄 격차</p>
             </div>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                {top10.length === 0 && <div style={{ color: '#94a3b8', fontSize: '0.9rem', textAlign: 'center', padding: '20px 0' }}>최근 6개월 내 유의미한 호가 갭(5% 초과)을 보이는 단지가 없습니다.</div>}
+
                 {top10.map((item, i) => (
                     <div key={i} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '12px 16px', backgroundColor: '#f8fafc', borderRadius: '8px', borderLeft: i < 3 ? '4px solid #ef4444' : '4px solid #cbd5e1' }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                             <div style={{ fontWeight: 800, width: '24px', color: i < 3 ? '#ef4444' : '#94a3b8' }}>{i + 1}</div>
                             <div>
                                 <div style={{ fontWeight: 700, fontSize: '1rem', color: '#1e293b' }}>{item.c_name} <span style={{ fontSize: '0.85rem', color: '#64748b', fontWeight: 'normal' }}>{item.type_name}</span></div>
-                                <div style={{ fontSize: '0.85rem', color: '#64748b', marginTop: '2px' }}>실거래 <b>{formatPrice(item.recent_deal)}</b>  vs  호가 <b>{formatPrice(item.lowest_ask)}</b></div>
+                                <div style={{ fontSize: '0.85rem', color: '#64748b', marginTop: '4px' }}>
+                                    실거래 <b>{formatPrice(item.recent_deal)}</b> <span style={{ fontSize: '0.75rem', color: '#94a3b8' }}>({item.deal_date} 체결)</span> vs 호가 <b>{formatPrice(item.lowest_ask)}</b>
+                                </div>
                             </div>
                         </div>
                         <div style={{ fontWeight: 800, color: '#ef4444', backgroundColor: '#fee2e2', padding: '6px 12px', borderRadius: '20px', fontSize: '0.95rem' }}>
