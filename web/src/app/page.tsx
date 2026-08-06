@@ -149,11 +149,10 @@ export default async function Dashboard({ searchParams }: { searchParams: { sort
 
                 </div>
                 <div className="sidebar-menu" style={{ marginTop: '10px' }}>
-                    <div className="menu-item active">?? 실시간 시장 현황</div>
-                    <div className="menu-item">?? 거래량 추이 통계</div>
-                    <Link href="/reports" style={{ textDecoration: 'none', color: 'inherit' }}><div className="menu-item">?? 종합 마켓 리포트</div></Link>
-                    <div className="menu-item">?? 급매물 알림</div>
-                    <div className="menu-item">?? 관심 단지 등록</div>
+                    <Link href="/" style={{textDecoration:'none', color:'inherit'}}><div className="menu-item active">📈 실시간 시장 현황</div></Link>
+                    <Link href="/market" style={{textDecoration:'none', color:'inherit'}}><div className="menu-item">📊 종합 시황 현황</div></Link>
+                                        <div className="menu-item">🚨 급매물 알림</div>
+                    <div className="menu-item">⭐ 관심 단지 등록</div>
                 </div>
                 <div style={{ marginTop: 'auto', padding: '24px' }}>
                     <SearchInput />
@@ -187,7 +186,7 @@ export default async function Dashboard({ searchParams }: { searchParams: { sort
                 })()} />
 
                 <div className="dashboard-area">
-                    <MacroIndexChart data={macroData} />
+                    
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                         <div>
                             <h1 style={{ fontSize: '2.5rem', fontWeight: 800, letterSpacing: '-1px' }}>선도50 아파트 모니터링</h1>

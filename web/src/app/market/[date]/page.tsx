@@ -28,7 +28,7 @@ export default async function ReportDetail({ params }: { params: { date: string 
     return (
         <div style={{ maxWidth: '800px', margin: '0 auto', padding: '40px 20px', fontFamily: 'var(--font-pretendard, sans-serif)' }}>
             <div style={{ marginBottom: '30px' }}>
-                <Link href="/reports" style={{ color: 'var(--text-muted)', textDecoration: 'none', fontSize: '14px' }}>← 목록으로 돌아가기</Link>
+                <Link href="/market" style={{ color: 'var(--text-muted)', textDecoration: 'none', fontSize: '14px' }}>← 목록으로 돌아가기</Link>
             </div>
 
             <div style={{
