@@ -147,6 +147,7 @@ export default async function Dashboard({ searchParams }: { searchParams: { sort
                 <div className="sidebar-menu" style={{ marginTop: '10px' }}>
                     <div className="menu-item active">📈 실시간 시장 현황</div>
                     <div className="menu-item">📊 거래량 추이 통계</div>
+                    <Link href="/reports" style={{ textDecoration: 'none', color: 'inherit' }}><div className="menu-item">📰 종합 마켓 리포트</div></Link>
                     <div className="menu-item">🔔 급매물 알림</div>
                     <div className="menu-item">💼 관심 단지 등록</div>
                 </div>
