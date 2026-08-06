@@ -12,21 +12,18 @@ export default function MacroGapRank({ kb50data }: { kb50data: ComplexStat[] }) 
     const gapList: any[] = [];
     kb50data.forEach(c => {
         c.stats.forEach(s => {
-            if (s.recent_deal_absolute && s.lowest_ask) {
-                const rPrice = s.recent_deal_absolute.price;
-                const aPrice = s.lowest_ask.price;
-                if (rPrice > 0 && aPrice > 0) {
-                    // Ask vs recent deal gap
-                    const gapPct = ((aPrice - rPrice) / rPrice) * 100;
-                    if (gapPct > 5) { // Only show where ask is at least 5% higher than recent deal
-                        gapList.push({
-                            c_name: c.complex.name,
-                            type_name: s.pyeong_name,
-                            recent_deal: rPrice,
-                            lowest_ask: aPrice,
-                            gap_pct: gapPct
-                        });
-                    }
+            const rPrice = s.recent_deal_absolute?.price;
+            const aPrice = s.current_lowest_ask;
+            if (rPrice && aPrice && rPrice > 0 && aPrice > 0) {
+                const gapPct = ((aPrice - rPrice) / rPrice) * 100;
+                if (gapPct > 5) {
+                    gapList.push({
+                        c_name: c.complex.name,
+                        type_name: s.pyeong_name,
+                        recent_deal: rPrice,
+                        lowest_ask: aPrice,
+                        gap_pct: gapPct
+                    });
                 }
             }
         });
