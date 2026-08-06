@@ -9,7 +9,7 @@ interface ComplexStat {
 export default function MacroGapRank({ kb50data }: { kb50data: ComplexStat[] }) {
     if (!kb50data || kb50data.length === 0) return null;
 
-    const gapList = [];
+    const gapList: any[] = [];
     kb50data.forEach(c => {
         c.stats.forEach(s => {
             if (s.recent_deal_absolute && s.lowest_ask) {
@@ -35,7 +35,7 @@ export default function MacroGapRank({ kb50data }: { kb50data: ComplexStat[] }) 
     gapList.sort((a, b) => b.gap_pct - a.gap_pct);
     const top10 = gapList.slice(0, 10);
 
-    const formatPrice = (v) => `${(v / 100000000).toFixed(1)}억`;
+    const formatPrice = (v: number) => `${(v / 100000000).toFixed(1)}억`;
 
     return (
         <div style={{ backgroundColor: 'white', padding: '24px', borderRadius: '12px', border: '1px solid var(--border-light)', boxShadow: '0 4px 20px rgba(0,0,0,0.03)' }}>
