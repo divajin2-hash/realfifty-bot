@@ -59,7 +59,7 @@ export default function MacroIndexChart({ data }: { data: MacroData[] }) {
                         />
                         <Tooltip
                             contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}
-                            formatter={(value: number) => [`${value}%`, '시장 회복률']}
+                            formatter={(value: any) => [`${value}%`, '시장 회복률']}
                             labelFormatter={(label) => `📅 ${label}`}
                         />
                         <ReferenceLine y={100} stroke="#ff0000" strokeDasharray="3 3" strokeOpacity={0.3} label={{ position: 'top', value: '전고점 (100%)', fill: '#ff0000', fontSize: 11 }} />
