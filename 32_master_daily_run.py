@@ -39,3 +39,4 @@ if __name__ == "__main__":
     # 6. Send Telegram Notification
     run_script("35_telegram_notify.py")
 
+run_script('pipeline/36_build_macro_index.py')
