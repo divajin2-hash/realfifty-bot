@@ -56,7 +56,7 @@
     "nid": "111515",
     "ptp_no": "4",
     "ptp_name": "62C",
-    "match_key_area": 40,
+    "match_key_area": 39,
     "supply_area": 62.46,
     "exclusive_area": 39.86
   },
@@ -65,7 +65,7 @@
     "nid": "111515",
     "ptp_no": "6",
     "ptp_name": "72C",
-    "match_key_area": 49,
+    "match_key_area": 39,
     "supply_area": 72.91,
     "exclusive_area": 49.29
   },
@@ -74,7 +74,7 @@
     "nid": "111515",
     "ptp_no": "25",
     "ptp_name": "72D",
-    "match_key_area": 49,
+    "match_key_area": 39,
     "supply_area": 72.52,
     "exclusive_area": 49.21
   },
@@ -83,7 +83,7 @@
     "nid": "111515",
     "ptp_no": "24",
     "ptp_name": "72B",
-    "match_key_area": 49,
+    "match_key_area": 39,
     "supply_area": 72.62,
     "exclusive_area": 49.32
   },
@@ -92,7 +92,7 @@
     "nid": "111515",
     "ptp_no": "5",
     "ptp_name": "72A",
-    "match_key_area": 49,
+    "match_key_area": 39,
     "supply_area": 72.46,
     "exclusive_area": 49.19
   },
@@ -101,7 +101,7 @@
     "nid": "111515",
     "ptp_no": "7",
     "ptp_name": "84A",
-    "match_key_area": 60,
+    "match_key_area": 39,
     "supply_area": 84.1,
     "exclusive_area": 59.96
   },
@@ -110,7 +110,7 @@
     "nid": "111515",
     "ptp_no": "11",
     "ptp_name": "107A",
-    "match_key_area": 85,
+    "match_key_area": 39,
     "supply_area": 107.97,
     "exclusive_area": 84.98
   },
@@ -119,7 +119,7 @@
     "nid": "111515",
     "ptp_no": "9",
     "ptp_name": "107J1",
-    "match_key_area": 85,
+    "match_key_area": 39,
     "supply_area": 107.66,
     "exclusive_area": 84.96
   },
@@ -128,7 +128,7 @@
     "nid": "111515",
     "ptp_no": "10",
     "ptp_name": "107J2",
-    "match_key_area": 85,
+    "match_key_area": 39,
     "supply_area": 107.66,
     "exclusive_area": 84.96
   },
@@ -137,7 +137,7 @@
     "nid": "111515",
     "ptp_no": "8",
     "ptp_name": "107I",
-    "match_key_area": 85,
+    "match_key_area": 39,
     "supply_area": 107.66,
     "exclusive_area": 84.94
   },
@@ -146,7 +146,7 @@
     "nid": "111515",
     "ptp_no": "13",
     "ptp_name": "108G",
-    "match_key_area": 85,
+    "match_key_area": 39,
     "supply_area": 108.43,
     "exclusive_area": 84.98
   },
@@ -155,7 +155,7 @@
     "nid": "111515",
     "ptp_no": "12",
     "ptp_name": "108K",
-    "match_key_area": 85,
+    "match_key_area": 39,
     "supply_area": 108.01,
     "exclusive_area": 84.98
   },
@@ -164,7 +164,7 @@
     "nid": "111515",
     "ptp_no": "15",
     "ptp_name": "108L",
-    "match_key_area": 85,
+    "match_key_area": 39,
     "supply_area": 108.72,
     "exclusive_area": 84.97
   },
@@ -173,7 +173,7 @@
     "nid": "111515",
     "ptp_no": "14",
     "ptp_name": "108H",
-    "match_key_area": 85,
+    "match_key_area": 39,
     "supply_area": 108.71,
     "exclusive_area": 84.98
   },
@@ -182,7 +182,7 @@
     "nid": "111515",
     "ptp_no": "16",
     "ptp_name": "109E",
-    "match_key_area": 85,
+    "match_key_area": 39,
     "supply_area": 109.73,
     "exclusive_area": 84.98
   },
@@ -191,7 +191,7 @@
     "nid": "111515",
     "ptp_no": "18",
     "ptp_name": "109C",
-    "match_key_area": 85,
+    "match_key_area": 39,
     "supply_area": 109.87,
     "exclusive_area": 84.99
   },
@@ -200,7 +200,7 @@
     "nid": "111515",
     "ptp_no": "17",
     "ptp_name": "109B",
-    "match_key_area": 85,
+    "match_key_area": 39,
     "supply_area": 109.76,
     "exclusive_area": 84.99
   },
@@ -209,7 +209,7 @@
     "nid": "111515",
     "ptp_no": "19",
     "ptp_name": "110D",
-    "match_key_area": 85,
+    "match_key_area": 39,
     "supply_area": 110.1,
     "exclusive_area": 84.99
   },
@@ -218,7 +218,7 @@
     "nid": "111515",
     "ptp_no": "20",
     "ptp_name": "110F",
-    "match_key_area": 85,
+    "match_key_area": 39,
     "supply_area": 110.17,
     "exclusive_area": 84.95
   },
@@ -227,7 +227,7 @@
     "nid": "111515",
     "ptp_no": "26",
     "ptp_name": "126A",
-    "match_key_area": 100,
+    "match_key_area": 39,
     "supply_area": 126.35,
     "exclusive_area": 99.6
   },
@@ -236,7 +236,7 @@
     "nid": "111515",
     "ptp_no": "21",
     "ptp_name": "140A",
-    "match_key_area": 111,
+    "match_key_area": 39,
     "supply_area": 140.26,
     "exclusive_area": 110.66
   },
@@ -245,7 +245,7 @@
     "nid": "111515",
     "ptp_no": "22",
     "ptp_name": "141B",
-    "match_key_area": 110,
+    "match_key_area": 39,
     "supply_area": 141.08,
     "exclusive_area": 110.44
   },
@@ -254,7 +254,7 @@
     "nid": "111515",
     "ptp_no": "23",
     "ptp_name": "163A",
-    "match_key_area": 130,
+    "match_key_area": 39,
     "supply_area": 163.91,
     "exclusive_area": 130.06
   },
@@ -263,7 +263,7 @@
     "nid": "111515",
     "ptp_no": "29",
     "ptp_name": "193C",
-    "match_key_area": 150,
+    "match_key_area": 39,
     "supply_area": 193.96,
     "exclusive_area": 150.09
   },
@@ -272,7 +272,7 @@
     "nid": "111515",
     "ptp_no": "30",
     "ptp_name": "194D",
-    "match_key_area": 150,
+    "match_key_area": 39,
     "supply_area": 194.2,
     "exclusive_area": 150.09
   },
@@ -299,7 +299,7 @@
     "nid": "134062",
     "ptp_no": "4",
     "ptp_name": "70A",
-    "match_key_area": 50,
+    "match_key_area": 35,
     "supply_area": 70.91,
     "exclusive_area": 49.69
   },
@@ -308,7 +308,7 @@
     "nid": "134062",
     "ptp_no": "3",
     "ptp_name": "70B",
-    "match_key_area": 50,
+    "match_key_area": 35,
     "supply_area": 70.87,
     "exclusive_area": 49.69
   },
@@ -317,7 +317,7 @@
     "nid": "134062",
     "ptp_no": "5",
     "ptp_name": "85A",
-    "match_key_area": 60,
+    "match_key_area": 35,
     "supply_area": 85.59,
     "exclusive_area": 59.97
   },
@@ -326,7 +326,7 @@
     "nid": "134062",
     "ptp_no": "6",
     "ptp_name": "86B",
-    "match_key_area": 60,
+    "match_key_area": 35,
     "supply_area": 86.99,
     "exclusive_area": 59.98
   },
@@ -335,7 +335,7 @@
     "nid": "134062",
     "ptp_no": "12",
     "ptp_name": "110A",
-    "match_key_area": 85,
+    "match_key_area": 35,
     "supply_area": 110.41,
     "exclusive_area": 84.82
   },
@@ -344,7 +344,7 @@
     "nid": "134062",
     "ptp_no": "13",
     "ptp_name": "111B",
-    "match_key_area": 85,
+    "match_key_area": 35,
     "supply_area": 111.53,
     "exclusive_area": 84.85
   },
@@ -353,7 +353,7 @@
     "nid": "134062",
     "ptp_no": "14",
     "ptp_name": "111C",
-    "match_key_area": 85,
+    "match_key_area": 35,
     "supply_area": 111.91,
     "exclusive_area": 84.9
   },
@@ -362,7 +362,7 @@
     "nid": "134062",
     "ptp_no": "16",
     "ptp_name": "124A",
-    "match_key_area": 97,
+    "match_key_area": 35,
     "supply_area": 124.23,
     "exclusive_area": 96.95
   },
@@ -371,7 +371,7 @@
     "nid": "134062",
     "ptp_no": "17",
     "ptp_name": "124B",
-    "match_key_area": 97,
+    "match_key_area": 35,
     "supply_area": 124.13,
     "exclusive_area": 96.91
   },
@@ -380,7 +380,7 @@
     "nid": "134062",
     "ptp_no": "7",
     "ptp_name": "144A",
-    "match_key_area": 113,
+    "match_key_area": 35,
     "supply_area": 144.05,
     "exclusive_area": 112.85
   },
@@ -389,7 +389,7 @@
     "nid": "134062",
     "ptp_no": "8",
     "ptp_name": "145B",
-    "match_key_area": 113,
+    "match_key_area": 35,
     "supply_area": 145.25,
     "exclusive_area": 112.99
   },
@@ -398,7 +398,7 @@
     "nid": "134062",
     "ptp_no": "10",
     "ptp_name": "169A",
-    "match_key_area": 133,
+    "match_key_area": 35,
     "supply_area": 169.52,
     "exclusive_area": 132.81
   },
@@ -524,7 +524,7 @@
     "nid": "22675",
     "ptp_no": "8",
     "ptp_name": "109C",
-    "match_key_area": 85,
+    "match_key_area": 84,
     "supply_area": 109.62,
     "exclusive_area": 84.9
   },
@@ -569,7 +569,7 @@
     "nid": "22627",
     "ptp_no": "3",
     "ptp_name": "109A",
-    "match_key_area": 85,
+    "match_key_area": 84,
     "supply_area": 109.29,
     "exclusive_area": 84.88
   },
@@ -749,7 +749,7 @@
     "nid": "142155",
     "ptp_no": "10",
     "ptp_name": "111D",
-    "match_key_area": 85,
+    "match_key_area": 84,
     "supply_area": 111.79,
     "exclusive_area": 84.95
   },
@@ -767,7 +767,7 @@
     "nid": "142155",
     "ptp_no": "17",
     "ptp_name": "112K",
-    "match_key_area": 85,
+    "match_key_area": 84,
     "supply_area": 112.85,
     "exclusive_area": 84.95
   },
@@ -1100,7 +1100,7 @@
     "nid": "142155",
     "ptp_no": "53",
     "ptp_name": "226H",
-    "match_key_area": 169,
+    "match_key_area": 168,
     "supply_area": 226.17,
     "exclusive_area": 168.87
   },
@@ -1109,7 +1109,7 @@
     "nid": "22746",
     "ptp_no": "1",
     "ptp_name": "42A",
-    "match_key_area": 28,
+    "match_key_area": 27,
     "supply_area": 42.28,
     "exclusive_area": 27.68
   },
@@ -1118,7 +1118,7 @@
     "nid": "22746",
     "ptp_no": "2",
     "ptp_name": "42B",
-    "match_key_area": 28,
+    "match_key_area": 27,
     "supply_area": 42.6,
     "exclusive_area": 27.68
   },
@@ -1127,7 +1127,7 @@
     "nid": "22746",
     "ptp_no": "3",
     "ptp_name": "42C",
-    "match_key_area": 28,
+    "match_key_area": 27,
     "supply_area": 42.52,
     "exclusive_area": 27.68
   },
@@ -1262,7 +1262,7 @@
     "nid": "22853",
     "ptp_no": "1",
     "ptp_name": "84A",
-    "match_key_area": 60,
+    "match_key_area": 59,
     "supply_area": 84.74,
     "exclusive_area": 59.98
   },
@@ -1658,7 +1658,7 @@
     "nid": "610",
     "ptp_no": "2",
     "ptp_name": "103B",
-    "match_key_area": 85,
+    "match_key_area": 84,
     "supply_area": 103.12,
     "exclusive_area": 84.7
   },
@@ -1667,7 +1667,7 @@
     "nid": "610",
     "ptp_no": "1",
     "ptp_name": "104A",
-    "match_key_area": 85,
+    "match_key_area": 84,
     "supply_area": 104.39,
     "exclusive_area": 84.75
   },
@@ -1973,7 +1973,7 @@
     "nid": "128527",
     "ptp_no": "6",
     "ptp_name": "79A",
-    "match_key_area": 60,
+    "match_key_area": 59,
     "supply_area": 79.52,
     "exclusive_area": 59.97
   },
@@ -2018,7 +2018,7 @@
     "nid": "128527",
     "ptp_no": "9",
     "ptp_name": "110A",
-    "match_key_area": 85,
+    "match_key_area": 84,
     "supply_area": 110.79,
     "exclusive_area": 84.59
   },
@@ -2090,7 +2090,7 @@
     "nid": "11698",
     "ptp_no": "3",
     "ptp_name": "86B",
-    "match_key_area": 60,
+    "match_key_area": 59,
     "supply_area": 86.92,
     "exclusive_area": 59.98
   },
@@ -2117,7 +2117,7 @@
     "nid": "11698",
     "ptp_no": "4",
     "ptp_name": "88B1",
-    "match_key_area": 60,
+    "match_key_area": 59,
     "supply_area": 88.72,
     "exclusive_area": 59.98
   },
@@ -2162,7 +2162,7 @@
     "nid": "11698",
     "ptp_no": "12",
     "ptp_name": "143B",
-    "match_key_area": 121,
+    "match_key_area": 120,
     "supply_area": 143.87,
     "exclusive_area": 120.82
   },
@@ -2270,7 +2270,7 @@
     "nid": "724",
     "ptp_no": "3",
     "ptp_name": "212A",
-    "match_key_area": 197,
+    "match_key_area": 157,
     "supply_area": 212.93,
     "exclusive_area": 196.7
   },
@@ -2324,7 +2324,7 @@
     "nid": "113907",
     "ptp_no": "5",
     "ptp_name": "100A",
-    "match_key_area": 74,
+    "match_key_area": 73,
     "supply_area": 100.95,
     "exclusive_area": 73.87
   },
@@ -2432,7 +2432,7 @@
     "nid": "481",
     "ptp_no": "3",
     "ptp_name": "151",
-    "match_key_area": 130,
+    "match_key_area": 131,
     "supply_area": 151.0,
     "exclusive_area": 130.23
   },
@@ -2459,7 +2459,7 @@
     "nid": "15011",
     "ptp_no": "1",
     "ptp_name": "86A",
-    "match_key_area": 60,
+    "match_key_area": 59,
     "supply_area": 86.43,
     "exclusive_area": 59.97
   },
@@ -2468,7 +2468,7 @@
     "nid": "15011",
     "ptp_no": "2",
     "ptp_name": "86B",
-    "match_key_area": 60,
+    "match_key_area": 59,
     "supply_area": 86.43,
     "exclusive_area": 59.97
   },
@@ -2729,7 +2729,7 @@
     "nid": "107613",
     "ptp_no": "18",
     "ptp_name": "236A",
-    "match_key_area": 179,
+    "match_key_area": 178,
     "supply_area": 236.68,
     "exclusive_area": 178.94
   },
@@ -2810,7 +2810,7 @@
     "nid": "119341",
     "ptp_no": "9",
     "ptp_name": "152",
-    "match_key_area": 115,
+    "match_key_area": 114,
     "supply_area": 152.72,
     "exclusive_area": 114.86
   },
@@ -2837,7 +2837,7 @@
     "nid": "104917",
     "ptp_no": "2",
     "ptp_name": "80B",
-    "match_key_area": 60,
+    "match_key_area": 59,
     "supply_area": 80.18,
     "exclusive_area": 59.94
   },
@@ -2882,7 +2882,7 @@
     "nid": "104917",
     "ptp_no": "7",
     "ptp_name": "113B",
-    "match_key_area": 85,
+    "match_key_area": 84,
     "supply_area": 113.0,
     "exclusive_area": 84.89
   },
@@ -2918,7 +2918,7 @@
     "nid": "104917",
     "ptp_no": "11",
     "ptp_name": "150B",
-    "match_key_area": 115,
+    "match_key_area": 114,
     "supply_area": 150.66,
     "exclusive_area": 114.58
   },
@@ -3053,7 +3053,7 @@
     "nid": "669",
     "ptp_no": "17",
     "ptp_name": "109A",
-    "match_key_area": 84,
+    "match_key_area": 83,
     "supply_area": 109.27,
     "exclusive_area": 83.89
   },
@@ -3134,7 +3134,7 @@
     "nid": "389",
     "ptp_no": "54",
     "ptp_name": "212",
-    "match_key_area": 197,
+    "match_key_area": 182,
     "supply_area": 212.56,
     "exclusive_area": 196.76
   },
@@ -3152,7 +3152,7 @@
     "nid": "659",
     "ptp_no": "1",
     "ptp_name": "74",
-    "match_key_area": 54,
+    "match_key_area": 53,
     "supply_area": 74.74,
     "exclusive_area": 53.88
   },
@@ -3170,7 +3170,7 @@
     "nid": "659",
     "ptp_no": "2",
     "ptp_name": "89A",
-    "match_key_area": 67,
+    "match_key_area": 66,
     "supply_area": 89.88,
     "exclusive_area": 66.6
   },
@@ -3260,7 +3260,7 @@
     "nid": "119219",
     "ptp_no": "1",
     "ptp_name": "86A",
-    "match_key_area": 60,
+    "match_key_area": 59,
     "supply_area": 86.05,
     "exclusive_area": 59.92
   },
@@ -3287,7 +3287,7 @@
     "nid": "119219",
     "ptp_no": "12",
     "ptp_name": "115A",
-    "match_key_area": 85,
+    "match_key_area": 84,
     "supply_area": 115.41,
     "exclusive_area": 84.86
   },
@@ -3314,7 +3314,7 @@
     "nid": "119219",
     "ptp_no": "3",
     "ptp_name": "129B",
-    "match_key_area": 97,
+    "match_key_area": 96,
     "supply_area": 129.78,
     "exclusive_area": 96.91
   },
@@ -3413,7 +3413,7 @@
     "nid": "108187",
     "ptp_no": "10",
     "ptp_name": "115D",
-    "match_key_area": 85,
+    "match_key_area": 84,
     "supply_area": 115.47,
     "exclusive_area": 84.88
   },
@@ -3809,7 +3809,7 @@
     "nid": "180280",
     "ptp_no": "5",
     "ptp_name": "113A",
-    "match_key_area": 85,
+    "match_key_area": 84,
     "supply_area": 113.15,
     "exclusive_area": 84.97
   },
@@ -4142,7 +4142,7 @@
     "nid": "22781",
     "ptp_no": "6",
     "ptp_name": "109TA",
-    "match_key_area": 85,
+    "match_key_area": 84,
     "supply_area": 109.7,
     "exclusive_area": 84.94
   },
@@ -4160,7 +4160,7 @@
     "nid": "22781",
     "ptp_no": "7",
     "ptp_name": "110A",
-    "match_key_area": 85,
+    "match_key_area": 84,
     "supply_area": 110.51,
     "exclusive_area": 84.96
   },
@@ -4322,7 +4322,7 @@
     "nid": "22570",
     "ptp_no": "1",
     "ptp_name": "87A",
-    "match_key_area": 60,
+    "match_key_area": 59,
     "supply_area": 87.41,
     "exclusive_area": 59.99
   },
@@ -4331,7 +4331,7 @@
     "nid": "22570",
     "ptp_no": "2",
     "ptp_name": "87B",
-    "match_key_area": 60,
+    "match_key_area": 59,
     "supply_area": 87.41,
     "exclusive_area": 59.99
   },
@@ -4493,7 +4493,7 @@
     "nid": "656",
     "ptp_no": "19",
     "ptp_name": "178D",
-    "match_key_area": 143,
+    "match_key_area": 153,
     "supply_area": 178.53,
     "exclusive_area": 143.36
   },
@@ -4556,7 +4556,7 @@
     "nid": "438",
     "ptp_no": "4",
     "ptp_name": "128A",
-    "match_key_area": 99,
+    "match_key_area": 98,
     "supply_area": 128.89,
     "exclusive_area": 98.63
   },
@@ -4619,7 +4619,7 @@
     "nid": "118771",
     "ptp_no": "5",
     "ptp_name": "108A",
-    "match_key_area": 85,
+    "match_key_area": 84,
     "supply_area": 108.52,
     "exclusive_area": 84.92
   },
@@ -4646,7 +4646,7 @@
     "nid": "118771",
     "ptp_no": "11",
     "ptp_name": "113PC",
-    "match_key_area": 85,
+    "match_key_area": 84,
     "supply_area": 113.06,
     "exclusive_area": 84.92
   },
@@ -4844,7 +4844,7 @@
     "nid": "154",
     "ptp_no": "1",
     "ptp_name": "101A",
-    "match_key_area": 95,
+    "match_key_area": 84,
     "supply_area": 101.66,
     "exclusive_area": 94.89
   },
@@ -4862,7 +4862,7 @@
     "nid": "154",
     "ptp_no": "2",
     "ptp_name": "137",
-    "match_key_area": 128,
+    "match_key_area": 118,
     "supply_area": 137.45,
     "exclusive_area": 128.32
   },
@@ -4880,7 +4880,7 @@
     "nid": "154",
     "ptp_no": "3",
     "ptp_name": "157",
-    "match_key_area": 147,
+    "match_key_area": 137,
     "supply_area": 157.36,
     "exclusive_area": 146.75
   },
@@ -4898,7 +4898,7 @@
     "nid": "154",
     "ptp_no": "4",
     "ptp_name": "186",
-    "match_key_area": 174,
+    "match_key_area": 164,
     "supply_area": 186.36,
     "exclusive_area": 174.0
   },
@@ -5042,7 +5042,7 @@
     "nid": "708",
     "ptp_no": "1",
     "ptp_name": "113",
-    "match_key_area": 82,
+    "match_key_area": 83,
     "supply_area": 113.96,
     "exclusive_area": 82.23
   }

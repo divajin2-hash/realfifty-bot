@@ -1,4 +1,5 @@
 import os
+import json
 import requests
 from datetime import datetime, timedelta, timezone
 from dotenv import load_dotenv
@@ -49,6 +50,21 @@ def run():
         return
         
     yest_dict = {(r['complex_id'], r['area']): r for r in res_yest.data}
+
+    # Load pyeong_name map from kb50_stats.json: (complex_id, match_key_area) -> pyeong_name
+    pyeong_name_map = {}
+    try:
+        stats_path = os.path.join(os.path.dirname(__file__), '..', 'web', 'src', 'data', 'kb50_stats.json')
+        kb50 = json.load(open(stats_path, encoding='utf-8'))
+        for cx in kb50:
+            cx_id = cx['complex'].get('id')
+            for s in cx.get('stats', []):
+                area = s.get('match_key_area')
+                pname = s.get('pyeong_name')
+                if cx_id and area and pname:
+                    pyeong_name_map[(cx_id, area)] = pname
+    except Exception as e:
+        print(f"Warning: could not load pyeong_name map: {e}")
     
     # Lists to hold formatted strings
     rtms_changes = []
@@ -77,6 +93,11 @@ def run():
             
             rtms_changes.append(f"- {c_name} {area}㎡: {y_str} ➡️ {t_str} ({mark} {d_str})")
             
+            # Use type-specific breakdown
+            pname = pyeong_name_map.get((t.get('complex_id'), area))
+            if pname and pname != str(area):
+                rtms_changes[-1] = rtms_changes[-1].replace(f"{c_name} {area}㎡:", f"{c_name} {pname}({area}㎡):")
+            
         # 2. 네이버 최저호가 (lowest_ask 변동 비교)
         t_ask = t.get('lowest_ask') or 0
         y_ask = y.get('lowest_ask') or 0
@@ -90,7 +111,12 @@ def run():
             y_str = format_price(y_ask)
             d_str = format_price(diff_abs)
             
-            ask_changes.append(f"- {c_name} {area}㎡: {y_str} ➡️ {t_str} ({mark} {d_str})")
+            ask_changes.append(f"- {c_name} {area}㎡: {y_str} ➡️ {t_str} ({mark} {d_str})") 
+
+        # 2b. Also show type-specific breakdown using pyeong_name
+        pname = pyeong_name_map.get((t.get('complex_id'), area))
+        if pname and pname != str(area):  # Only add suffix if it adds info (e.g. "84A" not just "84")
+            ask_changes[-1] = ask_changes[-1].replace(f"{c_name} {area}㎡:", f"{c_name} {pname}({area}㎡):")
             
     # Format message
     msg = f"🔔 *RealFifty 데일리 리포트*\n({today_date} 자정 기준)\n\n"

@@ -1,0 +1,4694 @@
+{
+  "헬리오시티": {
+    "61A": {
+      "status": "AMBIGUOUS",
+      "old_match_key": 39,
+      "new_match_key": 39,
+      "ptp_ex_area": 39.1,
+      "db_area_exact": null,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": " shared_mk_with:61B,61D"
+    },
+    "61B": {
+      "status": "AMBIGUOUS",
+      "old_match_key": 39,
+      "new_match_key": 39,
+      "ptp_ex_area": 39.12,
+      "db_area_exact": null,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": " shared_mk_with:61A,61D"
+    },
+    "61D": {
+      "status": "AMBIGUOUS",
+      "old_match_key": 39,
+      "new_match_key": 39,
+      "ptp_ex_area": 39.17,
+      "db_area_exact": null,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": " shared_mk_with:61A,61B"
+    },
+    "62C": {
+      "status": "FIXED",
+      "old_match_key": 40,
+      "new_match_key": 39,
+      "ptp_ex_area": 39.86,
+      "db_area_exact": null,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": ""
+    },
+    "72C": {
+      "status": "FIXED",
+      "old_match_key": 49,
+      "new_match_key": 39,
+      "ptp_ex_area": 49.29,
+      "db_area_exact": null,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": " shared_mk_with:72D,72B,72A"
+    },
+    "72D": {
+      "status": "FIXED",
+      "old_match_key": 49,
+      "new_match_key": 39,
+      "ptp_ex_area": 49.21,
+      "db_area_exact": null,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": " shared_mk_with:72C,72B,72A"
+    },
+    "72B": {
+      "status": "FIXED",
+      "old_match_key": 49,
+      "new_match_key": 39,
+      "ptp_ex_area": 49.32,
+      "db_area_exact": null,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": " shared_mk_with:72C,72D,72A"
+    },
+    "72A": {
+      "status": "FIXED",
+      "old_match_key": 49,
+      "new_match_key": 39,
+      "ptp_ex_area": 49.19,
+      "db_area_exact": null,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": " shared_mk_with:72C,72D,72B"
+    },
+    "84A": {
+      "status": "FIXED",
+      "old_match_key": 60,
+      "new_match_key": 39,
+      "ptp_ex_area": 59.96,
+      "db_area_exact": null,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": ""
+    },
+    "107A": {
+      "status": "FIXED",
+      "old_match_key": 85,
+      "new_match_key": 39,
+      "ptp_ex_area": 84.98,
+      "db_area_exact": null,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": " shared_mk_with:107J1,107J2,107I,108G,108K,108L,108H,109E,109C,109B,110D,110F"
+    },
+    "107J1": {
+      "status": "FIXED",
+      "old_match_key": 85,
+      "new_match_key": 39,
+      "ptp_ex_area": 84.96,
+      "db_area_exact": null,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": " shared_mk_with:107A,107J2,107I,108G,108K,108L,108H,109E,109C,109B,110D,110F"
+    },
+    "107J2": {
+      "status": "FIXED",
+      "old_match_key": 85,
+      "new_match_key": 39,
+      "ptp_ex_area": 84.96,
+      "db_area_exact": null,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": " shared_mk_with:107A,107J1,107I,108G,108K,108L,108H,109E,109C,109B,110D,110F"
+    },
+    "107I": {
+      "status": "FIXED",
+      "old_match_key": 85,
+      "new_match_key": 39,
+      "ptp_ex_area": 84.94,
+      "db_area_exact": null,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": " shared_mk_with:107A,107J1,107J2,108G,108K,108L,108H,109E,109C,109B,110D,110F"
+    },
+    "108G": {
+      "status": "FIXED",
+      "old_match_key": 85,
+      "new_match_key": 39,
+      "ptp_ex_area": 84.98,
+      "db_area_exact": null,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": " shared_mk_with:107A,107J1,107J2,107I,108K,108L,108H,109E,109C,109B,110D,110F"
+    },
+    "108K": {
+      "status": "FIXED",
+      "old_match_key": 85,
+      "new_match_key": 39,
+      "ptp_ex_area": 84.98,
+      "db_area_exact": null,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": " shared_mk_with:107A,107J1,107J2,107I,108G,108L,108H,109E,109C,109B,110D,110F"
+    },
+    "108L": {
+      "status": "FIXED",
+      "old_match_key": 85,
+      "new_match_key": 39,
+      "ptp_ex_area": 84.97,
+      "db_area_exact": null,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": " shared_mk_with:107A,107J1,107J2,107I,108G,108K,108H,109E,109C,109B,110D,110F"
+    },
+    "108H": {
+      "status": "FIXED",
+      "old_match_key": 85,
+      "new_match_key": 39,
+      "ptp_ex_area": 84.98,
+      "db_area_exact": null,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": " shared_mk_with:107A,107J1,107J2,107I,108G,108K,108L,109E,109C,109B,110D,110F"
+    },
+    "109E": {
+      "status": "FIXED",
+      "old_match_key": 85,
+      "new_match_key": 39,
+      "ptp_ex_area": 84.98,
+      "db_area_exact": null,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": " shared_mk_with:107A,107J1,107J2,107I,108G,108K,108L,108H,109C,109B,110D,110F"
+    },
+    "109C": {
+      "status": "FIXED",
+      "old_match_key": 85,
+      "new_match_key": 39,
+      "ptp_ex_area": 84.99,
+      "db_area_exact": null,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": " shared_mk_with:107A,107J1,107J2,107I,108G,108K,108L,108H,109E,109B,110D,110F"
+    },
+    "109B": {
+      "status": "FIXED",
+      "old_match_key": 85,
+      "new_match_key": 39,
+      "ptp_ex_area": 84.99,
+      "db_area_exact": null,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": " shared_mk_with:107A,107J1,107J2,107I,108G,108K,108L,108H,109E,109C,110D,110F"
+    },
+    "110D": {
+      "status": "FIXED",
+      "old_match_key": 85,
+      "new_match_key": 39,
+      "ptp_ex_area": 84.99,
+      "db_area_exact": null,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": " shared_mk_with:107A,107J1,107J2,107I,108G,108K,108L,108H,109E,109C,109B,110F"
+    },
+    "110F": {
+      "status": "FIXED",
+      "old_match_key": 85,
+      "new_match_key": 39,
+      "ptp_ex_area": 84.95,
+      "db_area_exact": null,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": " shared_mk_with:107A,107J1,107J2,107I,108G,108K,108L,108H,109E,109C,109B,110D"
+    },
+    "126A": {
+      "status": "FIXED",
+      "old_match_key": 100,
+      "new_match_key": 39,
+      "ptp_ex_area": 99.6,
+      "db_area_exact": null,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": ""
+    },
+    "140A": {
+      "status": "FIXED",
+      "old_match_key": 111,
+      "new_match_key": 39,
+      "ptp_ex_area": 110.66,
+      "db_area_exact": null,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": ""
+    },
+    "141B": {
+      "status": "FIXED",
+      "old_match_key": 110,
+      "new_match_key": 39,
+      "ptp_ex_area": 110.44,
+      "db_area_exact": null,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": ""
+    },
+    "163A": {
+      "status": "FIXED",
+      "old_match_key": 130,
+      "new_match_key": 39,
+      "ptp_ex_area": 130.06,
+      "db_area_exact": null,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": ""
+    },
+    "193C": {
+      "status": "FIXED",
+      "old_match_key": 150,
+      "new_match_key": 39,
+      "ptp_ex_area": 150.09,
+      "db_area_exact": null,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": " shared_mk_with:194D"
+    },
+    "194D": {
+      "status": "FIXED",
+      "old_match_key": 150,
+      "new_match_key": 39,
+      "ptp_ex_area": 150.09,
+      "db_area_exact": null,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": " shared_mk_with:193C"
+    }
+  },
+  "디에이치퍼스티어아이파크": {
+    "50A": {
+      "status": "AMBIGUOUS",
+      "old_match_key": 35,
+      "new_match_key": 35,
+      "ptp_ex_area": 34.99,
+      "db_area_exact": 35.0,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": " shared_mk_with:50B"
+    },
+    "50B": {
+      "status": "AMBIGUOUS",
+      "old_match_key": 35,
+      "new_match_key": 35,
+      "ptp_ex_area": 34.99,
+      "db_area_exact": 35.0,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": " shared_mk_with:50A"
+    },
+    "70A": {
+      "status": "FIXED",
+      "old_match_key": 50,
+      "new_match_key": 35,
+      "ptp_ex_area": 49.69,
+      "db_area_exact": 35.0,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": "area_mismatch:49.69vs35.0 shared_mk_with:70B"
+    },
+    "70B": {
+      "status": "FIXED",
+      "old_match_key": 50,
+      "new_match_key": 35,
+      "ptp_ex_area": 49.69,
+      "db_area_exact": 35.0,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": "area_mismatch:49.69vs35.0 shared_mk_with:70A"
+    },
+    "85A": {
+      "status": "FIXED",
+      "old_match_key": 60,
+      "new_match_key": 35,
+      "ptp_ex_area": 59.97,
+      "db_area_exact": 35.0,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": "area_mismatch:59.97vs35.0 shared_mk_with:86B"
+    },
+    "86B": {
+      "status": "FIXED",
+      "old_match_key": 60,
+      "new_match_key": 35,
+      "ptp_ex_area": 59.98,
+      "db_area_exact": 35.0,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": "area_mismatch:59.98vs35.0 shared_mk_with:85A"
+    },
+    "110A": {
+      "status": "FIXED",
+      "old_match_key": 85,
+      "new_match_key": 35,
+      "ptp_ex_area": 84.82,
+      "db_area_exact": 35.0,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": "area_mismatch:84.82vs35.0 shared_mk_with:111B,111C"
+    },
+    "111B": {
+      "status": "FIXED",
+      "old_match_key": 85,
+      "new_match_key": 35,
+      "ptp_ex_area": 84.85,
+      "db_area_exact": 35.0,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": "area_mismatch:84.85vs35.0 shared_mk_with:110A,111C"
+    },
+    "111C": {
+      "status": "FIXED",
+      "old_match_key": 85,
+      "new_match_key": 35,
+      "ptp_ex_area": 84.9,
+      "db_area_exact": 35.0,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": "area_mismatch:84.9vs35.0 shared_mk_with:110A,111B"
+    },
+    "124A": {
+      "status": "FIXED",
+      "old_match_key": 97,
+      "new_match_key": 35,
+      "ptp_ex_area": 96.95,
+      "db_area_exact": 35.0,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": "area_mismatch:96.95vs35.0 shared_mk_with:124B"
+    },
+    "124B": {
+      "status": "FIXED",
+      "old_match_key": 97,
+      "new_match_key": 35,
+      "ptp_ex_area": 96.91,
+      "db_area_exact": 35.0,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": "area_mismatch:96.91vs35.0 shared_mk_with:124A"
+    },
+    "144A": {
+      "status": "FIXED",
+      "old_match_key": 113,
+      "new_match_key": 35,
+      "ptp_ex_area": 112.85,
+      "db_area_exact": 35.0,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": "area_mismatch:112.85vs35.0 shared_mk_with:145B"
+    },
+    "145B": {
+      "status": "FIXED",
+      "old_match_key": 113,
+      "new_match_key": 35,
+      "ptp_ex_area": 112.99,
+      "db_area_exact": 35.0,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": "area_mismatch:112.99vs35.0 shared_mk_with:144A"
+    },
+    "169A": {
+      "status": "FIXED",
+      "old_match_key": 133,
+      "new_match_key": 35,
+      "ptp_ex_area": 132.81,
+      "db_area_exact": 35.0,
+      "match_method": "date_price_floor",
+      "naver_tx_count": 7,
+      "scrape_status": "ok",
+      "note": "area_mismatch:132.81vs35.0 shared_mk_with:170C"
+    },
+    "170C": {
+      "status": "NO_DB_MATCH",
+      "old_match_key": 133,
+      "new_match_key": 133,
+      "ptp_ex_area": 132.99,
+      "db_area_exact": null,
+      "match_method": "no_match",
+      "naver_tx_count": 0,
+      "scrape_status": "tab_fail",
+      "note": " shared_mk_with:169A"
+    },
+    "201A": {
+      "status": "NO_DB_MATCH",
+      "old_match_key": 157,
+      "new_match_key": 157,
+      "ptp_ex_area": 156.96,
+      "db_area_exact": null,
+      "match_method": "no_match",
+      "naver_tx_count": 0,
+      "scrape_status": "error:Page.goto: Target page, context or browser has been closed",
+      "note": " shared_mk_with:202B"
+    },
+    "202B": {
+      "status": "NO_DB_MATCH",
+      "old_match_key": 157,
+      "new_match_key": 157,
+      "ptp_ex_area": 156.62,
+      "db_area_exact": null,
+      "match_method": "no_match",
+      "naver_tx_count": 0,
+      "scrape_status": "error:Page.goto: Target page, context or browser has been closed",
+      "note": " shared_mk_with:201A"
+    },
+    "220A": {
+      "status": "NO_DB_MATCH",
+      "old_match_key": 172,
+      "new_match_key": 172,
+      "ptp_ex_area": 171.65,
+      "db_area_exact": null,
+      "match_method": "no_match",
+      "naver_tx_count": 0,
+      "scrape_status": "error:Page.goto: Target page, context or browser has been closed",
+      "note": " shared_mk_with:220B"
+    },
+    "220B": {
+      "status": "NO_DB_MATCH",
+      "old_match_key": 172,
+      "new_match_key": 172,
+      "ptp_ex_area": 171.64,
+      "db_area_exact": null,
+      "match_method": "no_match",
+      "naver_tx_count": 0,
+      "scrape_status": "error:Page.goto: Target page, context or browser has been closed",
+      "note": " shared_mk_with:220A"
+    },
+    "230P1": {
+      "status": "NO_DB_MATCH",
+      "old_match_key": 180,
+      "new_match_key": 180,
+      "ptp_ex_area": 179.56,
+      "db_area_exact": null,
+      "match_method": "no_match",
+      "naver_tx_count": 0,
+      "scrape_status": "error:Page.goto: Target page, context or browser has been closed",
+      "note": ""
+    }
+  },
+  "파크리오": {
+    "52": {
+      "status": "OK",
+      "old_mk": 35,
+      "new_mk": 35,
+      "ptp_ex_area": 35.24,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "86A": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.95,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "86B": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.86,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "87C": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.64,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "108B": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.79,
+      "db_area_exact": 84.79,
+      "note": ""
+    },
+    "108A": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.97,
+      "db_area_exact": 84.97,
+      "note": ""
+    },
+    "108B1": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.79,
+      "db_area_exact": 84.79,
+      "note": ""
+    },
+    "109C": {
+      "status": "FIXED",
+      "old_mk": 85,
+      "new_mk": 84,
+      "ptp_ex_area": 84.9,
+      "db_area_exact": null,
+      "note": "85 -> 84"
+    },
+    "149": {
+      "status": "OK",
+      "old_mk": 122,
+      "new_mk": 122,
+      "ptp_ex_area": 121.63,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "174": {
+      "status": "OK",
+      "old_mk": 145,
+      "new_mk": 145,
+      "ptp_ex_area": 144.77,
+      "db_area_exact": 144.77,
+      "note": ""
+    }
+  },
+  "잠실엘스": {
+    "84": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.96,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "109B": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.97,
+      "db_area_exact": 84.97,
+      "note": ""
+    },
+    "109A": {
+      "status": "FIXED",
+      "old_mk": 85,
+      "new_mk": 84,
+      "ptp_ex_area": 84.88,
+      "db_area_exact": null,
+      "note": "85 -> 84"
+    },
+    "111C": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.8,
+      "db_area_exact": 84.8,
+      "note": ""
+    },
+    "149": {
+      "status": "OK",
+      "old_mk": 120,
+      "new_mk": 120,
+      "ptp_ex_area": 119.93,
+      "db_area_exact": null,
+      "note": ""
+    }
+  },
+  "올림픽선수기자촌": {
+    "112": {
+      "status": "OK",
+      "old_mk": 83,
+      "new_mk": 83,
+      "ptp_ex_area": 83.06,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "132A": {
+      "status": "OK",
+      "old_mk": 100,
+      "new_mk": 100,
+      "ptp_ex_area": 100.31,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "132B": {
+      "status": "OK",
+      "old_mk": 101,
+      "new_mk": 101,
+      "ptp_ex_area": 100.82,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "142": {
+      "status": "OK",
+      "old_mk": 110,
+      "new_mk": 110,
+      "ptp_ex_area": 110.25,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "155A": {
+      "status": "OK",
+      "old_mk": 121,
+      "new_mk": 121,
+      "ptp_ex_area": 121.23,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "161": {
+      "status": "OK",
+      "old_mk": 126,
+      "new_mk": 126,
+      "ptp_ex_area": 126.18,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "165": {
+      "status": "OK",
+      "old_mk": 129,
+      "new_mk": 129,
+      "ptp_ex_area": 128.97,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "168": {
+      "status": "OK",
+      "old_mk": 132,
+      "new_mk": 132,
+      "ptp_ex_area": 131.76,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "171": {
+      "status": "OK",
+      "old_mk": 136,
+      "new_mk": 136,
+      "ptp_ex_area": 135.99,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "175": {
+      "status": "OK",
+      "old_mk": 137,
+      "new_mk": 137,
+      "ptp_ex_area": 136.98,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "188": {
+      "status": "OK",
+      "old_mk": 149,
+      "new_mk": 149,
+      "ptp_ex_area": 148.77,
+      "db_area_exact": 148.77,
+      "note": ""
+    },
+    "211": {
+      "status": "OK",
+      "old_mk": 163,
+      "new_mk": 163,
+      "ptp_ex_area": 163.44,
+      "db_area_exact": null,
+      "note": ""
+    }
+  },
+  "래미안원베일리": {
+    "80A": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.96,
+      "db_area_exact": 59.96,
+      "note": ""
+    },
+    "80B": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.96,
+      "db_area_exact": 59.96,
+      "note": ""
+    },
+    "99C": {
+      "status": "OK",
+      "old_mk": 75,
+      "new_mk": 75,
+      "ptp_ex_area": 74.92,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "100A": {
+      "status": "NO_DB_MATCH",
+      "old_mk": 75,
+      "new_mk": 75,
+      "ptp_ex_area": 74.97,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "100B": {
+      "status": "NO_DB_MATCH",
+      "old_mk": 75,
+      "new_mk": 75,
+      "ptp_ex_area": 74.97,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "111D": {
+      "status": "FIXED",
+      "old_mk": 85,
+      "new_mk": 84,
+      "ptp_ex_area": 84.95,
+      "db_area_exact": null,
+      "note": "85 -> 84"
+    },
+    "111O": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.97,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "112K": {
+      "status": "FIXED",
+      "old_mk": 85,
+      "new_mk": 84,
+      "ptp_ex_area": 84.95,
+      "db_area_exact": null,
+      "note": "85 -> 84"
+    },
+    "112B": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.98,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "112A": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.98,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "112S": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.96,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "112F1": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.98,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "112E": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.96,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "112G": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.98,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "112Q": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.98,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "112P": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.98,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "112R": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.96,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "112C": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.94,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "113N": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.98,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "113L": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.99,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "113M": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.93,
+      "db_area_exact": 84.93,
+      "note": ""
+    },
+    "113H": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.97,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "113I": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.92,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "133H": {
+      "status": "OK",
+      "old_mk": 102,
+      "new_mk": 102,
+      "ptp_ex_area": 101.99,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "135B": {
+      "status": "OK",
+      "old_mk": 102,
+      "new_mk": 102,
+      "ptp_ex_area": 101.94,
+      "db_area_exact": 101.94,
+      "note": ""
+    },
+    "135A": {
+      "status": "OK",
+      "old_mk": 102,
+      "new_mk": 102,
+      "ptp_ex_area": 101.96,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "135C": {
+      "status": "OK",
+      "old_mk": 102,
+      "new_mk": 102,
+      "ptp_ex_area": 101.94,
+      "db_area_exact": 101.94,
+      "note": ""
+    },
+    "136D": {
+      "status": "OK",
+      "old_mk": 102,
+      "new_mk": 102,
+      "ptp_ex_area": 101.97,
+      "db_area_exact": 101.94,
+      "note": ""
+    },
+    "136E": {
+      "status": "OK",
+      "old_mk": 102,
+      "new_mk": 102,
+      "ptp_ex_area": 101.97,
+      "db_area_exact": 101.97,
+      "note": ""
+    },
+    "136F": {
+      "status": "OK",
+      "old_mk": 102,
+      "new_mk": 102,
+      "ptp_ex_area": 101.94,
+      "db_area_exact": 101.94,
+      "note": ""
+    },
+    "136G": {
+      "status": "OK",
+      "old_mk": 102,
+      "new_mk": 102,
+      "ptp_ex_area": 101.94,
+      "db_area_exact": 101.94,
+      "note": ""
+    },
+    "152G": {
+      "status": "OK",
+      "old_mk": 117,
+      "new_mk": 117,
+      "ptp_ex_area": 116.92,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "153D": {
+      "status": "OK",
+      "old_mk": 117,
+      "new_mk": 117,
+      "ptp_ex_area": 116.95,
+      "db_area_exact": 116.95,
+      "note": ""
+    },
+    "153A": {
+      "status": "NO_DB_MATCH",
+      "old_mk": 117,
+      "new_mk": 117,
+      "ptp_ex_area": 116.96,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "153B": {
+      "status": "NO_DB_MATCH",
+      "old_mk": 117,
+      "new_mk": 117,
+      "ptp_ex_area": 116.88,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "153H": {
+      "status": "OK",
+      "old_mk": 117,
+      "new_mk": 117,
+      "ptp_ex_area": 116.92,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "154E": {
+      "status": "OK",
+      "old_mk": 117,
+      "new_mk": 117,
+      "ptp_ex_area": 116.93,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "154F": {
+      "status": "OK",
+      "old_mk": 117,
+      "new_mk": 117,
+      "ptp_ex_area": 116.95,
+      "db_area_exact": 116.95,
+      "note": ""
+    },
+    "154C": {
+      "status": "OK",
+      "old_mk": 117,
+      "new_mk": 117,
+      "ptp_ex_area": 116.97,
+      "db_area_exact": 116.97,
+      "note": ""
+    },
+    "174D": {
+      "status": "OK",
+      "old_mk": 134,
+      "new_mk": 134,
+      "ptp_ex_area": 133.95,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "175C": {
+      "status": "OK",
+      "old_mk": 134,
+      "new_mk": 134,
+      "ptp_ex_area": 133.91,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "220D": {
+      "status": "NO_DB_MATCH",
+      "old_mk": 169,
+      "new_mk": 169,
+      "ptp_ex_area": 168.65,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "222E": {
+      "status": "NO_DB_MATCH",
+      "old_mk": 169,
+      "new_mk": 169,
+      "ptp_ex_area": 168.94,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "224C": {
+      "status": "NO_DB_MATCH",
+      "old_mk": 169,
+      "new_mk": 169,
+      "ptp_ex_area": 168.9,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "226H": {
+      "status": "FIXED",
+      "old_mk": 169,
+      "new_mk": 168,
+      "ptp_ex_area": 168.87,
+      "db_area_exact": null,
+      "note": "169 -> 168"
+    }
+  },
+  "리센츠": {
+    "42A": {
+      "status": "FIXED",
+      "old_mk": 28,
+      "new_mk": 27,
+      "ptp_ex_area": 27.68,
+      "db_area_exact": null,
+      "note": "28 -> 27"
+    },
+    "42B": {
+      "status": "FIXED",
+      "old_mk": 28,
+      "new_mk": 27,
+      "ptp_ex_area": 27.68,
+      "db_area_exact": null,
+      "note": "28 -> 27"
+    },
+    "42C": {
+      "status": "FIXED",
+      "old_mk": 28,
+      "new_mk": 27,
+      "ptp_ex_area": 27.68,
+      "db_area_exact": null,
+      "note": "28 -> 27"
+    },
+    "82B": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.99,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "82D": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.99,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "109A": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.99,
+      "db_area_exact": 84.99,
+      "note": ""
+    },
+    "109B": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.99,
+      "db_area_exact": 84.99,
+      "note": ""
+    },
+    "109C": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.99,
+      "db_area_exact": 84.99,
+      "note": ""
+    },
+    "109J": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.99,
+      "db_area_exact": 84.99,
+      "note": ""
+    },
+    "109F": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.99,
+      "db_area_exact": 84.99,
+      "note": ""
+    },
+    "109G": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.99,
+      "db_area_exact": 84.99,
+      "note": ""
+    },
+    "110H": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.99,
+      "db_area_exact": 84.99,
+      "note": ""
+    },
+    "126": {
+      "status": "OK",
+      "old_mk": 99,
+      "new_mk": 99,
+      "ptp_ex_area": 98.55,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "158B": {
+      "status": "OK",
+      "old_mk": 124,
+      "new_mk": 124,
+      "ptp_ex_area": 124.22,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "158A": {
+      "status": "OK",
+      "old_mk": 124,
+      "new_mk": 124,
+      "ptp_ex_area": 124.22,
+      "db_area_exact": null,
+      "note": ""
+    }
+  },
+  "은마": {
+    "101": {
+      "status": "OK",
+      "old_mk": 77,
+      "new_mk": 77,
+      "ptp_ex_area": 76.79,
+      "db_area_exact": 76.79,
+      "note": ""
+    },
+    "115": {
+      "status": "OK",
+      "old_mk": 84,
+      "new_mk": 84,
+      "ptp_ex_area": 84.43,
+      "db_area_exact": 84.43,
+      "note": ""
+    }
+  },
+  "반포자이": {
+    "84A": {
+      "status": "FIXED",
+      "old_mk": 60,
+      "new_mk": 59,
+      "ptp_ex_area": 59.98,
+      "db_area_exact": null,
+      "note": "60 -> 59"
+    },
+    "84B": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.97,
+      "db_area_exact": 59.971,
+      "note": ""
+    },
+    "116A": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.94,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "116C": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.98,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "116B": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.99,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "116D": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.98,
+      "db_area_exact": 84.984,
+      "note": ""
+    },
+    "165A": {
+      "status": "OK",
+      "old_mk": 132,
+      "new_mk": 132,
+      "ptp_ex_area": 132.43,
+      "db_area_exact": 132.439,
+      "note": ""
+    },
+    "166B": {
+      "status": "OK",
+      "old_mk": 132,
+      "new_mk": 132,
+      "ptp_ex_area": 132.17,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "199B": {
+      "status": "OK",
+      "old_mk": 165,
+      "new_mk": 165,
+      "ptp_ex_area": 165.05,
+      "db_area_exact": 165.052,
+      "note": ""
+    },
+    "200A": {
+      "status": "OK",
+      "old_mk": 165,
+      "new_mk": 165,
+      "ptp_ex_area": 165.44,
+      "db_area_exact": 165.446,
+      "note": ""
+    },
+    "232A": {
+      "status": "OK",
+      "old_mk": 195,
+      "new_mk": 195,
+      "ptp_ex_area": 194.51,
+      "db_area_exact": 194.515,
+      "note": ""
+    },
+    "232B": {
+      "status": "OK",
+      "old_mk": 195,
+      "new_mk": 195,
+      "ptp_ex_area": 194.69,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "264": {
+      "status": "OK",
+      "old_mk": 216,
+      "new_mk": 216,
+      "ptp_ex_area": 216.49,
+      "db_area_exact": 216.49,
+      "note": ""
+    },
+    "297": {
+      "status": "OK",
+      "old_mk": 245,
+      "new_mk": 245,
+      "ptp_ex_area": 244.54,
+      "db_area_exact": 244.543,
+      "note": ""
+    },
+    "301A": {
+      "status": "OK",
+      "old_mk": 245,
+      "new_mk": 245,
+      "ptp_ex_area": 244.62,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "301B": {
+      "status": "OK",
+      "old_mk": 245,
+      "new_mk": 245,
+      "ptp_ex_area": 244.97,
+      "db_area_exact": 244.972,
+      "note": ""
+    }
+  },
+  "잠실주공(5단지)": {
+    "112A": {
+      "status": "OK",
+      "old_mk": 76,
+      "new_mk": 76,
+      "ptp_ex_area": 76.49,
+      "db_area_exact": 76.5,
+      "note": ""
+    },
+    "112B": {
+      "status": "OK",
+      "old_mk": 76,
+      "new_mk": 76,
+      "ptp_ex_area": 76.49,
+      "db_area_exact": 76.5,
+      "note": ""
+    },
+    "115T": {
+      "status": "OK",
+      "old_mk": 82,
+      "new_mk": 82,
+      "ptp_ex_area": 81.75,
+      "db_area_exact": 81.75,
+      "note": ""
+    },
+    "119B": {
+      "status": "OK",
+      "old_mk": 83,
+      "new_mk": 83,
+      "ptp_ex_area": 82.61,
+      "db_area_exact": 82.61,
+      "note": ""
+    },
+    "119A": {
+      "status": "OK",
+      "old_mk": 83,
+      "new_mk": 83,
+      "ptp_ex_area": 82.51,
+      "db_area_exact": 82.51,
+      "note": ""
+    }
+  },
+  "현대(신현대)": {
+    "114A": {
+      "status": "OK",
+      "old_mk": 107,
+      "new_mk": 107,
+      "ptp_ex_area": 107.16,
+      "db_area_exact": 107.16,
+      "note": ""
+    },
+    "115C": {
+      "status": "OK",
+      "old_mk": 108,
+      "new_mk": 108,
+      "ptp_ex_area": 108.31,
+      "db_area_exact": 108.31,
+      "note": ""
+    },
+    "115B": {
+      "status": "OK",
+      "old_mk": 108,
+      "new_mk": 108,
+      "ptp_ex_area": 108.3,
+      "db_area_exact": 108.3,
+      "note": ""
+    },
+    "115D": {
+      "status": "OK",
+      "old_mk": 108,
+      "new_mk": 108,
+      "ptp_ex_area": 108.32,
+      "db_area_exact": 108.32,
+      "note": ""
+    },
+    "116E": {
+      "status": "OK",
+      "old_mk": 109,
+      "new_mk": 109,
+      "ptp_ex_area": 108.88,
+      "db_area_exact": 108.88,
+      "note": ""
+    },
+    "116F": {
+      "status": "OK",
+      "old_mk": 109,
+      "new_mk": 109,
+      "ptp_ex_area": 109.24,
+      "db_area_exact": 109.24,
+      "note": ""
+    },
+    "116G": {
+      "status": "OK",
+      "old_mk": 109,
+      "new_mk": 109,
+      "ptp_ex_area": 109.29,
+      "db_area_exact": 109.29,
+      "note": ""
+    },
+    "118C": {
+      "status": "OK",
+      "old_mk": 111,
+      "new_mk": 111,
+      "ptp_ex_area": 110.82,
+      "db_area_exact": 110.82,
+      "note": ""
+    },
+    "119D": {
+      "status": "OK",
+      "old_mk": 111,
+      "new_mk": 111,
+      "ptp_ex_area": 111.38,
+      "db_area_exact": 111.38,
+      "note": ""
+    },
+    "119B": {
+      "status": "OK",
+      "old_mk": 108,
+      "new_mk": 108,
+      "ptp_ex_area": 108.36,
+      "db_area_exact": 108.36,
+      "note": ""
+    },
+    "119E": {
+      "status": "OK",
+      "old_mk": 112,
+      "new_mk": 112,
+      "ptp_ex_area": 112.05,
+      "db_area_exact": 112.05,
+      "note": ""
+    },
+    "126": {
+      "status": "OK",
+      "old_mk": 115,
+      "new_mk": 115,
+      "ptp_ex_area": 115.23,
+      "db_area_exact": 115.23,
+      "note": ""
+    },
+    "128A": {
+      "status": "OK",
+      "old_mk": 121,
+      "new_mk": 121,
+      "ptp_ex_area": 121.18,
+      "db_area_exact": 121.18,
+      "note": ""
+    },
+    "129C": {
+      "status": "OK",
+      "old_mk": 122,
+      "new_mk": 122,
+      "ptp_ex_area": 122.27,
+      "db_area_exact": 122.27,
+      "note": ""
+    },
+    "129B": {
+      "status": "NO_DB_MATCH",
+      "old_mk": 122,
+      "new_mk": 122,
+      "ptp_ex_area": 121.98,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "164A": {
+      "status": "OK",
+      "old_mk": 152,
+      "new_mk": 152,
+      "ptp_ex_area": 152.28,
+      "db_area_exact": 152.28,
+      "note": ""
+    },
+    "165B": {
+      "status": "OK",
+      "old_mk": 152,
+      "new_mk": 152,
+      "ptp_ex_area": 152.39,
+      "db_area_exact": 152.39,
+      "note": ""
+    },
+    "167A": {
+      "status": "OK",
+      "old_mk": 156,
+      "new_mk": 156,
+      "ptp_ex_area": 155.52,
+      "db_area_exact": 155.52,
+      "note": ""
+    },
+    "183": {
+      "status": "OK",
+      "old_mk": 170,
+      "new_mk": 170,
+      "ptp_ex_area": 170.38,
+      "db_area_exact": 170.38,
+      "note": ""
+    },
+    "188B": {
+      "status": "OK",
+      "old_mk": 171,
+      "new_mk": 171,
+      "ptp_ex_area": 171.43,
+      "db_area_exact": 171.43,
+      "note": ""
+    },
+    "188A": {
+      "status": "OK",
+      "old_mk": 171,
+      "new_mk": 171,
+      "ptp_ex_area": 170.81,
+      "db_area_exact": 170.81,
+      "note": ""
+    },
+    "197": {
+      "status": "OK",
+      "old_mk": 183,
+      "new_mk": 183,
+      "ptp_ex_area": 182.95,
+      "db_area_exact": 182.95,
+      "note": ""
+    },
+    "202": {
+      "status": "OK",
+      "old_mk": 183,
+      "new_mk": 183,
+      "ptp_ex_area": 183.41,
+      "db_area_exact": 183.41,
+      "note": ""
+    }
+  },
+  "올림픽훼밀리타운": {
+    "103B": {
+      "status": "FIXED",
+      "old_mk": 85,
+      "new_mk": 84,
+      "ptp_ex_area": 84.7,
+      "db_area_exact": null,
+      "note": "85 -> 84"
+    },
+    "104A": {
+      "status": "FIXED",
+      "old_mk": 85,
+      "new_mk": 84,
+      "ptp_ex_area": 84.75,
+      "db_area_exact": null,
+      "note": "85 -> 84"
+    },
+    "138": {
+      "status": "OK",
+      "old_mk": 118,
+      "new_mk": 118,
+      "ptp_ex_area": 117.58,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "158": {
+      "status": "OK",
+      "old_mk": 136,
+      "new_mk": 136,
+      "ptp_ex_area": 136.32,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "182": {
+      "status": "OK",
+      "old_mk": 159,
+      "new_mk": 159,
+      "ptp_ex_area": 158.7,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "219": {
+      "status": "OK",
+      "old_mk": 192,
+      "new_mk": 192,
+      "ptp_ex_area": 192.23,
+      "db_area_exact": null,
+      "note": ""
+    }
+  },
+  "래미안퍼스티지": {
+    "86T2": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.96,
+      "db_area_exact": 59.96,
+      "note": ""
+    },
+    "87P": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.98,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "87T1": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.89,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "113L1": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.93,
+      "db_area_exact": 84.93,
+      "note": ""
+    },
+    "113T2": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.76,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "113T1": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.85,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "114L2": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.93,
+      "db_area_exact": 84.93,
+      "note": ""
+    },
+    "114P": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.93,
+      "db_area_exact": 84.93,
+      "note": ""
+    },
+    "147T1": {
+      "status": "OK",
+      "old_mk": 116,
+      "new_mk": 116,
+      "ptp_ex_area": 115.65,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "148T2": {
+      "status": "OK",
+      "old_mk": 117,
+      "new_mk": 117,
+      "ptp_ex_area": 117.12,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "172T1": {
+      "status": "OK",
+      "old_mk": 136,
+      "new_mk": 136,
+      "ptp_ex_area": 135.92,
+      "db_area_exact": 135.92,
+      "note": ""
+    },
+    "173T2": {
+      "status": "OK",
+      "old_mk": 137,
+      "new_mk": 137,
+      "ptp_ex_area": 136.65,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "205T1": {
+      "status": "OK",
+      "old_mk": 169,
+      "new_mk": 169,
+      "ptp_ex_area": 169.31,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "205T2": {
+      "status": "OK",
+      "old_mk": 169,
+      "new_mk": 169,
+      "ptp_ex_area": 168.65,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "238T1": {
+      "status": "OK",
+      "old_mk": 198,
+      "new_mk": 198,
+      "ptp_ex_area": 198.04,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "238T2": {
+      "status": "OK",
+      "old_mk": 198,
+      "new_mk": 198,
+      "ptp_ex_area": 198.22,
+      "db_area_exact": 198.22,
+      "note": ""
+    },
+    "268T1": {
+      "status": "OK",
+      "old_mk": 223,
+      "new_mk": 223,
+      "ptp_ex_area": 222.76,
+      "db_area_exact": 222.76,
+      "note": ""
+    },
+    "268T2": {
+      "status": "OK",
+      "old_mk": 222,
+      "new_mk": 222,
+      "ptp_ex_area": 222.15,
+      "db_area_exact": null,
+      "note": ""
+    }
+  },
+  "한보미도맨션": {
+    "113": {
+      "status": "OK",
+      "old_mk": 84,
+      "new_mk": 84,
+      "ptp_ex_area": 84.48,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "114": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.96,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "135": {
+      "status": "OK",
+      "old_mk": 115,
+      "new_mk": 115,
+      "ptp_ex_area": 115.05,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "148": {
+      "status": "OK",
+      "old_mk": 126,
+      "new_mk": 126,
+      "ptp_ex_area": 126.33,
+      "db_area_exact": 126.33,
+      "note": ""
+    },
+    "152": {
+      "status": "OK",
+      "old_mk": 128,
+      "new_mk": 128,
+      "ptp_ex_area": 128.01,
+      "db_area_exact": 128.01,
+      "note": ""
+    },
+    "183": {
+      "status": "OK",
+      "old_mk": 159,
+      "new_mk": 159,
+      "ptp_ex_area": 159.15,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "188": {
+      "status": "OK",
+      "old_mk": 161,
+      "new_mk": 161,
+      "ptp_ex_area": 161.36,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "217": {
+      "status": "OK",
+      "old_mk": 190,
+      "new_mk": 190,
+      "ptp_ex_area": 190.47,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "220": {
+      "status": "OK",
+      "old_mk": 191,
+      "new_mk": 191,
+      "ptp_ex_area": 191.06,
+      "db_area_exact": null,
+      "note": ""
+    }
+  },
+  "개포자이프레지던스": {
+    "59": {
+      "status": "OK",
+      "old_mk": 40,
+      "new_mk": 40,
+      "ptp_ex_area": 39.94,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "74": {
+      "status": "OK",
+      "old_mk": 50,
+      "new_mk": 50,
+      "ptp_ex_area": 49.95,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "79A": {
+      "status": "FIXED",
+      "old_mk": 60,
+      "new_mk": 59,
+      "ptp_ex_area": 59.97,
+      "db_area_exact": null,
+      "note": "60 -> 59"
+    },
+    "79B": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.83,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "102A": {
+      "status": "OK",
+      "old_mk": 79,
+      "new_mk": 79,
+      "ptp_ex_area": 78.77,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "102B": {
+      "status": "OK",
+      "old_mk": 78,
+      "new_mk": 78,
+      "ptp_ex_area": 78.32,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "102C": {
+      "status": "OK",
+      "old_mk": 79,
+      "new_mk": 79,
+      "ptp_ex_area": 78.72,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "110A": {
+      "status": "FIXED",
+      "old_mk": 85,
+      "new_mk": 84,
+      "ptp_ex_area": 84.59,
+      "db_area_exact": null,
+      "note": "85 -> 84"
+    },
+    "110B": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.75,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "133A": {
+      "status": "OK",
+      "old_mk": 103,
+      "new_mk": 103,
+      "ptp_ex_area": 102.76,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "134B": {
+      "status": "OK",
+      "old_mk": 103,
+      "new_mk": 103,
+      "ptp_ex_area": 102.57,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "143": {
+      "status": "OK",
+      "old_mk": 110,
+      "new_mk": 110,
+      "ptp_ex_area": 109.88,
+      "db_area_exact": 109.8841,
+      "note": ""
+    },
+    "148A": {
+      "status": "OK",
+      "old_mk": 115,
+      "new_mk": 115,
+      "ptp_ex_area": 114.81,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "149C": {
+      "status": "OK",
+      "old_mk": 115,
+      "new_mk": 115,
+      "ptp_ex_area": 114.99,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "149B": {
+      "status": "OK",
+      "old_mk": 115,
+      "new_mk": 115,
+      "ptp_ex_area": 114.8,
+      "db_area_exact": null,
+      "note": ""
+    }
+  },
+  "도곡렉슬": {
+    "86B": {
+      "status": "FIXED",
+      "old_mk": 60,
+      "new_mk": 59,
+      "ptp_ex_area": 59.98,
+      "db_area_exact": null,
+      "note": "60 -> 59"
+    },
+    "86A": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.97,
+      "db_area_exact": 59.9772,
+      "note": ""
+    },
+    "86D": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.99,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "88B1": {
+      "status": "FIXED",
+      "old_mk": 60,
+      "new_mk": 59,
+      "ptp_ex_area": 59.98,
+      "db_area_exact": null,
+      "note": "60 -> 59"
+    },
+    "109B1": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.92,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "111A": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.99,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "143A": {
+      "status": "OK",
+      "old_mk": 115,
+      "new_mk": 115,
+      "ptp_ex_area": 114.99,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "143C": {
+      "status": "OK",
+      "old_mk": 120,
+      "new_mk": 120,
+      "ptp_ex_area": 119.89,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "143B": {
+      "status": "FIXED",
+      "old_mk": 121,
+      "new_mk": 120,
+      "ptp_ex_area": 120.82,
+      "db_area_exact": null,
+      "note": "121 -> 120"
+    },
+    "167": {
+      "status": "OK",
+      "old_mk": 135,
+      "new_mk": 135,
+      "ptp_ex_area": 134.9,
+      "db_area_exact": null,
+      "note": ""
+    }
+  },
+  "트리지움": {
+    "84": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.88,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "110": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.83,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "110A": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.95,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "110B": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.97,
+      "db_area_exact": 84.97,
+      "note": ""
+    },
+    "143": {
+      "status": "OK",
+      "old_mk": 115,
+      "new_mk": 115,
+      "ptp_ex_area": 114.7,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "180": {
+      "status": "OK",
+      "old_mk": 149,
+      "new_mk": 149,
+      "ptp_ex_area": 149.45,
+      "db_area_exact": null,
+      "note": ""
+    }
+  },
+  "현대(6 7차)": {
+    "156B": {
+      "status": "OK",
+      "old_mk": 145,
+      "new_mk": 145,
+      "ptp_ex_area": 144.7,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "156A": {
+      "status": "OK",
+      "old_mk": 144,
+      "new_mk": 144,
+      "ptp_ex_area": 144.2,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "156C": {
+      "status": "OK",
+      "old_mk": 144,
+      "new_mk": 144,
+      "ptp_ex_area": 144.2,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "170": {
+      "status": "OK",
+      "old_mk": 157,
+      "new_mk": 157,
+      "ptp_ex_area": 157.36,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "212A": {
+      "status": "FIXED",
+      "old_mk": 197,
+      "new_mk": 157,
+      "ptp_ex_area": 196.7,
+      "db_area_exact": null,
+      "note": "197 -> 157"
+    },
+    "212B": {
+      "status": "OK",
+      "old_mk": 197,
+      "new_mk": 197,
+      "ptp_ex_area": 196.7,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "264": {
+      "status": "OK",
+      "old_mk": 245,
+      "new_mk": 245,
+      "ptp_ex_area": 245.2,
+      "db_area_exact": null,
+      "note": ""
+    }
+  },
+  "고덕그라시움": {
+    "82A": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.78,
+      "db_area_exact": 59.785,
+      "note": ""
+    },
+    "82C": {
+      "status": "OK",
+      "old_mk": 59,
+      "new_mk": 59,
+      "ptp_ex_area": 59.02,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "82D": {
+      "status": "OK",
+      "old_mk": 59,
+      "new_mk": 59,
+      "ptp_ex_area": 59.05,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "100A": {
+      "status": "FIXED",
+      "old_mk": 74,
+      "new_mk": 73,
+      "ptp_ex_area": 73.87,
+      "db_area_exact": null,
+      "note": "74 -> 73"
+    },
+    "101B": {
+      "status": "OK",
+      "old_mk": 74,
+      "new_mk": 74,
+      "ptp_ex_area": 73.56,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "114A": {
+      "status": "OK",
+      "old_mk": 84,
+      "new_mk": 84,
+      "ptp_ex_area": 84.24,
+      "db_area_exact": 84.244,
+      "note": ""
+    },
+    "115D": {
+      "status": "OK",
+      "old_mk": 84,
+      "new_mk": 84,
+      "ptp_ex_area": 84.24,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "115C": {
+      "status": "OK",
+      "old_mk": 84,
+      "new_mk": 84,
+      "ptp_ex_area": 84.04,
+      "db_area_exact": 84.046,
+      "note": ""
+    },
+    "132B": {
+      "status": "OK",
+      "old_mk": 98,
+      "new_mk": 98,
+      "ptp_ex_area": 97.78,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "133A": {
+      "status": "OK",
+      "old_mk": 98,
+      "new_mk": 98,
+      "ptp_ex_area": 97.8,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "154C": {
+      "status": "OK",
+      "old_mk": 113,
+      "new_mk": 113,
+      "ptp_ex_area": 113.39,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "155B": {
+      "status": "OK",
+      "old_mk": 113,
+      "new_mk": 113,
+      "ptp_ex_area": 113.19,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "172": {
+      "status": "OK",
+      "old_mk": 128,
+      "new_mk": 128,
+      "ptp_ex_area": 127.76,
+      "db_area_exact": null,
+      "note": ""
+    }
+  },
+  "삼풍": {
+    "105": {
+      "status": "OK",
+      "old_mk": 79,
+      "new_mk": 79,
+      "ptp_ex_area": 79.47,
+      "db_area_exact": 79.47,
+      "note": ""
+    },
+    "151": {
+      "status": "FIXED",
+      "old_mk": 130,
+      "new_mk": 131,
+      "ptp_ex_area": 130.23,
+      "db_area_exact": null,
+      "note": "130 -> 131"
+    },
+    "185": {
+      "status": "OK",
+      "old_mk": 164,
+      "new_mk": 164,
+      "ptp_ex_area": 163.81,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "189": {
+      "status": "OK",
+      "old_mk": 166,
+      "new_mk": 166,
+      "ptp_ex_area": 165.92,
+      "db_area_exact": null,
+      "note": ""
+    }
+  },
+  "레이크팰리스": {
+    "86A": {
+      "status": "FIXED",
+      "old_mk": 60,
+      "new_mk": 59,
+      "ptp_ex_area": 59.97,
+      "db_area_exact": null,
+      "note": "60 -> 59"
+    },
+    "86B": {
+      "status": "FIXED",
+      "old_mk": 60,
+      "new_mk": 59,
+      "ptp_ex_area": 59.97,
+      "db_area_exact": null,
+      "note": "60 -> 59"
+    },
+    "114": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.82,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "144": {
+      "status": "OK",
+      "old_mk": 116,
+      "new_mk": 116,
+      "ptp_ex_area": 116.19,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "166A": {
+      "status": "OK",
+      "old_mk": 136,
+      "new_mk": 136,
+      "ptp_ex_area": 135.82,
+      "db_area_exact": 135.82,
+      "note": ""
+    },
+    "167B": {
+      "status": "OK",
+      "old_mk": 137,
+      "new_mk": 137,
+      "ptp_ex_area": 136.74,
+      "db_area_exact": null,
+      "note": ""
+    }
+  },
+  "아크로리버파크": {
+    "78D": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.98,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "79E": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.98,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "80A": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.97,
+      "db_area_exact": 59.97,
+      "note": ""
+    },
+    "80B": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.98,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "110E": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.98,
+      "db_area_exact": 84.98,
+      "note": ""
+    },
+    "110G": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.97,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "112A": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.97,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "112B": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.95,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "113D": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.95,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "114C": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.99,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "114F": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.94,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "145F": {
+      "status": "OK",
+      "old_mk": 113,
+      "new_mk": 113,
+      "ptp_ex_area": 112.96,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "148A": {
+      "status": "OK",
+      "old_mk": 113,
+      "new_mk": 113,
+      "ptp_ex_area": 112.99,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "149C": {
+      "status": "OK",
+      "old_mk": 113,
+      "new_mk": 113,
+      "ptp_ex_area": 112.96,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "150D": {
+      "status": "OK",
+      "old_mk": 113,
+      "new_mk": 113,
+      "ptp_ex_area": 112.93,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "150E": {
+      "status": "OK",
+      "old_mk": 113,
+      "new_mk": 113,
+      "ptp_ex_area": 112.98,
+      "db_area_exact": 112.98,
+      "note": ""
+    },
+    "152B": {
+      "status": "OK",
+      "old_mk": 113,
+      "new_mk": 113,
+      "ptp_ex_area": 112.97,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "168C": {
+      "status": "OK",
+      "old_mk": 130,
+      "new_mk": 130,
+      "ptp_ex_area": 129.96,
+      "db_area_exact": 129.96,
+      "note": ""
+    },
+    "168D": {
+      "status": "OK",
+      "old_mk": 130,
+      "new_mk": 130,
+      "ptp_ex_area": 129.95,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "172A": {
+      "status": "OK",
+      "old_mk": 130,
+      "new_mk": 130,
+      "ptp_ex_area": 129.92,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "172B": {
+      "status": "OK",
+      "old_mk": 130,
+      "new_mk": 130,
+      "ptp_ex_area": 129.97,
+      "db_area_exact": 129.97,
+      "note": ""
+    },
+    "205A": {
+      "status": "OK",
+      "old_mk": 155,
+      "new_mk": 155,
+      "ptp_ex_area": 154.97,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "211A": {
+      "status": "OK",
+      "old_mk": 164,
+      "new_mk": 164,
+      "ptp_ex_area": 164.39,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "223A": {
+      "status": "OK",
+      "old_mk": 169,
+      "new_mk": 169,
+      "ptp_ex_area": 168.98,
+      "db_area_exact": 168.98,
+      "note": ""
+    },
+    "236A": {
+      "status": "FIXED",
+      "old_mk": 179,
+      "new_mk": 178,
+      "ptp_ex_area": 178.94,
+      "db_area_exact": null,
+      "note": "179 -> 178"
+    },
+    "225B": {
+      "status": "OK",
+      "old_mk": 169,
+      "new_mk": 169,
+      "ptp_ex_area": 168.96,
+      "db_area_exact": null,
+      "note": ""
+    }
+  },
+  "고덕아르테온": {
+    "80D": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.83,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "81A": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.98,
+      "db_area_exact": 59.98,
+      "note": ""
+    },
+    "81B": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.96,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "113A": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.97,
+      "db_area_exact": 84.97,
+      "note": ""
+    },
+    "114B": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.93,
+      "db_area_exact": 84.93,
+      "note": ""
+    },
+    "114D": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.95,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "114C": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.94,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "152": {
+      "status": "FIXED",
+      "old_mk": 115,
+      "new_mk": 114,
+      "ptp_ex_area": 114.86,
+      "db_area_exact": null,
+      "note": "115 -> 114"
+    }
+  },
+  "마포래미안푸르지오": {
+    "80A": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.96,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "80C": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.92,
+      "db_area_exact": 59.9236,
+      "note": ""
+    },
+    "80B": {
+      "status": "FIXED",
+      "old_mk": 60,
+      "new_mk": 59,
+      "ptp_ex_area": 59.94,
+      "db_area_exact": null,
+      "note": "60 -> 59"
+    },
+    "80E": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.97,
+      "db_area_exact": 59.9796,
+      "note": ""
+    },
+    "81D": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.9,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "110A": {
+      "status": "OK",
+      "old_mk": 84,
+      "new_mk": 84,
+      "ptp_ex_area": 84.38,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "112C": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.59,
+      "db_area_exact": 84.5978,
+      "note": ""
+    },
+    "113B": {
+      "status": "FIXED",
+      "old_mk": 85,
+      "new_mk": 84,
+      "ptp_ex_area": 84.89,
+      "db_area_exact": null,
+      "note": "85 -> 84"
+    },
+    "113E": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.59,
+      "db_area_exact": 84.5978,
+      "note": ""
+    },
+    "149A": {
+      "status": "OK",
+      "old_mk": 114,
+      "new_mk": 114,
+      "ptp_ex_area": 114.28,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "150C": {
+      "status": "OK",
+      "old_mk": 115,
+      "new_mk": 115,
+      "ptp_ex_area": 114.72,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "150B": {
+      "status": "FIXED",
+      "old_mk": 115,
+      "new_mk": 114,
+      "ptp_ex_area": 114.58,
+      "db_area_exact": null,
+      "note": "115 -> 114"
+    },
+    "189A": {
+      "status": "OK",
+      "old_mk": 145,
+      "new_mk": 145,
+      "ptp_ex_area": 145.2,
+      "db_area_exact": null,
+      "note": ""
+    }
+  },
+  "신반포(한신2차)": {
+    "74": {
+      "status": "OK",
+      "old_mk": 69,
+      "new_mk": 69,
+      "ptp_ex_area": 68.91,
+      "db_area_exact": 68.91,
+      "note": ""
+    },
+    "85": {
+      "status": "OK",
+      "old_mk": 79,
+      "new_mk": 79,
+      "ptp_ex_area": 79.42,
+      "db_area_exact": 79.42,
+      "note": ""
+    },
+    "99": {
+      "status": "OK",
+      "old_mk": 92,
+      "new_mk": 92,
+      "ptp_ex_area": 92.2,
+      "db_area_exact": 92.2,
+      "note": ""
+    },
+    "100": {
+      "status": "OK",
+      "old_mk": 94,
+      "new_mk": 94,
+      "ptp_ex_area": 93.71,
+      "db_area_exact": 93.71,
+      "note": ""
+    },
+    "115": {
+      "status": "OK",
+      "old_mk": 107,
+      "new_mk": 107,
+      "ptp_ex_area": 107.31,
+      "db_area_exact": 107.31,
+      "note": ""
+    },
+    "146": {
+      "status": "OK",
+      "old_mk": 136,
+      "new_mk": 136,
+      "ptp_ex_area": 135.97,
+      "db_area_exact": 135.97,
+      "note": ""
+    },
+    "147": {
+      "status": "OK",
+      "old_mk": 138,
+      "new_mk": 138,
+      "ptp_ex_area": 137.66,
+      "db_area_exact": 137.66,
+      "note": ""
+    },
+    "164": {
+      "status": "OK",
+      "old_mk": 151,
+      "new_mk": 151,
+      "ptp_ex_area": 150.58,
+      "db_area_exact": 150.58,
+      "note": ""
+    }
+  },
+  "목동신시가지(14단지)": {
+    "75": {
+      "status": "OK",
+      "old_mk": 55,
+      "new_mk": 55,
+      "ptp_ex_area": 55.02,
+      "db_area_exact": 55.02,
+      "note": ""
+    },
+    "91C": {
+      "status": "OK",
+      "old_mk": 71,
+      "new_mk": 71,
+      "ptp_ex_area": 71.37,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "93B": {
+      "status": "OK",
+      "old_mk": 71,
+      "new_mk": 71,
+      "ptp_ex_area": 71.4,
+      "db_area_exact": 71.4,
+      "note": ""
+    },
+    "93A": {
+      "status": "OK",
+      "old_mk": 71,
+      "new_mk": 71,
+      "ptp_ex_area": 71.4,
+      "db_area_exact": 71.4,
+      "note": ""
+    },
+    "107": {
+      "status": "OK",
+      "old_mk": 83,
+      "new_mk": 83,
+      "ptp_ex_area": 83.31,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "109A": {
+      "status": "FIXED",
+      "old_mk": 84,
+      "new_mk": 83,
+      "ptp_ex_area": 83.89,
+      "db_area_exact": null,
+      "note": "84 -> 83"
+    },
+    "109C": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.87,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "110B": {
+      "status": "OK",
+      "old_mk": 93,
+      "new_mk": 93,
+      "ptp_ex_area": 92.67,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "129A": {
+      "status": "OK",
+      "old_mk": 108,
+      "new_mk": 108,
+      "ptp_ex_area": 108.28,
+      "db_area_exact": 108.28,
+      "note": ""
+    },
+    "153": {
+      "status": "OK",
+      "old_mk": 129,
+      "new_mk": 129,
+      "ptp_ex_area": 129.33,
+      "db_area_exact": null,
+      "note": ""
+    }
+  },
+  "장미(1차)": {
+    "92": {
+      "status": "OK",
+      "old_mk": 71,
+      "new_mk": 71,
+      "ptp_ex_area": 71.2,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "108": {
+      "status": "OK",
+      "old_mk": 82,
+      "new_mk": 82,
+      "ptp_ex_area": 82.45,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "126": {
+      "status": "OK",
+      "old_mk": 99,
+      "new_mk": 99,
+      "ptp_ex_area": 99.0,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "150": {
+      "status": "OK",
+      "old_mk": 120,
+      "new_mk": 120,
+      "ptp_ex_area": 120.0,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "212": {
+      "status": "FIXED",
+      "old_mk": 197,
+      "new_mk": 182,
+      "ptp_ex_area": 196.76,
+      "db_area_exact": null,
+      "note": "197 -> 182"
+    }
+  },
+  "목동신시가지(7단지)": {
+    "72": {
+      "status": "OK",
+      "old_mk": 59,
+      "new_mk": 59,
+      "ptp_ex_area": 59.39,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "74": {
+      "status": "FIXED",
+      "old_mk": 54,
+      "new_mk": 53,
+      "ptp_ex_area": 53.88,
+      "db_area_exact": null,
+      "note": "54 -> 53"
+    },
+    "78": {
+      "status": "OK",
+      "old_mk": 64,
+      "new_mk": 64,
+      "ptp_ex_area": 64.4,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "89A": {
+      "status": "FIXED",
+      "old_mk": 67,
+      "new_mk": 66,
+      "ptp_ex_area": 66.6,
+      "db_area_exact": null,
+      "note": "67 -> 66"
+    },
+    "90C": {
+      "status": "OK",
+      "old_mk": 74,
+      "new_mk": 74,
+      "ptp_ex_area": 74.12,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "106": {
+      "status": "OK",
+      "old_mk": 89,
+      "new_mk": 89,
+      "ptp_ex_area": 89.05,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "121": {
+      "status": "OK",
+      "old_mk": 101,
+      "new_mk": 101,
+      "ptp_ex_area": 101.2,
+      "db_area_exact": null,
+      "note": ""
+    }
+  },
+  "아시아선수촌": {
+    "124A": {
+      "status": "OK",
+      "old_mk": 99,
+      "new_mk": 99,
+      "ptp_ex_area": 99.38,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "168B": {
+      "status": "OK",
+      "old_mk": 134,
+      "new_mk": 134,
+      "ptp_ex_area": 134.48,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "171C": {
+      "status": "OK",
+      "old_mk": 140,
+      "new_mk": 140,
+      "ptp_ex_area": 139.66,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "185C": {
+      "status": "OK",
+      "old_mk": 151,
+      "new_mk": 151,
+      "ptp_ex_area": 151.0,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "213D": {
+      "status": "OK",
+      "old_mk": 178,
+      "new_mk": 178,
+      "ptp_ex_area": 178.32,
+      "db_area_exact": null,
+      "note": ""
+    }
+  },
+  "개포래미안포레스트": {
+    "74": {
+      "status": "OK",
+      "old_mk": 50,
+      "new_mk": 50,
+      "ptp_ex_area": 49.92,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "86A": {
+      "status": "FIXED",
+      "old_mk": 60,
+      "new_mk": 59,
+      "ptp_ex_area": 59.92,
+      "db_area_exact": null,
+      "note": "60 -> 59"
+    },
+    "86B": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.96,
+      "db_area_exact": 59.96,
+      "note": ""
+    },
+    "101": {
+      "status": "OK",
+      "old_mk": 75,
+      "new_mk": 75,
+      "ptp_ex_area": 74.66,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "115A": {
+      "status": "FIXED",
+      "old_mk": 85,
+      "new_mk": 84,
+      "ptp_ex_area": 84.86,
+      "db_area_exact": null,
+      "note": "85 -> 84"
+    },
+    "115B": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.83,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "128A": {
+      "status": "OK",
+      "old_mk": 97,
+      "new_mk": 97,
+      "ptp_ex_area": 96.93,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "129B": {
+      "status": "FIXED",
+      "old_mk": 97,
+      "new_mk": 96,
+      "ptp_ex_area": 96.91,
+      "db_area_exact": null,
+      "note": "97 -> 96"
+    },
+    "135A": {
+      "status": "OK",
+      "old_mk": 102,
+      "new_mk": 102,
+      "ptp_ex_area": 102.32,
+      "db_area_exact": 102.32,
+      "note": ""
+    },
+    "136B": {
+      "status": "OK",
+      "old_mk": 102,
+      "new_mk": 102,
+      "ptp_ex_area": 102.41,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "148A": {
+      "status": "OK",
+      "old_mk": 113,
+      "new_mk": 113,
+      "ptp_ex_area": 112.97,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "149B": {
+      "status": "OK",
+      "old_mk": 113,
+      "new_mk": 113,
+      "ptp_ex_area": 112.73,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "174": {
+      "status": "OK",
+      "old_mk": 136,
+      "new_mk": 136,
+      "ptp_ex_area": 136.06,
+      "db_area_exact": null,
+      "note": ""
+    }
+  },
+  "래미안힐스테이트고덕": {
+    "82P": {
+      "status": "OK",
+      "old_mk": 59,
+      "new_mk": 59,
+      "ptp_ex_area": 59.35,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "82TWB": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.96,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "82TWA": {
+      "status": "OK",
+      "old_mk": 59,
+      "new_mk": 59,
+      "ptp_ex_area": 59.23,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "94TR": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.92,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "99P": {
+      "status": "OK",
+      "old_mk": 72,
+      "new_mk": 72,
+      "ptp_ex_area": 72.02,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "115D": {
+      "status": "FIXED",
+      "old_mk": 85,
+      "new_mk": 84,
+      "ptp_ex_area": 84.88,
+      "db_area_exact": null,
+      "note": "85 -> 84"
+    },
+    "115P": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.9,
+      "db_area_exact": 84.9,
+      "note": ""
+    },
+    "115A": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.83,
+      "db_area_exact": 84.83,
+      "note": ""
+    },
+    "115B": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.94,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "132A": {
+      "status": "OK",
+      "old_mk": 97,
+      "new_mk": 97,
+      "ptp_ex_area": 97.26,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "132B": {
+      "status": "OK",
+      "old_mk": 97,
+      "new_mk": 97,
+      "ptp_ex_area": 97.26,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "138PH": {
+      "status": "NO_DB_MATCH",
+      "old_mk": 101,
+      "new_mk": 101,
+      "ptp_ex_area": 101.14,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "148": {
+      "status": "OK",
+      "old_mk": 110,
+      "new_mk": 110,
+      "ptp_ex_area": 109.81,
+      "db_area_exact": 109.81,
+      "note": ""
+    },
+    "194": {
+      "status": "OK",
+      "old_mk": 142,
+      "new_mk": 142,
+      "ptp_ex_area": 141.64,
+      "db_area_exact": 141.64,
+      "note": ""
+    }
+  },
+  "디에이치자이개포": {
+    "82C": {
+      "status": "OK",
+      "old_mk": 64,
+      "new_mk": 64,
+      "ptp_ex_area": 63.76,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "82B": {
+      "status": "OK",
+      "old_mk": 64,
+      "new_mk": 64,
+      "ptp_ex_area": 63.76,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "97A": {
+      "status": "OK",
+      "old_mk": 77,
+      "new_mk": 77,
+      "ptp_ex_area": 76.6,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "98C": {
+      "status": "NO_DB_MATCH",
+      "old_mk": 77,
+      "new_mk": 77,
+      "ptp_ex_area": 76.55,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "99D": {
+      "status": "OK",
+      "old_mk": 76,
+      "new_mk": 76,
+      "ptp_ex_area": 76.46,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "99B": {
+      "status": "OK",
+      "old_mk": 77,
+      "new_mk": 77,
+      "ptp_ex_area": 76.77,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "108B": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.73,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "108A": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.94,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "108F": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.81,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "108C": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.71,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "131C": {
+      "status": "OK",
+      "old_mk": 104,
+      "new_mk": 104,
+      "ptp_ex_area": 103.77,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "132B": {
+      "status": "OK",
+      "old_mk": 104,
+      "new_mk": 104,
+      "ptp_ex_area": 103.86,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "149A": {
+      "status": "OK",
+      "old_mk": 119,
+      "new_mk": 119,
+      "ptp_ex_area": 118.68,
+      "db_area_exact": 118.68,
+      "note": ""
+    },
+    "166A": {
+      "status": "OK",
+      "old_mk": 133,
+      "new_mk": 133,
+      "ptp_ex_area": 132.92,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "222A": {
+      "status": "NO_DB_MATCH",
+      "old_mk": 173,
+      "new_mk": 173,
+      "ptp_ex_area": 173.48,
+      "db_area_exact": null,
+      "note": ""
+    }
+  },
+  "타워팰리스(1차)": {
+    "112A": {
+      "status": "OK",
+      "old_mk": 84,
+      "new_mk": 84,
+      "ptp_ex_area": 84.16,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "112B": {
+      "status": "OK",
+      "old_mk": 84,
+      "new_mk": 84,
+      "ptp_ex_area": 84.15,
+      "db_area_exact": 84.15,
+      "note": ""
+    },
+    "161A": {
+      "status": "OK",
+      "old_mk": 121,
+      "new_mk": 121,
+      "ptp_ex_area": 120.78,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "162B": {
+      "status": "OK",
+      "old_mk": 121,
+      "new_mk": 121,
+      "ptp_ex_area": 121.42,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "183": {
+      "status": "OK",
+      "old_mk": 137,
+      "new_mk": 137,
+      "ptp_ex_area": 137.24,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "220B": {
+      "status": "OK",
+      "old_mk": 165,
+      "new_mk": 165,
+      "ptp_ex_area": 164.97,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "220A": {
+      "status": "OK",
+      "old_mk": 165,
+      "new_mk": 165,
+      "ptp_ex_area": 164.95,
+      "db_area_exact": 164.95,
+      "note": ""
+    },
+    "233": {
+      "status": "OK",
+      "old_mk": 175,
+      "new_mk": 175,
+      "ptp_ex_area": 174.67,
+      "db_area_exact": 174.67,
+      "note": ""
+    },
+    "327": {
+      "status": "OK",
+      "old_mk": 245,
+      "new_mk": 245,
+      "ptp_ex_area": 244.66,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "403": {
+      "status": "OK",
+      "old_mk": 301,
+      "new_mk": 301,
+      "ptp_ex_area": 301.47,
+      "db_area_exact": null,
+      "note": ""
+    }
+  },
+  "우성1 2 3차": {
+    "86A": {
+      "status": "OK",
+      "old_mk": 80,
+      "new_mk": 80,
+      "ptp_ex_area": 80.35,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "86C": {
+      "status": "OK",
+      "old_mk": 81,
+      "new_mk": 81,
+      "ptp_ex_area": 80.76,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "87E": {
+      "status": "OK",
+      "old_mk": 82,
+      "new_mk": 82,
+      "ptp_ex_area": 82.06,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "104A": {
+      "status": "OK",
+      "old_mk": 97,
+      "new_mk": 97,
+      "ptp_ex_area": 96.65,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "141": {
+      "status": "OK",
+      "old_mk": 131,
+      "new_mk": 131,
+      "ptp_ex_area": 131.08,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "144": {
+      "status": "OK",
+      "old_mk": 136,
+      "new_mk": 136,
+      "ptp_ex_area": 136.34,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "173": {
+      "status": "OK",
+      "old_mk": 161,
+      "new_mk": 161,
+      "ptp_ex_area": 160.74,
+      "db_area_exact": null,
+      "note": ""
+    }
+  },
+  "래미안대치팰리스1단지": {
+    "88B": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.99,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "111C": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.99,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "112B": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.98,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "113A": {
+      "status": "FIXED",
+      "old_mk": 85,
+      "new_mk": 84,
+      "ptp_ex_area": 84.97,
+      "db_area_exact": null,
+      "note": "85 -> 84"
+    },
+    "118": {
+      "status": "NO_DB_MATCH",
+      "old_mk": 89,
+      "new_mk": 89,
+      "ptp_ex_area": 89.03,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "122C": {
+      "status": "OK",
+      "old_mk": 92,
+      "new_mk": 92,
+      "ptp_ex_area": 91.93,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "122E": {
+      "status": "OK",
+      "old_mk": 92,
+      "new_mk": 92,
+      "ptp_ex_area": 91.91,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "123A": {
+      "status": "OK",
+      "old_mk": 92,
+      "new_mk": 92,
+      "ptp_ex_area": 91.89,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "123B": {
+      "status": "OK",
+      "old_mk": 92,
+      "new_mk": 92,
+      "ptp_ex_area": 91.93,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "124": {
+      "status": "OK",
+      "old_mk": 93,
+      "new_mk": 93,
+      "ptp_ex_area": 93.18,
+      "db_area_exact": 93.18,
+      "note": ""
+    },
+    "125C1": {
+      "status": "OK",
+      "old_mk": 94,
+      "new_mk": 94,
+      "ptp_ex_area": 94.49,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "125B1": {
+      "status": "OK",
+      "old_mk": 94,
+      "new_mk": 94,
+      "ptp_ex_area": 94.5,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "126A": {
+      "status": "OK",
+      "old_mk": 94,
+      "new_mk": 94,
+      "ptp_ex_area": 94.49,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "126E": {
+      "status": "OK",
+      "old_mk": 95,
+      "new_mk": 95,
+      "ptp_ex_area": 94.51,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "149C": {
+      "status": "OK",
+      "old_mk": 114,
+      "new_mk": 114,
+      "ptp_ex_area": 114.15,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "149B": {
+      "status": "OK",
+      "old_mk": 114,
+      "new_mk": 114,
+      "ptp_ex_area": 114.17,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "150A": {
+      "status": "OK",
+      "old_mk": 114,
+      "new_mk": 114,
+      "ptp_ex_area": 114.14,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "181A": {
+      "status": "OK",
+      "old_mk": 151,
+      "new_mk": 151,
+      "ptp_ex_area": 151.31,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "183B": {
+      "status": "OK",
+      "old_mk": 151,
+      "new_mk": 151,
+      "ptp_ex_area": 151.27,
+      "db_area_exact": null,
+      "note": ""
+    }
+  },
+  "래미안블레스티지": {
+    "67A": {
+      "status": "OK",
+      "old_mk": 50,
+      "new_mk": 50,
+      "ptp_ex_area": 49.9,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "80A": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.96,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "80B": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.88,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "80C": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.83,
+      "db_area_exact": 59.837,
+      "note": ""
+    },
+    "113C": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.94,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "113B": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.94,
+      "db_area_exact": 84.943,
+      "note": ""
+    },
+    "113A": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.94,
+      "db_area_exact": 84.943,
+      "note": ""
+    },
+    "113B-1": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.94,
+      "db_area_exact": 84.943,
+      "note": ""
+    },
+    "113B-2": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.94,
+      "db_area_exact": 84.943,
+      "note": ""
+    },
+    "115D": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.95,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "133A": {
+      "status": "OK",
+      "old_mk": 100,
+      "new_mk": 100,
+      "ptp_ex_area": 99.96,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "133D": {
+      "status": "OK",
+      "old_mk": 100,
+      "new_mk": 100,
+      "ptp_ex_area": 99.97,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "134C": {
+      "status": "OK",
+      "old_mk": 100,
+      "new_mk": 100,
+      "ptp_ex_area": 99.91,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "134B": {
+      "status": "OK",
+      "old_mk": 100,
+      "new_mk": 100,
+      "ptp_ex_area": 99.99,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "150A": {
+      "status": "OK",
+      "old_mk": 114,
+      "new_mk": 114,
+      "ptp_ex_area": 113.73,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "151C": {
+      "status": "OK",
+      "old_mk": 114,
+      "new_mk": 114,
+      "ptp_ex_area": 113.96,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "169A": {
+      "status": "OK",
+      "old_mk": 127,
+      "new_mk": 127,
+      "ptp_ex_area": 126.92,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "169B": {
+      "status": "OK",
+      "old_mk": 127,
+      "new_mk": 127,
+      "ptp_ex_area": 126.97,
+      "db_area_exact": null,
+      "note": ""
+    }
+  },
+  "래미안슈르": {
+    "85": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.97,
+      "db_area_exact": 59.973,
+      "note": ""
+    },
+    "86": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.97,
+      "db_area_exact": 59.973,
+      "note": ""
+    },
+    "108C": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.96,
+      "db_area_exact": 84.961,
+      "note": ""
+    },
+    "109TA": {
+      "status": "FIXED",
+      "old_mk": 85,
+      "new_mk": 84,
+      "ptp_ex_area": 84.94,
+      "db_area_exact": null,
+      "note": "85 -> 84"
+    },
+    "109TB": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.96,
+      "db_area_exact": 84.961,
+      "note": ""
+    },
+    "110A": {
+      "status": "FIXED",
+      "old_mk": 85,
+      "new_mk": 84,
+      "ptp_ex_area": 84.96,
+      "db_area_exact": null,
+      "note": "85 -> 84"
+    },
+    "145": {
+      "status": "OK",
+      "old_mk": 117,
+      "new_mk": 117,
+      "ptp_ex_area": 116.99,
+      "db_area_exact": 116.99,
+      "note": ""
+    },
+    "145TB": {
+      "status": "OK",
+      "old_mk": 117,
+      "new_mk": 117,
+      "ptp_ex_area": 116.95,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "166": {
+      "status": "OK",
+      "old_mk": 137,
+      "new_mk": 137,
+      "ptp_ex_area": 136.62,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "168T": {
+      "status": "OK",
+      "old_mk": 137,
+      "new_mk": 137,
+      "ptp_ex_area": 137.21,
+      "db_area_exact": 137.211,
+      "note": ""
+    }
+  },
+  "신반포(한신4차)": {
+    "103A": {
+      "status": "OK",
+      "old_mk": 96,
+      "new_mk": 96,
+      "ptp_ex_area": 96.48,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "103B": {
+      "status": "OK",
+      "old_mk": 97,
+      "new_mk": 97,
+      "ptp_ex_area": 96.78,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "108": {
+      "status": "OK",
+      "old_mk": 100,
+      "new_mk": 100,
+      "ptp_ex_area": 100.11,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "113C": {
+      "status": "OK",
+      "old_mk": 106,
+      "new_mk": 106,
+      "ptp_ex_area": 105.89,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "113A": {
+      "status": "OK",
+      "old_mk": 105,
+      "new_mk": 105,
+      "ptp_ex_area": 105.44,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "115B": {
+      "status": "OK",
+      "old_mk": 107,
+      "new_mk": 107,
+      "ptp_ex_area": 107.39,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "149": {
+      "status": "OK",
+      "old_mk": 137,
+      "new_mk": 137,
+      "ptp_ex_area": 137.1,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "168": {
+      "status": "OK",
+      "old_mk": 155,
+      "new_mk": 155,
+      "ptp_ex_area": 155.0,
+      "db_area_exact": null,
+      "note": ""
+    }
+  },
+  "신동아": {
+    "103": {
+      "status": "OK",
+      "old_mk": 96,
+      "new_mk": 96,
+      "ptp_ex_area": 95.66,
+      "db_area_exact": 95.66,
+      "note": ""
+    },
+    "151A": {
+      "status": "OK",
+      "old_mk": 141,
+      "new_mk": 141,
+      "ptp_ex_area": 140.81,
+      "db_area_exact": 140.81,
+      "note": ""
+    },
+    "179A": {
+      "status": "OK",
+      "old_mk": 167,
+      "new_mk": 167,
+      "ptp_ex_area": 166.98,
+      "db_area_exact": 166.98,
+      "note": ""
+    },
+    "179B": {
+      "status": "OK",
+      "old_mk": 167,
+      "new_mk": 167,
+      "ptp_ex_area": 167.08,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "226A": {
+      "status": "OK",
+      "old_mk": 210,
+      "new_mk": 210,
+      "ptp_ex_area": 210.25,
+      "db_area_exact": 210.25,
+      "note": ""
+    }
+  },
+  "강동롯데캐슬퍼스트": {
+    "87A": {
+      "status": "FIXED",
+      "old_mk": 60,
+      "new_mk": 59,
+      "ptp_ex_area": 59.99,
+      "db_area_exact": null,
+      "note": "60 -> 59"
+    },
+    "87B": {
+      "status": "FIXED",
+      "old_mk": 60,
+      "new_mk": 59,
+      "ptp_ex_area": 59.99,
+      "db_area_exact": null,
+      "note": "60 -> 59"
+    },
+    "113C": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.81,
+      "db_area_exact": 84.81,
+      "note": ""
+    },
+    "113D": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.81,
+      "db_area_exact": 84.81,
+      "note": ""
+    },
+    "132I": {
+      "status": "OK",
+      "old_mk": 102,
+      "new_mk": 102,
+      "ptp_ex_area": 102.34,
+      "db_area_exact": 102.34,
+      "note": ""
+    },
+    "134A": {
+      "status": "OK",
+      "old_mk": 103,
+      "new_mk": 103,
+      "ptp_ex_area": 103.01,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "145A": {
+      "status": "OK",
+      "old_mk": 111,
+      "new_mk": 111,
+      "ptp_ex_area": 111.22,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "145I": {
+      "status": "OK",
+      "old_mk": 112,
+      "new_mk": 112,
+      "ptp_ex_area": 112.11,
+      "db_area_exact": 112.11,
+      "note": ""
+    },
+    "169I": {
+      "status": "OK",
+      "old_mk": 134,
+      "new_mk": 134,
+      "ptp_ex_area": 133.97,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "198I": {
+      "status": "OK",
+      "old_mk": 161,
+      "new_mk": 161,
+      "ptp_ex_area": 160.63,
+      "db_area_exact": null,
+      "note": ""
+    }
+  },
+  "목동신시가지(5단지)": {
+    "84": {
+      "status": "OK",
+      "old_mk": 65,
+      "new_mk": 65,
+      "ptp_ex_area": 65.08,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "113F": {
+      "status": "OK",
+      "old_mk": 95,
+      "new_mk": 95,
+      "ptp_ex_area": 95.01,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "113A": {
+      "status": "OK",
+      "old_mk": 95,
+      "new_mk": 95,
+      "ptp_ex_area": 95.21,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "113C": {
+      "status": "OK",
+      "old_mk": 95,
+      "new_mk": 95,
+      "ptp_ex_area": 95.22,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "114D": {
+      "status": "OK",
+      "old_mk": 95,
+      "new_mk": 95,
+      "ptp_ex_area": 95.27,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "118H": {
+      "status": "OK",
+      "old_mk": 95,
+      "new_mk": 95,
+      "ptp_ex_area": 95.06,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "120G": {
+      "status": "OK",
+      "old_mk": 95,
+      "new_mk": 95,
+      "ptp_ex_area": 95.28,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "142A": {
+      "status": "OK",
+      "old_mk": 122,
+      "new_mk": 122,
+      "ptp_ex_area": 122.46,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "144C": {
+      "status": "OK",
+      "old_mk": 115,
+      "new_mk": 115,
+      "ptp_ex_area": 115.47,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "178D": {
+      "status": "FIXED",
+      "old_mk": 143,
+      "new_mk": 153,
+      "ptp_ex_area": 143.36,
+      "db_area_exact": null,
+      "note": "143 -> 153"
+    }
+  },
+  "한가람": {
+    "85": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.88,
+      "db_area_exact": 59.88,
+      "note": ""
+    },
+    "111B": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.96,
+      "db_area_exact": 84.96,
+      "note": ""
+    },
+    "111A": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.89,
+      "db_area_exact": 84.89,
+      "note": ""
+    },
+    "142": {
+      "status": "OK",
+      "old_mk": 115,
+      "new_mk": 115,
+      "ptp_ex_area": 114.96,
+      "db_area_exact": 114.96,
+      "note": ""
+    }
+  },
+  "목동신시가지(13단지)": {
+    "72": {
+      "status": "OK",
+      "old_mk": 54,
+      "new_mk": 54,
+      "ptp_ex_area": 53.9,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "92B": {
+      "status": "OK",
+      "old_mk": 71,
+      "new_mk": 71,
+      "ptp_ex_area": 70.73,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "128A": {
+      "status": "FIXED",
+      "old_mk": 99,
+      "new_mk": 98,
+      "ptp_ex_area": 98.63,
+      "db_area_exact": null,
+      "note": "99 -> 98"
+    },
+    "193A": {
+      "status": "OK",
+      "old_mk": 157,
+      "new_mk": 157,
+      "ptp_ex_area": 156.62,
+      "db_area_exact": null,
+      "note": ""
+    }
+  },
+  "산성역포레스티아": {
+    "77A": {
+      "status": "OK",
+      "old_mk": 60,
+      "new_mk": 60,
+      "ptp_ex_area": 59.84,
+      "db_area_exact": 59.84,
+      "note": ""
+    },
+    "86A": {
+      "status": "OK",
+      "old_mk": 68,
+      "new_mk": 68,
+      "ptp_ex_area": 67.86,
+      "db_area_exact": 67.86,
+      "note": ""
+    },
+    "95B": {
+      "status": "OK",
+      "old_mk": 75,
+      "new_mk": 75,
+      "ptp_ex_area": 74.98,
+      "db_area_exact": 74.98,
+      "note": ""
+    },
+    "96A": {
+      "status": "OK",
+      "old_mk": 75,
+      "new_mk": 75,
+      "ptp_ex_area": 74.96,
+      "db_area_exact": 74.96,
+      "note": ""
+    },
+    "107T": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.77,
+      "db_area_exact": 84.77,
+      "note": ""
+    },
+    "108A": {
+      "status": "FIXED",
+      "old_mk": 85,
+      "new_mk": 84,
+      "ptp_ex_area": 84.92,
+      "db_area_exact": null,
+      "note": "85 -> 84"
+    },
+    "108B": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.96,
+      "db_area_exact": 84.96,
+      "note": ""
+    },
+    "112PA": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.94,
+      "db_area_exact": 84.94,
+      "note": ""
+    },
+    "113PC": {
+      "status": "FIXED",
+      "old_mk": 85,
+      "new_mk": 84,
+      "ptp_ex_area": 84.92,
+      "db_area_exact": null,
+      "note": "85 -> 84"
+    },
+    "113PB": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.98,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "114PD": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.94,
+      "db_area_exact": 84.94,
+      "note": ""
+    },
+    "125A": {
+      "status": "OK",
+      "old_mk": 99,
+      "new_mk": 99,
+      "ptp_ex_area": 98.68,
+      "db_area_exact": 98.68,
+      "note": ""
+    }
+  },
+  "미성(2차)": {
+    "95": {
+      "status": "OK",
+      "old_mk": 74,
+      "new_mk": 74,
+      "ptp_ex_area": 74.4,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "138": {
+      "status": "OK",
+      "old_mk": 119,
+      "new_mk": 119,
+      "ptp_ex_area": 118.63,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "163": {
+      "status": "OK",
+      "old_mk": 141,
+      "new_mk": 141,
+      "ptp_ex_area": 140.9,
+      "db_area_exact": null,
+      "note": ""
+    }
+  },
+  "목동신시가지(9단지)": {
+    "74": {
+      "status": "OK",
+      "old_mk": 54,
+      "new_mk": 54,
+      "ptp_ex_area": 53.82,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "94A": {
+      "status": "OK",
+      "old_mk": 71,
+      "new_mk": 71,
+      "ptp_ex_area": 71.37,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "103": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.99,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "108B": {
+      "status": "OK",
+      "old_mk": 91,
+      "new_mk": 91,
+      "ptp_ex_area": 90.72,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "122A": {
+      "status": "OK",
+      "old_mk": 100,
+      "new_mk": 100,
+      "ptp_ex_area": 100.33,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "128B": {
+      "status": "OK",
+      "old_mk": 107,
+      "new_mk": 107,
+      "ptp_ex_area": 106.93,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "129A": {
+      "status": "OK",
+      "old_mk": 106,
+      "new_mk": 106,
+      "ptp_ex_area": 106.39,
+      "db_area_exact": null,
+      "note": ""
+    }
+  },
+  "파크뷰": {
+    "108": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.99,
+      "db_area_exact": 84.99,
+      "note": ""
+    },
+    "158": {
+      "status": "OK",
+      "old_mk": 125,
+      "new_mk": 125,
+      "ptp_ex_area": 124.51,
+      "db_area_exact": 124.515,
+      "note": ""
+    },
+    "177A": {
+      "status": "OK",
+      "old_mk": 140,
+      "new_mk": 140,
+      "ptp_ex_area": 139.68,
+      "db_area_exact": 139.68,
+      "note": ""
+    },
+    "177B": {
+      "status": "OK",
+      "old_mk": 140,
+      "new_mk": 140,
+      "ptp_ex_area": 139.71,
+      "db_area_exact": 139.717,
+      "note": ""
+    },
+    "207": {
+      "status": "OK",
+      "old_mk": 163,
+      "new_mk": 163,
+      "ptp_ex_area": 162.86,
+      "db_area_exact": 162.869,
+      "note": ""
+    },
+    "231A": {
+      "status": "OK",
+      "old_mk": 182,
+      "new_mk": 182,
+      "ptp_ex_area": 182.23,
+      "db_area_exact": 182.232,
+      "note": ""
+    },
+    "254A": {
+      "status": "OK",
+      "old_mk": 200,
+      "new_mk": 200,
+      "ptp_ex_area": 199.77,
+      "db_area_exact": 199.777,
+      "note": ""
+    },
+    "310F": {
+      "status": "OK",
+      "old_mk": 245,
+      "new_mk": 245,
+      "ptp_ex_area": 244.57,
+      "db_area_exact": 244.574,
+      "note": ""
+    }
+  },
+  "선경(1 2차)": {
+    "101A": {
+      "status": "FIXED",
+      "old_mk": 95,
+      "new_mk": 84,
+      "ptp_ex_area": 94.89,
+      "db_area_exact": null,
+      "note": "95 -> 84"
+    },
+    "102B": {
+      "status": "OK",
+      "old_mk": 85,
+      "new_mk": 85,
+      "ptp_ex_area": 84.55,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "137": {
+      "status": "FIXED",
+      "old_mk": 128,
+      "new_mk": 118,
+      "ptp_ex_area": 128.32,
+      "db_area_exact": null,
+      "note": "128 -> 118"
+    },
+    "148": {
+      "status": "OK",
+      "old_mk": 128,
+      "new_mk": 128,
+      "ptp_ex_area": 127.75,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "157": {
+      "status": "FIXED",
+      "old_mk": 147,
+      "new_mk": 137,
+      "ptp_ex_area": 146.75,
+      "db_area_exact": null,
+      "note": "147 -> 137"
+    },
+    "182": {
+      "status": "OK",
+      "old_mk": 161,
+      "new_mk": 161,
+      "ptp_ex_area": 160.76,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "186": {
+      "status": "FIXED",
+      "old_mk": 174,
+      "new_mk": 164,
+      "ptp_ex_area": 174.0,
+      "db_area_exact": null,
+      "note": "174 -> 164"
+    }
+  },
+  "시범": {
+    "60": {
+      "status": "OK",
+      "old_mk": 61,
+      "new_mk": 61,
+      "ptp_ex_area": 60.96,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "79": {
+      "status": "OK",
+      "old_mk": 79,
+      "new_mk": 79,
+      "ptp_ex_area": 79.24,
+      "db_area_exact": 79.24,
+      "note": ""
+    },
+    "118": {
+      "status": "OK",
+      "old_mk": 118,
+      "new_mk": 118,
+      "ptp_ex_area": 118.12,
+      "db_area_exact": 118.12,
+      "note": ""
+    },
+    "156": {
+      "status": "OK",
+      "old_mk": 157,
+      "new_mk": 157,
+      "ptp_ex_area": 156.99,
+      "db_area_exact": 156.99,
+      "note": ""
+    }
+  },
+  "현대(1~5차)": {
+    "141": {
+      "status": "OK",
+      "old_mk": 131,
+      "new_mk": 131,
+      "ptp_ex_area": 131.48,
+      "db_area_exact": 131.48,
+      "note": ""
+    },
+    "172": {
+      "status": "NO_DB_MATCH",
+      "old_mk": 160,
+      "new_mk": 160,
+      "ptp_ex_area": 160.28,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "176": {
+      "status": "OK",
+      "old_mk": 161,
+      "new_mk": 161,
+      "ptp_ex_area": 161.19,
+      "db_area_exact": 161.19,
+      "note": ""
+    },
+    "176B": {
+      "status": "OK",
+      "old_mk": 161,
+      "new_mk": 161,
+      "ptp_ex_area": 161.18,
+      "db_area_exact": 161.18,
+      "note": ""
+    },
+    "176A": {
+      "status": "OK",
+      "old_mk": 163,
+      "new_mk": 163,
+      "ptp_ex_area": 162.94,
+      "db_area_exact": 162.94,
+      "note": ""
+    },
+    "211A": {
+      "status": "OK",
+      "old_mk": 196,
+      "new_mk": 196,
+      "ptp_ex_area": 196.21,
+      "db_area_exact": 196.21,
+      "note": ""
+    },
+    "211B": {
+      "status": "NO_DB_MATCH",
+      "old_mk": 197,
+      "new_mk": 197,
+      "ptp_ex_area": 196.84,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "213": {
+      "status": "NO_DB_MATCH",
+      "old_mk": 198,
+      "new_mk": 198,
+      "ptp_ex_area": 198.41,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "108A": {
+      "status": "OK",
+      "old_mk": 82,
+      "new_mk": 82,
+      "ptp_ex_area": 82.5,
+      "db_area_exact": 82.5,
+      "note": ""
+    },
+    "140": {
+      "status": "NO_DB_MATCH",
+      "old_mk": 118,
+      "new_mk": 118,
+      "ptp_ex_area": 117.9,
+      "db_area_exact": null,
+      "note": ""
+    },
+    "113": {
+      "status": "FIXED",
+      "old_mk": 82,
+      "new_mk": 83,
+      "ptp_ex_area": 82.23,
+      "db_area_exact": 82.23,
+      "note": "82 -> 83"
+    }
+  }
+}
