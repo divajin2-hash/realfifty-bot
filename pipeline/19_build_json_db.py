@@ -152,39 +152,54 @@ def build_db():
                 continue
                 
             a_ex = float(ask.get('exclusive_area', 0))
-            # attempt exact decimal mapping if available
             exact_trades = []
+            
+            # Count how many distinct exclusive areas exist in Naver for this integer group
+            group_a_ex_set = set(float(a.get('exclusive_area', 0)) for a in asks if int(round(float(a.get('exclusive_area', 0)))) == area)
+            
             for t in all_trades_in_group:
                 t_ex = t.get('exclusive_area_exact')
-                if t_ex is not None and abs(float(t_ex) - a_ex) < 0.05:
+                if t_ex is not None and abs(float(t_ex) - a_ex) < 0.005:
                     exact_trades.append(t)
                     
-            trades_to_use = exact_trades if exact_trades else all_trades_in_group
-            if not trades_to_use:
-                continue
+            # 만약 네이버 상에 해당 그룹(Area) 내 소수점 면적이 여러 개 존재해서 자릿수 경쟁을 한다면,
+            # 매칭에 완전히 실패(exact_trades=[], 0.005초과)해도 억지로 전체 트레이드를 주지 않는다.
+            # 하지만 해당 그룹에 소수점 타입이 1개밖에 없다면 그냥 전체를 줘도 안전하다.
+            if len(group_a_ex_set) > 1:
+                trades_to_use = exact_trades
+            else:
+                trades_to_use = exact_trades if exact_trades else all_trades_in_group
                 
-            trades_sorted = sorted(trades_to_use, key=lambda x: x["deal_date"])
-            highest_trade = max(trades_sorted, key=lambda x: x["deal_price"])
-            
-            def map_t(t):
-                return {
-                    "price": t["deal_price"],
-                    "date": t["deal_date"],
-                    "floor": t["floor"],
-                    "type": "중개거래"
-                }
+            if trades_to_use:
+                trades_sorted = sorted(trades_to_use, key=lambda x: x["deal_date"])
+                highest_trade = max(trades_sorted, key=lambda x: x["deal_price"])
+                
+                def map_t(t):
+                    return {
+                        "price": t["deal_price"],
+                        "date": t["deal_date"],
+                        "floor": t["floor"],
+                        "type": "중개거래"
+                    }
 
-            absolute_recent = map_t(trades_sorted[-1])
-            month_deals = [map_t(t) for t in trades_sorted if t["deal_date"] >= thirty_days_ago]
-            
+                absolute_recent = map_t(trades_sorted[-1])
+                month_deals = [map_t(t) for t in trades_sorted if t["deal_date"] >= thirty_days_ago]
+                
+                h_price = highest_trade["deal_price"]
+                h_date = highest_trade["deal_date"]
+            else:
+                absolute_recent = None
+                month_deals = []
+                h_price = 0
+                h_date = None
+                
             final_ask = ask.get('lowest_ask', 0)
-            # fallback logic omitted for brevity as it's Naver scraping source directly
             
             c_stats.append({
                 "match_key_area": area,
                 "pyeong_name": ask.get("ptp_name", ""),
-                "highest_deal_price": highest_trade["deal_price"],
-                "highest_deal_date": highest_trade["deal_date"],
+                "highest_deal_price": h_price,
+                "highest_deal_date": h_date,
                 "recent_deal_absolute": absolute_recent,
                 "month_deals": month_deals,
                 "month_volume": len(month_deals),
