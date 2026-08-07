@@ -17,7 +17,36 @@ export default function MacroGapRank({ kb50data }: { kb50data: ComplexStat[] }) 
     const cutoffStr = cutoffDate.toISOString().substring(0, 10);
 
     kb50data.forEach(c => {
+        // 동일 단지 내 쌍둥이 평형(같은 전용면적) 중 대표 1개만 추출
+        const representativeStats = new Map<number, any>();
+
         c.stats.forEach(s => {
+            const currentArea = s.match_key_area;
+            const existing = representativeStats.get(currentArea);
+
+            if (!existing) {
+                representativeStats.set(currentArea, s);
+            } else {
+                // 더 적합한 대표 평형(volume, 'A' 우선, ATH)으로 교체
+                const eVol = existing.month_volume || 0;
+                const cVol = s.month_volume || 0;
+                const eIsA = existing.pyeong_name?.includes('A') ? 1 : 0;
+                const cIsA = s.pyeong_name?.includes('A') ? 1 : 0;
+                const eAth = existing.highest_deal_price || 0;
+                const cAth = s.highest_deal_price || 0;
+
+                if (cVol > eVol) {
+                    representativeStats.set(currentArea, s);
+                } else if (cVol === eVol && cIsA > eIsA) {
+                    representativeStats.set(currentArea, s);
+                } else if (cVol === eVol && cIsA === eIsA && cAth > eAth) {
+                    representativeStats.set(currentArea, s);
+                }
+            }
+        });
+
+        // 엄선된 대표 평형만 랭킹에 참여
+        representativeStats.forEach(s => {
             const rPrice = s.recent_deal_absolute?.price;
             const rDate = s.recent_deal_absolute?.date;
             const aPrice = s.current_lowest_ask;
