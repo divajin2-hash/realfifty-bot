@@ -162,11 +162,26 @@ def build_db():
                 if t_ex is not None and abs(float(t_ex) - a_ex) < 0.005:
                     exact_trades.append(t)
                     
-            # 만약 네이버 상에 해당 그룹(Area) 내 소수점 면적이 여러 개 존재해서 자릿수 경쟁을 한다면,
-            # 매칭에 완전히 실패(exact_trades=[], 0.005초과)해도 억지로 전체 트레이드를 주지 않는다.
-            # 하지만 해당 그룹에 소수점 타입이 1개밖에 없다면 그냥 전체를 줘도 안전하다.
+            # 해당 그룹 내 타 평형이 단 1건이라도 정확히 매칭을 가져갔는가?
+            has_any_match_in_group = False
             if len(group_a_ex_set) > 1:
-                trades_to_use = exact_trades
+                for t in all_trades_in_group:
+                    t_ex = t.get('exclusive_area_exact')
+                    if t_ex is not None:
+                        for g_a in group_a_ex_set:
+                            if abs(float(t_ex) - g_a) < 0.005:
+                                has_any_match_in_group = True
+                                break
+                    if has_any_match_in_group:
+                        break
+                        
+            if len(group_a_ex_set) > 1:
+                # 형제 탭 중 누군가가 정상적으로 매칭을 가져갔다면 나는 빈껍데기(exact_trades)로 남아야 한다.
+                # 그러나 형제들도 전부 매칭에 실패(예: 네이버와 국토부 소수점 오차가 너무 큼)했다면, 통째로 흡수한다(all_trades).
+                if has_any_match_in_group:
+                    trades_to_use = exact_trades
+                else:
+                    trades_to_use = exact_trades if exact_trades else all_trades_in_group
             else:
                 trades_to_use = exact_trades if exact_trades else all_trades_in_group
                 

@@ -52,13 +52,11 @@ def run():
         # 대표 평형 추출 로직:
         # 쌍둥이 평형(전용면적 정수값 묶임) 중 거래량이 많고 일반적인(A타입 등) 모델을 우선!
         def sort_key(p):
-            # 1. 최근 한달 거래량
+            total_vol = len(p.get('all_trades_history', []))
             vol = p.get('month_volume', 0)
-            # 2. 거래가 없더라도 최고가가 있는 일반 평형 우선
-            ath = p.get('highest_deal_price') or 0
-            # 3. 이름에 'A'가 들어가면 가점
             is_a = 1 if 'A' in p.get('pyeong_name', '') else 0
-            return (vol, is_a, ath)
+            ath = p.get('highest_deal_price') or 0
+            return (total_vol, vol, is_a, ath)
             
         stats_sorted = sorted(c['stats'], key=sort_key, reverse=True)
         
