@@ -1,32 +1,68 @@
 [
   {
     "date": "2026-07-27",
-    "avg_drop_rate": -4.64,
-    "market_recovery_index": 95.36,
+    "avg_drop_rate": -3.63,
+    "market_recovery_index": 96.37,
     "sample_count": 312
   },
   {
     "date": "2026-07-28",
-    "avg_drop_rate": -4.64,
-    "market_recovery_index": 95.36,
+    "avg_drop_rate": -3.63,
+    "market_recovery_index": 96.37,
     "sample_count": 312
   },
   {
     "date": "2026-07-29",
-    "avg_drop_rate": -4.64,
-    "market_recovery_index": 95.36,
-    "sample_count": 310
+    "avg_drop_rate": -3.55,
+    "market_recovery_index": 96.45,
+    "sample_count": 311
   },
   {
     "date": "2026-07-30",
-    "avg_drop_rate": -4.64,
-    "market_recovery_index": 95.36,
+    "avg_drop_rate": -3.23,
+    "market_recovery_index": 96.77,
+    "sample_count": 311
+  },
+  {
+    "date": "2026-07-31",
+    "avg_drop_rate": -3.23,
+    "market_recovery_index": 96.77,
+    "sample_count": 311
+  },
+  {
+    "date": "2026-08-01",
+    "avg_drop_rate": -3.23,
+    "market_recovery_index": 96.77,
+    "sample_count": 311
+  },
+  {
+    "date": "2026-08-02",
+    "avg_drop_rate": -3.23,
+    "market_recovery_index": 96.77,
+    "sample_count": 311
+  },
+  {
+    "date": "2026-08-03",
+    "avg_drop_rate": -3.11,
+    "market_recovery_index": 96.89,
+    "sample_count": 308
+  },
+  {
+    "date": "2026-08-04",
+    "avg_drop_rate": -3.18,
+    "market_recovery_index": 96.82,
+    "sample_count": 310
+  },
+  {
+    "date": "2026-08-05",
+    "avg_drop_rate": -3.18,
+    "market_recovery_index": 96.82,
     "sample_count": 310
   },
   {
     "date": "2026-08-06",
-    "avg_drop_rate": -3.52,
-    "market_recovery_index": 96.48,
+    "avg_drop_rate": -3.36,
+    "market_recovery_index": 96.64,
     "sample_count": 310
   },
   {

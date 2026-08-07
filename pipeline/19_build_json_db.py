@@ -30,12 +30,21 @@ def build_db():
     print("Fetching complexes...")
     complexes = fetch_all("complexes")
     
-    # Get raw daily asks for exact naver ptp preservation
     import glob
-    ask_files = glob.glob('pipeline/raw_daily_asks_*.json')
-    ask_files.sort()
-    with open(ask_files[-1], 'r', encoding='utf-8') as f:
-        daily_asks = json.load(f)
+    import sys
+    
+    if len(sys.argv) > 1:
+        target_date = sys.argv[1]
+        target_file = f'pipeline/raw_daily_asks_{target_date}.json'
+        print(f"Using specific raw asks file: {target_file}")
+        with open(target_file, 'r', encoding='utf-8') as f:
+            daily_asks = json.load(f)
+    else:
+        ask_files = glob.glob('pipeline/raw_daily_asks_*.json')
+        ask_files.sort()
+        print(f"Using latest raw asks file: {ask_files[-1]}")
+        with open(ask_files[-1], 'r', encoding='utf-8') as f:
+            daily_asks = json.load(f)
         
     # Map complex_no to id
     cx_map_id = {str(c["complex_no"]): str(c["id"]) for c in complexes}
