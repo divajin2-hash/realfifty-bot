@@ -184,12 +184,14 @@ def build_db():
 
                 absolute_recent = map_t(trades_sorted[-1])
                 month_deals = [map_t(t) for t in trades_sorted if t["deal_date"] >= thirty_days_ago]
+                all_trades_history = [{"date": t["deal_date"], "price": t["deal_price"]} for t in trades_sorted]
                 
                 h_price = highest_trade["deal_price"]
                 h_date = highest_trade["deal_date"]
             else:
                 absolute_recent = None
                 month_deals = []
+                all_trades_history = []
                 h_price = 0
                 h_date = None
                 
@@ -202,6 +204,7 @@ def build_db():
                 "highest_deal_date": h_date,
                 "recent_deal_absolute": absolute_recent,
                 "month_deals": month_deals,
+                "all_trades_history": all_trades_history,
                 "month_volume": len(month_deals),
                 "max_month_volume": 10,
                 "volume_drop_rate": 0,

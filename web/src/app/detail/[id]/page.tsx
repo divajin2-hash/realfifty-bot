@@ -115,11 +115,11 @@ export default function DetailPage() {
 
     const currentMonth = new Date().getMonth() + 1;
 
-    const currentArea = activeStat?.match_key_area;
+    const currentPyeongName = activeStat?.pyeong_name;
 
     const miniVolumeData = useMemo(() => {
-        if (!chartDataState || !currentArea || !chartDataState[currentArea]) return [];
-        const volume = chartDataState[currentArea].volume || [];
+        if (!chartDataState || !currentPyeongName || !chartDataState[currentPyeongName]) return [];
+        const volume = chartDataState[currentPyeongName].volume || [];
         const now = new Date();
         const past = new Date(now.getFullYear(), now.getMonth() - 11, 1);
         const limitTimestamp = past.getTime();
@@ -141,12 +141,12 @@ export default function DetailPage() {
             filled.push({ name: label, count: found ? found.count : 0 });
         }
         return filled;
-    }, [chartDataState, currentArea]);
+    }, [chartDataState, currentPyeongName]);
 
     const chartData = useMemo(() => {
-        if (!chartDataState || !currentArea || !chartDataState[currentArea]) return [];
+        if (!chartDataState || !currentPyeongName || !chartDataState[currentPyeongName]) return [];
 
-        const areaData = chartDataState[currentArea];
+        const areaData = chartDataState[currentPyeongName];
         const trades = areaData.trades || [];
         const volume = areaData.volume || [];
         const asks = areaData.asks || [];
@@ -182,7 +182,7 @@ export default function DetailPage() {
         points.sort((a, b) => a.time - b.time);
 
         return points;
-    }, [chartDataState, currentArea, chartPeriod]);
+    }, [chartDataState, currentPyeongName, chartPeriod]);
 
     let diffDays = 0;
     let lastDealDateStr = '-';
