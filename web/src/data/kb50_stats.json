@@ -7171,14 +7171,7 @@
           "floor": 30,
           "type": "중개거래"
         },
-        "month_deals": [
-          {
-            "price": 2960000000,
-            "date": "2026-07-10",
-            "floor": 30,
-            "type": "중개거래"
-          }
-        ],
+        "month_deals": [],
         "all_trades_history": [
           {
             "date": "2014-01-06",
@@ -9537,7 +9530,7 @@
             "price": 2960000000
           }
         ],
-        "month_volume": 1,
+        "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
         "current_lowest_ask": 2900000000
@@ -9948,14 +9941,7 @@
           "floor": 30,
           "type": "중개거래"
         },
-        "month_deals": [
-          {
-            "price": 2960000000,
-            "date": "2026-07-10",
-            "floor": 30,
-            "type": "중개거래"
-          }
-        ],
+        "month_deals": [],
         "all_trades_history": [
           {
             "date": "2014-01-06",
@@ -12314,7 +12300,7 @@
             "price": 2960000000
           }
         ],
-        "month_volume": 1,
+        "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
         "current_lowest_ask": 3000000000
@@ -26926,7 +26912,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 5500000000
+        "current_lowest_ask": 5890000000
       },
       {
         "match_key_area": 75,
@@ -86111,12 +86097,6 @@
         },
         "month_deals": [
           {
-            "price": 3050000000,
-            "date": "2026-07-10",
-            "floor": 2,
-            "type": "중개거래"
-          },
-          {
             "price": 3130000000,
             "date": "2026-07-21",
             "floor": 8,
@@ -87325,7 +87305,7 @@
             "price": 3130000000
           }
         ],
-        "month_volume": 2,
+        "month_volume": 1,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
         "current_lowest_ask": 3000000000
@@ -120222,14 +120202,7 @@
           "floor": 1,
           "type": "중개거래"
         },
-        "month_deals": [
-          {
-            "price": 5100000000,
-            "date": "2026-07-10",
-            "floor": 1,
-            "type": "중개거래"
-          }
-        ],
+        "month_deals": [],
         "all_trades_history": [
           {
             "date": "2017-02-26",
@@ -120272,7 +120245,7 @@
             "price": 5100000000
           }
         ],
-        "month_volume": 1,
+        "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
         "current_lowest_ask": 5000000000
@@ -129721,7 +129694,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 4500000000
+        "current_lowest_ask": 4600000000
       },
       {
         "match_key_area": 94,
@@ -145098,12 +145071,6 @@
         },
         "month_deals": [
           {
-            "price": 3080000000,
-            "date": "2026-07-10",
-            "floor": 19,
-            "type": "중개거래"
-          },
-          {
             "price": 2900000000,
             "date": "2026-08-04",
             "floor": 2,
@@ -145172,7 +145139,7 @@
             "price": 2900000000
           }
         ],
-        "month_volume": 2,
+        "month_volume": 1,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
         "current_lowest_ask": 2630000000
@@ -193081,7 +193048,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 3300000000
+        "current_lowest_ask": 3500000000
       },
       {
         "match_key_area": 122,
@@ -196675,7 +196642,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 2800000000
+        "current_lowest_ask": 2730000000
       },
       {
         "match_key_area": 115,
