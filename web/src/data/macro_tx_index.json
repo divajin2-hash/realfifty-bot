@@ -6,13 +6,13 @@
   },
   {
     "month": "2014-02",
-    "recovery_rate": 25.24,
-    "sample_count": 466
+    "recovery_rate": 25.27,
+    "sample_count": 467
   },
   {
     "month": "2014-03",
     "recovery_rate": 25.68,
-    "sample_count": 317
+    "sample_count": 319
   },
   {
     "month": "2014-04",
@@ -21,18 +21,18 @@
   },
   {
     "month": "2014-05",
-    "recovery_rate": 25.73,
-    "sample_count": 180
+    "recovery_rate": 25.74,
+    "sample_count": 181
   },
   {
     "month": "2014-06",
     "recovery_rate": 26.23,
-    "sample_count": 236
+    "sample_count": 238
   },
   {
     "month": "2014-07",
-    "recovery_rate": 25.31,
-    "sample_count": 348
+    "recovery_rate": 25.34,
+    "sample_count": 349
   },
   {
     "month": "2014-08",
@@ -42,12 +42,12 @@
   {
     "month": "2014-09",
     "recovery_rate": 26.34,
-    "sample_count": 582
+    "sample_count": 583
   },
   {
     "month": "2014-10",
-    "recovery_rate": 26.92,
-    "sample_count": 346
+    "recovery_rate": 26.97,
+    "sample_count": 347
   },
   {
     "month": "2014-11",
@@ -57,12 +57,12 @@
   {
     "month": "2014-12",
     "recovery_rate": 26.71,
-    "sample_count": 226
+    "sample_count": 227
   },
   {
     "month": "2015-01",
-    "recovery_rate": 27.03,
-    "sample_count": 357
+    "recovery_rate": 27.05,
+    "sample_count": 358
   },
   {
     "month": "2015-02",
@@ -72,7 +72,7 @@
   {
     "month": "2015-03",
     "recovery_rate": 26.4,
-    "sample_count": 687
+    "sample_count": 688
   },
   {
     "month": "2015-04",
@@ -86,18 +86,18 @@
   },
   {
     "month": "2015-06",
-    "recovery_rate": 27.03,
-    "sample_count": 513
+    "recovery_rate": 27.01,
+    "sample_count": 516
   },
   {
     "month": "2015-07",
     "recovery_rate": 27.03,
-    "sample_count": 509
+    "sample_count": 511
   },
   {
     "month": "2015-08",
     "recovery_rate": 27.89,
-    "sample_count": 345
+    "sample_count": 347
   },
   {
     "month": "2015-09",
@@ -107,12 +107,12 @@
   {
     "month": "2015-10",
     "recovery_rate": 27.76,
-    "sample_count": 603
+    "sample_count": 604
   },
   {
     "month": "2015-11",
     "recovery_rate": 28.06,
-    "sample_count": 440
+    "sample_count": 441
   },
   {
     "month": "2015-12",
@@ -121,8 +121,8 @@
   },
   {
     "month": "2016-01",
-    "recovery_rate": 28.83,
-    "sample_count": 190
+    "recovery_rate": 28.78,
+    "sample_count": 191
   },
   {
     "month": "2016-02",
@@ -137,7 +137,7 @@
   {
     "month": "2016-04",
     "recovery_rate": 27.95,
-    "sample_count": 709
+    "sample_count": 710
   },
   {
     "month": "2016-05",
@@ -162,17 +162,17 @@
   {
     "month": "2016-09",
     "recovery_rate": 31.78,
-    "sample_count": 643
+    "sample_count": 644
   },
   {
     "month": "2016-10",
-    "recovery_rate": 32.24,
-    "sample_count": 624
+    "recovery_rate": 32.25,
+    "sample_count": 625
   },
   {
     "month": "2016-11",
-    "recovery_rate": 32.48,
-    "sample_count": 198
+    "recovery_rate": 32.5,
+    "sample_count": 199
   },
   {
     "month": "2016-12",
@@ -181,23 +181,23 @@
   },
   {
     "month": "2017-01",
-    "recovery_rate": 30.92,
-    "sample_count": 182
+    "recovery_rate": 30.93,
+    "sample_count": 183
   },
   {
     "month": "2017-02",
     "recovery_rate": 31.28,
-    "sample_count": 345
+    "sample_count": 346
   },
   {
     "month": "2017-03",
-    "recovery_rate": 31.49,
-    "sample_count": 564
+    "recovery_rate": 31.5,
+    "sample_count": 565
   },
   {
     "month": "2017-04",
-    "recovery_rate": 31.22,
-    "sample_count": 868
+    "recovery_rate": 31.24,
+    "sample_count": 870
   },
   {
     "month": "2017-05",
@@ -211,8 +211,8 @@
   },
   {
     "month": "2017-07",
-    "recovery_rate": 35.7,
-    "sample_count": 1032
+    "recovery_rate": 35.71,
+    "sample_count": 1035
   },
   {
     "month": "2017-08",
@@ -222,22 +222,22 @@
   {
     "month": "2017-09",
     "recovery_rate": 36.22,
-    "sample_count": 593
+    "sample_count": 595
   },
   {
     "month": "2017-10",
     "recovery_rate": 36.74,
-    "sample_count": 480
+    "sample_count": 482
   },
   {
     "month": "2017-11",
-    "recovery_rate": 37.64,
-    "sample_count": 774
+    "recovery_rate": 37.66,
+    "sample_count": 775
   },
   {
     "month": "2017-12",
-    "recovery_rate": 39.07,
-    "sample_count": 720
+    "recovery_rate": 39.11,
+    "sample_count": 723
   },
   {
     "month": "2018-01",
@@ -246,13 +246,13 @@
   },
   {
     "month": "2018-02",
-    "recovery_rate": 42.85,
-    "sample_count": 316
+    "recovery_rate": 42.89,
+    "sample_count": 317
   },
   {
     "month": "2018-03",
-    "recovery_rate": 43.16,
-    "sample_count": 242
+    "recovery_rate": 43.24,
+    "sample_count": 245
   },
   {
     "month": "2018-04",
@@ -261,8 +261,8 @@
   },
   {
     "month": "2018-05",
-    "recovery_rate": 41.9,
-    "sample_count": 128
+    "recovery_rate": 41.94,
+    "sample_count": 129
   },
   {
     "month": "2018-06",
@@ -271,18 +271,18 @@
   },
   {
     "month": "2018-07",
-    "recovery_rate": 42.15,
-    "sample_count": 478
+    "recovery_rate": 42.16,
+    "sample_count": 479
   },
   {
     "month": "2018-08",
-    "recovery_rate": 45.57,
-    "sample_count": 872
+    "recovery_rate": 45.61,
+    "sample_count": 873
   },
   {
     "month": "2018-09",
-    "recovery_rate": 47.96,
-    "sample_count": 296
+    "recovery_rate": 48.0,
+    "sample_count": 297
   },
   {
     "month": "2018-10",
@@ -296,8 +296,8 @@
   },
   {
     "month": "2018-12",
-    "recovery_rate": 44.96,
-    "sample_count": 53
+    "recovery_rate": 45.01,
+    "sample_count": 54
   },
   {
     "month": "2019-01",
@@ -321,43 +321,43 @@
   },
   {
     "month": "2019-05",
-    "recovery_rate": 43.46,
-    "sample_count": 574
+    "recovery_rate": 43.49,
+    "sample_count": 576
   },
   {
     "month": "2019-06",
     "recovery_rate": 45.96,
-    "sample_count": 828
+    "sample_count": 829
   },
   {
     "month": "2019-07",
     "recovery_rate": 48.21,
-    "sample_count": 705
+    "sample_count": 706
   },
   {
     "month": "2019-08",
-    "recovery_rate": 49.45,
-    "sample_count": 412
+    "recovery_rate": 49.43,
+    "sample_count": 413
   },
   {
     "month": "2019-09",
-    "recovery_rate": 49.39,
+    "recovery_rate": 49.38,
     "sample_count": 599
   },
   {
     "month": "2019-10",
-    "recovery_rate": 51.12,
-    "sample_count": 791
+    "recovery_rate": 51.13,
+    "sample_count": 793
   },
   {
     "month": "2019-11",
     "recovery_rate": 53.03,
-    "sample_count": 693
+    "sample_count": 695
   },
   {
     "month": "2019-12",
-    "recovery_rate": 54.68,
-    "sample_count": 341
+    "recovery_rate": 54.66,
+    "sample_count": 342
   },
   {
     "month": "2020-01",
@@ -382,17 +382,17 @@
   {
     "month": "2020-05",
     "recovery_rate": 51.52,
-    "sample_count": 411
+    "sample_count": 412
   },
   {
     "month": "2020-06",
-    "recovery_rate": 55.19,
-    "sample_count": 1023
+    "recovery_rate": 55.21,
+    "sample_count": 1024
   },
   {
     "month": "2020-07",
-    "recovery_rate": 58.97,
-    "sample_count": 374
+    "recovery_rate": 59.02,
+    "sample_count": 375
   },
   {
     "month": "2020-08",
@@ -401,23 +401,23 @@
   },
   {
     "month": "2020-09",
-    "recovery_rate": 60.62,
-    "sample_count": 179
+    "recovery_rate": 60.63,
+    "sample_count": 180
   },
   {
     "month": "2020-10",
-    "recovery_rate": 59.37,
+    "recovery_rate": 59.48,
     "sample_count": 195
   },
   {
     "month": "2020-11",
-    "recovery_rate": 61.14,
-    "sample_count": 338
+    "recovery_rate": 61.13,
+    "sample_count": 339
   },
   {
     "month": "2020-12",
-    "recovery_rate": 61.77,
-    "sample_count": 492
+    "recovery_rate": 61.74,
+    "sample_count": 494
   },
   {
     "month": "2021-01",
@@ -431,7 +431,7 @@
   },
   {
     "month": "2021-03",
-    "recovery_rate": 63.17,
+    "recovery_rate": 63.29,
     "sample_count": 157
   },
   {
@@ -451,8 +451,8 @@
   },
   {
     "month": "2021-07",
-    "recovery_rate": 68.94,
-    "sample_count": 235
+    "recovery_rate": 69.09,
+    "sample_count": 236
   },
   {
     "month": "2021-08",
@@ -541,8 +541,8 @@
   },
   {
     "month": "2023-01",
-    "recovery_rate": 53.57,
-    "sample_count": 235
+    "recovery_rate": 53.6,
+    "sample_count": 236
   },
   {
     "month": "2023-02",
@@ -557,7 +557,7 @@
   {
     "month": "2023-04",
     "recovery_rate": 58.51,
-    "sample_count": 357
+    "sample_count": 358
   },
   {
     "month": "2023-05",
@@ -566,13 +566,13 @@
   },
   {
     "month": "2023-06",
-    "recovery_rate": 61.27,
+    "recovery_rate": 61.26,
     "sample_count": 428
   },
   {
     "month": "2023-07",
-    "recovery_rate": 62.54,
-    "sample_count": 369
+    "recovery_rate": 62.52,
+    "sample_count": 370
   },
   {
     "month": "2023-08",
@@ -606,8 +606,8 @@
   },
   {
     "month": "2024-02",
-    "recovery_rate": 62.05,
-    "sample_count": 235
+    "recovery_rate": 62.07,
+    "sample_count": 236
   },
   {
     "month": "2024-03",
@@ -616,38 +616,38 @@
   },
   {
     "month": "2024-04",
-    "recovery_rate": 63.95,
-    "sample_count": 411
+    "recovery_rate": 63.96,
+    "sample_count": 412
   },
   {
     "month": "2024-05",
-    "recovery_rate": 64.68,
-    "sample_count": 553
+    "recovery_rate": 64.69,
+    "sample_count": 554
   },
   {
     "month": "2024-06",
     "recovery_rate": 66.07,
-    "sample_count": 875
+    "sample_count": 874
   },
   {
     "month": "2024-07",
-    "recovery_rate": 69.46,
-    "sample_count": 747
+    "recovery_rate": 69.44,
+    "sample_count": 749
   },
   {
     "month": "2024-08",
-    "recovery_rate": 71.64,
-    "sample_count": 439
+    "recovery_rate": 71.67,
+    "sample_count": 440
   },
   {
     "month": "2024-09",
-    "recovery_rate": 72.75,
-    "sample_count": 207
+    "recovery_rate": 72.69,
+    "sample_count": 209
   },
   {
     "month": "2024-10",
-    "recovery_rate": 73.02,
-    "sample_count": 247
+    "recovery_rate": 73.06,
+    "sample_count": 248
   },
   {
     "month": "2024-11",
@@ -667,12 +667,12 @@
   {
     "month": "2025-02",
     "recovery_rate": 74.6,
-    "sample_count": 831
+    "sample_count": 833
   },
   {
     "month": "2025-03",
-    "recovery_rate": 78.29,
-    "sample_count": 950
+    "recovery_rate": 78.27,
+    "sample_count": 954
   },
   {
     "month": "2025-04",
@@ -681,18 +681,18 @@
   },
   {
     "month": "2025-05",
-    "recovery_rate": 80.62,
-    "sample_count": 477
+    "recovery_rate": 80.7,
+    "sample_count": 479
   },
   {
     "month": "2025-06",
-    "recovery_rate": 85.16,
-    "sample_count": 742
+    "recovery_rate": 85.19,
+    "sample_count": 743
   },
   {
     "month": "2025-07",
-    "recovery_rate": 89.49,
-    "sample_count": 243
+    "recovery_rate": 89.48,
+    "sample_count": 244
   },
   {
     "month": "2025-08",
@@ -701,18 +701,18 @@
   },
   {
     "month": "2025-09",
-    "recovery_rate": 88.69,
-    "sample_count": 465
+    "recovery_rate": 88.68,
+    "sample_count": 464
   },
   {
     "month": "2025-10",
     "recovery_rate": 93.54,
-    "sample_count": 393
+    "sample_count": 395
   },
   {
     "month": "2025-11",
-    "recovery_rate": 94.46,
-    "sample_count": 178
+    "recovery_rate": 94.44,
+    "sample_count": 179
   },
   {
     "month": "2025-12",
@@ -726,8 +726,8 @@
   },
   {
     "month": "2026-02",
-    "recovery_rate": 97.29,
-    "sample_count": 163
+    "recovery_rate": 97.13,
+    "sample_count": 164
   },
   {
     "month": "2026-03",
@@ -751,7 +751,12 @@
   },
   {
     "month": "2026-07",
-    "recovery_rate": 93.92,
-    "sample_count": 137
+    "recovery_rate": 93.94,
+    "sample_count": 143
+  },
+  {
+    "month": "2026-08",
+    "recovery_rate": 94.16,
+    "sample_count": 5
   }
 ]
