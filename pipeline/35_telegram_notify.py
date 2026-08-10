@@ -113,10 +113,10 @@ def run():
             
             ask_changes.append(f"- {c_name} {area}㎡: {y_str} ➡️ {t_str} ({mark} {d_str})") 
 
-        # 2b. Also show type-specific breakdown using pyeong_name
-        pname = pyeong_name_map.get((t.get('complex_id'), area))
-        if pname and pname != str(area):  # Only add suffix if it adds info (e.g. "84A" not just "84")
-            ask_changes[-1] = ask_changes[-1].replace(f"{c_name} {area}㎡:", f"{c_name} {pname}({area}㎡):")
+            # 2b. Also show type-specific breakdown using pyeong_name
+            pname = pyeong_name_map.get((t.get('complex_id'), area))
+            if pname and pname != str(area):  # Only add suffix if it adds info (e.g. "84A" not just "84")
+                ask_changes[-1] = ask_changes[-1].replace(f"{c_name} {area}㎡:", f"{c_name} {pname}({area}㎡):")
             
     # Format message
     msg = f"🔔 *RealFifty 데일리 리포트*\n({today_date} 자정 기준)\n\n"

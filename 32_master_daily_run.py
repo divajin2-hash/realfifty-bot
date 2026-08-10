@@ -34,11 +34,12 @@ if __name__ == "__main__":
     # 6. Build chart data
     run_script("36_build_chart_data.py")
     
+    # 7. Build Macro Indices (Transaction & Volume)
+    run_script('36_build_macro_index.py')
+    run_script('38_build_tx_index.py')
+    run_script('45_news_crawler.py')
+
     print("\n✅ All daily master bot scripts executed successfully!")
 
-    # 6. Send Telegram Notification
+    # 8. Send Telegram Notification
     run_script("35_telegram_notify.py")
-
-run_script('pipeline/36_build_macro_index.py')
-run_script('pipeline/38_build_tx_index.py')
-run_script('pipeline/45_news_crawler.py')

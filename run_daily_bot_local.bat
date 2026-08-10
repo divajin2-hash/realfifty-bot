@@ -14,7 +14,7 @@ if %errorlevel% neq 0 (
 )
 
 echo [RealFifty] Git commit and push for Vercel deploy...
-git add web/src/data/kb50_stats.json
+git add web/
 git diff --quiet && git diff --staged --quiet || (git commit -m "[Daily Bot] Auto-update DB" && git push)
 
 echo ==============================================
