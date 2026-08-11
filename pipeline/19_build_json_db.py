@@ -159,31 +159,27 @@ def build_db():
             
             for t in all_trades_in_group:
                 t_ex = t.get('exclusive_area_exact')
-                if t_ex is not None and abs(float(t_ex) - a_ex) < 0.005:
-                    exact_trades.append(t)
+                if t_ex is not None:
+                    # Nearest Neighbor matching to handle systematic Naver-MOLIT decimal mismatches 
+                    # (e.g. Raemian Schur 84.94 vs 84.946, gap ~0.006)
+                    closest_g_a = None
+                    min_diff = 999
+                    for g_a in group_a_ex_set:
+                        diff = abs(float(t_ex) - g_a)
+                        if diff < min_diff:
+                            min_diff = diff
+                            closest_g_a = g_a
                     
-            # 해당 그룹 내 타 평형이 단 1건이라도 정확히 매칭을 가져갔는가?
-            has_any_match_in_group = False
-            if len(group_a_ex_set) > 1:
-                for t in all_trades_in_group:
-                    t_ex = t.get('exclusive_area_exact')
-                    if t_ex is not None:
-                        for g_a in group_a_ex_set:
-                            if abs(float(t_ex) - g_a) < 0.005:
-                                has_any_match_in_group = True
-                                break
-                    if has_any_match_in_group:
-                        break
+                    if closest_g_a is not None and abs(closest_g_a - a_ex) < 1e-5 and min_diff < 0.09:
+                        exact_trades.append(t)
+                else:
+                    exact_trades.append(t)
                         
             if len(group_a_ex_set) > 1:
-                # 형제 탭 중 누군가가 정상적으로 매칭을 가져갔다면 나는 빈껍데기(exact_trades)로 남아야 한다.
-                # 그러나 형제들도 전부 매칭에 실패(예: 네이버와 국토부 소수점 오차가 너무 큼)했다면, 통째로 흡수한다(all_trades).
-                if has_any_match_in_group:
-                    trades_to_use = exact_trades
-                else:
-                    trades_to_use = exact_trades if exact_trades else all_trades_in_group
+                # When twins exist, we rely entirely on nearest neighbor partitioning
+                trades_to_use = exact_trades
             else:
-                trades_to_use = exact_trades if exact_trades else all_trades_in_group
+                trades_to_use = all_trades_in_group
                 
             if trades_to_use:
                 trades_sorted = sorted(trades_to_use, key=lambda x: x["deal_date"])
