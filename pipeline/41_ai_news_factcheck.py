@@ -112,30 +112,52 @@ def run():
     {json.dumps(ask_drop_sorted, ensure_ascii=False)}
     """
     
-    # 3. Gemini 보고서 생성
-    logging.info("Generating Daily Report via Gemini...")
-    report_prompt = f"""
-    너는 'RealFifty 수석 분석관 김리얼'이야. 시세 데이터와 최신 뉴스를 엮어서 인사이트 넘치고 활기찬 문체로 마크다운 리포트를 작성해.
+    # No Daily Report Generation in this script. Only FactCheck!
+        
+    # 4. Gemini 팩트체크 JSON 생성
+    logging.info("Generating FactCheck API JSON via Gemini...")
+    factcheck_prompt = f"""
+    너는 가짜뉴스/과장보도를 판별하는 'RealFifty 팩트체커'야.
+    제공된 [오늘의 뉴스]들을 모두 읽고, 내용이 매우 유사하거나 복붙(어뷰징)된 기사들이 있다면 병합하여 가장 대표적인 기사 1~2개만 엄선해.
+    그리고 그 엄선된 1~2개의 최고 핵심 기사에 대해서만 [RealFifty 데이터]를 철저한 근거로 삼아 과장인지 사실인지 팩트체크해 줘.
+    결과는 반드시 1개 이상 2개 이하의 원소를 가진 완벽한 JSON 배열 형태로만 출력해야 해. 마크다운 백틱 안됨(```json ... ``` 안됨). 시작과 끝이 [ 와 ] 이어야 함.
     
-    데이터 요약:
+    데이터:
     {data_context}
     
-    오늘의 관련 뉴스:
+    오늘의 뉴스:
     {recent_news_context}
     
-    요구사항:
-    1. 오늘 시장 상황을 요약하는 매력적인 마크다운 제목(# 📊 RealFifty 일일 마켓 브리핑)으로 시작할 것.
-    2. 전체 평균 하락률을 바탕으로 전반적인 장세를 진단할 것.
-    3. 눈치보기 단지와 호가하락 단지를 언급하고, 왜 그런지 [오늘의 관련 뉴스]의 정부 정책이나 경제 기사와 자연스럽게 인과관계를 엮어서 설명할 것 (만약 뉴스와 무관하면 너의 전문적 부동산 지식을 더해석 해석).
-    4. 친근하고 단호하며, 팩트를 짚어주는 톤앤매너 유지.
+    출력 형식(예시):
+    [
+      {{
+        "title": "기사 실제 제목",
+        "link": "기사 URL (제공된 news_items에서 가져올 것)",
+        "source": "언론사",
+        "pub_date": "원래 제공된 시간",
+        "verdict_type": "과장 보도 주의" 또는 "팩트 일치",
+        "body_summary": "기사 본문에서 주장하는 바를 1-2줄 핵심 요약",
+        "factcheck_content": "RealFifty 분석결과: 데이터에 따르면 평균 하락률이 어쩌고... 하면서 반박하거나 동의하는 5~6줄 깊이있는 분석 텍스트"
+      }}
+    ]
+    * 절대 제공받은 뉴스와 똑같은 개수를 만들지 말고, 중복을 확실히 제거하여 1~2개의 핵심 기사 팩트체크 오브젝트만 배출해 (배열 원소 개수 최대 2개).
     """
     
-    res_report = client.models.generate_content(model='gemini-3.5-flash', contents=report_prompt)
-    report_md = res_report.text
+    # 원본 뉴스 객체들을 프롬프트가 링크를 가져갈 수 있도록 컨텍스트로 제공
+    res_factcheck = client.models.generate_content(model='gemini-3.5-flash', contents=factcheck_prompt + f"\n[원본 JSON 구조]\n{json.dumps(news_items, ensure_ascii=False)}")
     
-    with open(os.path.join(output_dir_report, f'report_{today_str}.md'), 'w', encoding='utf-8') as f:
-        f.write(report_md)
-        
+    raw_json = res_factcheck.text.strip()
+    if raw_json.startswith('```json'): raw_json = raw_json[7:]
+    if raw_json.startswith('```'): raw_json = raw_json[3:]
+    if raw_json.endswith('```'): raw_json = raw_json[:-3]
+    
+    try:
+        factcheck_data = json.loads(raw_json.strip())
+        with open(os.path.join(output_dir_news, 'factcheck_news.json'), 'w', encoding='utf-8') as f:
+            json.dump(factcheck_data, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        logging.error(f"Failed to parse FactCheck JSON: {e}\nRaw output: {res_factcheck.text}")
+
     logging.info("🎉 40_ai_reporter.py Completed successfully!")
 
 if __name__ == '__main__':
