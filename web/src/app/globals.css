@@ -141,7 +141,7 @@ body {
   font-weight: 700;
   display: flex;
   overflow: hidden;
-  white-space: nowrap;
+
 }
 
 .dashboard-area {
@@ -338,14 +338,14 @@ body {
   width: 100%;
   border-collapse: collapse;
   margin: 32px 0;
-  font-size: 15px;
+  font-size: 13.5px;
   background-color: #fff;
-  white-space: nowrap;
+
 }
 
 .report-content th,
 .report-content td {
-  padding: 16px;
+  padding: 12px 6px; letter-spacing: -0.3px;
   text-align: center;
   border-bottom: 1px solid var(--border-light);
 }
@@ -360,7 +360,7 @@ body {
   font-weight: 800;
   color: var(--navy-header);
   border-top: 2px solid var(--navy-header);
-  white-space: nowrap;
+
 }
 
 .report-content tr:last-child td {
