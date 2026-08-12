@@ -167,11 +167,29 @@ def run():
     if raw_json.endswith('```'): raw_json = raw_json[:-3]
     
     try:
-        factcheck_data = json.loads(raw_json.strip())
+        new_factcheck_data = json.loads(raw_json.strip())
+        history_path = os.path.join(output_dir_news, 'factcheck_history.json')
+        
+        existing_data = []
+        if os.path.exists(history_path):
+            try:
+                with open(history_path, 'r', encoding='utf-8') as f:
+                    existing_data = json.load(f)
+            except:
+                pass
+                
+        # 새 데이터를 맨 앞에 추가
+        updated_data = new_factcheck_data + existing_data
+        
+        with open(history_path, 'w', encoding='utf-8') as f:
+            json.dump(updated_data, f, ensure_ascii=False, indent=2)
+            
+        # 기존 호환성을 위해 latest_news 처럼 오늘자 분량만 백업
         with open(os.path.join(output_dir_news, 'factcheck_news.json'), 'w', encoding='utf-8') as f:
-            json.dump(factcheck_data, f, ensure_ascii=False, indent=2)
+            json.dump(new_factcheck_data, f, ensure_ascii=False, indent=2)
+            
     except Exception as e:
-        logging.error(f"Failed to parse FactCheck JSON: {e}\nRaw output: {res_factcheck.text}")
+        logging.error(f"Failed to parse FactCheck JSON: {e}\nRaw output: {raw_json}")
 
     logging.info("🎉 40_ai_reporter.py Completed successfully!")
 

@@ -6,11 +6,21 @@ import Sidebar from '../Sidebar';
 export const dynamic = 'force-dynamic';
 
 export default async function NewsFactCheckPage() {
-    const newsPath = path.join(process.cwd(), 'src', 'data', 'factcheck_news.json');
+    const newsPath = path.join(process.cwd(), 'src', 'data', 'factcheck_history.json');
     let newsData: any[] = [];
     try {
-        newsData = JSON.parse(fs.readFileSync(newsPath, 'utf8'));
-    } catch (e) { }
+        if (fs.existsSync(newsPath)) {
+            newsData = JSON.parse(fs.readFileSync(newsPath, 'utf8'));
+        } else {
+            // fallback for today if history isn't generated yet
+            const singlePath = path.join(process.cwd(), 'src', 'data', 'factcheck_news.json');
+            if (fs.existsSync(singlePath)) {
+                newsData = JSON.parse(fs.readFileSync(singlePath, 'utf8'));
+            }
+        }
+    } catch (e) {
+        console.error("News read error", e);
+    }
 
     return (
         <div className="app-wrapper">

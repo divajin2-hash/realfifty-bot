@@ -325,9 +325,15 @@ body {
     gap: 12px !important;
   }
 }
+
 /* -------------------
    Markdown Report Content Styling
 ------------------- */
+.report-content {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
 .report-content table {
   width: 100%;
   border-collapse: collapse;
