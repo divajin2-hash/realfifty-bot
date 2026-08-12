@@ -16,7 +16,7 @@ export default async function NewsFactCheckPage() {
         <div className="app-wrapper">
             <Sidebar activePath="/news" />
             <div className="main-content">
-                <div style={{ maxWidth: '900px', margin: '0 auto', padding: '40px 20px', fontFamily: 'var(--font-pretendard, sans-serif)' }}>
+                <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '40px 60px', fontFamily: 'var(--font-pretendard, sans-serif)' }}>
                     <div style={{ marginBottom: '40px' }}>
                         <h1 style={{ fontSize: '32px', fontWeight: '800', margin: '0 0 8px 0', color: 'var(--text-dark)' }}>🔍 부동산 팩트체크</h1>
                         <p style={{ color: 'var(--text-muted)', margin: 0, fontSize: '15px' }}>
