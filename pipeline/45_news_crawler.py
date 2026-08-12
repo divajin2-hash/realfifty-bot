@@ -5,9 +5,12 @@ import xml.etree.ElementTree as ET
 import datetime
 
 def run():
-    print("\nStarting Google News RSS Crawler for Real Estate...")
-    # Search for '부동산 아파트' (Real estate apartment) on Google News KR
-    url = 'https://news.google.com/rss/search?q=%EB%B6%80%EB%8F%99%EC%82%B0+%EC%95%84%ED%8C%8C%ED%8A%B8&hl=ko&gl=KR&ceid=KR:ko'
+    import urllib.parse
+    
+    # 팩트체크에 적합하도록 '가격', '거래량' 관련 키워드로 한정
+    query = '아파트 (신고가 OR 하락 OR 폭락 OR 반등 OR 거래량 OR 거래절벽 OR 호가)'
+    encoded_query = urllib.parse.quote(query)
+    url = f'https://news.google.com/rss/search?q={encoded_query}&hl=ko&gl=KR&ceid=KR:ko'
 
     try:
         res = requests.get(url, timeout=10)

@@ -38,6 +38,9 @@ if __name__ == "__main__":
     run_script('36_build_macro_index.py')
     run_script('38_build_tx_index.py')
     run_script('45_news_crawler.py')
+    
+    # 8. Generate AI Daily Report and Fact Check JSON
+    run_script('40_ai_reporter.py')
 
     print("\n✅ All daily master bot scripts executed successfully!")
 
