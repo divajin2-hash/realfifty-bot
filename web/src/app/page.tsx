@@ -4,6 +4,7 @@ import ClientGrid from './ClientGrid'
 import SearchInput from './SearchInput'
 import TickerClient from './TickerClient'
 import MacroIndexChart from './MacroIndexChart'
+import Sidebar from './Sidebar'
 import Link from 'next/link'
 import fs from 'fs'
 import path from 'path'
@@ -141,23 +142,7 @@ export default async function Dashboard({ searchParams }: { searchParams: { sort
     return (
         <div className="app-wrapper">
             {/* ?? Left Sidebar */}
-            <aside className="sidebar">
-                <div className="sidebar-logo" style={{ padding: '32px 24px 12px 24px' }}>
-                    <div style={{ fontSize: '2.2rem', fontWeight: 900, color: '#ffffff', letterSpacing: '1px', textShadow: '0 2px 10px rgba(0,0,0,0.2)' }}>
-                        Real<span style={{ color: '#ffb4ab' }}>Fifty</span>
-                    </div>
-
-                </div>
-                <div className="sidebar-menu" style={{ marginTop: '10px' }}>
-                    <Link href="/" style={{textDecoration:'none', color:'inherit'}}><div className="menu-item active">📈 실시간 시장 현황</div></Link>
-                    <Link href="/market" style={{textDecoration:'none', color:'inherit'}}><div className="menu-item">📊 종합 시황 현황</div></Link>
-                                        <div className="menu-item">🚨 급매물 알림</div>
-                    <div className="menu-item">⭐ 관심 단지 등록</div>
-                </div>
-                <div style={{ marginTop: 'auto', padding: '24px' }}>
-                    <SearchInput />
-                </div>
-            </aside>
+            <Sidebar activePath="/" />
 
             {/* ?? Main Content */}
             <div className="main-content">
@@ -186,7 +171,7 @@ export default async function Dashboard({ searchParams }: { searchParams: { sort
                 })()} />
 
                 <div className="dashboard-area">
-                    
+
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                         <div>
                             <h1 style={{ fontSize: '2.5rem', fontWeight: 800, letterSpacing: '-1px' }}>선도50 아파트 모니터링</h1>
