@@ -71,8 +71,22 @@ def run():
     for c in kb50:
         cx_name = c['complex']['name']
         if not c['stats']: continue
-        # 대표평형(국평 위주) 추출 간소화
-        best_stat = max(c['stats'], key=lambda s: (len(s.get('all_trades_history', [])), s.get('highest_deal_price', 0)))
+        # 대표평형(국평 84㎡ 위주, 최근 거래 활성도순) 추출: 프론트엔드 page.tsx와 동일하게 맞춤
+        def score(s):
+            is_alive = False
+            rp = s.get('recent_deal_absolute')
+            if rp and rp.get('date'):
+                try:
+                    d = datetime.strptime(rp['date'], '%Y-%m-%d')
+                    if (datetime.now() - d).days <= 365:
+                        is_alive = True
+                except: pass
+            
+            mka = s.get('match_key_area', 0)
+            group_dist = 0 if 82 <= mka <= 85 else abs(mka - 84)
+            return (not is_alive, group_dist, -(s.get('max_month_volume', 0)), -s.get('highest_deal_price', 0))
+            
+        best_stat = sorted(c['stats'], key=score)[0]
         rp = best_stat.get('recent_deal_absolute', {}).get('price') if best_stat.get('recent_deal_absolute') else best_stat.get('highest_deal_price', 0)
         ath = best_stat.get('highest_deal_price', 0)
         ask = best_stat.get('current_lowest_ask', 0)
