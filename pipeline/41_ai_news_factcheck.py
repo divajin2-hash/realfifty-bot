@@ -93,7 +93,8 @@ def run():
         
         real_drop = ((rp - ath) / ath) * 100 if ath > 0 and rp else 0
         ask_drop = ((ask - ath) / ath) * 100 if ath > 0 and ask else 0
-        gap = abs(real_drop - ask_drop)
+        # 갭 = 최저호가 변동률 - 실거래가 변동률
+        gap = ask_drop - real_drop
         
         rep_stats.append({
             'name': cx_name,
@@ -109,10 +110,10 @@ def run():
     avg_real_drop = round(sum(s['real_drop'] for s in rep_stats) / len(rep_stats), 2)
     avg_ask_drop = round(sum(s['ask_drop'] for s in rep_stats) / len(rep_stats), 2)
     
-    # 갭 큰 단지 (눈치보기 심함)
+    # 눈치보기 심함 (호가가 실거래보다 높은 단지)
     gap_sorted = sorted(rep_stats, key=lambda x: x['gap'], reverse=True)[:5]
-    # 호가 하락 깊은 단지 (항복/급매)
-    ask_drop_sorted = sorted(rep_stats, key=lambda x: x['ask_drop'])[:5]
+    # 호가 항복/급매 (호가가 실거래보다 낮은 단지)
+    ask_drop_sorted = sorted(rep_stats, key=lambda x: x['gap'])[:5]
     
     data_context = f"""
     [RealFifty 오늘자 마켓 데이터 요약 ({today_str})]

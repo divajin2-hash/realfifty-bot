@@ -93,7 +93,10 @@ def run():
         
         real_drop = ((rp - ath) / ath) * 100 if ath > 0 and rp else 0
         ask_drop = ((ask - ath) / ath) * 100 if ath > 0 and ask else 0
-        gap = abs(real_drop - ask_drop)
+        # 갭 = 최저호가 변동률 - 실거래가 변동률
+        # (예: 호가는 -5% 방어 중인데 실거래는 -20% 찍혔다면, 갭은 +15%p -> 호가가 높게 매달려있는 눈치보기)
+        # (예: 호가는 -25%로 던지는데 실거래는 -10%라면, 갭은 -15%p -> 호가가 빠르게 붕괴되는 패닉셀)
+        gap = ask_drop - real_drop
         
         rep_stats.append({
             'name': cx_name,
@@ -109,10 +112,10 @@ def run():
     avg_real_drop = round(sum(s['real_drop'] for s in rep_stats) / len(rep_stats), 2)
     avg_ask_drop = round(sum(s['ask_drop'] for s in rep_stats) / len(rep_stats), 2)
     
-    # 갭 큰 단지 (눈치보기 심함)
+    # 눈치보기 심함 (호가가 실거래보다 비정상적으로 높은 단지)
     gap_sorted = sorted(rep_stats, key=lambda x: x['gap'], reverse=True)[:5]
-    # 호가 하락 깊은 단지 (항복/급매)
-    ask_drop_sorted = sorted(rep_stats, key=lambda x: x['ask_drop'])[:5]
+    # 호가 항복/패닉셀 (호가가 실거래보다 비정상적으로 붕괴된 단지)
+    ask_drop_sorted = sorted(rep_stats, key=lambda x: x['gap'])[:5]
     
     data_context = f"""
     [RealFifty 오늘자 마켓 데이터 요약 ({today_str})]
@@ -139,9 +142,10 @@ def run():
     
     요구사항:
     1. 오늘 시장 상황을 요약하는 매력적인 마크다운 제목(# 📊 RealFifty 일일 마켓 브리핑)으로 시작할 것.
-    2. 전체 평균 하락률을 바탕으로 전반적인 장세를 진단할 것.
-    3. 눈치보기 단지와 호가하락 단지를 언급하고, 왜 그런지 [오늘의 관련 뉴스]의 정부 정책이나 경제 기사와 자연스럽게 인과관계를 엮어서 설명할 것 (만약 뉴스와 무관하면 너의 전문적 부동산 지식을 더해석 해석).
-    4. 친근하고 단호하며, 팩트를 짚어주는 톤앤매너 유지.
+    2. 전체 50개 대장주의 하락률 수치를 바탕으로 묵직한 장세 진단을 먼저 던질 것.
+    3. 눈치보기 단지와 호가하락(항복) 단지 데이터를 구체적인 아파트 이름과 수치로 표/리스트로 보여줄 것.
+    4. [매우 중요] 함께 전달된 [오늘의 관련 뉴스]들은 언론사들의 과장이나 선동(예: 신고가 랠리, 반등 등)일 확률이 매우 높음. 뉴스의 주장을 무조건 믿고 원인으로 쓰지 마! 만약 기사는 '상승/신고가'를 외치는데 우리의 데이터가 '폭락/하락'을 가리킨다면, "언론은 상승이라고 호들갑 떨지만 실제 RealFifty 대장주 데이터는 -8%대 하락으로 정반대의 진실을 말해주고 있다"며 언론 기사를 매섭게 비판하고 반박하는 스탠스로 작성할 것. 데이터가 곧 진리임을 강조.
+    5. 친근하면서도 팩트(데이터)를 무기로 언론을 꼬집는 단호한 전문가 톤앤매너 유지.
     """
     
     res_report = client.models.generate_content(model='gemini-3.5-flash', contents=report_prompt)
