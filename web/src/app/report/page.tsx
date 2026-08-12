@@ -1,29 +1,36 @@
 import React from 'react';
 import fs from 'fs';
 import path from 'path';
+import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import Sidebar from '../Sidebar';
 
 export const dynamic = 'force-dynamic';
 
-export default async function ReportPage() {
+export default async function ReportPage(props: any) {
+    const searchParams = typeof props.searchParams === 'object' ? await props.searchParams : {};
+    const targetDate = searchParams?.date;
+
     const reportsDir = path.join(process.cwd(), 'src', 'data', 'reports');
     let reports: string[] = [];
-    let latestReportContent = "";
-    let latestDate = "";
+    let activeReportContent = "";
+    let activeDate = "";
 
     try {
         if (fs.existsSync(reportsDir)) {
             reports = fs.readdirSync(reportsDir)
                 .filter(file => file.endsWith('.md'))
                 .map(file => file.replace('report_', '').replace('.md', ''))
-                .sort((a, b) => b.localeCompare(a));
+                .sort((a, b) => b.localeCompare(a)); // 최신순 정렬
 
             if (reports.length > 0) {
-                latestDate = reports[0];
-                const reportPath = path.join(reportsDir, `report_${latestDate}.md`);
-                latestReportContent = fs.readFileSync(reportPath, 'utf8');
+                // 사용자가 요청한 날짜가 있으면 그걸로, 없으면 최신날짜(reports[0])로
+                activeDate = (targetDate && reports.includes(targetDate)) ? targetDate : reports[0];
+                const reportPath = path.join(reportsDir, `report_${activeDate}.md`);
+                if (fs.existsSync(reportPath)) {
+                    activeReportContent = fs.readFileSync(reportPath, 'utf8');
+                }
             }
         }
     } catch (e) {
@@ -43,9 +50,9 @@ export default async function ReportPage() {
                     </div>
 
                     <div style={{ display: 'flex', gap: '40px' }}>
-                        {/* Main Latest Report */}
+                        {/* Main Active Report */}
                         <div style={{ flex: '1', minWidth: '0' }}>
-                            {latestReportContent ? (
+                            {activeReportContent ? (
                                 <div style={{
                                     backgroundColor: 'white',
                                     border: '1px solid var(--border-light)',
@@ -55,38 +62,52 @@ export default async function ReportPage() {
                                 }}>
                                     <div style={{ borderBottom: '2px solid var(--text-dark)', paddingBottom: '24px', marginBottom: '32px' }}>
                                         <div style={{ color: '#005fb0', fontWeight: '800', fontSize: '14px', marginBottom: '8px', letterSpacing: '1px' }}>REALFIFTY DAILY REPORT</div>
-                                        <h2 style={{ margin: 0, fontSize: '28px', fontWeight: '800', color: 'var(--text-dark)' }}>{latestDate} 부동산 시황 요약</h2>
+                                        <h2 style={{ margin: 0, fontSize: '28px', fontWeight: '800', color: 'var(--text-dark)' }}>{activeDate} 부동산 시황 요약</h2>
                                     </div>
                                     <div className="prose prose-invert max-w-none report-content" style={{ lineHeight: '1.8', color: '#131b2e' }}>
                                         <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                                            {latestReportContent}
+                                            {activeReportContent}
                                         </ReactMarkdown>
                                     </div>
                                 </div>
                             ) : (
                                 <div style={{ padding: '40px', textAlign: 'center', backgroundColor: 'white', borderRadius: '16px', border: '1px solid var(--border-light)' }}>
-                                    아직 작성된 리포트가 없습니다.
+                                    생성된 리포트가 없습니다.
                                 </div>
                             )}
                         </div>
 
                         {/* Sidebar List of Reports */}
                         <div style={{ width: '280px', flexShrink: 0 }}>
-                            <h3 style={{ fontSize: '18px', fontWeight: '800', marginBottom: '16px' }}>지난 리포트</h3>
+                            <h3 style={{ fontSize: '18px', fontWeight: '800', marginBottom: '16px' }}>지난 리포트 탐색</h3>
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                                {reports.slice(1).map(date => (
-                                    <div key={date} style={{
-                                        padding: '16px',
-                                        backgroundColor: 'white',
-                                        border: '1px solid var(--border-light)',
-                                        borderRadius: '8px',
-                                        cursor: 'pointer',
-                                    }}>
-                                        <div style={{ fontSize: '12px', color: 'var(--text-muted)' }}>{date}</div>
-                                        <div style={{ fontSize: '14px', fontWeight: '700', marginTop: '4px' }}>오픈 준비중인 기능입니다</div>
-                                    </div>
+                                {reports.map(date => (
+                                    <Link key={date} href={`/report?date=${date}`} style={{ textDecoration: 'none' }}>
+                                        <div style={{
+                                            padding: '16px',
+                                            backgroundColor: date === activeDate ? '#f1f8ff' : 'white',
+                                            border: date === activeDate ? '1px solid #005fb0' : '1px solid var(--border-light)',
+                                            borderRadius: '8px',
+                                            cursor: 'pointer',
+                                            transition: 'all 0.2s ease',
+                                        }}>
+                                            <div style={{
+                                                fontSize: '12px',
+                                                color: date === activeDate ? '#005fb0' : 'var(--text-muted)',
+                                                fontWeight: date === activeDate ? '700' : 'normal'
+                                            }}>{date}</div>
+                                            <div style={{
+                                                fontSize: '15px',
+                                                fontWeight: '800',
+                                                marginTop: '4px',
+                                                color: date === activeDate ? '#005fb0' : 'var(--text-dark)'
+                                            }}>
+                                                {date} 마켓 브리핑 {date === activeDate && '읽는 중 📖'}
+                                            </div>
+                                        </div>
+                                    </Link>
                                 ))}
-                                {reports.length <= 1 && <div style={{ fontSize: '14px', color: 'var(--text-muted)' }}>이전 리포트가 없습니다.</div>}
+                                {reports.length === 0 && <div style={{ fontSize: '14px', color: 'var(--text-muted)' }}>이전 리포트가 없습니다.</div>}
                             </div>
                         </div>
                     </div>
