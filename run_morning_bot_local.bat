@@ -12,7 +12,7 @@ IF %ERRORLEVEL% NEQ 0 (
 )
 
 echo "2. Push output JSON to Web/Vercel"
-git add web/src/data/factcheck_news.json
+git add web/src/data/factcheck_*.json
 git commit -m "bot: update morning news factcheck"
 git push
 

@@ -29,10 +29,12 @@ export default async function NewsFactCheckPage(props: any) {
     // 그룹화 로직 (날짜별)
     const groupedNews: Record<string, any[]> = {};
     allNews.forEach(news => {
-        let d = "Unknown";
-        try {
-            d = new Date(news.pub_date).toISOString().split('T')[0];
-        } catch (e) { }
+        let d = news.factcheck_date || "Unknown";
+        if (d === "Unknown") {
+            try {
+                d = new Date(news.pub_date).toISOString().split('T')[0];
+            } catch (e) { }
+        }
         if (!groupedNews[d]) groupedNews[d] = [];
         groupedNews[d].push(news);
     });

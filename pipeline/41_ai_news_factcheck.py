@@ -168,6 +168,11 @@ def run():
     
     try:
         new_factcheck_data = json.loads(raw_json.strip())
+        
+        # 오늘 날짜 주입 (프론트엔드 그룹화용)
+        for item in new_factcheck_data:
+            item['factcheck_date'] = today_str
+
         history_path = os.path.join(output_dir_news, 'factcheck_history.json')
         
         existing_data = []
