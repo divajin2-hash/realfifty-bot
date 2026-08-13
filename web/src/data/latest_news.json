@@ -1,21 +1,105 @@
 [
   {
-    "title": "가양동 아파트 신고가 잇따라…'마곡 더그리드' 개발도 주목",
-    "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5Ub0hta19OY2QxRnVhWE83Qmt0dmxaT083MnY2bHVGM3VveTl5UGVvdFRBS0Nxb19BUndWc29fS3NZQ2dqQm1tVGtSa2FQeUJISXRmSE5mLXBtV2ljWjlGNDZTUHJTMDA1?oc=5",
+    "title": "서울 아파트값 상승폭 0.21%로 둔화…강남·서초 하락 전환",
+    "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE90WFZBUEt0YW9GbWZuanE4aGJHdzVSbmVvcmhnSXBiU25ORXY0SXBuS3M0dE0wU2hCMkRoSlpINnVSTFVvM0FSQmNEUEVtRDVhMUZhbWZ1OUxrV1NQM1ZiTmtwVkU0SlU?oc=5",
+    "source": "연합뉴스TV",
+    "pub_date": "Thu, 13 Aug 2026 05:00:00 GMT"
+  },
+  {
+    "title": "대구 아파트값 다시 하락…한 주 만에 보합 깨졌다",
+    "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE53MHZuOWRmTi1kNmtXaG05WUpZdVZjOC0ydWk2MmVKUjVOSHhUQVJnWmxMeThWTm5kcWFsN05XMmdCMGFvV05kR01VaDNvVTZ2d0pzNjJibmxqcDFpRElFX0xxVFd4ZzRxdloydFBXMA?oc=5",
+    "source": "kyongbuk.co.kr",
+    "pub_date": "Thu, 13 Aug 2026 10:44:25 GMT"
+  },
+  {
+    "title": "서초·강남 아파트값 하락 전환에도 강북권 강세 지속",
+    "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBYVmZOU2lrbFozNXd5c3lfMEJkaTdCS1JoU1RVa3p0eEp6X1VfNS1yRktUS2FoQ2U4VzViVnNXWmxoN1V4M1RuNUhaUTc1R1FETjJlTGZITktRNXBZX2c?oc=5",
+    "source": "YTN",
+    "pub_date": "Thu, 13 Aug 2026 11:06:00 GMT"
+  },
+  {
+    "title": "정부 세제개편안 발표 후 서울 강남·서초 아파트 하락 전환",
+    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5RZ0ZmRmxNTnZmWGNoMlY4VVZidjNhaXhoOFNXODRmM005M19wb2Z1NzV5VFRhNUV6YUJMTm9EWlVOeDFkbGI5U2NPTjVDZlJ2U1YyMm9aYmsxUdIBX0FVX3lxTE9tM3VMbUg1Rk5oZ0U0aWNzQ09nWkg5WDNjVWdLOEtrWDU2ZnltaURMUTg2OTk3dVNGcE9pazY0LUJ5WXNMMzNDeUlTRERhXzhwRzM1cG1MQ2pZRlZIWXhn?oc=5",
+    "source": "경향신문",
+    "pub_date": "Thu, 13 Aug 2026 07:13:00 GMT"
+  },
+  {
+    "title": "2분기 서울 경기 제외 모든 지역서 아파트 거래량 감소",
+    "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9xUjQ0MzlfaGltc2FOb3ZxRmJxVGtrVVh5c2ZSZ3hXSnFWaS1qeWdOcnJscWREWE9YLWxpTWVwbTA1eW5fU0xzSG5lT04yTjkzeWE2NmpNbnM?oc=5",
+    "source": "매일경제",
+    "pub_date": "Thu, 13 Aug 2026 01:40:33 GMT"
+  },
+  {
+    "title": "서울 아파트 매매가격 상승폭 둔화…서초·강남은 하락 전환(종합)",
+    "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5aOE4takQyTmxpWW5hRDZ0VXQzWF94UkVqcG5oVmVGemxWUzQzS0dBWGNNcUdhcEFMTlc2bjd1Q1FDMFVZc2dlS0c1QTIyYzMzUkRpVEk5anF0S2_SAWBBVV95cUxQamlNVXJrdHNnb2kxenhGWEt3R0R4c1d3aFFnbzNVbEpfNnkyb3F4dEdfR2FxSGVWOXA3Q0EyZHRrN1R3YXBHUEl6bC05SWtCRy05OWIxbXNFVERoR09nQ3Q?oc=5",
+    "source": "연합뉴스",
+    "pub_date": "Thu, 13 Aug 2026 06:07:31 GMT"
+  },
+  {
+    "title": "수도권 부동산 훈풍…부산은 ‘썰렁’, 아파트·상가·사무실 거래 10.5%↓",
+    "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNVGQyQkwwZUhyd0pzZUp5V09QemFOblgtY2VGcW5jVGJvemZqZGs4ck5ETjhISjZTNkVoMnBUTHMwUDZqWEU3dy1lanlSVVVoN1BUVUFvQkI3Y1FOdE8zak5EOHBpNTZoMkpPVmJyMUNCVmxtaTQ1ZXVsMmJqYkVzNk1KNWtOVEd4bi1N?oc=5",
+    "source": "국제신문",
+    "pub_date": "Thu, 13 Aug 2026 10:30:00 GMT"
+  },
+  {
+    "title": "서초·강남 아파트 매매가격 하락‥서울 전체 상승폭은 둔화",
+    "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1CM2tKdkpnM252RTlwUmE5RnZyQUtwR0oyMEFuS1ZmWTJ3dGN0eDBiN1lLeE9hQkJLUFhVbHZNb21oeXZxRnRyZlBOaUU3enJvTmRDSkxJLWNocUw1N3RtbDdROGhDSkVDME5ydmNobHB0V3RTeWp3UA?oc=5",
+    "source": "MBC 뉴스",
+    "pub_date": "Thu, 13 Aug 2026 10:55:28 GMT"
+  },
+  {
+    "title": "세제 개편안 후폭풍... 강남·서초 집값 하락 전환",
+    "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPcF9aY0FCSF9FeW1zM0hLX3hTWGc2YVdERW5yMXo2TFRiWi00emhaRXJSbnlYeGs5aE1hLWpONW96Y3kxNDNEY2NSQk9sVnU5eldsb1E3Vi1iVDJZcS0zdlVNeGhmcTBOdkpjWUNnaC1jQVExWFJRRUlaLUV2VmFUMXc5LUJkMnFS?oc=5",
+    "source": "조선일보",
+    "pub_date": "Thu, 13 Aug 2026 11:18:11 GMT"
+  },
+  {
+    "title": "8·3 세제개편 직격…강남·서초 아파트값 16주 만에 하락 전환",
+    "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1zUU02OWZmZ05oeHpBMEtNS1NRSmlqZmpVTlhlRHVPN0VOeUI4VnFIblRWVDBZRC12a3kzbDlRRTNreUI4VFAzRUdYSFB4emdnamxLOQ?oc=5",
+    "source": "JTBC",
+    "pub_date": "Thu, 13 Aug 2026 06:20:00 GMT"
+  },
+  {
+    "title": "세제개편 후 강남·서초 아파트값 하락…서울 외곽은 상승",
+    "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE8xYjFiaFgwUVYweGRzN1pkYS1HWkt2RjVkMFZudUJPTVgyX3BaTy10TElNZlpYSGRraGVnR0swbVFFTmZ2LWpqelQ1azA1b25nc01ieHNranB5NkFtQnlLMXdhZkFrTG1ZZDJLVDAyZGw?oc=5",
+    "source": "코리아리포트",
+    "pub_date": "Thu, 13 Aug 2026 13:02:24 GMT"
+  },
+  {
+    "title": "서울 아파트값 상승폭 둔화…서초·강남 ’하락 전환’",
+    "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5tNWcxZThTaC1sdi1sVDFPckF2d2ZCcTFnQkl5X1pFdEh2R2ZLMm1Ua1pFWGpsbTd1TXdHVHM1dGFfMWE4R0lqcHhzaFA0MnB2aWtJeFBPaFIzVUNzRHpGRXQxVlFta2M?oc=5",
+    "source": "연합뉴스TV",
+    "pub_date": "Thu, 13 Aug 2026 11:42:00 GMT"
+  },
+  {
+    "title": "강남·서초 아파트값 세제개편 후 첫 하락",
+    "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE83aGE3Uk9nRWZsajl1d1E3VUlTNWNPSWRwVktUb01WMHUyZmZuZERtR2l3aEJPelRrYnlSV2xTRVg1OG9TY2d0WVVvVzd2dmVPVTIyV2s0bFRqZ9IBX0FVX3lxTFBsWEQ5bjZLeFVIcVQzQlJxQS0yeHJscFNwLW5rRFhiRVMxV0tOWHR3cDE4aU1hdnJycC1tcklPSUFWT3lKX2dGMFN2dW5YaUFKTXd0WV8zN2xNY0hWa3dN?oc=5",
+    "source": "경향신문",
+    "pub_date": "Thu, 13 Aug 2026 11:43:00 GMT"
+  },
+  {
+    "title": "‘세제 개편 직격탄’ 강남·서초 아파트값 3개월 만에 하락 전환 - 조선비즈",
+    "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPU0hvMnJ5c1JaZXloZ0JjY2JpQkwweGh3eU9MXzdJZ1VTRW5CUU1QZDExdnBBdVVBd2xDbDFmTy1NX1NiNDFRVWhiX1Uxa1lHYlAwWmZZbGtFZGJrbG1mbzJ1aC1IS0ZHcDhoU0xIbGVzQUI0V1pobnBIUFFPSVp0M3FRSU5QMlJMOWhKd3Bna0YwX1RvMFQ0M9IBrAFBVV95cUxPTEtCUk1rY3NZdDZMd0ZjMzRrSER2dmlOcmwzdGEwOXRlY1AyaExJUmpsbUl4MFpUQkUzR0VZYmtkZFo2OVNWMVRRZUVjUlRsVHBqS3o3OTFrS0xXR0NkQ2RhOS1FRl9fZUtvdTFiTzFvS3hFeFBUSXJBUlhYTl9PazFfUUJ1RlJTSjFWZWtDU0JxVmczUURQdjUxODhBWEZ0VnRMa0RrWnNveFZp?oc=5",
+    "source": "Chosunbiz",
+    "pub_date": "Thu, 13 Aug 2026 06:18:00 GMT"
+  },
+  {
+    "title": "서울 아파트 매매가격 상승폭 축소…강남·서초는 하락 반전",
+    "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBtb01RdzI5a1c3QlhqOW5qamViV1d6RW80Rm51SHduZkdFeHZwdFl4UU9oal9HUzd6R0ZOWGdwRE9TUWFVSlhKTW5YaFNSeVJlWGExUmdnQzN4TE0?oc=5",
+    "source": "KBS 뉴스",
+    "pub_date": "Thu, 13 Aug 2026 05:00:00 GMT"
+  },
+  {
+    "title": "강남·서초 아파트 가격 하락 전환⋯서울 상승률 둔화",
+    "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1MWlo3SkU2YXV6akJ6Vk5hc1hVWDNnSTdDcm45d3VHcmFqaFpiZWVPdHVMVldJMl9aVDJrUnhMektBZmlJdkJVTm81UzRyT2ttSUY0cw?oc=5",
+    "source": "이투데이",
+    "pub_date": "Thu, 13 Aug 2026 05:04:00 GMT"
+  },
+  {
+    "title": "거래 잠겨도 신고가...비강남권 아파트값 ‘껑충’",
+    "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBJenlvcnotd1dHUlR1WC1VVWhmWjlHVV9JaTh3VHo5emI0bzV1VWVpU01FZ0JRWUtoV08wTUxaV1Vkd2R5M2NEWFRRM1VTbG9tUjMtTG8yX0tsdDBQMFM0MTBWeXlPOURHZ2QzTQ?oc=5",
     "source": "한경매거진&북",
-    "pub_date": "Thu, 13 Aug 2026 00:00:00 GMT"
-  },
-  {
-    "title": "강남發 아파트 호가 10억 폭락…경기권 '이 동네'도 흔들흔들",
-    "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE56S0tyQmp0QzUtaVhqOW00SURDSVVMVGVURF9pQUZDRlBkZ01DSTZvWGdZdUd3enVvU1VwYUlESFU2YTlBczZ6TXpta3hrR014aE9YSkVIeFFEaHRpbExHTkZONzB3czdoUDUyZnZ0VklXZWlSUjV3YW1TYnp4VFXSAXNBVV95cUxQS3EzUk0ybHludW5oUkxSaERHSmZ1N1dMS1hhZllrMnBYakc3UjYyemF1T29lM3lKbm9tVXdiZ3NsR1U0dzZJTHRIWWpnbDZILUoxM1lMbDZzY0NMdUFhc1M5SF9saHM5Zlh0c1lOLWwzMzhF?oc=5",
-    "source": "realty.chosun.com",
-    "pub_date": "Wed, 12 Aug 2026 21:00:00 GMT"
-  },
-  {
-    "title": "“거래도 없는데 왜 이러지?”…‘스멀스멀’ 오르는 비강남 아파트값",
-    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1MOUN3YkVEUVFzeE9xVDBtUlJnWDEwdW1FTjJtNWVIeEJ5c0RGWFNqT3Z6SDlXR21mdDRNOVlpcEhhVmQ2X0RCUlA3T1lmYkk?oc=5",
-    "source": "v.daum.net",
-    "pub_date": "Thu, 13 Aug 2026 00:06:01 GMT"
+    "pub_date": "Thu, 13 Aug 2026 04:48:00 GMT"
   },
   {
     "title": "“높은 서울 집값에 매수세 이동”…부천 아파트 거래량 69% 쑥",
@@ -24,99 +108,15 @@
     "pub_date": "Tue, 11 Aug 2026 04:31:55 GMT"
   },
   {
-    "title": "‘덜 똘똘한 한 채’ 쏠림?…수도권 15억∼20억 아파트 신고가 행진",
-    "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9MUjRxUmVMemRrT1c5bE1QcWVRU2duS2tId0JEazZFU3o4d2R6a1JTalF2YzBzQ3pMbzV0V2VsSkpEZlBKejB3YklBSzZ4c1Yz?oc=5",
-    "source": "문화일보",
-    "pub_date": "Mon, 10 Aug 2026 14:42:42 GMT"
+    "title": "강남發 아파트 호가 10억 폭락…경기권 '이 동네'도 흔들흔들",
+    "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE56S0tyQmp0QzUtaVhqOW00SURDSVVMVGVURF9pQUZDRlBkZ01DSTZvWGdZdUd3enVvU1VwYUlESFU2YTlBczZ6TXpta3hrR014aE9YSkVIeFFEaHRpbExHTkZONzB3czdoUDUyZnZ0VklXZWlSUjV3YW1TYnp4VFXSAXNBVV95cUxQS3EzUk0ybHludW5oUkxSaERHSmZ1N1dMS1hhZllrMnBYakc3UjYyemF1T29lM3lKbm9tVXdiZ3NsR1U0dzZJTHRIWWpnbDZILUoxM1lMbDZzY0NMdUFhc1M5SF9saHM5Zlh0c1lOLWwzMzhF?oc=5",
+    "source": "땅집고",
+    "pub_date": "Wed, 12 Aug 2026 21:00:00 GMT"
   },
   {
-    "title": "수도권 중고가 아파트 2건 중 1건이 '신고가'…실수요가 가격 견인",
-    "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9OMjZPMzVMOGt6eDFuMTZUcnF1OE1RUVVqaExoWGxwaUtVV2JRRDhoYzhMdFlabjhOaWxNYUFac00yUWdqLTBCM0lMOWVLNDhTaXpjZzNxYl9uTUdEU0wtUV84bmF1Sy1sYXVkMVVzbUo?oc=5",
-    "source": "연합인포맥스",
-    "pub_date": "Sun, 09 Aug 2026 23:50:00 GMT"
-  },
-  {
-    "title": "7월 수도권 15억∼20억원대 아파트 거래 과반이 신고가",
-    "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1Yb3BYTlc5SE1oLXFxWHNxWThWcW50UnN1TlpteHFOQ0k4ZVBUalpJc21fQk92Z1Q2V1RkQkJ2NmpxaTFmZURzQ0ExOGREems3U0xCdzJqOUdPVknSAWBBVV95cUxQT1BNZ3dJc3pfQWdLQUUzUk5kZmZmMWg1YllGYW4tZWE2cGpPMjRRTU9tUFJ6UGh0bUl4WTdJSXdpbjlDc01JQm52NE9XT0V6c2lKR1FfTi1odENQMlJqbkg?oc=5",
-    "source": "연합뉴스",
-    "pub_date": "Mon, 10 Aug 2026 00:21:17 GMT"
-  },
-  {
-    "title": "수도권 15억~20억 아파트, 거래 절반 넘게 '신고가' 속출",
-    "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9oa2VvQk5PbDIwY3cxZ3Nyb3JMRmhwM3psdkRHbnBlMjlEUFlkVUJMQnZPRWFEeUtHSkR4ZjFVTzYxTkxFd05JMS13LTFyWGt4QmUxRUM3MmdoQ2tTdHkxdTdn?oc=5",
-    "source": "이코노미스트",
-    "pub_date": "Mon, 10 Aug 2026 04:52:00 GMT"
-  },
-  {
-    "title": "오산 아파트 거래량 51% 증가세… ‘북오산자이 드포레’ 국평 6억대 분양가",
-    "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBjZEtWc0NUejg5cWo0WWlPRWZDZVN6RnlRZWpDRjYtY0xrT0V0UThpdWlLbjhCejlDcUE5WHlNOEV5MEtFZmpKdGhMY2hMR25iZ213SGdKOG0?oc=5",
-    "source": "뷰어스",
-    "pub_date": "Tue, 11 Aug 2026 02:21:19 GMT"
-  },
-  {
-    "title": "대구·경북 경매시장…대구 아파트 수요 몰리고 경북은 낙찰가율 하락",
-    "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBHUk5kR2hfUDRFUXlQLXNEZVZJNkRmTHFhcG1lMTdEU0hkZnplQ2ZxTXFyU3hsVktJSGhIVkdJZ1hLeVJjRkx3Ynp1TlJuWlEzMnhXYmdVY2NKUExISXZKS3JRSm1aYzA?oc=5",
-    "source": "영남경제",
-    "pub_date": "Wed, 12 Aug 2026 05:51:26 GMT"
-  },
-  {
-    "title": "전국 아파트 입주전망 3개월 만에 하락…수도권 13.2포인트↓",
-    "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNczJCYnJ4U01ZQWd3aGFXMzhrdlhDZWNRR3lzT0JUaWllUmw2VTNoQjhPYktYX3ZhOTRkdTI5SmZITy1uUzZzVS1KcE8xR1c5MWtIY0VoS2tVeFRnU0dyMENldE10QlowUVNQQ0NBMWJNdl9HSjFMell0eVlUYVlWRlJSWjM0c18zNnc?oc=5",
-    "source": "글로벌이코노믹",
-    "pub_date": "Tue, 11 Aug 2026 01:30:00 GMT"
-  },
-  {
-    "title": "지난달 수도권 아파트 신고가, 6억~20억 원에 몰렸다",
-    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFAwaUNfS2laOWE3V2pCZlhjSnBEZ1NoeS02UWdseHViaXZXSEMyaXhvNW9ZNFcwNi14UFlpaGlRd1NfdjZqOW5aRFNPekoxdnc?oc=5",
-    "source": "v.daum.net",
-    "pub_date": "Mon, 10 Aug 2026 08:54:20 GMT"
-  },
-  {
-    "title": "수도권 15~20억 아파트 신고가 행진",
-    "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1nRWlNU0NtMlN5T1dWeGdNaTM1cTVoVzN3eWp4RmM4Mk1zakRDeHU5VzNIbG1ERFRwUUZLMEtwYU82eElyRFMxOVFtV2V6R3Y1VkFYRmFPbl8?oc=5",
-    "source": "매일경제",
-    "pub_date": "Mon, 10 Aug 2026 08:09:50 GMT"
-  },
-  {
-    "title": "증시 변동성·세제개편안에 8월 아파트 입주 전망 하락",
-    "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1mTENkUS1lTzN2Q0o0bjNhMmpzaXNDWDFXaUx3dGY2TGdMem9CWWlSelh6ZG9WOC1tVEVxRnZqRkgxcHdoZFR2VHBaRzNkN2tRWWtnTmlweHlXYlHSAWBBVV95cUxPb0NZWFNMZlA2X2MzYzlDbE9YZ2RTaDR6OFdnNVZyaUFORlJLWndWX1FRcTM5aU5fdlZfM2UyRWFuTVM1RE1SNDZ6R1hNaWRaV0ViNVIyMlZpcEFTWERlVmE?oc=5",
-    "source": "연합뉴스",
-    "pub_date": "Tue, 11 Aug 2026 02:00:06 GMT"
-  },
-  {
-    "title": "“비싸도 팔린다” 수도권 고가 아파트 ‘신고가’",
-    "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5MNFY3dDFVX0NXYmNLbnhFM2lfT05FOWlYNEZIWnRNeXdiOHBPM1pPMkt1VjN0VTNoSmVSRXB6dGJCUnlwa1ZaUjNoU3c1cTRNN0hSNy02WFZDcWI0dXlMUG1NX3BydmJMaDdDbg?oc=5",
-    "source": "한경매거진&북",
-    "pub_date": "Mon, 10 Aug 2026 01:50:00 GMT"
-  },
-  {
-    "title": "경기 고가 아파트 ‘신고가 62.8%’…수도권 상승세 주도",
-    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE00TFhHbDhSWE5DZzQxVC1CeUxESTZIX05sSG94NndJMzI3cm5BOE1renBrNkFnTXM3NENXbnVpQjVwUWhMSVAxcXFydDZwX1U?oc=5",
-    "source": "v.daum.net",
-    "pub_date": "Mon, 10 Aug 2026 07:46:25 GMT"
-  },
-  {
-    "title": "중고가 아파트 신고가 쏟아진 수도권…12억~15억 구간 비중 2배 급증",
-    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFA4ci1GZlR5VGJGaTA3TUxyd2lsT3hJX24wWWc5bWNQYTdETXh0MzZzQ2doWVRSeE50ZHNjYl9TN0JYMEFpQlRmS0VoOWIzYWs?oc=5",
-    "source": "v.daum.net",
-    "pub_date": "Mon, 10 Aug 2026 06:30:07 GMT"
-  },
-  {
-    "title": "7월 수도권 15억~20억 아파트, 절반 넘게 신고가 거래",
-    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBhXzMtMHM5c0dRZzBib3NxWXZ6TG44TmVJRHNFS2RuWU1MdlRtcG5OaUF4RGdJbm5ZLWFabDBUQUU3SWx5R2J3TUtHZzk3OUE?oc=5",
-    "source": "v.daum.net",
-    "pub_date": "Mon, 10 Aug 2026 02:00:00 GMT"
-  },
-  {
-    "title": "강남 아파트의 추락…압구정 10억, 은마 7억 급락",
-    "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE13ZTlMWEtFczRmS3RjOC15SGhUSGhWblU4Tm9sTnJ0ZE01YjR2THM2aWx4VkkyUlpOa2RDX2ZKR09rbDR6M3B2VHZYZnMycElMRl9hUlQwSTgyVUx3Q0hQMmc0TmFFRkFiMW1NakJKRTQtSTMzVWVlelUtU3lkWDDSAXNBVV95cUxQdVdUMHpWLVB6RW81VXg5Q1N4SkhmelpORVM1OXExZ2pLbW5XbXZEd2h4SUZIQlpFZktydnVOTW1BUGRSOS1nUWR4SE1hUHRLYnZJTzR5RTNwbzBHWFE1azN2THhlNzI5X2ozOVpHU2gyWDVJ?oc=5",
-    "source": "realty.chosun.com",
-    "pub_date": "Tue, 11 Aug 2026 01:57:15 GMT"
-  },
-  {
-    "title": "7월 서울 아파트 입주율 4.1%p↑…세제개편 예고에 8월 전망 하락",
-    "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1xeENtX0JFQ3lsUC1ETGNjRXpLT0oyMkFVMk11WURramZQSklpREdxRVZHSGg5MjlxWHZseDZ0c2FqTEFjY1o3NW1VRXVPNGVTYlBMcGs4UWllcjAzUThBTmNQTk1oV1ZCbzhmVHV1ZF8?oc=5",
-    "source": "연합인포맥스",
-    "pub_date": "Tue, 11 Aug 2026 02:00:21 GMT"
+    "title": "압구정현대 119억→92억…‘세제개편 영향’ 강남권 아파트값 하락 전환",
+    "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE41X2pxbk9QNV91Ymt3am9rM1FpSW1kSjZuRGE5TWVJSXJVWVF2Tk5oMm1QclRtaEtBUjdHeW5SZlkwemdyX3lCUzRiV1F0ZU5xeDV2eHYwdUdDTjhwS3ZDeFNYd0JyU1hQ?oc=5",
+    "source": "한겨레",
+    "pub_date": "Thu, 13 Aug 2026 09:52:00 GMT"
   }
 ]
