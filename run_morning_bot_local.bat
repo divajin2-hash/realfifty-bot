@@ -1,8 +1,6 @@
 @echo off
 cd /d "D:\appmaking\kb50_mdd"
 echo Running Morning News FactCheck Bot...
-call F:\anacon\Scripts\activate.bat
-call conda activate proptech_env
 
 echo "1. Run morning python pipeline (Scraping + Gemini Fact Check)"
 python 33_morning_news_run.py
