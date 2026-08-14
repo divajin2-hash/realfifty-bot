@@ -101,6 +101,10 @@ def generate_market_report():
     summary_items.sort(key=lambda x: x["month_vol"], reverse=True)
     top_vol = summary_items[:3]
     
+    from datetime import timedelta
+    end_date = datetime.now()
+    start_date = end_date - timedelta(days=30)
+    
     prompt = f"""너는 'RealFifty'의 수석 부동산 시황 특파원이에요.
 데이터는 팩트 기반으로 날카롭고 전문적으로 해석하되, 독자들이 읽을 때 지루하지 않게 아주 유쾌하고 센스있는 '존댓말'로 브리핑해 주세요. (절대 반말로 하거나 '형/누나'라고 지칭하지 마세요!)
 가끔 위트 있는 비유와 이모지(🔥, 🥶, 💸, 📈, 📉 등)를 적극적으로 사용하여 활기찬 분위기를 만들어주세요.
@@ -114,7 +118,7 @@ def generate_market_report():
 오늘의 분석 데이터:
 - 조사 대상: 선도 아파트 총 {drop_count}개 단지 대표 평형
 - 전체 평균 실거래가 하락률: {avg_drop:.2f}%
-- 최근 한 달간 전체 거래량: {total_vol}건
+- 최근 한 달간 전체 거래량 ({start_date.strftime('%Y-%m-%d')} ~ {end_date.strftime('%Y-%m-%d')}): {total_vol}건
 
 - 🔥 최고 하락폭(MDD) 단지 Top 3 (최저호가 기준):
 """
@@ -122,11 +126,11 @@ def generate_market_report():
     for i, t in enumerate(top_drop):
         prompt += f"  {i+1}. {t['name']} {t['pyeong']} (최고가 대비 {t['mdd_rate']:.2f}% 하락, 현재 최저호가 {t['lowest_ask']}원)\n"
         
-    prompt += "\n- 🏃‍♂️ 최근 30일간 거래량이 가장 많았던 단지 Top 3:\n"
+    prompt += f"\n- 🏃‍♂️ 최근 30일간 ({start_date.strftime('%Y.%m.%d')} ~ {end_date.strftime('%Y.%m.%d')}) 거래량이 가장 많았던 단지 Top 3:\n"
     for i, t in enumerate(top_vol):
-        prompt += f"  {i+1}. {t['name']} {t['pyeong']} (최근 30일 {t['month_vol']}건 성사)\n"
+        prompt += f"  {i+1}. {t['name']} {t['pyeong']} (해당 기간 {t['month_vol']}건 성사)\n"
         
-    prompt += "\n이 데이터를 바탕으로 멋진 마크다운 형식의 일일 시황 리포트를 작성해줘."
+    prompt += "\n이 데이터를 바탕으로 멋진 마크다운 형식의 일일 시황 리포트를 작성해줘. 독자들이 '왜 어제랑 오늘 30일 거래량이 다르지?' 헷갈려하므로, 리포트에서 거래량을 언급할 때는 반드시 위에서 제공한 구체적인 집계 기준일(예: 8월 14일 기준 최근 30일)을 명시해 주세요."
     
     url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key={GEMINI_API_KEY}"
     payload = {
