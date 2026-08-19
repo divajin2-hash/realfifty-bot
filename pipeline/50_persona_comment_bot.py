@@ -54,23 +54,27 @@ PERSONAS = {
     }
 }
 
-def generate_comment(complex_name: str, persona_key: str) -> str:
+def generate_comment_data(complex_name: str, persona_key: str) -> dict:
     persona = PERSONAS[persona_key]
     
     prompt = f"""
 당신은 대한민국 부동산 커뮤니티의 유저입니다. 
-다음 페르소나에 완벽하게 빙의하여 '{complex_name}' 아파트에 대한 커뮤니티 댓글을 작성해주세요.
+다음 페르소나에 완벽하게 빙의하여 '{complex_name}' 아파트에 대한 커뮤니티 댓글과 어울리는 닉네임을 작성해주세요.
 
 [당신의 페르소나]
 - 유형: {persona['name']}
 - 성향: {persona['description']}
 
 [작성 규칙]
-1. 길이는 50자 ~ 150자 내외의 짧은 인터넷 커뮤니티 댓글 스타일로 작성하세요. (존댓말, 반말 섞어서 자연스럽게)
-2. AI나 봇이라는 느낌이 전혀 들지 않도록, 실제 사람이 쓴 것처럼 감정과 뉘앙스를 담아주세요.
-3. 해시태그나 이모티콘을 너무 남발하지 마세요. (불필요한 인사말 생략, 바로 본론)
+1. 댓글 길이는 50자 ~ 150자 내외의 짧은 인터넷 커뮤니티 댓글 스타일로 작성하세요. (존댓말, 반말 섞어서 자연스럽게)
+2. AI나 봇이라는 느낌이 전혀 들지 않도록 감정과 뉘앙스를 담아주세요.
+3. 닉네임은 페르소나 성향에 맞는 3자~8자 길이의 한국어 닉네임을 창작하세요. (예: 강남가즈아, 영끌30대, 데이터맹신)
 4. '{complex_name}'의 이름을 자연스럽게 언급하거나 유추할 수 있게 작성하세요.
-5. 오직 댓글 본문 텍스트만 출력하세요 (따옴표나 부가 설명 금지).
+5. 오직 아래 JSON 형식으로만 출력하세요. 마크다운 기호(```json 등)는 절대 포함하지 마세요.
+{{
+  "nickname": "창작한닉네임",
+  "comment": "댓글본문"
+}}
 """
     
     response = ai_client.models.generate_content(
@@ -78,7 +82,18 @@ def generate_comment(complex_name: str, persona_key: str) -> str:
         contents=prompt
     )
     
-    return response.text.strip()
+    try:
+        text = response.text.strip()
+        if text.startswith("```json"):
+            text = text[7:]
+        if text.startswith("```"):
+            text = text[3:]
+        if text.endswith("```"):
+            text = text[:-3]
+        return json.loads(text.strip())
+    except Exception as e:
+        logging.error(f"JSON 파싱 에러: {e}")
+        return {"nickname": "부동산관망러", "comment": response.text.strip()}
 
 def run_bot():
     logging.info("페르소나 봇 활성화: 시작합니다.")
@@ -107,14 +122,18 @@ def run_bot():
         for p_key in selected_personas:
             persona_info = PERSONAS[p_key]
             try:
-                # Gemini 엔진으로 텍스트 생성
-                comment_text = generate_comment(complex_name, p_key)
-                logging.info(f" -> [{persona_info['name']}] 생성된 댓글: {comment_text}")
+                # Gemini 엔진으로 JSON 데이터 생성 (닉네임 + 댓글)
+                bot_data = generate_comment_data(complex_name, p_key)
+                comment_text = bot_data.get("comment", "")
+                author_name = bot_data.get("nickname", "폭락폭등관망")
+                
+                logging.info(f" -> [{persona_info['name']}] 닉네임: {author_name}, 댓글: {comment_text}")
                 
                 # DB Insert
                 insert_data = {
                     "complex_id": complex_id,
                     "is_bot": True,
+                    "author_name": author_name,
                     "persona_type": p_key,
                     "vote": persona_info['vote'],
                     "content": comment_text,

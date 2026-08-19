@@ -7,6 +7,7 @@ import { ko } from 'date-fns/locale';
 interface Comment {
     id: string;
     complex_name: string;
+    author_name: string;
     persona_type: string;
     vote: 'bull' | 'bear' | 'neutral';
     content: string;
@@ -20,7 +21,7 @@ export default function LiveCommunityFeed() {
         const fetchComments = async () => {
             const { data, error } = await supabase
                 .from('community_comments')
-                .select('id, vote, content, created_at, persona_type, complexes(name)')
+                .select('id, vote, content, created_at, persona_type, author_name, complexes(name)')
                 .order('created_at', { ascending: false })
                 .limit(4);
 
@@ -28,6 +29,7 @@ export default function LiveCommunityFeed() {
                 const formatted = data.map((d: any) => ({
                     id: d.id,
                     complex_name: d.complexes?.name || '알수없음',
+                    author_name: d.author_name || (d.is_bot ? '익명(봇)' : '익명유저'),
                     persona_type: d.persona_type,
                     vote: d.vote,
                     content: d.content,
@@ -71,6 +73,9 @@ export default function LiveCommunityFeed() {
                             <span style={{ fontSize: '0.75rem', color: '#adb5bd' }}>
                                 {formatDistanceToNow(new Date(comment.created_at), { addSuffix: true, locale: ko })}
                             </span>
+                        </div>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '4px' }}>
+                            <span style={{ fontSize: '0.8rem', fontWeight: 700, color: '#495057' }}>{comment.author_name}</span>
                         </div>
                         <p style={{ fontSize: '0.85rem', color: '#495057', margin: 0, lineHeight: 1.5, wordBreak: 'keep-all' }}>
                             {comment.content}
