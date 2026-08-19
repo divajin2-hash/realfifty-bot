@@ -8,6 +8,7 @@ import Sidebar from './Sidebar'
 import Link from 'next/link'
 import fs from 'fs'
 import path from 'path'
+import LiveCommunityFeed from './LiveCommunityFeed'
 
 export const dynamic = 'force-dynamic';
 
@@ -205,6 +206,9 @@ export default async function Dashboard({ searchParams }: { searchParams: { sort
                             </div>
                         </div>
                     </div>
+
+                    {/* 실시간 커뮤니티 피드 위젯 추가 */}
+                    <LiveCommunityFeed />
 
                     <ClientGrid groupedData={groupedData} />
                 </div>
