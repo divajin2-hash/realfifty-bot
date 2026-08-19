@@ -4,6 +4,7 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import rawData from '@/data/kb50_stats.json';
 import TickerClient from '../../TickerClient';
+import SentimentVoteAndComment from './SentimentVoteAndComment';
 import '@/app/globals.css';
 import { ComposedChart, Line, Bar, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer, BarChart } from 'recharts';
 
@@ -500,6 +501,9 @@ export default function DetailPage() {
                         )}
                         <div style={{ padding: '20px', textAlign: 'center', color: '#ba1a1a', fontSize: '0.9rem', fontWeight: 700, cursor: 'pointer', background: '#f7f9fc' }}>10년치(약 150개월) 거래 원장 조회기능 준비중</div>
                     </div>
+
+                    {/* 유저 참여 컴포넌트 추가 */}
+                    <SentimentVoteAndComment complexId={complexIdStr} complexName={complex.name} />
 
                 </div>
             </div>
