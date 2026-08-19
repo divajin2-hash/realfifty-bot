@@ -69,7 +69,7 @@ export default function SentimentVoteAndComment({ complexId, complexName }: Sent
     };
 
     return (
-        <div style={{ marginTop: '24px', backgroundColor: 'white', borderRadius: '12px', padding: '24px', border: '1px solid #e1e3e8', boxShadow: '0 2px 8px rgba(0,0,0,0.02)' }}>
+        <div id="comments-section" style={{ marginTop: '24px', backgroundColor: 'white', borderRadius: '12px', padding: '24px', border: '1px solid #e1e3e8', boxShadow: '0 2px 8px rgba(0,0,0,0.02)' }}>
             <h2 style={{ fontSize: '1.2rem', fontWeight: 800, marginBottom: '20px' }}>💭 {complexName} 토론방</h2>
 
             {/* 글쓰기 폼 */}

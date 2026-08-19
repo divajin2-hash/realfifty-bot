@@ -3,9 +3,11 @@ import React, { useEffect, useState } from 'react';
 import { supabase } from '../utils/supabase';
 import { formatDistanceToNow } from 'date-fns';
 import { ko } from 'date-fns/locale';
+import { useRouter } from 'next/navigation';
 
 interface Comment {
     id: string;
+    complex_id: string;
     complex_name: string;
     author_name: string;
     persona_type: string;
@@ -16,18 +18,20 @@ interface Comment {
 
 export default function LiveCommunityFeed() {
     const [comments, setComments] = useState<Comment[]>([]);
+    const router = useRouter();
 
     useEffect(() => {
         const fetchComments = async () => {
             const { data, error } = await supabase
                 .from('community_comments')
-                .select('id, vote, content, created_at, persona_type, author_name, complexes(name)')
+                .select('id, complex_id, vote, content, created_at, persona_type, author_name, complexes(name)')
                 .order('created_at', { ascending: false })
                 .limit(4);
 
             if (data && !error) {
                 const formatted = data.map((d: any) => ({
                     id: d.id,
+                    complex_id: d.complex_id,
                     complex_name: d.complexes?.name || '알수없음',
                     author_name: d.author_name || (d.is_bot ? '익명(봇)' : '익명유저'),
                     persona_type: d.persona_type,
@@ -64,7 +68,11 @@ export default function LiveCommunityFeed() {
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '16px' }}>
                 {comments.map((comment) => (
-                    <div key={comment.id} style={{ display: 'flex', flexDirection: 'column', gap: '8px', padding: '16px', backgroundColor: '#f8f9fa', borderRadius: '8px', border: '1px solid #e9ecef' }}>
+                    <div
+                        key={comment.id}
+                        onClick={() => router.push(`/detail/${comment.complex_id}#comments-section`)}
+                        style={{ display: 'flex', flexDirection: 'column', gap: '8px', padding: '16px', backgroundColor: '#f8f9fa', borderRadius: '8px', border: '1px solid #e9ecef', cursor: 'pointer', transition: 'background-color 0.2s', ...({ ':hover': { backgroundColor: '#f1f3f5' } } as any) }}
+                    >
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                                 <span style={{ fontWeight: 800, fontSize: '0.9rem', color: '#2e2f32' }}>[{comment.complex_name}]</span>
