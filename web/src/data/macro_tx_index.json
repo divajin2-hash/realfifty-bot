@@ -751,12 +751,12 @@
   },
   {
     "month": "2026-07",
-    "recovery_rate": 94.52,
-    "sample_count": 188
+    "recovery_rate": 94.59,
+    "sample_count": 192
   },
   {
     "month": "2026-08",
-    "recovery_rate": 95.38,
-    "sample_count": 19
+    "recovery_rate": 95.33,
+    "sample_count": 20
   }
 ]
