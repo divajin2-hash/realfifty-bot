@@ -13611,7 +13611,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 2980000000
+        "current_lowest_ask": 3050000000
       },
       {
         "match_key_area": 85,
@@ -32460,7 +32460,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 2950000000
+        "current_lowest_ask": 3000000000
       },
       {
         "match_key_area": 85,
@@ -38926,7 +38926,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 2550000000
+        "current_lowest_ask": 2440000000
       },
       {
         "match_key_area": 60,
@@ -48111,7 +48111,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 2670000000
+        "current_lowest_ask": 2660000000
       },
       {
         "match_key_area": 85,
@@ -82970,7 +82970,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 3130000000
+        "current_lowest_ask": 3100000000
       },
       {
         "match_key_area": 85,
@@ -89251,86 +89251,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 2700000000
-      },
-      {
-        "match_key_area": 85,
-        "pyeong_name": "109A",
-        "highest_deal_price": 2800000000,
-        "highest_deal_date": "2026-04-06",
-        "recent_deal_absolute": {
-          "price": 2800000000,
-          "date": "2026-04-06",
-          "floor": 1,
-          "type": "중개거래"
-        },
-        "month_deals": [],
-        "all_trades_history": [
-          {
-            "date": "2014-08-25",
-            "price": 744000000
-          },
-          {
-            "date": "2014-09-25",
-            "price": 750000000
-          },
-          {
-            "date": "2015-05-20",
-            "price": 750000000
-          },
-          {
-            "date": "2015-07-03",
-            "price": 810000000
-          },
-          {
-            "date": "2015-10-26",
-            "price": 768000000
-          },
-          {
-            "date": "2016-05-03",
-            "price": 813000000
-          },
-          {
-            "date": "2016-08-06",
-            "price": 900000000
-          },
-          {
-            "date": "2018-08-09",
-            "price": 1400000000
-          },
-          {
-            "date": "2019-11-29",
-            "price": 1690000000
-          },
-          {
-            "date": "2019-12-02",
-            "price": 1660000000
-          },
-          {
-            "date": "2023-09-20",
-            "price": 2000000000
-          },
-          {
-            "date": "2024-05-20",
-            "price": 1900000000
-          },
-          {
-            "date": "2024-06-29",
-            "price": 1900000000
-          },
-          {
-            "date": "2025-03-01",
-            "price": 2400000000
-          },
-          {
-            "date": "2026-04-06",
-            "price": 2800000000
-          }
-        ],
-        "month_volume": 0,
-        "max_month_volume": 10,
-        "volume_drop_rate": 0,
-        "current_lowest_ask": 2700000000
+        "current_lowest_ask": 0
       },
       {
         "match_key_area": 83,
@@ -89562,6 +89483,10 @@
             "price": 730000000
           },
           {
+            "date": "2014-08-25",
+            "price": 744000000
+          },
+          {
             "date": "2014-08-30",
             "price": 775000000
           },
@@ -89616,6 +89541,10 @@
           {
             "date": "2014-09-25",
             "price": 778000000
+          },
+          {
+            "date": "2014-09-25",
+            "price": 750000000
           },
           {
             "date": "2014-09-26",
@@ -89822,6 +89751,10 @@
             "price": 798000000
           },
           {
+            "date": "2015-05-20",
+            "price": 750000000
+          },
+          {
             "date": "2015-06-03",
             "price": 790000000
           },
@@ -89848,6 +89781,10 @@
           {
             "date": "2015-06-25",
             "price": 860000000
+          },
+          {
+            "date": "2015-07-03",
+            "price": 810000000
           },
           {
             "date": "2015-07-06",
@@ -90056,6 +89993,10 @@
           {
             "date": "2015-10-24",
             "price": 828000000
+          },
+          {
+            "date": "2015-10-26",
+            "price": 768000000
           },
           {
             "date": "2015-10-28",
@@ -90314,6 +90255,10 @@
             "price": 870000000
           },
           {
+            "date": "2016-05-03",
+            "price": 813000000
+          },
+          {
             "date": "2016-05-12",
             "price": 820000000
           },
@@ -90476,6 +90421,10 @@
           {
             "date": "2016-08-04",
             "price": 890000000
+          },
+          {
+            "date": "2016-08-06",
+            "price": 900000000
           },
           {
             "date": "2016-08-06",
@@ -91114,6 +91063,10 @@
             "price": 1400000000
           },
           {
+            "date": "2018-08-09",
+            "price": 1400000000
+          },
+          {
             "date": "2018-08-10",
             "price": 1420000000
           },
@@ -91538,8 +91491,16 @@
             "price": 1650000000
           },
           {
+            "date": "2019-11-29",
+            "price": 1690000000
+          },
+          {
             "date": "2019-12-02",
             "price": 1730000000
+          },
+          {
+            "date": "2019-12-02",
+            "price": 1660000000
           },
           {
             "date": "2019-12-03",
@@ -92086,6 +92047,10 @@
             "price": 1920000000
           },
           {
+            "date": "2023-09-20",
+            "price": 2000000000
+          },
+          {
             "date": "2023-09-21",
             "price": 2000000000
           },
@@ -92258,6 +92223,10 @@
             "price": 1945000000
           },
           {
+            "date": "2024-05-20",
+            "price": 1900000000
+          },
+          {
             "date": "2024-05-22",
             "price": 1940000000
           },
@@ -92296,6 +92265,10 @@
           {
             "date": "2024-06-29",
             "price": 2050000000
+          },
+          {
+            "date": "2024-06-29",
+            "price": 1900000000
           },
           {
             "date": "2024-07-01",
@@ -92530,6 +92503,10 @@
             "price": 2320000000
           },
           {
+            "date": "2025-03-01",
+            "price": 2400000000
+          },
+          {
             "date": "2025-03-03",
             "price": 2470000000
           },
@@ -92672,6 +92649,10 @@
           {
             "date": "2026-03-31",
             "price": 2775000000
+          },
+          {
+            "date": "2026-04-06",
+            "price": 2800000000
           },
           {
             "date": "2026-04-21",
@@ -94076,7 +94057,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 3000000000
+        "current_lowest_ask": 3050000000
       },
       {
         "match_key_area": 101,
@@ -96616,7 +96597,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 4100000000
+        "current_lowest_ask": 3800000000
       },
       {
         "match_key_area": 136,
@@ -106314,7 +106295,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 8490000000
+        "current_lowest_ask": 8480000000
       },
       {
         "match_key_area": 169,
@@ -115230,7 +115211,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 3040000000
+        "current_lowest_ask": 3090000000
       },
       {
         "match_key_area": 60,
@@ -170205,7 +170186,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 3800000000
+        "current_lowest_ask": 3790000000
       },
       {
         "match_key_area": 124,
@@ -171567,6 +171548,12 @@
             "price": 3340000000,
             "date": "2026-08-01",
             "floor": 3,
+            "type": "중개거래"
+          },
+          {
+            "price": 3450000000,
+            "date": "2026-08-01",
+            "floor": 8,
             "type": "중개거래"
           },
           {
@@ -175770,14 +175757,18 @@
             "price": 3340000000
           },
           {
+            "date": "2026-08-01",
+            "price": 3450000000
+          },
+          {
             "date": "2026-08-03",
             "price": 3440000000
           }
         ],
-        "month_volume": 2,
+        "month_volume": 3,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 3100000000
+        "current_lowest_ask": 3080000000
       },
       {
         "match_key_area": 84,
@@ -199324,7 +199315,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 4100000000
+        "current_lowest_ask": 4130000000
       },
       {
         "match_key_area": 83,
@@ -200323,7 +200314,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 4200000000
+        "current_lowest_ask": 4130000000
       }
     ]
   },
@@ -200574,7 +200565,7 @@
         "month_volume": 1,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 5600000000
+        "current_lowest_ask": 5500000000
       },
       {
         "match_key_area": 108,
@@ -201509,7 +201500,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 5900000000
+        "current_lowest_ask": 5800000000
       },
       {
         "match_key_area": 115,
@@ -201950,7 +201941,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 7400000000
+        "current_lowest_ask": 7500000000
       },
       {
         "match_key_area": 152,
@@ -202777,7 +202768,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 7800000000
+        "current_lowest_ask": 7790000000
       },
       {
         "match_key_area": 183,
@@ -227785,7 +227776,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 6190000000
+        "current_lowest_ask": 6200000000
       }
     ]
   },
@@ -227821,7 +227812,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 2000000000
+        "current_lowest_ask": 1900000000
       },
       {
         "match_key_area": 50,
@@ -229104,6 +229095,209 @@
         "max_month_volume": 10,
         "volume_drop_rate": 0,
         "current_lowest_ask": 5000000000
+      },
+      {
+        "match_key_area": 133,
+        "pyeong_name": "171",
+        "highest_deal_price": 5500000000,
+        "highest_deal_date": "2026-04-29",
+        "recent_deal_absolute": {
+          "price": 5080000000,
+          "date": "2026-05-29",
+          "floor": 2,
+          "type": "중개거래"
+        },
+        "month_deals": [],
+        "all_trades_history": [
+          {
+            "date": "2014-01-16",
+            "price": 1160000000
+          },
+          {
+            "date": "2014-07-22",
+            "price": 1160000000
+          },
+          {
+            "date": "2014-08-25",
+            "price": 1170000000
+          },
+          {
+            "date": "2014-09-11",
+            "price": 1070000000
+          },
+          {
+            "date": "2014-10-11",
+            "price": 1120000000
+          },
+          {
+            "date": "2014-12-17",
+            "price": 1135000000
+          },
+          {
+            "date": "2015-02-28",
+            "price": 1155000000
+          },
+          {
+            "date": "2015-03-11",
+            "price": 1170000000
+          },
+          {
+            "date": "2015-04-24",
+            "price": 1155000000
+          },
+          {
+            "date": "2015-06-10",
+            "price": 1189000000
+          },
+          {
+            "date": "2015-10-09",
+            "price": 1217000000
+          },
+          {
+            "date": "2015-11-03",
+            "price": 1190000000
+          },
+          {
+            "date": "2016-03-11",
+            "price": 1180000000
+          },
+          {
+            "date": "2016-04-15",
+            "price": 1170000000
+          },
+          {
+            "date": "2016-04-26",
+            "price": 1210000000
+          },
+          {
+            "date": "2016-06-11",
+            "price": 1240000000
+          },
+          {
+            "date": "2016-07-14",
+            "price": 1280000000
+          },
+          {
+            "date": "2016-07-18",
+            "price": 1245000000
+          },
+          {
+            "date": "2016-11-29",
+            "price": 1297000000
+          },
+          {
+            "date": "2016-12-07",
+            "price": 1300000000
+          },
+          {
+            "date": "2016-12-16",
+            "price": 1320000000
+          },
+          {
+            "date": "2017-11-06",
+            "price": 1520000000
+          },
+          {
+            "date": "2018-01-19",
+            "price": 1535000000
+          },
+          {
+            "date": "2018-03-19",
+            "price": 1580000000
+          },
+          {
+            "date": "2018-06-06",
+            "price": 1620000000
+          },
+          {
+            "date": "2018-08-10",
+            "price": 1750000000
+          },
+          {
+            "date": "2018-08-31",
+            "price": 1790000000
+          },
+          {
+            "date": "2019-07-03",
+            "price": 1740000000
+          },
+          {
+            "date": "2019-10-19",
+            "price": 1940000000
+          },
+          {
+            "date": "2019-11-23",
+            "price": 1950000000
+          },
+          {
+            "date": "2020-01-06",
+            "price": 2030000000
+          },
+          {
+            "date": "2020-02-26",
+            "price": 2060000000
+          },
+          {
+            "date": "2021-01-13",
+            "price": 2395000000
+          },
+          {
+            "date": "2021-01-21",
+            "price": 2000000000
+          },
+          {
+            "date": "2021-05-19",
+            "price": 2398500000
+          },
+          {
+            "date": "2021-06-16",
+            "price": 2000000000
+          },
+          {
+            "date": "2021-08-19",
+            "price": 2540000000
+          },
+          {
+            "date": "2023-10-02",
+            "price": 2475000000
+          },
+          {
+            "date": "2024-06-26",
+            "price": 2730000000
+          },
+          {
+            "date": "2025-03-22",
+            "price": 2150000000
+          },
+          {
+            "date": "2025-03-23",
+            "price": 2500000000
+          },
+          {
+            "date": "2025-08-11",
+            "price": 2580000000
+          },
+          {
+            "date": "2025-09-09",
+            "price": 2970000000
+          },
+          {
+            "date": "2026-04-29",
+            "price": 5500000000
+          },
+          {
+            "date": "2026-05-26",
+            "price": 5100000000
+          },
+          {
+            "date": "2026-05-29",
+            "price": 5080000000
+          }
+        ],
+        "month_volume": 0,
+        "max_month_volume": 10,
+        "volume_drop_rate": 0,
+        "current_lowest_ask": 6500000000
       }
     ]
   },
@@ -239159,7 +239353,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 3500000000
+        "current_lowest_ask": 3490000000
       },
       {
         "match_key_area": 115,
@@ -258312,7 +258506,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 2050000000
+        "current_lowest_ask": 2150000000
       },
       {
         "match_key_area": 59,
@@ -276260,7 +276454,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 3750000000
+        "current_lowest_ask": 3740000000
       },
       {
         "match_key_area": 137,
@@ -277439,7 +277633,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 4150000000
+        "current_lowest_ask": 4100000000
       },
       {
         "match_key_area": 60,
@@ -283999,7 +284193,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 7000000000
+        "current_lowest_ask": 6800000000
       },
       {
         "match_key_area": 113,
@@ -285104,6 +285298,49 @@
         "max_month_volume": 10,
         "volume_drop_rate": 0,
         "current_lowest_ask": 10000000000
+      },
+      {
+        "match_key_area": 169,
+        "pyeong_name": "225B",
+        "highest_deal_price": 9500000000,
+        "highest_deal_date": "2025-07-13",
+        "recent_deal_absolute": {
+          "price": 9500000000,
+          "date": "2025-07-13",
+          "floor": 28,
+          "type": "중개거래"
+        },
+        "month_deals": [],
+        "all_trades_history": [
+          {
+            "date": "2017-08-24",
+            "price": 3400000000
+          },
+          {
+            "date": "2018-01-02",
+            "price": 3900000000
+          },
+          {
+            "date": "2019-12-07",
+            "price": 5400000000
+          },
+          {
+            "date": "2021-07-03",
+            "price": 5850000000
+          },
+          {
+            "date": "2021-07-19",
+            "price": 5800000000
+          },
+          {
+            "date": "2025-07-13",
+            "price": 9500000000
+          }
+        ],
+        "month_volume": 0,
+        "max_month_volume": 10,
+        "volume_drop_rate": 0,
+        "current_lowest_ask": 13000000000
       },
       {
         "match_key_area": 179,
@@ -315543,7 +315780,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 4700000000
+        "current_lowest_ask": 4600000000
       },
       {
         "match_key_area": 136,
@@ -316182,14 +316419,7 @@
           "floor": 4,
           "type": "중개거래"
         },
-        "month_deals": [
-          {
-            "price": 2020000000,
-            "date": "2026-07-29",
-            "floor": 4,
-            "type": "중개거래"
-          }
-        ],
+        "month_deals": [],
         "all_trades_history": [
           {
             "date": "2014-01-07",
@@ -322552,7 +322782,7 @@
             "price": 2020000000
           }
         ],
-        "month_volume": 1,
+        "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
         "current_lowest_ask": 2050000000
@@ -331791,6 +332021,697 @@
         "max_month_volume": 10,
         "volume_drop_rate": 0,
         "current_lowest_ask": 2800000000
+      },
+      {
+        "match_key_area": 129,
+        "pyeong_name": "153",
+        "highest_deal_price": 3130000000,
+        "highest_deal_date": "2026-07-14",
+        "recent_deal_absolute": {
+          "price": 3100000000,
+          "date": "2026-07-19",
+          "floor": 9,
+          "type": "중개거래"
+        },
+        "month_deals": [],
+        "all_trades_history": [
+          {
+            "date": "2014-01-07",
+            "price": 825000000
+          },
+          {
+            "date": "2014-02-05",
+            "price": 898000000
+          },
+          {
+            "date": "2014-03-06",
+            "price": 845000000
+          },
+          {
+            "date": "2014-03-15",
+            "price": 920000000
+          },
+          {
+            "date": "2014-03-19",
+            "price": 950000000
+          },
+          {
+            "date": "2014-05-09",
+            "price": 1055000000
+          },
+          {
+            "date": "2014-05-12",
+            "price": 898000000
+          },
+          {
+            "date": "2014-06-19",
+            "price": 920000000
+          },
+          {
+            "date": "2014-07-18",
+            "price": 895000000
+          },
+          {
+            "date": "2014-08-19",
+            "price": 900000000
+          },
+          {
+            "date": "2014-08-24",
+            "price": 885000000
+          },
+          {
+            "date": "2014-08-29",
+            "price": 975000000
+          },
+          {
+            "date": "2014-09-05",
+            "price": 995000000
+          },
+          {
+            "date": "2014-09-19",
+            "price": 895000000
+          },
+          {
+            "date": "2014-10-13",
+            "price": 945000000
+          },
+          {
+            "date": "2014-10-15",
+            "price": 1100000000
+          },
+          {
+            "date": "2015-02-12",
+            "price": 1045000000
+          },
+          {
+            "date": "2015-03-05",
+            "price": 1013000000
+          },
+          {
+            "date": "2015-03-07",
+            "price": 1020000000
+          },
+          {
+            "date": "2015-03-12",
+            "price": 979000000
+          },
+          {
+            "date": "2015-03-18",
+            "price": 900000000
+          },
+          {
+            "date": "2015-03-23",
+            "price": 958000000
+          },
+          {
+            "date": "2015-04-17",
+            "price": 980000000
+          },
+          {
+            "date": "2015-05-23",
+            "price": 1030000000
+          },
+          {
+            "date": "2015-06-17",
+            "price": 964000000
+          },
+          {
+            "date": "2015-07-05",
+            "price": 1090000000
+          },
+          {
+            "date": "2015-07-24",
+            "price": 1095000000
+          },
+          {
+            "date": "2015-07-25",
+            "price": 945000000
+          },
+          {
+            "date": "2015-07-29",
+            "price": 1055000000
+          },
+          {
+            "date": "2015-09-05",
+            "price": 1070000000
+          },
+          {
+            "date": "2015-09-08",
+            "price": 1075000000
+          },
+          {
+            "date": "2015-09-25",
+            "price": 1088000000
+          },
+          {
+            "date": "2015-10-20",
+            "price": 960000000
+          },
+          {
+            "date": "2015-10-29",
+            "price": 1035000000
+          },
+          {
+            "date": "2016-03-10",
+            "price": 1070000000
+          },
+          {
+            "date": "2016-04-02",
+            "price": 940000000
+          },
+          {
+            "date": "2016-04-23",
+            "price": 1037000000
+          },
+          {
+            "date": "2016-04-30",
+            "price": 960000000
+          },
+          {
+            "date": "2016-05-20",
+            "price": 980000000
+          },
+          {
+            "date": "2016-06-03",
+            "price": 1000000000
+          },
+          {
+            "date": "2016-06-04",
+            "price": 970000000
+          },
+          {
+            "date": "2016-06-04",
+            "price": 980000000
+          },
+          {
+            "date": "2016-06-06",
+            "price": 1095000000
+          },
+          {
+            "date": "2016-06-07",
+            "price": 1135000000
+          },
+          {
+            "date": "2016-06-08",
+            "price": 1005000000
+          },
+          {
+            "date": "2016-06-08",
+            "price": 990000000
+          },
+          {
+            "date": "2016-06-10",
+            "price": 980000000
+          },
+          {
+            "date": "2016-06-10",
+            "price": 1000000000
+          },
+          {
+            "date": "2016-06-11",
+            "price": 1146500000
+          },
+          {
+            "date": "2016-06-11",
+            "price": 1000000000
+          },
+          {
+            "date": "2016-06-16",
+            "price": 1100000000
+          },
+          {
+            "date": "2016-06-16",
+            "price": 1020000000
+          },
+          {
+            "date": "2016-06-18",
+            "price": 1050000000
+          },
+          {
+            "date": "2016-06-20",
+            "price": 1020000000
+          },
+          {
+            "date": "2016-06-20",
+            "price": 1020000000
+          },
+          {
+            "date": "2016-06-22",
+            "price": 998000000
+          },
+          {
+            "date": "2016-07-01",
+            "price": 1025000000
+          },
+          {
+            "date": "2016-07-02",
+            "price": 1020000000
+          },
+          {
+            "date": "2016-07-11",
+            "price": 1160000000
+          },
+          {
+            "date": "2016-07-21",
+            "price": 1147500000
+          },
+          {
+            "date": "2016-07-22",
+            "price": 1140000000
+          },
+          {
+            "date": "2016-07-29",
+            "price": 1150000000
+          },
+          {
+            "date": "2016-08-11",
+            "price": 1140000000
+          },
+          {
+            "date": "2016-08-13",
+            "price": 1130000000
+          },
+          {
+            "date": "2016-08-14",
+            "price": 1045000000
+          },
+          {
+            "date": "2016-08-25",
+            "price": 1180000000
+          },
+          {
+            "date": "2016-08-26",
+            "price": 1100000000
+          },
+          {
+            "date": "2016-09-03",
+            "price": 1195000000
+          },
+          {
+            "date": "2016-09-29",
+            "price": 1250000000
+          },
+          {
+            "date": "2016-10-10",
+            "price": 1240000000
+          },
+          {
+            "date": "2016-10-18",
+            "price": 1300000000
+          },
+          {
+            "date": "2016-12-31",
+            "price": 1350000000
+          },
+          {
+            "date": "2017-03-14",
+            "price": 1200000000
+          },
+          {
+            "date": "2017-04-12",
+            "price": 1150000000
+          },
+          {
+            "date": "2017-04-21",
+            "price": 1150000000
+          },
+          {
+            "date": "2017-05-08",
+            "price": 1150000000
+          },
+          {
+            "date": "2017-05-15",
+            "price": 1215000000
+          },
+          {
+            "date": "2017-05-28",
+            "price": 1220000000
+          },
+          {
+            "date": "2017-05-29",
+            "price": 1150000000
+          },
+          {
+            "date": "2017-06-01",
+            "price": 1200000000
+          },
+          {
+            "date": "2017-06-03",
+            "price": 1230000000
+          },
+          {
+            "date": "2017-06-03",
+            "price": 1160000000
+          },
+          {
+            "date": "2017-06-07",
+            "price": 1250000000
+          },
+          {
+            "date": "2017-07-09",
+            "price": 1330000000
+          },
+          {
+            "date": "2017-07-11",
+            "price": 1350000000
+          },
+          {
+            "date": "2017-07-22",
+            "price": 1320000000
+          },
+          {
+            "date": "2017-07-25",
+            "price": 1200000000
+          },
+          {
+            "date": "2017-07-27",
+            "price": 1200000000
+          },
+          {
+            "date": "2017-07-31",
+            "price": 1220000000
+          },
+          {
+            "date": "2017-09-18",
+            "price": 1227000000
+          },
+          {
+            "date": "2017-10-21",
+            "price": 1300000000
+          },
+          {
+            "date": "2017-10-25",
+            "price": 1280000000
+          },
+          {
+            "date": "2017-10-30",
+            "price": 1350000000
+          },
+          {
+            "date": "2017-10-30",
+            "price": 1207000000
+          },
+          {
+            "date": "2017-11-06",
+            "price": 1350000000
+          },
+          {
+            "date": "2017-11-17",
+            "price": 1195000000
+          },
+          {
+            "date": "2017-11-18",
+            "price": 1230000000
+          },
+          {
+            "date": "2017-11-22",
+            "price": 1300000000
+          },
+          {
+            "date": "2017-11-25",
+            "price": 1370000000
+          },
+          {
+            "date": "2017-12-03",
+            "price": 1490000000
+          },
+          {
+            "date": "2017-12-08",
+            "price": 1525000000
+          },
+          {
+            "date": "2017-12-16",
+            "price": 1383000000
+          },
+          {
+            "date": "2017-12-29",
+            "price": 1490000000
+          },
+          {
+            "date": "2018-01-16",
+            "price": 1450000000
+          },
+          {
+            "date": "2018-02-05",
+            "price": 1570000000
+          },
+          {
+            "date": "2018-02-10",
+            "price": 1445000000
+          },
+          {
+            "date": "2018-03-17",
+            "price": 1500000000
+          },
+          {
+            "date": "2018-07-29",
+            "price": 1550000000
+          },
+          {
+            "date": "2018-07-31",
+            "price": 1487000000
+          },
+          {
+            "date": "2018-08-08",
+            "price": 1460000000
+          },
+          {
+            "date": "2018-08-09",
+            "price": 1470000000
+          },
+          {
+            "date": "2018-08-21",
+            "price": 1610000000
+          },
+          {
+            "date": "2018-09-11",
+            "price": 1535000000
+          },
+          {
+            "date": "2018-09-11",
+            "price": 1550000000
+          },
+          {
+            "date": "2019-03-12",
+            "price": 1490000000
+          },
+          {
+            "date": "2019-03-30",
+            "price": 1450000000
+          },
+          {
+            "date": "2019-05-17",
+            "price": 1500000000
+          },
+          {
+            "date": "2019-05-27",
+            "price": 1442000000
+          },
+          {
+            "date": "2019-05-28",
+            "price": 1450000000
+          },
+          {
+            "date": "2019-05-31",
+            "price": 1450000000
+          },
+          {
+            "date": "2019-06-01",
+            "price": 1480000000
+          },
+          {
+            "date": "2019-06-03",
+            "price": 1497000000
+          },
+          {
+            "date": "2019-06-07",
+            "price": 1490000000
+          },
+          {
+            "date": "2019-06-17",
+            "price": 1550000000
+          },
+          {
+            "date": "2019-06-22",
+            "price": 1550000000
+          },
+          {
+            "date": "2019-07-21",
+            "price": 1600000000
+          },
+          {
+            "date": "2019-09-04",
+            "price": 1600000000
+          },
+          {
+            "date": "2019-09-20",
+            "price": 1550000000
+          },
+          {
+            "date": "2019-09-23",
+            "price": 1600000000
+          },
+          {
+            "date": "2019-09-26",
+            "price": 1620000000
+          },
+          {
+            "date": "2019-09-26",
+            "price": 1617500000
+          },
+          {
+            "date": "2019-10-11",
+            "price": 1600000000
+          },
+          {
+            "date": "2019-10-15",
+            "price": 1700000000
+          },
+          {
+            "date": "2019-10-15",
+            "price": 1760000000
+          },
+          {
+            "date": "2019-11-09",
+            "price": 1780000000
+          },
+          {
+            "date": "2019-11-18",
+            "price": 1780000000
+          },
+          {
+            "date": "2019-12-15",
+            "price": 1970000000
+          },
+          {
+            "date": "2020-05-12",
+            "price": 1730000000
+          },
+          {
+            "date": "2020-07-09",
+            "price": 1920000000
+          },
+          {
+            "date": "2020-07-28",
+            "price": 2000000000
+          },
+          {
+            "date": "2020-07-29",
+            "price": 1980000000
+          },
+          {
+            "date": "2020-08-10",
+            "price": 2100000000
+          },
+          {
+            "date": "2020-08-27",
+            "price": 2060000000
+          },
+          {
+            "date": "2020-12-01",
+            "price": 1960000000
+          },
+          {
+            "date": "2020-12-05",
+            "price": 2065000000
+          },
+          {
+            "date": "2021-02-25",
+            "price": 2220000000
+          },
+          {
+            "date": "2021-03-24",
+            "price": 2050000000
+          },
+          {
+            "date": "2021-03-26",
+            "price": 2090000000
+          },
+          {
+            "date": "2021-04-19",
+            "price": 2100000000
+          },
+          {
+            "date": "2021-04-22",
+            "price": 2100000000
+          },
+          {
+            "date": "2021-09-01",
+            "price": 2300000000
+          },
+          {
+            "date": "2021-10-22",
+            "price": 2250000000
+          },
+          {
+            "date": "2021-10-23",
+            "price": 2395000000
+          },
+          {
+            "date": "2023-01-03",
+            "price": 1975000000
+          },
+          {
+            "date": "2023-06-23",
+            "price": 2050000000
+          },
+          {
+            "date": "2023-07-18",
+            "price": 2150000000
+          },
+          {
+            "date": "2023-07-31",
+            "price": 2075000000
+          },
+          {
+            "date": "2023-09-11",
+            "price": 2304000000
+          },
+          {
+            "date": "2024-03-27",
+            "price": 2120000000
+          },
+          {
+            "date": "2024-08-31",
+            "price": 2460000000
+          },
+          {
+            "date": "2024-09-25",
+            "price": 2000000000
+          },
+          {
+            "date": "2024-10-04",
+            "price": 2400000000
+          },
+          {
+            "date": "2024-12-13",
+            "price": 2400000000
+          },
+          {
+            "date": "2025-04-08",
+            "price": 2600000000
+          },
+          {
+            "date": "2025-04-30",
+            "price": 2650000000
+          },
+          {
+            "date": "2025-06-12",
+            "price": 2750000000
+          },
+          {
+            "date": "2026-07-14",
+            "price": 3130000000
+          },
+          {
+            "date": "2026-07-19",
+            "price": 3100000000
+          }
+        ],
+        "month_volume": 0,
+        "max_month_volume": 10,
+        "volume_drop_rate": 0,
+        "current_lowest_ask": 3400000000
       }
     ]
   },
@@ -333426,7 +334347,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 2945000000
+        "current_lowest_ask": 2930000000
       },
       {
         "match_key_area": 82,
@@ -344045,7 +344966,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 3080000000
+        "current_lowest_ask": 3050000000
       },
       {
         "match_key_area": 85,
@@ -345233,12 +346154,19 @@
         "highest_deal_price": 1935000000,
         "highest_deal_date": "2025-10-15",
         "recent_deal_absolute": {
-          "price": 1690000000,
-          "date": "2026-05-23",
-          "floor": 2,
+          "price": 1890000000,
+          "date": "2026-08-12",
+          "floor": 25,
           "type": "중개거래"
         },
-        "month_deals": [],
+        "month_deals": [
+          {
+            "price": 1890000000,
+            "date": "2026-08-12",
+            "floor": 25,
+            "type": "중개거래"
+          }
+        ],
         "all_trades_history": [
           {
             "date": "2016-12-05",
@@ -346467,9 +347395,13 @@
           {
             "date": "2026-05-23",
             "price": 1690000000
+          },
+          {
+            "date": "2026-08-12",
+            "price": 1890000000
           }
         ],
-        "month_volume": 0,
+        "month_volume": 1,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
         "current_lowest_ask": 1930000000
@@ -364267,6 +365199,65 @@
         "current_lowest_ask": 2850000000
       },
       {
+        "match_key_area": 81,
+        "pyeong_name": "86C",
+        "highest_deal_price": 2300000000,
+        "highest_deal_date": "2025-04-23",
+        "recent_deal_absolute": {
+          "price": 2300000000,
+          "date": "2025-04-23",
+          "floor": 1,
+          "type": "중개거래"
+        },
+        "month_deals": [],
+        "all_trades_history": [
+          {
+            "date": "2014-08-15",
+            "price": 660000000
+          },
+          {
+            "date": "2014-08-27",
+            "price": 620000000
+          },
+          {
+            "date": "2015-06-06",
+            "price": 705000000
+          },
+          {
+            "date": "2016-03-14",
+            "price": 770000000
+          },
+          {
+            "date": "2017-05-23",
+            "price": 970000000
+          },
+          {
+            "date": "2019-05-25",
+            "price": 1300000000
+          },
+          {
+            "date": "2019-10-14",
+            "price": 1450000000
+          },
+          {
+            "date": "2020-06-22",
+            "price": 1600000000
+          },
+          {
+            "date": "2021-01-02",
+            "price": 1680000000
+          },
+          {
+            "date": "2025-04-23",
+            "price": 2300000000
+          }
+        ],
+        "month_volume": 0,
+        "max_month_volume": 10,
+        "volume_drop_rate": 0,
+        "current_lowest_ask": 3030000000
+      },
+      {
         "match_key_area": 82,
         "pyeong_name": "87E",
         "highest_deal_price": 2850000000,
@@ -365966,65 +366957,6 @@
         "max_month_volume": 10,
         "volume_drop_rate": 0,
         "current_lowest_ask": 4390000000
-      },
-      {
-        "match_key_area": 81,
-        "pyeong_name": "86C",
-        "highest_deal_price": 2300000000,
-        "highest_deal_date": "2025-04-23",
-        "recent_deal_absolute": {
-          "price": 2300000000,
-          "date": "2025-04-23",
-          "floor": 1,
-          "type": "중개거래"
-        },
-        "month_deals": [],
-        "all_trades_history": [
-          {
-            "date": "2014-08-15",
-            "price": 660000000
-          },
-          {
-            "date": "2014-08-27",
-            "price": 620000000
-          },
-          {
-            "date": "2015-06-06",
-            "price": 705000000
-          },
-          {
-            "date": "2016-03-14",
-            "price": 770000000
-          },
-          {
-            "date": "2017-05-23",
-            "price": 970000000
-          },
-          {
-            "date": "2019-05-25",
-            "price": 1300000000
-          },
-          {
-            "date": "2019-10-14",
-            "price": 1450000000
-          },
-          {
-            "date": "2020-06-22",
-            "price": 1600000000
-          },
-          {
-            "date": "2021-01-02",
-            "price": 1680000000
-          },
-          {
-            "date": "2025-04-23",
-            "price": 2300000000
-          }
-        ],
-        "month_volume": 0,
-        "max_month_volume": 10,
-        "volume_drop_rate": 0,
-        "current_lowest_ask": 3030000000
       }
     ]
   },
@@ -366507,7 +367439,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 4200000000
+        "current_lowest_ask": 4190000000
       },
       {
         "match_key_area": 85,
@@ -366938,7 +367870,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 4200000000
+        "current_lowest_ask": 4250000000
       },
       {
         "match_key_area": 85,
@@ -367755,7 +368687,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 4400000000
+        "current_lowest_ask": 4350000000
       },
       {
         "match_key_area": 92,
@@ -369238,7 +370170,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 4700000000
+        "current_lowest_ask": 4600000000
       },
       {
         "match_key_area": 94,
@@ -377306,6 +378238,445 @@
         "current_lowest_ask": 3300000000
       },
       {
+        "match_key_area": 85,
+        "pyeong_name": "116P",
+        "highest_deal_price": 3600000000,
+        "highest_deal_date": "2025-07-03",
+        "recent_deal_absolute": {
+          "price": 3126000000,
+          "date": "2026-06-09",
+          "floor": 21,
+          "type": "중개거래"
+        },
+        "month_deals": [],
+        "all_trades_history": [
+          {
+            "date": "2019-06-15",
+            "price": 1970000000
+          },
+          {
+            "date": "2019-06-15",
+            "price": 2080000000
+          },
+          {
+            "date": "2019-06-17",
+            "price": 1850000000
+          },
+          {
+            "date": "2019-06-19",
+            "price": 2050000000
+          },
+          {
+            "date": "2019-06-19",
+            "price": 2000000000
+          },
+          {
+            "date": "2019-06-27",
+            "price": 1970000000
+          },
+          {
+            "date": "2019-06-28",
+            "price": 2200000000
+          },
+          {
+            "date": "2019-07-12",
+            "price": 2300000000
+          },
+          {
+            "date": "2019-11-20",
+            "price": 2430000000
+          },
+          {
+            "date": "2020-05-04",
+            "price": 2300000000
+          },
+          {
+            "date": "2020-05-04",
+            "price": 2510000000
+          },
+          {
+            "date": "2020-05-19",
+            "price": 2300000000
+          },
+          {
+            "date": "2020-06-04",
+            "price": 2430000000
+          },
+          {
+            "date": "2020-06-07",
+            "price": 2510000000
+          },
+          {
+            "date": "2020-06-17",
+            "price": 2600000000
+          },
+          {
+            "date": "2020-06-29",
+            "price": 2700000000
+          },
+          {
+            "date": "2020-07-08",
+            "price": 2640000000
+          },
+          {
+            "date": "2020-07-08",
+            "price": 2480000000
+          },
+          {
+            "date": "2020-07-30",
+            "price": 2650000000
+          },
+          {
+            "date": "2020-08-08",
+            "price": 2800000000
+          },
+          {
+            "date": "2020-10-27",
+            "price": 2700000000
+          },
+          {
+            "date": "2020-12-16",
+            "price": 2650000000
+          },
+          {
+            "date": "2021-01-14",
+            "price": 2670000000
+          },
+          {
+            "date": "2021-02-15",
+            "price": 2510000000
+          },
+          {
+            "date": "2021-03-09",
+            "price": 2770000000
+          },
+          {
+            "date": "2021-04-14",
+            "price": 2680000000
+          },
+          {
+            "date": "2021-07-24",
+            "price": 2820000000
+          },
+          {
+            "date": "2021-08-07",
+            "price": 2890000000
+          },
+          {
+            "date": "2021-08-31",
+            "price": 2980000000
+          },
+          {
+            "date": "2021-09-05",
+            "price": 2930000000
+          },
+          {
+            "date": "2021-09-17",
+            "price": 2950000000
+          },
+          {
+            "date": "2021-10-09",
+            "price": 3200000000
+          },
+          {
+            "date": "2023-02-04",
+            "price": 2500000000
+          },
+          {
+            "date": "2023-02-04",
+            "price": 2420000000
+          },
+          {
+            "date": "2023-02-13",
+            "price": 2520000000
+          },
+          {
+            "date": "2023-02-18",
+            "price": 2400000000
+          },
+          {
+            "date": "2023-02-27",
+            "price": 2470000000
+          },
+          {
+            "date": "2023-04-25",
+            "price": 2495000000
+          },
+          {
+            "date": "2023-05-05",
+            "price": 2695000000
+          },
+          {
+            "date": "2023-05-10",
+            "price": 2470000000
+          },
+          {
+            "date": "2023-05-25",
+            "price": 2580000000
+          },
+          {
+            "date": "2023-05-27",
+            "price": 2570000000
+          },
+          {
+            "date": "2023-06-12",
+            "price": 2700000000
+          },
+          {
+            "date": "2023-06-13",
+            "price": 2700000000
+          },
+          {
+            "date": "2023-06-13",
+            "price": 2650000000
+          },
+          {
+            "date": "2023-06-14",
+            "price": 2700000000
+          },
+          {
+            "date": "2023-07-05",
+            "price": 2700000000
+          },
+          {
+            "date": "2023-07-07",
+            "price": 2620000000
+          },
+          {
+            "date": "2023-07-08",
+            "price": 2690000000
+          },
+          {
+            "date": "2023-07-10",
+            "price": 2750000000
+          },
+          {
+            "date": "2023-07-12",
+            "price": 2650000000
+          },
+          {
+            "date": "2023-07-28",
+            "price": 2750000000
+          },
+          {
+            "date": "2023-07-29",
+            "price": 2750000000
+          },
+          {
+            "date": "2023-08-06",
+            "price": 2730000000
+          },
+          {
+            "date": "2023-08-12",
+            "price": 2820000000
+          },
+          {
+            "date": "2024-03-17",
+            "price": 2670000000
+          },
+          {
+            "date": "2024-03-19",
+            "price": 2770000000
+          },
+          {
+            "date": "2024-03-23",
+            "price": 2680000000
+          },
+          {
+            "date": "2024-05-02",
+            "price": 2790000000
+          },
+          {
+            "date": "2024-05-04",
+            "price": 2850000000
+          },
+          {
+            "date": "2024-05-17",
+            "price": 2840000000
+          },
+          {
+            "date": "2024-05-25",
+            "price": 2790000000
+          },
+          {
+            "date": "2024-05-31",
+            "price": 2780000000
+          },
+          {
+            "date": "2024-06-05",
+            "price": 2800000000
+          },
+          {
+            "date": "2024-06-14",
+            "price": 2780000000
+          },
+          {
+            "date": "2024-06-15",
+            "price": 2900000000
+          },
+          {
+            "date": "2024-06-17",
+            "price": 2900000000
+          },
+          {
+            "date": "2024-06-24",
+            "price": 2790000000
+          },
+          {
+            "date": "2024-07-01",
+            "price": 2895000000
+          },
+          {
+            "date": "2024-07-29",
+            "price": 3045000000
+          },
+          {
+            "date": "2024-08-05",
+            "price": 3100000000
+          },
+          {
+            "date": "2024-09-30",
+            "price": 3300000000
+          },
+          {
+            "date": "2024-10-14",
+            "price": 3130000000
+          },
+          {
+            "date": "2024-10-30",
+            "price": 3130000000
+          },
+          {
+            "date": "2024-12-19",
+            "price": 2800000000
+          },
+          {
+            "date": "2025-02-10",
+            "price": 3100000000
+          },
+          {
+            "date": "2025-02-16",
+            "price": 3120000000
+          },
+          {
+            "date": "2025-02-23",
+            "price": 3200000000
+          },
+          {
+            "date": "2025-02-24",
+            "price": 3200000000
+          },
+          {
+            "date": "2025-02-27",
+            "price": 3100000000
+          },
+          {
+            "date": "2025-03-01",
+            "price": 3300000000
+          },
+          {
+            "date": "2025-03-05",
+            "price": 3280000000
+          },
+          {
+            "date": "2025-03-14",
+            "price": 3255000000
+          },
+          {
+            "date": "2025-03-22",
+            "price": 3100000000
+          },
+          {
+            "date": "2025-03-23",
+            "price": 3200000000
+          },
+          {
+            "date": "2025-06-03",
+            "price": 3200000000
+          },
+          {
+            "date": "2025-06-06",
+            "price": 3390000000
+          },
+          {
+            "date": "2025-06-06",
+            "price": 3300000000
+          },
+          {
+            "date": "2025-06-21",
+            "price": 3340000000
+          },
+          {
+            "date": "2025-06-25",
+            "price": 3395000000
+          },
+          {
+            "date": "2025-06-25",
+            "price": 3300000000
+          },
+          {
+            "date": "2025-07-03",
+            "price": 3600000000
+          },
+          {
+            "date": "2025-10-24",
+            "price": 3580000000
+          },
+          {
+            "date": "2025-11-12",
+            "price": 3600000000
+          },
+          {
+            "date": "2025-11-19",
+            "price": 3550000000
+          },
+          {
+            "date": "2026-03-27",
+            "price": 3250000000
+          },
+          {
+            "date": "2026-04-21",
+            "price": 3100000000
+          },
+          {
+            "date": "2026-04-25",
+            "price": 3400000000
+          },
+          {
+            "date": "2026-05-05",
+            "price": 3400000000
+          },
+          {
+            "date": "2026-05-09",
+            "price": 3500000000
+          },
+          {
+            "date": "2026-05-15",
+            "price": 3250000000
+          },
+          {
+            "date": "2026-05-16",
+            "price": 3450000000
+          },
+          {
+            "date": "2026-05-30",
+            "price": 3300000000
+          },
+          {
+            "date": "2026-06-09",
+            "price": 3126000000
+          },
+          {
+            "date": "2026-06-09",
+            "price": 3126000000
+          }
+        ],
+        "month_volume": 0,
+        "max_month_volume": 10,
+        "volume_drop_rate": 0,
+        "current_lowest_ask": 3600000000
+      },
+      {
         "match_key_area": 100,
         "pyeong_name": "133A",
         "highest_deal_price": 3920000000,
@@ -378274,7 +379645,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 4100000000
+        "current_lowest_ask": 4050000000
       },
       {
         "match_key_area": 127,
@@ -402107,7 +403478,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 3980000000
+        "current_lowest_ask": 3800000000
       },
       {
         "match_key_area": 167,
@@ -424903,7 +426274,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 3900000000
+        "current_lowest_ask": 3850000000
       },
       {
         "match_key_area": 115,
@@ -452722,7 +454093,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 3900000000
+        "current_lowest_ask": 3890000000
       },
       {
         "match_key_area": 128,
@@ -453140,7 +454511,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 4800000000
+        "current_lowest_ask": 4790000000
       },
       {
         "match_key_area": 161,
@@ -454989,12 +456360,6 @@
         },
         "month_deals": [
           {
-            "price": 3550000000,
-            "date": "2026-07-29",
-            "floor": 11,
-            "type": "중개거래"
-          },
-          {
             "price": 3650000000,
             "date": "2026-08-03",
             "floor": 6,
@@ -455559,7 +456924,7 @@
             "price": 3650000000
           }
         ],
-        "month_volume": 2,
+        "month_volume": 1,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
         "current_lowest_ask": 3690000000
