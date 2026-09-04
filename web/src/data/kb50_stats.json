@@ -36226,7 +36226,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 5500000000
+        "current_lowest_ask": 5300000000
       }
     ]
   },
@@ -37396,7 +37396,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 3350000000
+        "current_lowest_ask": 3340000000
       },
       {
         "match_key_area": 85,
@@ -51895,7 +51895,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 2850000000
+        "current_lowest_ask": 2840000000
       },
       {
         "match_key_area": 85,
@@ -90121,7 +90121,7 @@
         "month_volume": 1,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 2800000000
+        "current_lowest_ask": 2790000000
       },
       {
         "match_key_area": 100,
@@ -91476,7 +91476,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 3050000000
+        "current_lowest_ask": 3000000000
       },
       {
         "match_key_area": 101,
@@ -95145,12 +95145,19 @@
         "highest_deal_price": 4950000000,
         "highest_deal_date": "2026-02-06",
         "recent_deal_absolute": {
-          "price": 4600000000,
-          "date": "2026-06-18",
-          "floor": 32,
+          "price": 4700000000,
+          "date": "2026-08-27",
+          "floor": 21,
           "type": "중개거래"
         },
-        "month_deals": [],
+        "month_deals": [
+          {
+            "price": 4700000000,
+            "date": "2026-08-27",
+            "floor": 21,
+            "type": "중개거래"
+          }
+        ],
         "all_trades_history": [
           {
             "date": "2023-06-07",
@@ -95315,9 +95322,13 @@
           {
             "date": "2026-06-18",
             "price": 4600000000
+          },
+          {
+            "date": "2026-08-27",
+            "price": 4700000000
           }
         ],
-        "month_volume": 0,
+        "month_volume": 1,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
         "current_lowest_ask": 3980000000
@@ -95328,12 +95339,19 @@
         "highest_deal_price": 4950000000,
         "highest_deal_date": "2026-02-06",
         "recent_deal_absolute": {
-          "price": 4600000000,
-          "date": "2026-06-18",
-          "floor": 32,
+          "price": 4700000000,
+          "date": "2026-08-27",
+          "floor": 21,
           "type": "중개거래"
         },
-        "month_deals": [],
+        "month_deals": [
+          {
+            "price": 4700000000,
+            "date": "2026-08-27",
+            "floor": 21,
+            "type": "중개거래"
+          }
+        ],
         "all_trades_history": [
           {
             "date": "2023-06-07",
@@ -95498,9 +95516,13 @@
           {
             "date": "2026-06-18",
             "price": 4600000000
+          },
+          {
+            "date": "2026-08-27",
+            "price": 4700000000
           }
         ],
-        "month_volume": 0,
+        "month_volume": 1,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
         "current_lowest_ask": 4000000000
@@ -97064,7 +97086,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 5100000000
+        "current_lowest_ask": 5000000000
       },
       {
         "match_key_area": 85,
@@ -102669,7 +102691,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 6600000000
+        "current_lowest_ask": 6400000000
       },
       {
         "match_key_area": 102,
@@ -103374,7 +103396,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 7400000000
+        "current_lowest_ask": 7300000000
       },
       {
         "match_key_area": 117,
@@ -103485,7 +103507,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 7100000000
+        "current_lowest_ask": 7000000000
       },
       {
         "match_key_area": 117,
@@ -103718,7 +103740,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 8480000000
+        "current_lowest_ask": 7700000000
       },
       {
         "match_key_area": 169,
@@ -108920,7 +108942,7 @@
         "month_volume": 1,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 1580000000
+        "current_lowest_ask": 1575000000
       },
       {
         "match_key_area": 28,
@@ -181619,7 +181641,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 4400000000
+        "current_lowest_ask": 4250000000
       },
       {
         "match_key_area": 85,
@@ -187027,7 +187049,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 6690000000
+        "current_lowest_ask": 6600000000
       },
       {
         "match_key_area": 216,
@@ -187984,7 +188006,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 8000000000
+        "current_lowest_ask": 8500000000
       },
       {
         "match_key_area": 245,
@@ -195740,7 +195762,7 @@
         "month_volume": 3,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 3840000000
+        "current_lowest_ask": 3830000000
       },
       {
         "match_key_area": 82,
@@ -197621,7 +197643,7 @@
         "month_volume": 1,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 4120000000
+        "current_lowest_ask": 4200000000
       },
       {
         "match_key_area": 83,
@@ -198620,7 +198642,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 4120000000
+        "current_lowest_ask": 4200000000
       }
     ]
   },
@@ -200148,7 +200170,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 7000000000
+        "current_lowest_ask": 6800000000
       },
       {
         "match_key_area": 152,
@@ -204165,7 +204187,7 @@
         "month_volume": 2,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 2600000000
+        "current_lowest_ask": 2640000000
       },
       {
         "match_key_area": 85,
@@ -220323,7 +220345,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 6000000000
+        "current_lowest_ask": 0
       },
       {
         "match_key_area": 117,
@@ -227482,7 +227504,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 4300000000
+        "current_lowest_ask": 4250000000
       },
       {
         "match_key_area": 115,
@@ -242774,7 +242796,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 2880000000
+        "current_lowest_ask": 2870000000
       },
       {
         "match_key_area": 85,
@@ -277124,7 +277146,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 4950000000
+        "current_lowest_ask": 5000000000
       },
       {
         "match_key_area": 85,
@@ -282751,7 +282773,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 8500000000
+        "current_lowest_ask": 6900000000
       },
       {
         "match_key_area": 113,
@@ -282978,7 +283000,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 7000000000
+        "current_lowest_ask": 6900000000
       },
       {
         "match_key_area": 130,
@@ -283447,7 +283469,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 7500000000
+        "current_lowest_ask": 7490000000
       },
       {
         "match_key_area": 130,
@@ -286803,6 +286825,18 @@
         },
         "month_deals": [
           {
+            "price": 2390000000,
+            "date": "2026-08-08",
+            "floor": 20,
+            "type": "중개거래"
+          },
+          {
+            "price": 2305000000,
+            "date": "2026-08-08",
+            "floor": 6,
+            "type": "중개거래"
+          },
+          {
             "price": 2335000000,
             "date": "2026-08-14",
             "floor": 5,
@@ -288395,11 +288429,19 @@
             "price": 2350000000
           },
           {
+            "date": "2026-08-08",
+            "price": 2390000000
+          },
+          {
+            "date": "2026-08-08",
+            "price": 2305000000
+          },
+          {
             "date": "2026-08-14",
             "price": 2335000000
           }
         ],
-        "month_volume": 1,
+        "month_volume": 3,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
         "current_lowest_ask": 2100000000
@@ -291156,7 +291198,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 2300000000
+        "current_lowest_ask": 2250000000
       },
       {
         "match_key_area": 85,
@@ -302289,15 +302331,22 @@
       {
         "match_key_area": 84,
         "pyeong_name": "110A",
-        "highest_deal_price": 2570000000,
-        "highest_deal_date": "2026-02-11",
+        "highest_deal_price": 2610000000,
+        "highest_deal_date": "2026-08-07",
         "recent_deal_absolute": {
-          "price": 2500000000,
-          "date": "2026-05-27",
-          "floor": 25,
+          "price": 2610000000,
+          "date": "2026-08-07",
+          "floor": 12,
           "type": "중개거래"
         },
-        "month_deals": [],
+        "month_deals": [
+          {
+            "price": 2610000000,
+            "date": "2026-08-07",
+            "floor": 12,
+            "type": "중개거래"
+          }
+        ],
         "all_trades_history": [
           {
             "date": "2015-02-24",
@@ -302686,9 +302735,13 @@
           {
             "date": "2026-05-27",
             "price": 2500000000
+          },
+          {
+            "date": "2026-08-07",
+            "price": 2610000000
           }
         ],
-        "month_volume": 0,
+        "month_volume": 1,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
         "current_lowest_ask": 2750000000
@@ -310716,7 +310769,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 3469000000
+        "current_lowest_ask": 3460000000
       },
       {
         "match_key_area": 79,
@@ -344297,7 +344350,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 3200000000
+        "current_lowest_ask": 3290000000
       },
       {
         "match_key_area": 97,
@@ -358375,7 +358428,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 2550000000
+        "current_lowest_ask": 2600000000
       },
       {
         "match_key_area": 110,
@@ -368329,7 +368382,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 4550000000
+        "current_lowest_ask": 4450000000
       },
       {
         "match_key_area": 94,
@@ -368720,7 +368773,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 4600000000
+        "current_lowest_ask": 4450000000
       },
       {
         "match_key_area": 94,
@@ -369828,7 +369881,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 6100000000
+        "current_lowest_ask": 6050000000
       },
       {
         "match_key_area": 114,
@@ -375576,7 +375629,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 3350000000
+        "current_lowest_ask": 3300000000
       },
       {
         "match_key_area": 85,
@@ -376299,7 +376352,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 3350000000
+        "current_lowest_ask": 3300000000
       },
       {
         "match_key_area": 85,
@@ -401914,7 +401967,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 4390000000
+        "current_lowest_ask": 4300000000
       },
       {
         "match_key_area": 141,
@@ -402578,10 +402631,6 @@
             "price": 1700000000
           },
           {
-            "date": "2015-07-20",
-            "price": 1570000000
-          },
-          {
             "date": "2015-09-21",
             "price": 1750000000
           },
@@ -402620,10 +402669,6 @@
           {
             "date": "2016-06-03",
             "price": 1940000000
-          },
-          {
-            "date": "2016-06-14",
-            "price": 1630000000
           },
           {
             "date": "2016-06-14",
@@ -402712,10 +402757,6 @@
           {
             "date": "2019-07-29",
             "price": 2500000000
-          },
-          {
-            "date": "2019-08-02",
-            "price": 2790000000
           },
           {
             "date": "2019-09-05",
@@ -402834,6 +402875,73 @@
         "max_month_volume": 10,
         "volume_drop_rate": 0,
         "current_lowest_ask": 5890000000
+      },
+      {
+        "match_key_area": 210,
+        "pyeong_name": "226B",
+        "highest_deal_price": 6000000000,
+        "highest_deal_date": "2025-06-17",
+        "recent_deal_absolute": {
+          "price": 6000000000,
+          "date": "2025-06-17",
+          "floor": 6,
+          "type": "중개거래"
+        },
+        "month_deals": [],
+        "all_trades_history": [
+          {
+            "date": "2015-07-20",
+            "price": 1570000000
+          },
+          {
+            "date": "2016-06-14",
+            "price": 1630000000
+          },
+          {
+            "date": "2017-03-03",
+            "price": 2330000000
+          },
+          {
+            "date": "2017-03-06",
+            "price": 2200000000
+          },
+          {
+            "date": "2017-03-25",
+            "price": 2280000000
+          },
+          {
+            "date": "2019-08-02",
+            "price": 2790000000
+          },
+          {
+            "date": "2024-03-12",
+            "price": 4000000000
+          },
+          {
+            "date": "2024-07-25",
+            "price": 4250000000
+          },
+          {
+            "date": "2024-07-29",
+            "price": 4200000000
+          },
+          {
+            "date": "2025-02-15",
+            "price": 4450000000
+          },
+          {
+            "date": "2025-05-02",
+            "price": 4100000000
+          },
+          {
+            "date": "2025-06-17",
+            "price": 6000000000
+          }
+        ],
+        "month_volume": 0,
+        "max_month_volume": 10,
+        "volume_drop_rate": 0,
+        "current_lowest_ask": 5700000000
       }
     ]
   },
@@ -425430,7 +425538,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 4500000000
+        "current_lowest_ask": 4100000000
       }
     ]
   },
@@ -435250,9 +435358,9 @@
         "highest_deal_price": 1610000000,
         "highest_deal_date": "2026-08-10",
         "recent_deal_absolute": {
-          "price": 1600000000,
-          "date": "2026-08-15",
-          "floor": 8,
+          "price": 1555000000,
+          "date": "2026-08-29",
+          "floor": 11,
           "type": "중개거래"
         },
         "month_deals": [
@@ -435272,6 +435380,12 @@
             "price": 1600000000,
             "date": "2026-08-15",
             "floor": 8,
+            "type": "중개거래"
+          },
+          {
+            "price": 1555000000,
+            "date": "2026-08-29",
+            "floor": 11,
             "type": "중개거래"
           }
         ],
@@ -437739,9 +437853,13 @@
           {
             "date": "2026-08-15",
             "price": 1600000000
+          },
+          {
+            "date": "2026-08-29",
+            "price": 1555000000
           }
         ],
-        "month_volume": 3,
+        "month_volume": 4,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
         "current_lowest_ask": 1500000000
@@ -451083,7 +451201,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 3000000000
+        "current_lowest_ask": 2980000000
       },
       {
         "match_key_area": 163,
@@ -453408,7 +453526,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 5200000000
+        "current_lowest_ask": 5190000000
       }
     ]
   },
@@ -455123,7 +455241,7 @@
         "month_volume": 0,
         "max_month_volume": 10,
         "volume_drop_rate": 0,
-        "current_lowest_ask": 3100000000
+        "current_lowest_ask": 3090000000
       },
       {
         "match_key_area": 118,
