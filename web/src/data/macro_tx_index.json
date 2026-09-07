@@ -67,7 +67,7 @@
   {
     "month": "2015-02",
     "recovery_rate": 26.43,
-    "sample_count": 408
+    "sample_count": 409
   },
   {
     "month": "2015-03",
@@ -107,12 +107,12 @@
   {
     "month": "2015-10",
     "recovery_rate": 27.74,
-    "sample_count": 603
+    "sample_count": 604
   },
   {
     "month": "2015-11",
     "recovery_rate": 28.04,
-    "sample_count": 442
+    "sample_count": 443
   },
   {
     "month": "2015-12",
@@ -207,12 +207,12 @@
   {
     "month": "2017-06",
     "recovery_rate": 34.36,
-    "sample_count": 660
+    "sample_count": 661
   },
   {
     "month": "2017-07",
     "recovery_rate": 35.65,
-    "sample_count": 1033
+    "sample_count": 1034
   },
   {
     "month": "2017-08",
@@ -332,12 +332,12 @@
   {
     "month": "2019-07",
     "recovery_rate": 48.14,
-    "sample_count": 708
+    "sample_count": 709
   },
   {
     "month": "2019-08",
-    "recovery_rate": 49.25,
-    "sample_count": 414
+    "recovery_rate": 49.26,
+    "sample_count": 415
   },
   {
     "month": "2019-09",
@@ -347,7 +347,7 @@
   {
     "month": "2019-10",
     "recovery_rate": 51.07,
-    "sample_count": 795
+    "sample_count": 796
   },
   {
     "month": "2019-11",
@@ -371,8 +371,8 @@
   },
   {
     "month": "2020-03",
-    "recovery_rate": 51.91,
-    "sample_count": 95
+    "recovery_rate": 52.1,
+    "sample_count": 96
   },
   {
     "month": "2020-04",
@@ -381,8 +381,8 @@
   },
   {
     "month": "2020-05",
-    "recovery_rate": 51.43,
-    "sample_count": 413
+    "recovery_rate": 51.45,
+    "sample_count": 414
   },
   {
     "month": "2020-06",
@@ -591,8 +591,8 @@
   },
   {
     "month": "2023-11",
-    "recovery_rate": 64.46,
-    "sample_count": 136
+    "recovery_rate": 64.49,
+    "sample_count": 138
   },
   {
     "month": "2023-12",
@@ -691,8 +691,8 @@
   },
   {
     "month": "2025-07",
-    "recovery_rate": 89.52,
-    "sample_count": 240
+    "recovery_rate": 89.55,
+    "sample_count": 241
   },
   {
     "month": "2025-08",
@@ -757,6 +757,6 @@
   {
     "month": "2026-08",
     "recovery_rate": 95.65,
-    "sample_count": 74
+    "sample_count": 75
   }
 ]
