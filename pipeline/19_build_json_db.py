@@ -219,7 +219,15 @@ def build_db():
                 "month_volume": len(month_deals),
                 "max_month_volume": 10,
                 "volume_drop_rate": 0,
-                "current_lowest_ask": final_ask
+                "current_lowest_ask": final_ask,
+                
+                # --- V2 Extra Fields ---
+                "normal_lowest_ask": ask.get("normal_lowest_ask", 0),
+                "sale_count": ask.get("sale_count", 0),
+                "jeonse_count": ask.get("jeonse_count", 0),
+                "jeonse_lowest_ask": ask.get("jeonse_lowest_ask", 0),
+                "jeonse_rate": ask.get("jeonse_rate", 0),
+                "top_5_listings": ask.get("top_5", [])
             })
             
         final_data.append({

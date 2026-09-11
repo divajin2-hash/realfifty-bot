@@ -1,4 +1,4 @@
-import os
+﻿import os
 import sys
 
 def run_script(script_name):
@@ -15,14 +15,14 @@ if __name__ == "__main__":
     # Ensure we are in root dir (kb50_mdd)
     
     # 1. Update MOTIE recent deals (This Month & Last Month)
-    # [PRO 적용] 직거래 필터 및 소수점 면적 보존, 입주권 분양권 동시 순회
+    # [PRO ?곸슜] 吏곴굅???꾪꽣 諛??뚯닔??硫댁쟻 蹂댁〈, ?낆＜沅?遺꾩뼇沅??숈떆 ?쒗쉶
     run_script("31_daily_rtms_pro.py")
 
     # 2. Update Naver lowest ask prices
-    # [PRO 적용] 원자 단위 호가 스크래퍼 (최저가 100% 수집하여 raw_daily_asks.json 생성)
-    run_script("10_full_pyeong_scraper.py")
+    # [PRO ?곸슜] ?먯옄 ?⑥쐞 ?멸? ?ㅽ겕?섑띁 (理쒖?媛 100% ?섏쭛?섏뿬 raw_daily_asks.json ?앹꽦)
+    run_script("11_api_scraper_v2.py")
     
-    # 3. 네이버 수집파일 + 국토부 파일 결합 및 MDD(pyeong_stats) 생성 처리기
+    # 3. ?ㅼ씠踰??섏쭛?뚯씪 + 援?넗遺 ?뚯씪 寃고빀 諛?MDD(pyeong_stats) ?앹꽦 泥섎━湲?
     run_script("20_mdd_bridge.py")
     
     # 4. Re-build the JSON DB that the frontend reads
@@ -42,7 +42,7 @@ if __name__ == "__main__":
     # 8. Generate AI Daily Report and Fact Check JSON
     run_script('40_ai_reporter.py')
 
-    print("\n✅ All daily master bot scripts executed successfully!")
+    print("\n??All daily master bot scripts executed successfully!")
 
     # 8. Send Telegram Notification
     run_script("35_telegram_notify.py")

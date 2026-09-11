@@ -145,10 +145,15 @@ def run_master():
                     
                     import time
                     time.sleep(0.5)
+                    try:
+                        target_page.evaluate("""document.querySelectorAll('.dimmed').forEach(el => el.remove())""")
+                        target_page.evaluate("""document.querySelectorAll('.layer_popup').forEach(el => el.remove())""")
+                    except:
+                        pass
                     
                     price_btn = target_page.locator("a[data-nclk='TAA.price']")
                     if "is-ascending" not in price_btn.get_attribute("class") or "":
-                        price_btn.click(timeout=3000)
+                        price_btn.click(timeout=3000, force=True)
                         target_page.wait_for_selector("a[data-nclk='TAA.price'].is-ascending", timeout=4000)
                         time.sleep(1)
                     

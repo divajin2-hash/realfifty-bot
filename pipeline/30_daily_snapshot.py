@@ -1,4 +1,4 @@
-import os
+﻿import os
 import sys
 import json
 from datetime import datetime, timedelta, timezone
@@ -17,14 +17,14 @@ if not URL or not KEY:
 supabase: Client = create_client(URL, KEY)
 
 def run():
-    print("🚀 [Daily Snapshot Bot] Reading kb50_stats.json...")
+    print("?? [Daily Snapshot Bot] Reading kb50_stats.json...")
     
     json_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'web', 'src', 'data', 'kb50_stats.json')
     try:
         with open(json_path, 'r', encoding='utf-8') as f:
             db_stats = json.load(f)
     except FileNotFoundError:
-        print("❌ kb50_stats.json not found! Please run 19_build_json_db.py first.")
+        print("??kb50_stats.json not found! Please run 19_build_json_db.py first.")
         return
 
     # Fetch complex IDs
@@ -39,7 +39,7 @@ def run():
     today_str = datetime.now(KST).strftime('%Y-%m-%d')
     if len(sys.argv) > 1:
         today_str = sys.argv[1]
-        print(f"⚠️ Using custom date: {today_str}")
+        print(f"?좑툘 Using custom date: {today_str}")
 
     records = []
     
@@ -49,8 +49,8 @@ def run():
         if not c_id:
             continue
             
-        # 대표 평형 추출 로직:
-        # 쌍둥이 평형(전용면적 정수값 묶임) 중 거래량이 많고 일반적인(A타입 등) 모델을 우선!
+        # ????됲삎 異붿텧 濡쒖쭅:
+        # ?띾뫁???됲삎(?꾩슜硫댁쟻 ?뺤닔媛?臾띠엫) 以?嫄곕옒?됱씠 留롪퀬 ?쇰컲?곸씤(A????? 紐⑤뜽???곗꽑!
         def sort_key(p):
             total_vol = len(p.get('all_trades_history', []))
             vol = p.get('month_volume', 0)
@@ -86,27 +86,27 @@ def run():
                 "ath_price": ath,
                 "recent_price": recent,
                 "month_volume": vol,
-                "lowest_ask": ask
+                "lowest_ask": ask, "normal_lowest_ask": p.get('normal_lowest_ask', 0), "sale_count": p.get('sale_count', 0), "jeonse_count": p.get('jeonse_count', 0), "jeonse_lowest_ask": p.get('jeonse_lowest_ask', 0), "jeonse_rate": p.get('jeonse_rate', 0)
             }
             records.append(record)
 
     if not records:
-        print("⚠️ No records to insert.")
+        print("?좑툘 No records to insert.")
         return
         
-    print(f"✅ Prepared {len(records)} daily snapshots for {today_str}!")
+    print(f"??Prepared {len(records)} daily snapshots for {today_str}!")
     
     # Upsert to DB
-    print("🚀 Upserting to daily_history in Supabase (1000 chunk limit)...")
+    print("?? Upserting to daily_history in Supabase (1000 chunk limit)...")
     
     # Insert in chunks of 500
     chunk_size = 500
     for i in range(0, len(records), chunk_size):
         chunk = records[i:i + chunk_size]
         res = supabase.table("daily_history").upsert(chunk, on_conflict="complex_id, area, base_date").execute()
-        print(f"✔️ Chunk {i // chunk_size + 1} pushed! ({len(chunk)} records)")
+        print(f"?뷂툘 Chunk {i // chunk_size + 1} pushed! ({len(chunk)} records)")
 
-    print("🎉 Daily bot execution complete! One day's real snapshot is recorded.")
+    print("?럦 Daily bot execution complete! One day's real snapshot is recorded.")
 
 if __name__ == "__main__":
     run()

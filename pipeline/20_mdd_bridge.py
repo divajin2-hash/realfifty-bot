@@ -69,7 +69,15 @@ def run_mdd_bridge():
                 "match_key_area": match_key,
                 "price": price,
                 "ptp_no": ask.get("ptp_no", "0"),
-                "pyeong_name": str(supply_area) if supply_area > 0 else ""
+                "pyeong_name": str(supply_area) if supply_area > 0 else "",
+                
+                # --- V2 Extra Fields ---
+                "normal_lowest_ask": ask.get("normal_lowest_ask", 0),
+                "sale_count": ask.get("sale_count", 0),
+                "jeonse_count": ask.get("jeonse_count", 0),
+                "jeonse_lowest_ask": ask.get("jeonse_lowest_ask", 0),
+                "jeonse_rate": ask.get("jeonse_rate", 0),
+                "top_5": ask.get("top_5", [])
             }
             
     # 3. 국토부 실거래 DB에서 대표 평형별 '최고가(ATH)' 추출
@@ -147,7 +155,15 @@ def run_mdd_bridge():
             "current_lowest_ask": current_ask,
             "highest_deal_price": ath_price,
             "highest_deal_date": ath["date"],
-            "mdd_rate": mdd
+            "mdd_rate": mdd,
+            
+            # --- V2 Extra Fields ---
+            "normal_lowest_ask": ask_data.get("normal_lowest_ask", 0),
+            "sale_count": ask_data.get("sale_count", 0),
+            "jeonse_count": ask_data.get("jeonse_count", 0),
+            "jeonse_lowest_ask": ask_data.get("jeonse_lowest_ask", 0),
+            "jeonse_rate": ask_data.get("jeonse_rate", 0),
+            "top_5_listings": ask_data.get("top_5", [])
         })
         
     print(f"✅ 최종 MDD 산출 완료: {len(stats_to_insert)}개 평형 블록 업데이트 준비.")
