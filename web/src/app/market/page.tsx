@@ -107,15 +107,15 @@ export default function MarketDashboard() {
                 let fill = "#38BDF8";
                 let quad = "QUADRANT I";
 
-                // Color Logic based on ATH crosshair and diagonal spread
+                // STRICT Mathematical Quadrants based on X=0 (ATH) and Y=0 (Ask ATH)
                 if (mdd >= 0 && ask_mdd >= 0) {
-                    fill = "#38BDF8"; quad = "QUADRANT I"; // 상승 랠리
-                } else if (mdd >= 0 && ask_mdd < 0) {
-                    fill = "#EAB308"; quad = "QUADRANT IV"; // 매수자 우위 조정
-                } else if (mdd < 0 && ask_mdd > mdd) {
-                    fill = "#0ea5e9"; quad = "QUADRANT II"; // 호가 방어
+                    fill = "#38BDF8"; quad = "QUADRANT I"; // Q1: 신/전고점 랠리
+                } else if (mdd < 0 && ask_mdd >= 0) {
+                    fill = "#0ea5e9"; quad = "QUADRANT II"; // Q2: 극강 호가 방어 (호가 > 전고점)
+                } else if (mdd < 0 && ask_mdd < 0) {
+                    fill = "#F87171"; quad = "QUADRANT III"; // Q3: 동반 하락 / 항복
                 } else {
-                    fill = "#F87171"; quad = "QUADRANT III"; // 가격 항복
+                    fill = "#EAB308"; quad = "QUADRANT IV"; // Q4: 실거래는 버티나 호가 조정
                 }
 
                 const addr = group.complex.address || "";
@@ -333,7 +333,7 @@ export default function MarketDashboard() {
                                     <XAxis
                                         type="number"
                                         dataKey="mdd"
-                                        domain={[-35, 10]}
+                                        domain={[-35, 15]}
                                         name="실거래가 등락률"
                                         stroke="var(--text-muted)"
                                         fontSize={11}
@@ -342,7 +342,7 @@ export default function MarketDashboard() {
                                     <YAxis
                                         type="number"
                                         dataKey="ask_mdd"
-                                        domain={[-35, 10]}
+                                        domain={[-35, 15]}
                                         name="호가 등락률"
                                         stroke="var(--text-muted)"
                                         fontSize={11}
@@ -370,12 +370,12 @@ export default function MarketDashboard() {
                         </div>
 
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', flex: 1 }}>
-                            {/* Card 1: Defensor (Q2) */}
+                            {/* Card 1: Defensor (Highest Gap) */}
                             {defensor && (
-                                <div style={{ border: '1px solid #0ea5e9', padding: '20px', borderRadius: '4px', background: 'rgba(14, 165, 233, 0.05)' }}>
+                                <div style={{ border: `1px solid ${defensor.fill}`, padding: '20px', borderRadius: '4px', background: `${defensor.fill}20` }}>
                                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
                                         <div style={{ fontSize: '1.1rem', fontWeight: 800, color: '#fff' }}>{defensor.name} <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)', fontWeight: 400 }}>{defensor.subTitle.split('·')[1]}</span></div>
-                                        <div style={{ background: '#0ea5e9', color: '#fff', fontSize: '0.7rem', padding: '2px 6px', borderRadius: '4px', fontWeight: 800 }}>QUADRANT II</div>
+                                        <div style={{ background: defensor.fill, color: '#111827', fontSize: '0.7rem', padding: '2px 6px', borderRadius: '4px', fontWeight: 800 }}>{defensor.quad}</div>
                                     </div>
                                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '8px', marginBottom: '16px', fontSize: '0.8rem' }}>
                                         <div>
@@ -391,18 +391,18 @@ export default function MarketDashboard() {
                                             <div style={{ color: '#38BDF8', fontWeight: 700 }}>+{defensor.gap}%</div>
                                         </div>
                                     </div>
-                                    <div style={{ fontSize: '0.85rem', color: '#E5E7EB', lineHeight: 1.6, background: '#111827', padding: '12px', borderLeft: '3px solid #0ea5e9' }}>
-                                        <span style={{ color: '#38BDF8', fontWeight: 800 }}>[호가 방어 구간 판정]</span> 매도자가 최근 실거래가 급락({defensor.mdd}%)을 인정하지 않고 전고점에 가까운 호가를 지속 유지. 거래 성사 불가 국면(Liquidity Freeze) 지속 중.
+                                    <div style={{ fontSize: '0.85rem', color: '#E5E7EB', lineHeight: 1.6, background: '#111827', padding: '12px', borderLeft: `3px solid ${defensor.fill}` }}>
+                                        <span style={{ color: defensor.fill, fontWeight: 800 }}>[상대적 호가 강세]</span> 해당 단지는 속한 구역 내에서도 실거래 하락률({defensor.mdd}%) 대비 매도 호가를 강하게 방어({defensor.ask_mdd}%)하며 가격 안착을 시도하는 특징을 보입니다.
                                     </div>
                                 </div>
                             )}
 
-                            {/* Card 2: Capitulator (Q3) */}
+                            {/* Card 2: Capitulator (Drop) */}
                             {capitulator && (
-                                <div style={{ border: '1px solid #F87171', padding: '20px', borderRadius: '4px', background: 'rgba(248, 113, 113, 0.05)' }}>
+                                <div style={{ border: `1px solid ${capitulator.fill}`, padding: '20px', borderRadius: '4px', background: `${capitulator.fill}20` }}>
                                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
                                         <div style={{ fontSize: '1.1rem', fontWeight: 800, color: '#fff' }}>{capitulator.name} <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)', fontWeight: 400 }}>{capitulator.subTitle.split('·')[1]}</span></div>
-                                        <div style={{ background: '#7F1D1D', color: '#FCA5A5', fontSize: '0.7rem', padding: '2px 6px', borderRadius: '4px', fontWeight: 800 }}>QUADRANT III</div>
+                                        <div style={{ background: capitulator.fill, color: '#111827', fontSize: '0.7rem', padding: '2px 6px', borderRadius: '4px', fontWeight: 800 }}>{capitulator.quad}</div>
                                     </div>
                                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '8px', marginBottom: '16px', fontSize: '0.8rem' }}>
                                         <div>
@@ -415,16 +415,15 @@ export default function MarketDashboard() {
                                         </div>
                                         <div>
                                             <div style={{ color: 'var(--text-muted)', marginBottom: '4px' }}>상태</div>
-                                            <div style={{ color: '#F87171', fontWeight: 700 }}>호가 붕괴</div>
+                                            <div style={{ color: '#F87171', fontWeight: 700 }}>하방 이탈</div>
                                         </div>
                                     </div>
-                                    <div style={{ fontSize: '0.85rem', color: '#E5E7EB', lineHeight: 1.6, background: '#111827', padding: '12px', borderLeft: '3px solid #F87171' }}>
-                                        <span style={{ color: '#F87171', fontWeight: 800 }}>[가격 항복 국면 판정]</span> 최고가 {capitulator.highestStr} 대비 {capitulator.askStr} 급매 매물이 속출하며 매도 호가({capitulator.ask_mdd}%)가 실거래선 밑으로 내려앉음. 하락 압력 가속화.
+                                    <div style={{ fontSize: '0.85rem', color: '#E5E7EB', lineHeight: 1.6, background: '#111827', padding: '12px', borderLeft: `3px solid ${capitulator.fill}` }}>
+                                        <span style={{ color: capitulator.fill, fontWeight: 800 }}>[상대적 하락 압력]</span> 실거래 추락에 더해 호가 하락({capitulator.ask_mdd}%)까지 깊어지며 하락 압력이 지속되는 단지입니다. 매수 관망세가 짙습니다.
                                     </div>
                                 </div>
                             )}
                         </div>
-
                         <div style={{ marginTop: '20px', paddingTop: '16px', borderTop: '1px solid #374151', display: 'flex', justifyContent: 'space-between', fontSize: '0.75rem', fontWeight: 800, color: 'var(--text-muted)', letterSpacing: '1px' }}>
                             <span>RADAR ACCURACY INDEX</span>
                             <span style={{ color: '#38BDF8' }}>99.2% CONFIDENCE</span>
