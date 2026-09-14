@@ -11,6 +11,16 @@ export default async function MarketDashboard() {
     let rawData = [];
     try { rawData = JSON.parse(fs.readFileSync(jsonPath, 'utf8')); } catch (e) { }
 
+    
+    function formatPyeong(s: any) {
+        if (!s) return "";
+        if (s.supply_area && s.exclusive_area) {
+            const letters = (s.pyeong_name || "").replace(/[^a-zA-Z]/g, '');
+            return `${s.supply_area}㎡ (${s.exclusive_area}${letters})`;
+        }
+        return s.pyeong_name ? `${s.pyeong_name}` : `${s.match_key_area}㎡`;
+    }
+
     const groupedData = (rawData as any[]).map(group => {
         return {
             complex: group.complex,

@@ -281,15 +281,33 @@ export default function DetailPage() {
                                             cursor: 'pointer', transition: 'all 0.2s', fontWeight: 700
                                         }}
                                     >
-                                        {s.pyeong_name && (
-                                            <span style={{ fontSize: '1rem', fontWeight: 900, opacity: isActive ? 1 : 0.7, marginBottom: '2px', color: isActive ? '#ba1a1a' : '#fff' }}>
-                                                {s.pyeong_name.includes('㎡') || s.pyeong_name.includes('형') ? s.pyeong_name : `${s.pyeong_name}형`}
-                                            </span>
-                                        )}
-                                        <div style={{ display: 'flex', alignItems: 'baseline', gap: '3px' }}>
-                                            <span style={{ fontSize: '0.8rem', opacity: isActive ? 0.9 : 0.6, fontWeight: 600 }}>전용</span>
-                                            <span className="num-font" style={{ fontSize: '1.4rem' }}>{s.match_key_area}</span>
-                                        </div>
+                                        
+                                        {(() => {
+                                            if (s.supply_area && s.exclusive_area) {
+                                                const letters = (s.pyeong_name || "").replace(/[^a-zA-Z]/g, '');
+                                                return (
+                                                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                                                        <span className="num-font" style={{ fontSize: '1rem', fontWeight: 900, opacity: isActive ? 1 : 0.7, color: isActive ? '#ba1a1a' : '#fff' }}>
+                                                            {s.supply_area}㎡
+                                                        </span>
+                                                        <span className="num-font" style={{ fontSize: '0.8rem', opacity: isActive ? 0.9 : 0.6 }}>
+                                                            ({s.exclusive_area}{letters})
+                                                        </span>
+                                                    </div>
+                                                )
+                                            }
+                                            return (
+                                                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                                                    <span className="num-font" style={{ fontSize: '1rem', fontWeight: 900, opacity: isActive ? 1 : 0.7, color: isActive ? '#ba1a1a' : '#fff' }}>
+                                                        {s.pyeong_name}
+                                                    </span>
+                                                    <span className="num-font" style={{ fontSize: '0.8rem', opacity: isActive ? 0.9 : 0.6 }}>
+                                                        (전용 {s.match_key_area})
+                                                    </span>
+                                                </div>
+                                            )
+                                        })()}
+    
                                     </div>
                                 )
                             })}

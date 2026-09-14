@@ -28,11 +28,21 @@ export default async function Dashboard({ searchParams }: { searchParams: { sort
                     month_volume: s.month_volume,
                     current_lowest_ask: s.current_lowest_ask,
                     recent_drop_rate: recent_drop_rate,
-                    mdd_rate: s.highest_deal_price > 0 ? ((s.current_lowest_ask - s.highest_deal_price) / s.highest_deal_price) * 100 : 0
+                    mdd_rate: (s.highest_deal_price > 0 && s.current_lowest_ask > 0) ? ((s.current_lowest_ask - s.highest_deal_price) / s.highest_deal_price) * 100 : 0
                 }
             })
         }
     });
+
+
+    function formatPyeong(s: any) {
+        if (!s) return "";
+        if (s.supply_area && s.exclusive_area) {
+            const letters = (s.pyeong_name || "").replace(/[^a-zA-Z]/g, '');
+            return `${s.supply_area}㎡ (${s.exclusive_area}${letters})`;
+        }
+        return s.pyeong_name ? `${s.pyeong_name}` : `${s.match_key_area}㎡`;
+    }
 
     function getRepresentativeStat(stats: any[]) {
         if (!stats || stats.length === 0) return null;
@@ -42,14 +52,19 @@ export default async function Dashboard({ searchParams }: { searchParams: { sort
             if (s.recent_deal_absolute && s.recent_deal_absolute.date) {
                 diffDays = Math.abs(now - new Date(s.recent_deal_absolute.date).getTime()) / (1000 * 3600 * 24);
             }
-            return { ...s, diffDays, isAlive: diffDays <= 365, groupDist: Math.abs(s.match_key_area - 84) };
+            const hasAsk = s.current_lowest_ask > 0;
+            return { ...s, diffDays, isAlive: diffDays <= 365, hasAsk, groupDist: Math.abs(s.match_key_area - 84) };
         });
-        scoredStats.sort((a, b) => {
+        
+        let validStats = scoredStats.filter(s => s.hasAsk);
+        if (validStats.length === 0) validStats = scoredStats;
+        
+        validStats.sort((a, b) => {
             if (a.isAlive !== b.isAlive) return a.isAlive ? -1 : 1;
             if (a.groupDist !== b.groupDist) return a.groupDist - b.groupDist;
             return (b.month_volume || 0) - (a.month_volume || 0);
         });
-        return scoredStats[0];
+        return validStats[0];
     }
 
     // Calculators
@@ -255,7 +270,7 @@ export default async function Dashboard({ searchParams }: { searchParams: { sort
                                         <div key={i} style={{ display: 'flex', padding: '20px 24px', borderBottom: i < 2 ? '1px solid var(--border-light)' : 'none', alignItems: 'center' }}>
                                             <div className="num-font" style={{ width: '40px', fontSize: '1.5rem', fontWeight: 900, color: 'var(--color-down)', opacity: 0.8 }}>0{i + 1}</div>
                                             <div style={{ flex: 1 }}>
-                                                <div style={{ fontSize: '1.05rem', fontWeight: 800, color: 'var(--text-dark)' }}>{m.complex.name} <span className="num-font" style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 400 }}>{rep?.pyeong_name}</span></div>
+                                                <div style={{ fontSize: '1.05rem', fontWeight: 800, color: 'var(--text-dark)' }}>{m.complex.name} <span className="num-font" style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 400 }}>{formatPyeong(rep)}</span></div>
                                                 <div className="num-font" style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '4px' }}>직전 체결 44.5억 대비 10.0억 급락</div>
                                             </div>
                                             <div style={{ textAlign: 'right' }}>
@@ -281,7 +296,7 @@ export default async function Dashboard({ searchParams }: { searchParams: { sort
                                         <div key={i} style={{ display: 'flex', padding: '20px 24px', borderBottom: i < 2 ? '1px solid var(--border-light)' : 'none', alignItems: 'center' }}>
                                             <div className="num-font" style={{ width: '40px', fontSize: '1.5rem', fontWeight: 900, color: 'var(--color-cyan)', opacity: 0.8 }}>0{i + 1}</div>
                                             <div style={{ flex: 1 }}>
-                                                <div style={{ fontSize: '1.05rem', fontWeight: 800, color: 'var(--text-dark)' }}>{m.complex.name} <span className="num-font" style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 400 }}>{rep?.pyeong_name}</span></div>
+                                                <div style={{ fontSize: '1.05rem', fontWeight: 800, color: 'var(--text-dark)' }}>{m.complex.name} <span className="num-font" style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 400 }}>{formatPyeong(rep)}</span></div>
                                                 <div className="num-font" style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginTop: '4px' }}>급매물 초과 출현 • 즉시 입주 협의</div>
                                             </div>
                                             <div style={{ textAlign: 'right' }}>
@@ -308,7 +323,7 @@ export default async function Dashboard({ searchParams }: { searchParams: { sort
                         <div style={{ background: 'var(--bg-card)', border: '1px solid var(--border-light)', padding: '32px' }}>
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '40px' }}>
                                 <div style={{ fontSize: '1.4rem', fontWeight: 800, display: 'flex', alignItems: 'baseline', gap: '12px' }}>
-                                    {gapExample.complex.name} <span className="num-font" style={{ fontSize: '0.9rem', color: 'var(--color-cyan)' }}>{gapRep.pyeong_name} TYPE</span>
+                                    {gapExample.complex.name} <span className="num-font" style={{ fontSize: '0.9rem', color: 'var(--color-cyan)' }}>{formatPyeong(gapRep)}</span>
                                 </div>
                                 <div className="num-font" style={{ background: 'var(--color-down)', color: 'var(--bg-card)', padding: '4px 12px', fontSize: '0.8rem', fontWeight: 800, borderRadius: '4px' }}>
                                     ● HIGH DIVERGENCE ZONE ALERT
@@ -384,7 +399,7 @@ export default async function Dashboard({ searchParams }: { searchParams: { sort
                                             <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px', paddingBottom: '12px', borderBottom: '1px solid var(--border-light)' }}>
                                                 <div>
                                                     <div style={{ fontWeight: 800, color: 'var(--text-dark)', fontSize: '0.9rem' }}>{m.complex.name}</div>
-                                                    <div className="num-font" style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>{r.pyeong_name} • {(r.recent_deal_absolute.price / 10000).toFixed(1)}억 / 호 {(r.current_lowest_ask / 10000).toFixed(1)}억</div>
+                                                    <div className="num-font" style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>{formatPyeong(r)} • {(r.recent_deal_absolute.price / 10000).toFixed(1)}억 / 호 {(r.current_lowest_ask / 10000).toFixed(1)}억</div>
                                                 </div>
                                                 <div className="num-font" style={{ color: 'var(--color-cyan)', fontWeight: 800, fontSize: '1rem' }}>
                                                     GAP +{g}%
