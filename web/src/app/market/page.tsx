@@ -100,37 +100,49 @@ export default function MarketDashboard() {
             const ask = stat.current_lowest_ask;
 
             if (highest > 0 && recent > 0 && ask > 0) {
-                const mdd = ((recent - highest) / highest) * 100;
-                const gap = ((ask - recent) / recent) * 100;
+                const mdd = ((recent - highest) / highest) * 100;       // 실거래 하락률
+                const ask_mdd = ((ask - highest) / highest) * 100;      // 호가 하락률 (NEW Y-AXIS)
+                const gap = ((ask - recent) / recent) * 100;            // 괴리율 (스프레드)
 
                 let fill = "#38BDF8";
-                if (mdd >= -15 && gap >= 0) fill = "#38BDF8"; // Q1: cyan
-                else if (mdd >= -15 && gap < 0) fill = "#9CA3AF"; // Q2: gray
-                else if (mdd < -15 && gap < 0) fill = "#F87171"; // Q3: red
-                else fill = "#EAB308"; // Q4: yellow
+                let quad = "QUADRANT I";
 
-                // Extact Gu/Dong for label
+                // Color Logic based on ATH crosshair and diagonal spread
+                if (mdd >= 0 && ask_mdd >= 0) {
+                    fill = "#38BDF8"; quad = "QUADRANT I"; // 상승 랠리
+                } else if (ask_mdd > mdd) {
+                    fill = "#0ea5e9"; quad = "QUADRANT II"; // 호가 방어 (Gray/Blue)
+                } else if (ask_mdd <= mdd) {
+                    fill = "#F87171"; quad = "QUADRANT III"; // 가격 항복 (Red)
+                } else {
+                    fill = "#EAB308"; quad = "QUADRANT IV"; // 기타
+                }
+
                 const addr = group.complex.address || "";
                 let dong = "";
                 const parts = addr.split(" ");
                 if (parts.length > 0) {
-                    dong = parts[parts.length - 1]; // e.g. 가락동
+                    dong = parts[parts.length - 1];
                 }
 
                 scatter.push({
                     name: group.complex.name,
                     subTitle: `${dong} · ${stat.match_key_area}㎡`,
                     mdd: Number(mdd.toFixed(1)),
+                    ask_mdd: Number(ask_mdd.toFixed(1)),
                     gap: Number(gap.toFixed(1)),
+                    highest: highest,
+                    recent: recent,
+                    ask: ask,
                     highestStr: (highest / 100000000).toFixed(1) + '억',
                     recentStr: (recent / 100000000).toFixed(1) + '억',
                     askStr: (ask / 100000000).toFixed(1) + '억',
-                    fill
+                    fill,
+                    quad
                 });
 
                 // Region calculation
                 const rec_rate = (recent / highest) * 100;
-
                 if (GANGNAM3.some(g => dong.includes(g))) {
                     regions.gangnam.sum += rec_rate;
                     regions.gangnam.count++;
@@ -154,16 +166,40 @@ export default function MarketDashboard() {
     const top5Gap = [...scatterData].sort((a, b) => b.gap - a.gap).slice(0, 5);
     const top5Drop = [...scatterData].sort((a, b) => a.mdd - b.mdd).slice(0, 5);
 
+    // Get representatives for deep diagnosis
+    const defensor = top5Gap[0] || scatterData[0];
+    const capitulator = [...scatterData].sort((a, b) => a.ask_mdd - b.ask_mdd)[0] || scatterData[1]; // Most extreme ask drop
+
+    // Custom Scatter Dot Label
+    const renderCustomDot = (props: any) => {
+        const { cx, cy, payload } = props;
+        const isHighlight = payload.name === defensor?.name || payload.name === capitulator?.name;
+
+        return (
+            <g>
+                <circle cx={cx} cy={cy} r={isHighlight ? 5 : 3.5} fill={payload.fill} stroke={isHighlight ? "#fff" : "none"} strokeWidth={1} />
+                {isHighlight && (
+                    <text x={cx + 8} y={cy} dy={4} fill="#E5E7EB" fontSize="10px" fontWeight="600" style={{ pointerEvents: 'none' }}>
+                        {payload.name} ({payload.mdd}%, {payload.ask_mdd}%)
+                    </text>
+                )}
+            </g>
+        );
+    };
+
     const ScatterTooltip = ({ active, payload }: any) => {
         if (active && payload && payload.length) {
             const data = payload[0].payload;
             return (
                 <div style={{ background: '#111827', border: '1px solid #374151', padding: '16px', borderRadius: '8px', color: '#fff', boxShadow: '0 10px 25px rgba(0,0,0,0.5)' }}>
-                    <div style={{ fontWeight: 'bold', marginBottom: '8px' }}>{data.name}</div>
-                    <div style={{ fontSize: '0.9rem', color: '#9CA3AF' }}>최근실거래: <span style={{ color: '#fff' }}>{data.recentStr}</span> (최고가 {data.highestStr})</div>
-                    <div style={{ fontSize: '0.9rem', color: '#9CA3AF' }}>현재최저호가: <span style={{ color: '#fff' }}>{data.askStr}</span></div>
-                    <div style={{ fontSize: '0.9rem', marginTop: '8px', color: data.mdd > -15 ? '#38BDF8' : '#F87171' }}>실거래 회복(MDD): {data.mdd}%</div>
-                    <div style={{ fontSize: '0.9rem', color: data.gap > 0 ? '#38BDF8' : '#F87171' }}>호가 괴리율: {data.gap > 0 ? '+' : ''}{data.gap}%</div>
+                    <div style={{ fontWeight: 'bold', marginBottom: '8px', color: data.fill }}>{data.name} <span style={{ fontSize: '0.7rem', color: '#6B7280' }}>({data.quad})</span></div>
+                    <div style={{ fontSize: '0.9rem', color: '#9CA3AF' }}>전고점: {data.highestStr}</div>
+                    <div style={{ fontSize: '0.9rem', color: '#9CA3AF' }}>최근실거래: <span style={{ color: '#fff' }}>{data.recentStr}</span></div>
+                    <div style={{ fontSize: '0.9rem', color: '#9CA3AF' }}>최저호가: <span style={{ color: '#fff' }}>{data.askStr}</span></div>
+                    <div style={{ padding: '8px', background: 'rgba(255,255,255,0.05)', borderRadius: '4px', marginTop: '12px' }}>
+                        <div style={{ fontSize: '0.85rem' }}>실거래 등락 (X): <span style={{ color: data.mdd > 0 ? '#38BDF8' : '#F87171' }}>{data.mdd}%</span></div>
+                        <div style={{ fontSize: '0.85rem' }}>호가 등락 (Y): <span style={{ color: data.ask_mdd > 0 ? '#38BDF8' : '#EAB308' }}>{data.ask_mdd}%</span></div>
+                    </div>
                 </div>
             );
         }
@@ -275,75 +311,123 @@ export default function MarketDashboard() {
                     </div>
                 </div>
 
-                {/* Grid 2: Scatter Plot & Guidance */}
+                {/* Grid 2: Scatter Plot & Guidance Diagnosis */}
                 <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 2fr) minmax(0, 1fr)', gap: '16px', marginBottom: '16px' }}>
                     <div style={{ background: 'var(--bg-card)', border: '1px solid var(--border-light)', padding: '24px' }}>
-                        <div className="num-font" style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginBottom: '24px', display: 'flex', justifyContent: 'space-between' }}>
-                            <span style={{ color: '#fff', fontWeight: 600 }}>REALFIFTY MARKET MAP (4분면)</span>
+                        <div className="num-font" style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginBottom: '8px', display: 'flex', justifyContent: 'space-between' }}>
+                            <span style={{ color: '#fff', fontSize: '1.2rem', fontWeight: 800 }}>REALFIFTY MARKET MAP (4분면 매트릭스)</span>
                             <span style={{ padding: '4px 8px', border: '1px solid var(--border-light)', borderRadius: '4px', fontSize: '0.7rem' }}>DUAL-AXIS VALUATION RADAR</span>
                         </div>
+                        <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginBottom: '24px' }}>
+                            X축: 실거래가 고점 대비 등락률 (%) ↔ Y축: 최신 호가 고점 대비 등락률 (%) • 단지별 가격 왜곡 상태 추적
+                        </div>
                         <div style={{ height: '500px', position: 'relative' }}>
-                            <div style={{ position: 'absolute', top: '10px', right: '40px', color: '#38BDF8', fontSize: '0.75rem', fontWeight: 800, zIndex: 10 }}>QUADRANT I: 신고가 랠리</div>
-                            <div style={{ position: 'absolute', top: '10px', left: '40px', color: '#9CA3AF', fontSize: '0.75rem', fontWeight: 800, zIndex: 10 }}>QUADRANT II: 호가 방어 (괴리 발생)</div>
-                            <div style={{ position: 'absolute', bottom: '20px', left: '40px', color: '#F87171', fontSize: '0.75rem', fontWeight: 800, zIndex: 10 }}>QUADRANT III: 과대 낙폭</div>
-                            <div style={{ position: 'absolute', bottom: '20px', right: '40px', color: '#EAB308', fontSize: '0.75rem', fontWeight: 800, zIndex: 10 }}>QUADRANT IV: 급매 포착 구간</div>
+                            <div style={{ position: 'absolute', top: '10px', right: '40px', color: '#38BDF8', fontSize: '0.8rem', fontWeight: 800, zIndex: 10 }}>QUADRANT I: 신고가 랠리</div>
+                            <div style={{ position: 'absolute', top: '10px', left: '40px', color: '#0ea5e9', fontSize: '0.8rem', fontWeight: 800, zIndex: 10 }}>QUADRANT II: 호가 방어 국면</div>
+                            <div style={{ position: 'absolute', bottom: '20px', left: '40px', color: '#F87171', fontSize: '0.8rem', fontWeight: 800, zIndex: 10 }}>QUADRANT III: 가격 항복 & 급락 국면</div>
+                            <div style={{ position: 'absolute', bottom: '20px', right: '40px', color: '#EAB308', fontSize: '0.8rem', fontWeight: 800, zIndex: 10 }}>QUADRANT IV: 매수자 우위 조정</div>
 
                             <ResponsiveContainer width="100%" height="100%">
-                                <ScatterChart margin={{ top: 20, right: 20, bottom: 20, left: 0 }}>
-                                    <CartesianGrid stroke="#374151" strokeDasharray="3 3" />
+                                <ScatterChart margin={{ top: 30, right: 30, bottom: 20, left: 0 }}>
+                                    <CartesianGrid stroke="#1F2937" strokeDasharray="3 3" />
                                     <XAxis
                                         type="number"
                                         dataKey="mdd"
-                                        domain={[-35, 5]}
-                                        name="실거래 회복(MDD)"
+                                        domain={[-35, 10]}
+                                        name="실거래가 등락률"
                                         stroke="var(--text-muted)"
                                         fontSize={11}
-                                        label={{ value: "◀ 실거래 하락 심각 (-35%)                      실거래 전고점 도달 (0%) ▶", position: "insideBottom", fill: "var(--text-muted)", fontSize: 10, dy: 15 }}
+                                        label={{ value: "◀ 실거래가 -35% (급락)                      실거래가 -20%                    X=0% (전고점 수준)                     신고가 +10% ▶", position: "insideBottom", fill: "var(--text-muted)", fontSize: 10, dy: 15 }}
                                     />
                                     <YAxis
                                         type="number"
-                                        dataKey="gap"
-                                        domain={[-20, 30]}
-                                        name="호가 괴리율"
+                                        dataKey="ask_mdd"
+                                        domain={[-35, 10]}
+                                        name="호가 등락률"
                                         stroke="var(--text-muted)"
                                         fontSize={11}
                                     />
-                                    <ZAxis type="number" range={[60, 60]} />
+                                    <ZAxis type="number" range={[50, 50]} />
                                     <RechartsTooltip content={<ScatterTooltip />} cursor={{ strokeDasharray: '3 3' }} />
-                                    <ReferenceLine x={-15} stroke="#6B7280" strokeWidth={2} />
-                                    <ReferenceLine y={0} stroke="#6B7280" strokeWidth={2} />
 
-                                    <Scatter data={scatterData} shape="circle" isAnimationActive={false}>
-                                        {scatterData.map((entry, index) => (
-                                            <Cell key={`cell-${index}`} fill={entry.fill} />
-                                        ))}
-                                    </Scatter>
+                                    {/* Crosshairs strictly at X=0, Y=0 representing ATH */}
+                                    <ReferenceLine x={0} stroke="#F87171" strokeWidth={1} label={{ position: 'top', value: 'X=0% 전고점', fill: '#F87171', fontSize: 10 }} />
+                                    <ReferenceLine y={0} stroke="#374151" strokeWidth={2} />
+
+                                    {/* Diagonal Line Y = X */}
+                                    <ReferenceLine segment={[{ x: -35, y: -35 }, { x: 10, y: 10 }]} stroke="#374151" strokeDasharray="5 5" />
+
+                                    <Scatter data={scatterData} shape={renderCustomDot} isAnimationActive={false} />
                                 </ScatterChart>
                             </ResponsiveContainer>
                         </div>
                     </div>
 
+                    {/* Detailed Position Diagnosis */}
                     <div style={{ background: 'var(--bg-card)', border: '1px solid var(--border-light)', padding: '24px', display: 'flex', flexDirection: 'column' }}>
-                        <div className="num-font" style={{ fontSize: '0.85rem', color: '#fff', marginBottom: '24px', fontWeight: 600 }}>
-                            <span style={{ color: '#38BDF8' }}>■</span> 4분면 매트릭스 리딩 가이던스
+                        <div className="num-font" style={{ fontSize: '1.2rem', color: '#fff', marginBottom: '32px', fontWeight: 800 }}>
+                            <span style={{ color: '#38BDF8', marginRight: '8px' }}>◎</span>단지별 포지션 심층 진단
                         </div>
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '30px', flex: 1, justifyItems: 'space-between', marginTop: '20px' }}>
-                            <div>
-                                <div style={{ fontSize: '1rem', color: '#fff', fontWeight: 700, marginBottom: '8px' }}>Q1. 주도주 / 과열 영역</div>
-                                <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)', lineHeight: 1.6 }}>전고점 대비 -15% 이내 회복 완료 및 매물 호가 강세 유지. 단기간 급반등한 단지 군집입니다. 추격 매수 시 강한 저항을 유의하십시오.</div>
-                            </div>
-                            <div>
-                                <div style={{ fontSize: '1rem', color: '#fff', fontWeight: 700, marginBottom: '8px' }}>Q2. 호가 방어 / 팽팽한 줄다리기</div>
-                                <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)', lineHeight: 1.6 }}>최근 실거래가는 -15% 이하로 크게 꺾였으나, 집주인들이 호가를 내리지 않는 '호가 방어력' 구간입니다. 매수/매도 호가 괴리가 깊어 거래절벽이 일어납니다.</div>
-                            </div>
-                            <div>
-                                <div style={{ fontSize: '1rem', color: '#fff', fontWeight: 700, marginBottom: '8px' }}>Q3. 과대 낙폭 / 바닥 탐색 구간</div>
-                                <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)', lineHeight: 1.6 }}>실거래와 호가 모두 -15% 이하로 붕괴했습니다. 시장 공포가 극에 달한 구간이나, 유동성 유입 시 가장 튀어오를 턴어라운드 후보 단지들입니다.</div>
-                            </div>
-                            <div>
-                                <div style={{ fontSize: '1rem', color: '#fff', fontWeight: 700, marginBottom: '8px' }}>Q4. 호가 조정 / 급매 포착 구간</div>
-                                <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)', lineHeight: 1.6 }}>실거래가는 버티고 있으나 최근 호가가 던져지고 있습니다. 단기적 모멘텀은 약하나 급매물(Bargain) 타겟팅이 가장 유리한 영역입니다.</div>
-                            </div>
+
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', flex: 1 }}>
+                            {/* Card 1: Defensor (Q2) */}
+                            {defensor && (
+                                <div style={{ border: '1px solid #0ea5e9', padding: '20px', borderRadius: '4px', background: 'rgba(14, 165, 233, 0.05)' }}>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
+                                        <div style={{ fontSize: '1.1rem', fontWeight: 800, color: '#fff' }}>{defensor.name} <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)', fontWeight: 400 }}>{defensor.subTitle.split('·')[1]}</span></div>
+                                        <div style={{ background: '#0ea5e9', color: '#fff', fontSize: '0.7rem', padding: '2px 6px', borderRadius: '4px', fontWeight: 800 }}>QUADRANT II</div>
+                                    </div>
+                                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '8px', marginBottom: '16px', fontSize: '0.8rem' }}>
+                                        <div>
+                                            <div style={{ color: 'var(--text-muted)', marginBottom: '4px' }}>실거래 하락률</div>
+                                            <div style={{ color: '#fff', fontWeight: 700 }}>{defensor.mdd}%</div>
+                                        </div>
+                                        <div>
+                                            <div style={{ color: 'var(--text-muted)', marginBottom: '4px' }}>호가 하락률</div>
+                                            <div style={{ color: '#fff', fontWeight: 700 }}>{defensor.ask_mdd}%</div>
+                                        </div>
+                                        <div>
+                                            <div style={{ color: 'var(--text-muted)', marginBottom: '4px' }}>스프레드 괴리</div>
+                                            <div style={{ color: '#38BDF8', fontWeight: 700 }}>+{defensor.gap}%</div>
+                                        </div>
+                                    </div>
+                                    <div style={{ fontSize: '0.85rem', color: '#E5E7EB', lineHeight: 1.6, background: '#111827', padding: '12px', borderLeft: '3px solid #0ea5e9' }}>
+                                        <span style={{ color: '#38BDF8', fontWeight: 800 }}>[호가 방어 구간 판정]</span> 매도자가 최근 실거래가 급락({defensor.mdd}%)을 인정하지 않고 전고점에 가까운 호가를 지속 유지. 거래 성사 불가 국면(Liquidity Freeze) 지속 중.
+                                    </div>
+                                </div>
+                            )}
+
+                            {/* Card 2: Capitulator (Q3) */}
+                            {capitulator && (
+                                <div style={{ border: '1px solid #F87171', padding: '20px', borderRadius: '4px', background: 'rgba(248, 113, 113, 0.05)' }}>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
+                                        <div style={{ fontSize: '1.1rem', fontWeight: 800, color: '#fff' }}>{capitulator.name} <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)', fontWeight: 400 }}>{capitulator.subTitle.split('·')[1]}</span></div>
+                                        <div style={{ background: '#7F1D1D', color: '#FCA5A5', fontSize: '0.7rem', padding: '2px 6px', borderRadius: '4px', fontWeight: 800 }}>QUADRANT III</div>
+                                    </div>
+                                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '8px', marginBottom: '16px', fontSize: '0.8rem' }}>
+                                        <div>
+                                            <div style={{ color: 'var(--text-muted)', marginBottom: '4px' }}>실거래 하락률</div>
+                                            <div style={{ color: '#fff', fontWeight: 700 }}>{capitulator.mdd}%</div>
+                                        </div>
+                                        <div>
+                                            <div style={{ color: 'var(--text-muted)', marginBottom: '4px' }}>호가 하락률</div>
+                                            <div style={{ color: '#fff', fontWeight: 700 }}>{capitulator.ask_mdd}%</div>
+                                        </div>
+                                        <div>
+                                            <div style={{ color: 'var(--text-muted)', marginBottom: '4px' }}>상태</div>
+                                            <div style={{ color: '#F87171', fontWeight: 700 }}>호가 붕괴</div>
+                                        </div>
+                                    </div>
+                                    <div style={{ fontSize: '0.85rem', color: '#E5E7EB', lineHeight: 1.6, background: '#111827', padding: '12px', borderLeft: '3px solid #F87171' }}>
+                                        <span style={{ color: '#F87171', fontWeight: 800 }}>[가격 항복 국면 판정]</span> 최고가 {capitulator.highestStr} 대비 {capitulator.askStr} 급매 매물이 속출하며 매도 호가({capitulator.ask_mdd}%)가 실거래선 밑으로 내려앉음. 하락 압력 가속화.
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+
+                        <div style={{ marginTop: '20px', paddingTop: '16px', borderTop: '1px solid #374151', display: 'flex', justifyContent: 'space-between', fontSize: '0.75rem', fontWeight: 800, color: 'var(--text-muted)', letterSpacing: '1px' }}>
+                            <span>RADAR ACCURACY INDEX</span>
+                            <span style={{ color: '#38BDF8' }}>99.2% CONFIDENCE</span>
                         </div>
                     </div>
                 </div>
