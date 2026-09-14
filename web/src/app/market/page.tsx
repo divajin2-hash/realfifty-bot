@@ -95,10 +95,10 @@ export default function MarketDashboard() {
             const stat = getRepresentativeStat(group.stats);
             if (!stat) return;
 
-            // 2024년 이전 과거 거래 중 최고가를 '역사적 전고점(Historic Peak)'으로 산출
+            // 26년 상반기(6월 말) 이전 과거 거래 중 최고가를 '역사적 전고점(Historic Peak)'으로 산출
             let histPeak = 0;
             if (stat.all_trades_history && stat.all_trades_history.length > 0) {
-                const pastTrades = stat.all_trades_history.filter((t: any) => t.date < '2024-01-01');
+                const pastTrades = stat.all_trades_history.filter((t: any) => t.date <= '2026-06-30');
                 if (pastTrades.length > 0) {
                     histPeak = Math.max(...pastTrades.map((t: any) => t.price));
                 }
@@ -329,7 +329,7 @@ export default function MarketDashboard() {
                             <span style={{ padding: '4px 8px', border: '1px solid var(--border-light)', borderRadius: '4px', fontSize: '0.7rem' }}>DUAL-AXIS VALUATION RADAR</span>
                         </div>
                         <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginBottom: '24px' }}>
-                            X축: 역사적 고점(21~23년) 대비 실거래 등락률 (%) ↔ Y축: 호가 등락률 (%) • 단지별 가격 왜곡 상태 추적
+                            X축: 직전 사이클 고점(26년 상반기) 대비 실거래 등락률 (%) ↔ Y축: 호가 등락률 (%) • 단지별 가격 왜곡 상태 추적
                         </div>
                         <div style={{ height: '500px', position: 'relative' }}>
                             <div style={{ position: 'absolute', top: '10px', right: '40px', color: '#38BDF8', fontSize: '0.8rem', fontWeight: 800, zIndex: 10 }}>QUADRANT I: 신고가 랠리</div>
