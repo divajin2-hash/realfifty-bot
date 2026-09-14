@@ -95,7 +95,17 @@ export default function MarketDashboard() {
             const stat = getRepresentativeStat(group.stats);
             if (!stat) return;
 
-            const highest = stat.highest_deal_price;
+            // 2024년 이전 과거 거래 중 최고가를 '역사적 전고점(Historic Peak)'으로 산출
+            let histPeak = 0;
+            if (stat.all_trades_history && stat.all_trades_history.length > 0) {
+                const pastTrades = stat.all_trades_history.filter((t: any) => t.date < '2024-01-01');
+                if (pastTrades.length > 0) {
+                    histPeak = Math.max(...pastTrades.map((t: any) => t.price));
+                }
+            }
+            if (histPeak === 0) histPeak = stat.highest_deal_price;
+
+            const highest = histPeak;
             const recent = stat.recent_deal_absolute?.price;
             const ask = stat.current_lowest_ask;
 
@@ -319,7 +329,7 @@ export default function MarketDashboard() {
                             <span style={{ padding: '4px 8px', border: '1px solid var(--border-light)', borderRadius: '4px', fontSize: '0.7rem' }}>DUAL-AXIS VALUATION RADAR</span>
                         </div>
                         <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginBottom: '24px' }}>
-                            X축: 실거래가 고점 대비 등락률 (%) ↔ Y축: 최신 호가 고점 대비 등락률 (%) • 단지별 가격 왜곡 상태 추적
+                            X축: 역사적 고점(21~23년) 대비 실거래 등락률 (%) ↔ Y축: 호가 등락률 (%) • 단지별 가격 왜곡 상태 추적
                         </div>
                         <div style={{ height: '500px', position: 'relative' }}>
                             <div style={{ position: 'absolute', top: '10px', right: '40px', color: '#38BDF8', fontSize: '0.8rem', fontWeight: 800, zIndex: 10 }}>QUADRANT I: 신고가 랠리</div>
@@ -337,7 +347,7 @@ export default function MarketDashboard() {
                                         name="실거래가 등락률"
                                         stroke="var(--text-muted)"
                                         fontSize={11}
-                                        label={{ value: "◀ 실거래가 -35% (급락)                      실거래가 -20%                    X=0% (전고점 수준)                     신고가 +10% ▶", position: "insideBottom", fill: "var(--text-muted)", fontSize: 10, dy: 15 }}
+                                        label={{ value: "◀ 실거래가 -35% (급락)                      실거래가 -20%                    X=0% (과거 최고점)                     신고가 +10% ▶", position: "insideBottom", fill: "var(--text-muted)", fontSize: 10, dy: 15 }}
                                     />
                                     <YAxis
                                         type="number"
