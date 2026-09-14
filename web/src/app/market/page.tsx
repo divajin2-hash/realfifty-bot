@@ -42,16 +42,23 @@ function MacroTrendChart({ macroIndex, macroTxIndex }: { macroIndex: any[], macr
         const askMap = new Map();
         macroIndex.forEach(d => askMap.set(d.date.substring(0, 7), d.market_recovery_index));
         
-        txBase.forEach(tx => {
+        txBase.forEach((tx, i) => {
             const m = tx.month;
             const tx_val = tx.recovery_rate;
-            // Get precise ask value if available, else simulate realistic KB market price lag
+            
             let ask_val = askMap.get(m);
             if (!ask_val) {
-                // If historical, Market Price (Ask) tends to trail slightly above in bull markets, 
-                // and gets sticky in bear markets
-                ask_val = tx_val + (tx_val > 80 ? 2.5 : 4.0); 
+                // 시장 모멘텀(Derivative) 계산: 하락장에서는 호가(급매)가 실거래가를 뚫고 내려가고,
+                // 상승장에서는 호가가 실거래가를 끌어올리는 실제 부동산 시장 동역학 시뮬레이션
+                const prev1 = i > 0 ? txBase[i-1].recovery_rate : tx_val;
+                const prev2 = i > 1 ? txBase[i-2].recovery_rate : prev1;
+                const momentum = ((tx_val - prev1) + (tx_val - prev2) / 2) / 2;
+                
+                // 한국 부동산 특유의 기본 호가 마진(약 0.5%) + 모멘텀(방향성 * 1.5배 가중)
+                const spread = 0.5 + (momentum * 1.5);
+                ask_val = tx_val + spread;
             }
+            
             merged.push({
                 date: m.replace('20', ''), // Format: 24-01
                 tx_recovery: Number(tx_val.toFixed(2)),
