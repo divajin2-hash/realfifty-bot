@@ -100,14 +100,14 @@ function MacroTrendChart({ macroIndex, macroTxIndex }: { macroIndex: any[], macr
                         <YAxis domain={['auto', 'auto']} stroke="var(--text-muted)" fontSize={11} />
                         <RechartsTooltip contentStyle={{ background: '#111827', border: '1px solid #374151', borderRadius: '4px', color: '#fff' }} />
                         
-                        <Line type="monotone" name="시세 (호가)" dataKey="ask_recovery" stroke="#38BDF8" strokeWidth={2.5} dot={{r: 2, fill: '#38BDF8', strokeWidth: 0}} activeDot={{r: 5}} isAnimationActive={false} />
+                        
                         <Line type="monotone" name="실거래가 기준" dataKey="tx_recovery" stroke="#F87171" strokeWidth={2.5} dot={{r: 2, fill: '#F87171', strokeWidth: 0}} activeDot={{r: 5}} isAnimationActive={false} />
                     </LineChart>
                 </ResponsiveContainer>
             </div>
             
             <div style={{ display: 'flex', justifyContent: 'center', gap: '24px', marginTop: '16px', fontSize: '0.75rem' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><div style={{ width: '10px', height: '10px', background: '#38BDF8', borderRadius: '50%' }}></div> <span style={{color: '#E5E7EB'}}>단지별 평균 시세(호가) 회복률</span></div>
+                
                 <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><div style={{ width: '10px', height: '10px', background: '#F87171', borderRadius: '50%' }}></div> <span style={{color: '#E5E7EB'}}>체결 실거래가 회복률</span></div>
             </div>
         </div>
