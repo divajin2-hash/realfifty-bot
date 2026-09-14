@@ -33,14 +33,25 @@ export default function MarketDashboard() {
     // 1. DATA PREPARATION: Macro Index (Top Line Chart)
     // ----------------------------------------------------
     const indexData = useMemo(() => {
-        return macroIndex.map((d: any) => ({
+        const askData = macroIndex.slice(-100).map((d: any) => ({
             date: d.date,
-            recovery: d.market_recovery_index || 0
-        })).slice(-100);
+            ask_recovery: d.market_recovery_index || 0
+        }));
+        
+        const txData = macroTxIndex.slice(-36).map((d: any) => ({
+            date: `${d.month}-15`,
+            tx_recovery: d.recovery_rate || 0
+        }));
+        
+        const mergedMap = new Map();
+        txData.forEach(d => mergedMap.set(d.date, { ...mergedMap.get(d.date), ...d }));
+        askData.forEach(d => mergedMap.set(d.date, { ...mergedMap.get(d.date), ...d }));
+        
+        return Array.from(mergedMap.values()).sort((a: any, b: any) => a.date.localeCompare(b.date));
     }, []);
 
-    const latestRecovery = indexData.length > 0 ? indexData[indexData.length - 1].recovery : 94.18;
-    const prevRecovery = indexData.length > 1 ? indexData[indexData.length - 2].recovery : latestRecovery - 0.02;
+    const latestRecovery = indexData.length > 0 ? indexData[indexData.length - 1].ask_recovery || 94.18 : 94.18;
+    const prevRecovery = indexData.length > 1 ? indexData[indexData.length - 2].ask_recovery || 94.18 : latestRecovery - 0.02;
     const diff = latestRecovery - prevRecovery;
     const diffRate = (diff / prevRecovery) * 100;
 
@@ -265,11 +276,16 @@ export default function MarketDashboard() {
                         <div style={{ height: '300px' }}>
                             <ResponsiveContainer width="100%" height="100%">
                                 <LineChart data={indexData} margin={{ top: 20, right: 20, bottom: 0, left: -20 }}>
-                                    <CartesianGrid strokeDasharray="3 3" stroke="var(--border-light)" vertical={false} />
-                                    <XAxis dataKey="date" stroke="var(--text-muted)" fontSize={11} tickFormatter={(tick) => tick.substring(5)} minTickGap={20} />
-                                    <YAxis domain={['dataMin - 1', 'dataMax + 1']} stroke="var(--text-muted)" fontSize={11} />
+                                    <CartesianGrid strokeDasharray="3 3" stroke="#1F2937" vertical={false} />
+                                    <XAxis dataKey="date" stroke="var(--text-muted)" fontSize={11} tickFormatter={(tick) => tick.substring(2)} minTickGap={30} />
+                                    <YAxis domain={['auto', 'auto']} stroke="var(--text-muted)" fontSize={11} />
                                     <RechartsTooltip contentStyle={{ background: '#111827', border: '1px solid #374151', borderRadius: '4px' }} />
-                                    <Line type="step" dataKey="recovery" stroke="var(--color-cyan)" strokeWidth={3} dot={false} isAnimationActive={false} />
+                                    
+                                    {/* Y축 (호가) 선행 라인 */}
+                                    <Line type="monotone" name="호가 회복률(Y축)" dataKey="ask_recovery" stroke="#38BDF8" strokeWidth={2.5} dot={false} connectNulls={true} isAnimationActive={false} />
+                                    
+                                    {/* X축 (실거래) 후행 라인 */}
+                                    <Line type="monotone" name="실거래 회복률(X축)" dataKey="tx_recovery" stroke="#F87171" strokeWidth={2.5} dot={false} connectNulls={true} isAnimationActive={false} />
                                 </LineChart>
                             </ResponsiveContainer>
                         </div>
@@ -310,7 +326,7 @@ export default function MarketDashboard() {
                             </div>
                             <div>
                                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
-                                    <span style={{ fontSize: '0.85rem', color: '#fff', fontWeight: 600 }}>노도강 외곽 벨트</span>
+                                    <span style={{ fontSize: '0.85rem', color: '#fff', fontWeight: 600 }}>기타 핵심지 (분당/목동/여의도 등)</span>
                                     <span className="num-font" style={{ fontSize: '1rem', color: '#F87171', fontWeight: 800 }}>{othersRate}%</span>
                                 </div>
                                 <div style={{ height: '6px', background: '#374151', borderRadius: '3px', position: 'relative' }}>
@@ -375,68 +391,103 @@ export default function MarketDashboard() {
 
                     {/* Detailed Position Diagnosis */}
                     <div style={{ background: 'var(--bg-card)', border: '1px solid var(--border-light)', padding: '24px', display: 'flex', flexDirection: 'column' }}>
-                        <div className="num-font" style={{ fontSize: '1.2rem', color: '#fff', marginBottom: '32px', fontWeight: 800 }}>
-                            <span style={{ color: '#38BDF8', marginRight: '8px' }}>◎</span>단지별 포지션 심층 진단
+                        <div className="num-font" style={{ fontSize: '1.2rem', color: '#fff', marginBottom: '24px', fontWeight: 800 }}>
+                            <span style={{ color: '#38BDF8', marginRight: '8px' }}>◎</span>4분면 구역별 특성 및 이상 징후 단지
+                        </div>
+                        
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', flex: 1, overflowY: 'auto', paddingRight: '4px' }}>
+                            {/* Q1 */}
+                            <div style={{ border: '1px solid #38BDF8', borderRadius: '4px', background: 'rgba(56, 189, 248, 0.05)', overflow: 'hidden' }}>
+                                <div style={{ padding: '12px 16px', borderBottom: '1px solid rgba(56, 189, 248, 0.2)', background: 'rgba(56, 189, 248, 0.1)' }}>
+                                    <div style={{ color: '#38BDF8', fontWeight: 800, fontSize: '0.85rem' }}>QUADRANT I: 신/전고점 랠리</div>
+                                    <div style={{ color: '#E5E7EB', fontSize: '0.75rem', marginTop: '4px' }}>실거래와 호가가 모두 26년 상반기 고점을 돌파하며 상승장을 주도하는 강세 구역</div>
+                                </div>
+                                {scatterData.filter(d=>d.mdd>=0 && d.ask_mdd>=0).sort((a,b)=>b.mdd-a.mdd)[0] ? (() => {
+                                    const c = scatterData.filter(d=>d.mdd>=0 && d.ask_mdd>=0).sort((a,b)=>b.mdd-a.mdd)[0];
+                                    return (
+                                        <div style={{ padding: '12px 16px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                            <div>
+                                                <div style={{ color: '#fff', fontWeight: 700, fontSize: '0.9rem' }}>{c.name} <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem', fontWeight: 400 }}>{c.subTitle.split('·')[1]}</span></div>
+                                            </div>
+                                            <div style={{ textAlign: 'right' }}>
+                                                <div style={{ color: 'var(--text-muted)', fontSize: '0.7rem' }}>실거래 돌파 <span style={{ color: '#38BDF8', fontWeight: 800, fontSize: '0.85rem', marginLeft: '4px' }}>+{c.mdd}%</span></div>
+                                                <div style={{ color: 'var(--text-muted)', fontSize: '0.7rem' }}>호가 돌파 <span style={{ color: '#38BDF8', fontWeight: 800, fontSize: '0.85rem', marginLeft: '4px' }}>+{c.ask_mdd}%</span></div>
+                                            </div>
+                                        </div>
+                                    )
+                                })() : <div style={{ padding: '12px 16px', color: 'var(--text-muted)', fontSize: '0.8rem' }}>현재 해당 구역 진입 단지 없음</div>}
+                            </div>
+
+                            {/* Q2 */}
+                            <div style={{ border: '1px solid #0ea5e9', borderRadius: '4px', background: 'rgba(14, 165, 233, 0.05)', overflow: 'hidden' }}>
+                                <div style={{ padding: '12px 16px', borderBottom: '1px solid rgba(14, 165, 233, 0.2)', background: 'rgba(14, 165, 233, 0.1)' }}>
+                                    <div style={{ color: '#0ea5e9', fontWeight: 800, fontSize: '0.85rem' }}>QUADRANT II: 극강 호가 방어</div>
+                                    <div style={{ color: '#E5E7EB', fontSize: '0.75rem', marginTop: '4px' }}>실거래는 고점 대비 하락했으나, 매도 호가는 여전히 고점 이상을 유지하며 버티는 구역</div>
+                                </div>
+                                {scatterData.filter(d=>d.mdd<0 && d.ask_mdd>=0).sort((a,b)=>b.gap-a.gap)[0] ? (() => {
+                                    const c = scatterData.filter(d=>d.mdd<0 && d.ask_mdd>=0).sort((a,b)=>b.gap-a.gap)[0];
+                                    return (
+                                        <div style={{ padding: '12px 16px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                            <div>
+                                                <div style={{ color: '#fff', fontWeight: 700, fontSize: '0.9rem' }}>{c.name} <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem', fontWeight: 400 }}>{c.subTitle.split('·')[1]}</span></div>
+                                            </div>
+                                            <div style={{ textAlign: 'right' }}>
+                                                <div style={{ color: 'var(--text-muted)', fontSize: '0.7rem' }}>실거래 낙폭 <span style={{ color: '#F87171', fontWeight: 800, fontSize: '0.85rem', marginLeft: '4px' }}>{c.mdd}%</span></div>
+                                                <div style={{ color: 'var(--text-muted)', fontSize: '0.7rem' }}>호가 방어 <span style={{ color: '#0ea5e9', fontWeight: 800, fontSize: '0.85rem', marginLeft: '4px' }}>+{c.ask_mdd}%</span></div>
+                                            </div>
+                                        </div>
+                                    )
+                                })() : <div style={{ padding: '12px 16px', color: 'var(--text-muted)', fontSize: '0.8rem' }}>현재 해당 구역 진입 단지 없음</div>}
+                            </div>
+                            
+                            {/* Q4 */}
+                            <div style={{ border: '1px solid #EAB308', borderRadius: '4px', background: 'rgba(234, 179, 8, 0.05)', overflow: 'hidden' }}>
+                                <div style={{ padding: '12px 16px', borderBottom: '1px solid rgba(234, 179, 8, 0.2)', background: 'rgba(234, 179, 8, 0.1)' }}>
+                                    <div style={{ color: '#EAB308', fontWeight: 800, fontSize: '0.85rem' }}>QUADRANT IV: 실거래 강세 / 호가 현실화</div>
+                                    <div style={{ color: '#E5E7EB', fontSize: '0.75rem', marginTop: '4px' }}>실거래는 고점을 타격했으나, 추격 매수 부족으로 매도 호가가 오히려 낮아진 매수자 우위 구역</div>
+                                </div>
+                                {scatterData.filter(d=>d.mdd>=0 && d.ask_mdd<0).sort((a,b)=>a.ask_mdd-b.ask_mdd)[0] ? (() => {
+                                    const c = scatterData.filter(d=>d.mdd>=0 && d.ask_mdd<0).sort((a,b)=>a.ask_mdd-b.ask_mdd)[0];
+                                    return (
+                                        <div style={{ padding: '12px 16px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                            <div>
+                                                <div style={{ color: '#fff', fontWeight: 700, fontSize: '0.9rem' }}>{c.name} <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem', fontWeight: 400 }}>{c.subTitle.split('·')[1]}</span></div>
+                                            </div>
+                                            <div style={{ textAlign: 'right' }}>
+                                                <div style={{ color: 'var(--text-muted)', fontSize: '0.7rem' }}>실거래 돌파 <span style={{ color: '#38BDF8', fontWeight: 800, fontSize: '0.85rem', marginLeft: '4px' }}>+{c.mdd}%</span></div>
+                                                <div style={{ color: 'var(--text-muted)', fontSize: '0.7rem' }}>호가 현실화 <span style={{ color: '#EAB308', fontWeight: 800, fontSize: '0.85rem', marginLeft: '4px' }}>{c.ask_mdd}%</span></div>
+                                            </div>
+                                        </div>
+                                    )
+                                })() : <div style={{ padding: '12px 16px', color: 'var(--text-muted)', fontSize: '0.8rem' }}>현재 해당 구역 진입 단지 없음</div>}
+                            </div>
+
+                            {/* Q3 */}
+                            <div style={{ border: '1px solid #F87171', borderRadius: '4px', background: 'rgba(248, 113, 113, 0.05)', overflow: 'hidden' }}>
+                                <div style={{ padding: '12px 16px', borderBottom: '1px solid rgba(248, 113, 113, 0.2)', background: 'rgba(248, 113, 113, 0.1)' }}>
+                                    <div style={{ color: '#F87171', fontWeight: 800, fontSize: '0.85rem' }}>QUADRANT III: 동반 하락 / 항복</div>
+                                    <div style={{ color: '#E5E7EB', fontSize: '0.75rem', marginTop: '4px' }}>실거래가 무너지는 가운데 매도 호가마저 고점 아래로 동반 하락하며 가격 조정이 진행되는 구역</div>
+                                </div>
+                                {scatterData.filter(d=>d.mdd<0 && d.ask_mdd<0).sort((a,b)=>a.mdd-b.mdd)[0] ? (() => {
+                                    const c = scatterData.filter(d=>d.mdd<0 && d.ask_mdd<0).sort((a,b)=>a.mdd-b.mdd)[0];
+                                    return (
+                                        <div style={{ padding: '12px 16px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                            <div>
+                                                <div style={{ color: '#fff', fontWeight: 700, fontSize: '0.9rem' }}>{c.name} <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem', fontWeight: 400 }}>{c.subTitle.split('·')[1]}</span></div>
+                                            </div>
+                                            <div style={{ textAlign: 'right' }}>
+                                                <div style={{ color: 'var(--text-muted)', fontSize: '0.7rem' }}>초대형 낙폭 <span style={{ color: '#F87171', fontWeight: 800, fontSize: '0.85rem', marginLeft: '4px' }}>{c.mdd}%</span></div>
+                                                <div style={{ color: 'var(--text-muted)', fontSize: '0.7rem' }}>호가 동반하락 <span style={{ color: '#F87171', fontWeight: 800, fontSize: '0.85rem', marginLeft: '4px' }}>{c.ask_mdd}%</span></div>
+                                            </div>
+                                        </div>
+                                    )
+                                })() : <div style={{ padding: '12px 16px', color: 'var(--text-muted)', fontSize: '0.8rem' }}>현재 해당 구역 진입 단지 없음</div>}
+                            </div>
                         </div>
 
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', flex: 1 }}>
-                            {/* Card 1: Defensor (Highest Gap) */}
-                            {defensor && (
-                                <div style={{ border: `1px solid ${defensor.fill}`, padding: '20px', borderRadius: '4px', background: `${defensor.fill}20` }}>
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
-                                        <div style={{ fontSize: '1.1rem', fontWeight: 800, color: '#fff' }}>{defensor.name} <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)', fontWeight: 400 }}>{defensor.subTitle.split('·')[1]}</span></div>
-                                        <div style={{ background: defensor.fill, color: '#111827', fontSize: '0.7rem', padding: '2px 6px', borderRadius: '4px', fontWeight: 800 }}>{defensor.quad}</div>
-                                    </div>
-                                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '8px', marginBottom: '16px', fontSize: '0.8rem' }}>
-                                        <div>
-                                            <div style={{ color: 'var(--text-muted)', marginBottom: '4px' }}>실거래 하락률</div>
-                                            <div style={{ color: '#fff', fontWeight: 700 }}>{defensor.mdd}%</div>
-                                        </div>
-                                        <div>
-                                            <div style={{ color: 'var(--text-muted)', marginBottom: '4px' }}>호가 하락률</div>
-                                            <div style={{ color: '#fff', fontWeight: 700 }}>{defensor.ask_mdd}%</div>
-                                        </div>
-                                        <div>
-                                            <div style={{ color: 'var(--text-muted)', marginBottom: '4px' }}>스프레드 괴리</div>
-                                            <div style={{ color: '#38BDF8', fontWeight: 700 }}>+{defensor.gap}%</div>
-                                        </div>
-                                    </div>
-                                    <div style={{ fontSize: '0.85rem', color: '#E5E7EB', lineHeight: 1.6, background: '#111827', padding: '12px', borderLeft: `3px solid ${defensor.fill}` }}>
-                                        <span style={{ color: defensor.fill, fontWeight: 800 }}>[상대적 호가 강세]</span> 해당 단지는 속한 구역 내에서도 실거래 하락률({defensor.mdd}%) 대비 매도 호가를 강하게 방어({defensor.ask_mdd}%)하며 가격 안착을 시도하는 특징을 보입니다.
-                                    </div>
-                                </div>
-                            )}
-
-                            {/* Card 2: Capitulator (Drop) */}
-                            {capitulator && (
-                                <div style={{ border: `1px solid ${capitulator.fill}`, padding: '20px', borderRadius: '4px', background: `${capitulator.fill}20` }}>
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
-                                        <div style={{ fontSize: '1.1rem', fontWeight: 800, color: '#fff' }}>{capitulator.name} <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)', fontWeight: 400 }}>{capitulator.subTitle.split('·')[1]}</span></div>
-                                        <div style={{ background: capitulator.fill, color: '#111827', fontSize: '0.7rem', padding: '2px 6px', borderRadius: '4px', fontWeight: 800 }}>{capitulator.quad}</div>
-                                    </div>
-                                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '8px', marginBottom: '16px', fontSize: '0.8rem' }}>
-                                        <div>
-                                            <div style={{ color: 'var(--text-muted)', marginBottom: '4px' }}>실거래 하락률</div>
-                                            <div style={{ color: '#fff', fontWeight: 700 }}>{capitulator.mdd}%</div>
-                                        </div>
-                                        <div>
-                                            <div style={{ color: 'var(--text-muted)', marginBottom: '4px' }}>호가 하락률</div>
-                                            <div style={{ color: '#fff', fontWeight: 700 }}>{capitulator.ask_mdd}%</div>
-                                        </div>
-                                        <div>
-                                            <div style={{ color: 'var(--text-muted)', marginBottom: '4px' }}>상태</div>
-                                            <div style={{ color: '#F87171', fontWeight: 700 }}>하방 이탈</div>
-                                        </div>
-                                    </div>
-                                    <div style={{ fontSize: '0.85rem', color: '#E5E7EB', lineHeight: 1.6, background: '#111827', padding: '12px', borderLeft: `3px solid ${capitulator.fill}` }}>
-                                        <span style={{ color: capitulator.fill, fontWeight: 800 }}>[상대적 하락 압력]</span> 실거래 추락에 더해 호가 하락({capitulator.ask_mdd}%)까지 깊어지며 하락 압력이 지속되는 단지입니다. 매수 관망세가 짙습니다.
-                                    </div>
-                                </div>
-                            )}
-                        </div>
-                        <div style={{ marginTop: '20px', paddingTop: '16px', borderTop: '1px solid #374151', display: 'flex', justifyContent: 'space-between', fontSize: '0.75rem', fontWeight: 800, color: 'var(--text-muted)', letterSpacing: '1px' }}>
-                            <span>RADAR ACCURACY INDEX</span>
-                            <span style={{ color: '#38BDF8' }}>99.2% CONFIDENCE</span>
+                        <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid #374151', display: 'flex', justifyContent: 'space-between', fontSize: '0.75rem', fontWeight: 800, color: 'var(--text-muted)', letterSpacing: '1px' }}>
+                            <span>RADAR CLASSIFICATION</span>
+                            <span style={{ color: '#38BDF8' }}>REAL-TIME UPDATED</span>
                         </div>
                     </div>
                 </div>
