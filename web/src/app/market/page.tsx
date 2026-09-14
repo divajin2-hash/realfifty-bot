@@ -110,12 +110,12 @@ export default function MarketDashboard() {
                 // Color Logic based on ATH crosshair and diagonal spread
                 if (mdd >= 0 && ask_mdd >= 0) {
                     fill = "#38BDF8"; quad = "QUADRANT I"; // 상승 랠리
-                } else if (ask_mdd > mdd) {
-                    fill = "#0ea5e9"; quad = "QUADRANT II"; // 호가 방어 (Gray/Blue)
-                } else if (ask_mdd <= mdd) {
-                    fill = "#F87171"; quad = "QUADRANT III"; // 가격 항복 (Red)
+                } else if (mdd >= 0 && ask_mdd < 0) {
+                    fill = "#EAB308"; quad = "QUADRANT IV"; // 매수자 우위 조정
+                } else if (mdd < 0 && ask_mdd > mdd) {
+                    fill = "#0ea5e9"; quad = "QUADRANT II"; // 호가 방어
                 } else {
-                    fill = "#EAB308"; quad = "QUADRANT IV"; // 기타
+                    fill = "#F87171"; quad = "QUADRANT III"; // 가격 항복
                 }
 
                 const addr = group.complex.address || "";
