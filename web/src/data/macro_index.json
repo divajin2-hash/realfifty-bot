@@ -295,8 +295,14 @@
   },
   {
     "date": "2026-09-16",
-    "avg_drop_rate": -2.28,
-    "market_recovery_index": 97.72,
+    "avg_drop_rate": -1.93,
+    "market_recovery_index": 98.07,
+    "sample_count": 252
+  },
+  {
+    "date": "2026-09-17",
+    "avg_drop_rate": -1.93,
+    "market_recovery_index": 98.07,
     "sample_count": 252
   }
 ]
