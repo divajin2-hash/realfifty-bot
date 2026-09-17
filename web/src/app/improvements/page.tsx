@@ -1,0 +1,2 @@
+import TerminalShell from '../TerminalShell';
+export default function Improvements(){return <TerminalShell active="/improvements" eyebrow="PRODUCT UPDATES" title="개선 소식" description="RealFifty가 달라지는 과정을 안내합니다."><section className="rt-panel"><p>2026.09.17 · 로컬 검증 중</p><h2>리포트와 단지 탐색의 가독성을 개선했습니다</h2><ul><li>평형별 매매·전세 매물 수와 전세가율 추가</li><li>전세 매물이 없을 때 표시 문구 정리</li><li>리포트 아카이브를 9월 16일 발행분부터 제공</li><li>리포트 인쇄용 그래프와 레이아웃 개선</li></ul><p>접수한 의견 원문과 이메일은 공개하지 않습니다. 공통 의견은 개인정보를 제외하고 개선 소식으로 정리합니다.</p></section></TerminalShell>;}

@@ -1,0 +1,2 @@
+import TerminalShell from '../TerminalShell';import LoginForm from './LoginForm';import {safeReturn} from '@/lib/member-model';
+export default async function Page({searchParams}:{searchParams:Promise<{next?:string;reason?:string}>}){const q=await searchParams;return <TerminalShell active="/account" eyebrow="MY REALFIFTY" title="필요한 순간에, 간편하게 로그인" description="시장 분석과 리포트는 로그인 없이 읽을 수 있습니다."><LoginForm next={safeReturn(q.next||null)} reason={q.reason?.slice(0,100)||'관심 단지와 나의 기록을 모아보세요.'}/></TerminalShell>;}

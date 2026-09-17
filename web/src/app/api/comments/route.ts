@@ -25,29 +25,6 @@ export async function GET(request: Request) {
     return NextResponse.json({ comments: data });
 }
 
-export async function POST(request: Request) {
-    try {
-        const body = await request.json();
-        const { reportDate, nickname, content } = body;
-
-        if (!reportDate || !nickname || !content) {
-            return NextResponse.json({ error: 'Missing fields' }, { status: 400 });
-        }
-
-        const { data, error } = await supabase
-            .from('report_comments')
-            .insert([
-                {
-                    report_date: reportDate,
-                    user_name: nickname,
-                    content: content
-                }
-            ]);
-
-        if (error) throw error;
-        return NextResponse.json({ success: true });
-    } catch (e) {
-        console.error(e);
-        return NextResponse.json({ error: 'Failed to post' }, { status: 500 });
-    }
+export async function POST() {
+    return NextResponse.json({ error: '이전 리포트 댓글 작성은 종료되었습니다. 로그인 후 단지 시장톡을 이용해 주세요.' }, { status: 410 });
 }

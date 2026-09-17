@@ -1,0 +1,3 @@
+import Link from 'next/link';import TerminalShell from '../TerminalShell';import AiMarketTalk from '../AiMarketTalk';import {readTalks} from '@/lib/ai-talk';
+export const dynamic='force-dynamic';
+export default async function Page({searchParams}:{searchParams:Promise<{date?:string}>}){const {date}=await searchParams;const talks=await readTalks();return <TerminalShell active="/ai-talk" eyebrow="AI PERSPECTIVES" title="AI 시장톡 기록" description="매일 같은 자료를 여섯 시각으로 읽습니다."><nav className="rt-controls" aria-label="토론 날짜">{talks.map(t=><Link className="rt-button secondary" key={t.date} href={`/ai-talk?date=${t.date}`}>{t.date} · {t.complex.name}</Link>)}</nav><AiMarketTalk date={date}/></TerminalShell>;}

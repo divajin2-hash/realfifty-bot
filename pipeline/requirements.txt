@@ -3,3 +3,5 @@ python-dotenv
 supabase
 beautifulsoup4
 playwright
+
+curl_cffi

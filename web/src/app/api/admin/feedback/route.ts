@@ -1,0 +1,4 @@
+import {adminAccess} from '@/lib/admin-access';
+import {feedbackStore} from '@/lib/feedback-store';
+export async function GET(req:Request){if(!await adminAccess(req))return Response.json({error:'운영자 권한이 필요합니다.'},{status:403});try{return Response.json({items:await feedbackStore('GET')},{headers:{'Cache-Control':'no-store'}});}catch{return Response.json({error:'접수함을 불러오지 못했습니다.'},{status:503});}}
+export async function PATCH(req:Request){if(!await adminAccess(req))return Response.json({error:'운영자 권한이 필요합니다.'},{status:403});try{const b=await req.json();if(!/^[a-f0-9-]{36}$/.test(b.id)||!['접수','검토 중','반영 예정','반영 완료'].includes(b.status))return Response.json({error:'잘못된 상태입니다.'},{status:400});await feedbackStore('PATCH',{id:b.id,status:b.status});return Response.json({ok:true});}catch{return Response.json({error:'저장하지 못했습니다.'},{status:503});}}

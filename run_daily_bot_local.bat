@@ -5,8 +5,8 @@ echo ==============================================
 echo [RealFifty] Scheduled Daily PropTech Bot Start
 echo ==============================================
 
+REM The master pipeline generates the daily report once.
 python 32_master_daily_run.py
-python pipeline/40_market_report_agent.py
 
 if %errorlevel% neq 0 (
     echo [ERROR] Python script failed.

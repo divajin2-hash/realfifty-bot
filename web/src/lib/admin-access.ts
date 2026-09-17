@@ -1,0 +1,2 @@
+import {memberIdentity,sameOrigin} from './member-server';
+export async function adminAccess(req:Request){if(!sameOrigin(req))return null;const host=new URL(req.url).hostname;const local=process.env.NODE_ENV==='development'&&process.env.REALFIFTY_LOCAL_ADMIN==='true'&&['localhost','127.0.0.1','[::1]'].includes(host);if(local)return {reviewer:'local-operator'};const auth=await memberIdentity(req);return auth?.user.app_metadata?.role==='admin'?{reviewer:auth.user.id}:null;}

@@ -3,11 +3,11 @@
 
 :root {
   /* TERMINAL MATRIX - QUANT DARK THEME */
-  --bg-main: #0d1117;
+  --bg-main: #0B0F17;
   /* 가장 깊은 딥다크 배경 */
-  --bg-sidebar: #131720;
+  --bg-sidebar: #111827;
   /* 사이드바 다크 톤 */
-  --bg-card: #161b22;
+  --bg-card: #111827;
   /* 모듈/카드 배경 */
 
   --text-dark: #FFFFFF;
@@ -17,21 +17,21 @@
   --text-muted: #8b949e;
   /* 흐린 텍스트 */
 
-  --border-light: #30363d;
+  --border-light: #1E293B;
   /* 매트릭스 그리드용 1px 선 */
-  --border-heavy: #58a6ff;
+  --border-heavy: #334155;
   /* 강조선 (Cyan계열 대용) */
 
-  --color-down: #ff7b72;
+  --color-down: #F43F5E;
   /* 하락 (Red) */
-  --color-up: #79c0ff;
+  --color-up: #10B981;
   /* 상승 (Cyan/Blue) */
   --color-neutral: #8b949e;
   /* 보합 */
-  --color-warning: #ffa657;
+  --color-warning: #F59E0B;
   /* 경고 */
 
-  --color-cyan: #00f0ff;
+  --color-cyan: #38BDF8;
   --card-bg: var(--bg-card);
   --navy-header: rgba(0, 240, 255, 0.1);
   /* 사이버 펑크/터미널 시안색 */
@@ -54,6 +54,7 @@ body {
 }
 
 .num-font {
+  font-variant-numeric: tabular-nums;
   font-family: 'JetBrains Mono', 'Pretendard Variable', monospace;
   letter-spacing: -0.5px;
 }
@@ -328,35 +329,25 @@ body {
 }
 
 /* -------------------
-   Mobile Responsive Layout
+   Mobile Responsive Layout (App-like Bottom Nav)
 ------------------- */
+.mobile-only {
+  display: none !important;
+}
+
 @media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+
+  .mobile-only {
+    display: flex !important;
+  }
+
   .app-wrapper {
     flex-direction: column;
-  }
-
-  .sidebar {
-    position: relative !important;
-    width: 100% !important;
-    height: auto !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    padding: 0 16px !important;
-    z-index: 50;
-  }
-
-  .sidebar-logo {
-    padding: 16px 0 !important;
-    border-bottom: none !important;
-  }
-
-  .sidebar-menu {
-    display: none !important;
-  }
-
-  .sidebar>div:last-child {
-    display: none !important;
+    padding-bottom: 70px;
+    /* Space for bottom nav */
   }
 
   .main-content {
@@ -380,6 +371,59 @@ body {
   .grid-layout {
     grid-template-columns: 1fr !important;
     gap: 12px !important;
+  }
+
+  .mobile-top-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    background-color: var(--bg-sidebar);
+    border-bottom: 1px solid var(--border-light);
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    z-index: 100;
+  }
+
+  .mobile-bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 65px;
+    background-color: var(--bg-sidebar);
+    border-top: 1px solid var(--border-light);
+    display: flex !important;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .mobile-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    color: var(--text-muted);
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    flex: 1;
+    height: 100%;
+  }
+
+  .mobile-nav-item.active {
+    color: var(--color-cyan);
+  }
+
+  .mobile-nav-item svg {
+    margin-bottom: 2px;
   }
 }
 
@@ -423,4 +467,31 @@ body {
 
 .report-content tr:last-child td {
   border-bottom: 2px solid var(--border-light);
+}
+@media (max-width: 768px) {
+  .report-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+  .report-main-panel {
+    padding: 20px !important;
+  }
+  .report-sidebar-panel {
+    position: relative !important;
+    top: 0 !important;
+  }
+  .factcheck-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .factcheck-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
+  .mobile-top-header {
+    height: 56px !important;
+    padding: 0 16px !important;
+    justify-content: space-between !important;
+  }
 }

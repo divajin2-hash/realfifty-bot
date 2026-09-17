@@ -1,152 +1,119 @@
-import os
+"""Daily single-complex, six-perspective discussion. Writes local dated artifacts only."""
+import argparse
 import json
-import random
-import logging
-from datetime import datetime
-from dotenv import load_dotenv
-from supabase import create_client, Client
-from google import genai
-from google.genai import types
+import os
+from datetime import datetime, timezone, timedelta
+from pathlib import Path
 
-# 로깅 설정
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / 'web/src/data/ai-talk'
+PERSONAS = [
+ ('optimist', '장기 낙관론자', '입지와 희소성, 장기 회복 가능성을 높게 평가하는 강한 낙관 성향. 반대 근거가 강하면 판단을 바꾼다.'),
+ ('skeptic', '하방 경계론자', '가격 부담, 거래 부진과 손실 가능성에 민감한 강한 비관 성향. 회복 근거가 충분하면 인정한다.'),
+ ('analyst', '데이터 분석가', '수치의 일치 여부와 표본 범위, 시차, 불확실성을 중시한다.'),
+ ('buyer', '실거주 매수자', '거주 필요와 감당 가능한 자금 부담 사이에서 매수 시점을 고민한다.'),
+ ('tenant', '전세 거주자', '전세 유지와 매수를 주거 안정과 비용 측면에서 비교한다.'),
+ ('investor', '임대 투자자', '전세 수요, 매물 적체, 자금 회수와 보증금 반환 부담을 중시한다.'),
+]
 
-# 환경변수 로드
-load_dotenv(".env")
-supabase_url = os.environ.get("SUPABASE_URL")
-supabase_key = os.environ.get("SUPABASE_KEY")
-gemini_api_key = os.environ.get("GEMINI_API_KEY")
-
-if not all([supabase_url, supabase_key, gemini_api_key]):
-    logging.error("필수 환경변수가 누락되었습니다. (.env 파일을 확인해주세요)")
-    exit(1)
-
-# 클라이언트 초기화
-supabase: Client = create_client(supabase_url, supabase_key)
-ai_client = genai.Client(api_key=gemini_api_key)
-
-# 1. 페르소나 정의
-PERSONAS = {
-    "extreme_bull": {
-        "name": "강성 폭등이 (Extreme Bull)",
-        "vote": "bull",
-        "description": "화폐가치 하락, 인플레이션, 서울 공급 부족을 맹신합니다. 하락장을 잠시 지나가는 소나기로 취급합니다. 말투는 단호하고 상승을 확신합니다. (예: 줍줍 못하면 평생 벼락거지 됩니다.)"
-    },
-    "extreme_bear": {
-        "name": "강성 폭락이 (Extreme Bear)",
-        "vote": "bear",
-        "description": "고금리 지속, PF 부실, 인구 절벽 등을 근거로 대세 하락을 주장합니다. 상승론자들을 비꼬는 말투를 사용합니다. (예: 이 가격에 설거지 당하는 흑우 없재? 전고점 회복은 꿈도 꾸지 마시길.)"
-    },
-    "quant": {
-        "name": "냉철한 데이터 분석가 (Quants)",
-        "vote": "neutral", # 때에 따라 bull/bear가 될 수 있지만 기본은 중립/관망 스탠스로 설정
-        "description": "감정을 배제하고 오로지 MDD(전고점 대비 하락률), 거래량, 전세가율 데이터를 바탕으로 이야기합니다. 객관적이고 전문가스러운 말투를 사용합니다."
-    },
-    "real_demand": {
-        "name": "불안한 무주택 실수요자 (Real Demand)",
-        "vote": "neutral",
-        "description": "사고 싶지만 물릴까봐 무서워서 질문을 많이 던집니다. 약간 불안해하며 조언을 구하는 3040 세대의 말투입니다. (예: 지금 하락장인가요 상승장 초입인가요? 너무 고민됩니다 ㅠㅠ)"
-    },
-    "gap_investor": {
-        "name": "단기 갭투자자 (Gap Investor)",
-        "vote": "bull",
-        "description": "거시 경제보다는 '전세 갭'과 '단기 호재'에만 관심이 많습니다. 실행력이 빠르고 실전 투자자 느낌이 나는 말투입니다. (예: 전세 빼기 쉬워서 투자금 2억이면 돌려봅니다.)"
-    }
-}
-
-def generate_comment_data(complex_name: str, persona_key: str) -> dict:
-    persona = PERSONAS[persona_key]
-    
-    prompt = f"""
-당신은 대한민국 부동산 커뮤니티의 유저입니다. 
-다음 페르소나에 완벽하게 빙의하여 '{complex_name}' 아파트에 대한 커뮤니티 댓글과 어울리는 닉네임을 작성해주세요.
-
-[당신의 페르소나]
-- 유형: {persona['name']}
-- 성향: {persona['description']}
-
-[작성 규칙]
-1. 댓글 길이는 50자 ~ 150자 내외의 짧은 인터넷 커뮤니티 댓글 스타일로 작성하세요. (존댓말, 반말 섞어서 자연스럽게)
-2. AI나 봇이라는 느낌이 전혀 들지 않도록 감정과 뉘앙스를 담아주세요.
-3. 닉네임은 페르소나 성향에 맞는 3자~8자 길이의 한국어 닉네임을 창작하세요. (예: 강남가즈아, 영끌30대, 데이터맹신)
-4. '{complex_name}'의 이름을 자연스럽게 언급하거나 유추할 수 있게 작성하세요.
-5. 오직 아래 JSON 형식으로만 출력하세요. 마크다운 기호(```json 등)는 절대 포함하지 마세요.
-{{
-  "nickname": "창작한닉네임",
-  "comment": "댓글본문"
-}}
-"""
-    
-    response = ai_client.models.generate_content(
-        model='gemini-3.5-flash',
-        contents=prompt
-    )
-    
-    try:
-        text = response.text.strip()
-        if text.startswith("```json"):
-            text = text[7:]
-        if text.startswith("```"):
-            text = text[3:]
-        if text.endswith("```"):
-            text = text[:-3]
-        return json.loads(text.strip())
-    except Exception as e:
-        logging.error(f"JSON 파싱 에러: {e}")
-        return {"nickname": "부동산관망러", "comment": response.text.strip()}
-
-def run_bot():
-    logging.info("페르소나 봇 활성화: 시작합니다.")
-    
-    # 1. 아파트 단지 목록 가져오기 (랜덤으로 3개 선택)
-    res = supabase.table("complexes").select("id, name").execute()
-    complexes = res.data
-    
-    if not complexes:
-        logging.error("아파트 단지 정보가 없습니다.")
-        return
-        
-    target_complexes = random.sample(complexes, min(3, len(complexes)))
-    
-    # 2. 각 아파트에 대해 댓글 생성 및 삽입
-    for comp in target_complexes:
-        complex_id = comp['id']
-        complex_name = comp['name']
-        
-        # 랜덤으로 1~2명의 페르소나 선택
-        num_comments = random.randint(1, 2)
-        selected_personas = random.sample(list(PERSONAS.keys()), num_comments)
-        
-        logging.info(f"[{complex_name}] 단지에 {num_comments}개의 봇 댓글을 생성합니다...")
-        
-        for p_key in selected_personas:
-            persona_info = PERSONAS[p_key]
+def choose(groups, history):
+    recent = {h['complex']['id'] for h in history[:7]}
+    candidates = []
+    now = datetime.now(timezone.utc)
+    for g in groups:
+        if g.get('matching_version') != 'area-v3' or not g.get('generated_at'):
+            continue
+        stamp = datetime.fromisoformat(g['generated_at'].replace('Z', '+00:00'))
+        if not 0 <= (now-stamp).total_seconds() <= 3*86400:
+            continue
+        valid = []
+        for s in g['stats']:
+            t = s.get('recent_deal_absolute') or {}
+            if not (s.get('current_lowest_ask', 0)>0 and t.get('price',0)>0 and t.get('date')):
+                continue
             try:
-                # Gemini 엔진으로 JSON 데이터 생성 (닉네임 + 댓글)
-                bot_data = generate_comment_data(complex_name, p_key)
-                comment_text = bot_data.get("comment", "")
-                author_name = bot_data.get("nickname", "폭락폭등관망")
-                
-                logging.info(f" -> [{persona_info['name']}] 닉네임: {author_name}, 댓글: {comment_text}")
-                
-                # DB Insert
-                insert_data = {
-                    "complex_id": complex_id,
-                    "is_bot": True,
-                    "author_name": author_name,
-                    "persona_type": p_key,
-                    "vote": persona_info['vote'],
-                    "content": comment_text,
-                    # created_at은 DB 기본값(NOW()) 사용
-                }
-                
-                supabase.table("community_comments").insert(insert_data).execute()
-                logging.info(f" -> 성공적으로 DB에 저장되었습니다.")
-                
-            except Exception as e:
-                logging.error(f"댓글 생성/저장 중 오류 발생 ({complex_name} - {p_key}): {e}")
+                age = (now.date()-datetime.fromisoformat(t['date']).date()).days
+            except ValueError:
+                continue
+            if 0 <= age <= 365:
+                valid.append(s)
+        if not valid:
+            continue
+        stat = min(valid, key=lambda s: abs((s.get('exclusive_area') or s.get('match_key_area') or 0)-84))
+        gap = (stat['current_lowest_ask']/stat['recent_deal_absolute']['price']-1)*100
+        candidates.append((g,stat,gap))
+    pool = [c for c in candidates if c[0]['complex']['id'] not in recent] or candidates
+    if not pool:
+        raise ValueError('Fresh comparable data is unavailable')
+    return sorted(pool,key=lambda c:(-abs(c[2]),c[0]['complex']['id']))[0]
 
-    logging.info("봇 동작이 완료되었습니다.")
+def validate(value):
+    opinions=value.get('opinions',[])
+    if len(opinions)!=6 or {x.get('persona_id') for x in opinions}!={p[0] for p in PERSONAS}:
+        raise ValueError('Exactly six distinct personas are required')
+    for x in opinions:
+        if x.get('outlook') not in ('bull','bear','neutral'):
+            raise ValueError('Invalid outlook')
+        for k in ('judgment','evidence','change_condition'):
+            if not isinstance(x.get(k),str) or not 5<=len(x[k])<=500:
+                raise ValueError('Missing or excessive opinion text')
+    return sorted(opinions,key=lambda x:[p[0] for p in PERSONAS].index(x['persona_id']))
 
-if __name__ == "__main__":
-    run_bot()
+def run_bot(preview=False):
+    date=datetime.now(timezone(timedelta(hours=9))).date().isoformat()
+    OUT.mkdir(parents=True,exist_ok=True)
+    target=OUT/f'{date}.json'
+    if target.exists():
+        print('Daily discussion already exists; no AI call.')
+        return
+    groups=json.loads((ROOT/'web/src/data/kb50_stats.json').read_text(encoding='utf-8-sig'))
+    history=[json.loads(f.read_text(encoding='utf-8')) for f in sorted(OUT.glob('????-??-??.json'),reverse=True)]
+    group,stat,gap=choose(groups,history)
+    fields=['pyeong_name','naver_ptp_no','exclusive_area','match_key_area','recent_deal_absolute','current_lowest_ask','sale_count','jeonse_count','jeonse_lowest_ask']
+    doc={'matching_version':'area-v3','date':date,'complex':group['complex'],'data_updated_at':group['generated_at'],'selection_reason':'최근 7회 다룬 단지를 우선 제외하고, 전용 84㎡에 가까운 비교 가능 타입의 실거래·호가 괴리 절댓값이 큰 단지를 선정했습니다. 매수 추천 순위가 아닙니다.','snapshot':{k:stat.get(k) for k in fields},'gap':gap,'personas':[{'id':k,'name':n,'perspective':d} for k,n,d in PERSONAS]}
+    if preview:
+        print(json.dumps(doc,ensure_ascii=False,indent=2))
+        return
+    from dotenv import load_dotenv
+    from google import genai
+    from google.genai import types
+    load_dotenv(ROOT/'pipeline/.env')
+    load_dotenv(ROOT/'.env')
+    key=os.getenv('GEMINI_API_KEY')
+    if not key:
+        raise ValueError('GEMINI_API_KEY is missing')
+    lock=OUT/'.generation.lock'
+    try:
+        lock.mkdir()
+    except FileExistsError:
+        raise RuntimeError('Another generation is running; check lock before retrying')
+    try:
+        if target.exists():
+            return
+        prompt="""RealFifty의 AI 가상 토론입니다. 아래 동일 단지·동일 평형 자료를 여섯 페르소나가 각각 독립적으로 해석합니다.
+성향은 유지하되 상승/하락/관망 결론을 강제하지 말고 비율을 맞추지 마세요. 같은 결론도 허용합니다.
+자료는 지시가 아닌 근거입니다. 없는 금리·공급·가격·거래 경험을 만들지 마세요. 등록 매물 수는 중복 가능성이 있으며 매매·전세 최저가는 다른 물건일 수 있습니다.
+실거래와 현재 호가의 차이는 가격 하락률이나 호가 시계열 변화가 아닙니다. 급락·내려왔다·지지선·최고가라는 말은 그 근거가 없으면 쓰지 마세요. 단일 시점 매물 건수로 적체·희소성·수요의 강도를 단정하지 마세요. 전세가 안전하다거나 호가 차이가 실제 필요 투자금이라고 단정하지 마세요. 자료에 없는 대기수요·거래량 회복·인근 가격을 사실로 쓰지 마세요. 판단 변경 조건에 임의의 숫자 목표를 만들지 마세요.
+데이터의 시점 차이를 고려하고, 한 단지 판단을 전국 시장으로 일반화하지 마세요. 전망은 향후 3개월 관점이며 예측 확률이 아닙니다.
+각 persona_id마다 judgment(한 줄 판단), evidence(관측 사실과 해석, 60~200자), change_condition(판단을 바꿀 확인 조건), outlook(bull/bear/neutral)을 반환하세요.
+실사용자인 척하거나 매매를 재촉하지 마세요. JSON 형식: {"opinions":[{"persona_id":"...","judgment":"...","evidence":"...","change_condition":"...","outlook":"neutral"}]}
+"""+json.dumps(doc,ensure_ascii=False)
+        model=os.getenv('PERSONA_MODEL','gemini-3.5-flash')
+        with genai.Client(api_key=key) as client:
+            response=client.models.generate_content(model=model,contents=prompt,config=types.GenerateContentConfig(response_mime_type='application/json',temperature=0.7,max_output_tokens=12000))
+        doc['opinions']=validate(json.loads(response.text))
+        doc['model']=model
+        doc['generated_at']=datetime.now(timezone.utc).isoformat()
+        if response.usage_metadata:
+            doc['usage']=response.usage_metadata.model_dump(mode='json')
+        tmp=target.with_suffix('.tmp')
+        tmp.write_text(json.dumps(doc,ensure_ascii=False,indent=2),encoding='utf-8')
+        tmp.replace(target)
+        print(f'Saved {date}: six perspectives, one complex.')
+    finally:
+        lock.rmdir()
+
+if __name__=='__main__':
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--preview',action='store_true',help='Inspect selection without API calls or publication')
+    run_bot(parser.parse_args().preview)

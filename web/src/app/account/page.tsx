@@ -1,0 +1,1 @@
+import TerminalShell from '../TerminalShell';import Account from './Account';export default function Page(){return <TerminalShell active="/account" eyebrow="MY REALFIFTY" title="내 정보" description="관심 단지, 호가 변화, 저장한 리포트와 내 의견을 한곳에서 관리합니다."><Account/></TerminalShell>;}

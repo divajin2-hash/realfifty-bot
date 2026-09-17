@@ -49,7 +49,7 @@ def clean_name(n):
     # 괄호 안의 내용 전체 삭제 (예: 현대1차(12,13동) -> 현대1차)
     return re.sub(r'\(.*?\)', '', n).replace(" ", "").strip()
 
-def is_matched(api_name, db_name):
+def legacy_name_match(api_name, db_name):
     clean_api = clean_name(api_name)
     clean_db = clean_name(db_name)
     if clean_api == clean_db: return True
@@ -59,6 +59,10 @@ def is_matched(api_name, db_name):
                 if clean_api == clean_name(al):
                     return True
     return False
+
+def is_matched(api_name, db_name):
+    from complex_matching import name_matches
+    return name_matches(api_name, db_name, legacy_name_match)
 
 def run_daily_rtms_crawler():
     print("▶ 국토부 실거래가 통합 수집기 가동 (순수 중개거래 & 소수점 면적 & 별명)")
@@ -78,8 +82,8 @@ def run_daily_rtms_crawler():
     
     # 2 endpoints: General Apt + Rights
     endpoints = [
-        "http://apis.data.go.kr/1613000/RTMSDataSvcAptTradeDev/getRTMSDataSvcAptTradeDev",
-        "http://apis.data.go.kr/1613000/RTMSDataSvcSilvTrade/getRTMSDataSvcSilvTrade"
+        "https://apis.data.go.kr/1613000/RTMSDataSvcAptTradeDev/getRTMSDataSvcAptTradeDev",
+        "https://apis.data.go.kr/1613000/RTMSDataSvcSilvTrade/getRTMSDataSvcSilvTrade"
     ]
     
     total_inserted = 0
@@ -103,6 +107,8 @@ def run_daily_rtms_crawler():
                     root = ET.fromstring(res.content)
                     
                     for item in root.findall(".//item"):
+                        if item.findtext("cdealType") or item.findtext("cdealDay"):
+                            continue
                         deal_type = item.findtext("dealingGbn", "")
                         
                         # [핵심] 직거래 배제 (중개거래만 허용하거나 직거래가 아닌 것들만)

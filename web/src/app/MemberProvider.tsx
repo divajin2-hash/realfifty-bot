@@ -1,0 +1,9 @@
+'use client';
+import {createContext,useContext,useEffect,useState,type ReactNode} from 'react';
+import type {User} from '@supabase/supabase-js';
+import {supabase} from '@/utils/supabase';
+type Auth={user:User|null;ready:boolean;requireLogin:(reason:string)=>boolean};
+const Context=createContext<Auth>({user:null,ready:false,requireLogin:()=>false});
+export const useMember=()=>useContext(Context);
+export async function memberRequest(action?:string,data:Record<string,unknown>={}){const {data:{session}}=await supabase.auth.getSession();if(!session)throw new Error('로그인이 필요합니다.');const res=await fetch('/api/member',{method:action?'POST':'GET',headers:{Authorization:`Bearer ${session.access_token}`,...(action?{'Content-Type':'application/json'}:{})},...(action?{body:JSON.stringify({action,...data})}:{})});const body=await res.json();if(!res.ok)throw new Error(body.error||'저장하지 못했습니다.');return body;}
+export default function MemberProvider({children}:{children:ReactNode}){const [user,setUser]=useState<User|null>(null),[ready,setReady]=useState(false);useEffect(()=>{let live=true;supabase.auth.getSession().then(({data})=>{if(live){setUser(data.session?.user||null);setReady(true);}}).catch(()=>{if(live)setReady(true);});const {data:{subscription}}=supabase.auth.onAuthStateChange((_event,session)=>{setUser(session?.user||null);setReady(true);});return()=>{live=false;subscription.unsubscribe();};},[]);useEffect(()=>{if(!user)return;const check=()=>{if(document.visibilityState==='visible')void memberRequest('check_alerts').catch(()=>{});};check();const timer=setInterval(check,300000);return()=>clearInterval(timer);},[user]);return <Context.Provider value={{user,ready,requireLogin:(reason)=>{if(!ready)return false;if(user)return true;location.assign(`/login?reason=${encodeURIComponent(reason)}&next=${encodeURIComponent(location.pathname+location.search+location.hash)}`);return false;}}}>{children}</Context.Provider>;}

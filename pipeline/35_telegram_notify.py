@@ -1,13 +1,13 @@
-import os
+﻿import os
 import json
 import requests
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timedelta, timezone as dt_timezone
 from dotenv import load_dotenv
 from supabase import create_client
 
 def format_price(price):
     if price == 0:
-        return "0원"
+        return "0"
     eok = price // 100000000
     man = (price % 100000000) // 10000
     res = ""
@@ -32,7 +32,7 @@ def run():
     KEY = os.environ.get("SUPABASE_KEY")
     supabase = create_client(URL, KEY)
     
-    KST = timezone(timedelta(hours=9))
+    KST = dt_timezone(timedelta(hours=9))
     today_date = datetime.now(KST).strftime('%Y-%m-%d')
     res_dates = supabase.table('daily_history').select('base_date').lt('base_date', today_date).order('base_date', desc=True).limit(1).execute()
     if res_dates.data:
@@ -40,35 +40,34 @@ def run():
     else:
         prev_date = (datetime.now(KST) - timedelta(days=1)).strftime('%Y-%m-%d')
     
-    print(f"Fetching summary stats for {today_date} vs {prev_date}...")
-    
     res_today = supabase.table('daily_history').select('*').eq('base_date', today_date).execute()
     res_yest = supabase.table('daily_history').select('*').eq('base_date', prev_date).execute()
     
     if not res_today.data:
-        print("No daily history data found for today.")
         return
         
     yest_dict = {(r['complex_id'], r['area']): r for r in res_yest.data}
 
-    # Load pyeong_name map from kb50_stats.json: (complex_id, match_key_area) -> pyeong_name
     pyeong_name_map = {}
     try:
         stats_path = os.path.join(os.path.dirname(__file__), '..', 'web', 'src', 'data', 'kb50_stats.json')
         kb50 = json.load(open(stats_path, encoding='utf-8'))
         for cx in kb50:
-            cx_id = cx['complex'].get('id')
-            for s in cx.get('stats', []):
-                area = s.get('match_key_area')
-                pname = s.get('pyeong_name')
-                if cx_id and area and pname:
-                    pyeong_name_map[(cx_id, area)] = pname
+            cid = cx.get('complex', {}).get('id')
+            for item in cx.get('stats', []):
+                pyeong_name_map[(cid, item.get('match_key_area'))] = item.get('pyeong_name')
     except Exception as e:
         print(f"Warning: could not load pyeong_name map: {e}")
     
-    # Lists to hold formatted strings
-    rtms_changes = []
-    ask_changes = []
+    rtms_rises = []
+    rtms_falls = []
+    ask_rises = []
+    ask_falls = []
+    
+    rtms_rise_diffs = []
+    rtms_fall_diffs = []
+    ask_rise_diffs = []
+    ask_fall_diffs = []
     
     for t in res_today.data:
         key = (t['complex_id'], t['area'])
@@ -78,67 +77,88 @@ def run():
             
         c_name = t['complex_name']
         area = t['area']
+        pname = pyeong_name_map.get((t.get('complex_id'), area), str(area))
+        name_str = f"{c_name} {pname}({area}㎡):" if pname != str(area) else f"{c_name} {area}㎡:"
         
-        # 1. 국토부 실거래가 (recent_price 변동 비교)
+        # 1. RTMS
         t_recent = t.get('recent_price') or 0
         y_recent = y.get('recent_price') or 0
         if t_recent > 0 and y_recent > 0 and t_recent != y_recent:
             diff = t_recent - y_recent
             diff_abs = abs(diff)
-            mark = "🔺상승" if diff > 0 else "🔻하락"
-            
             t_str = format_price(t_recent)
             y_str = format_price(y_recent)
             d_str = format_price(diff_abs)
             
-            rtms_changes.append(f"- {c_name} {area}㎡: {y_str} ➡️ {t_str} ({mark} {d_str})")
+            s = f"- {name_str} {y_str} ➡️ {t_str} "
+            if diff > 0:
+                s += f"(🔺상승 {d_str})"
+                rtms_rises.append(s)
+                rtms_rise_diffs.append(diff)
+            else:
+                s += f"(🔻하락 {d_str})"
+                rtms_falls.append(s)
+                rtms_fall_diffs.append(diff_abs)
             
-            # Use type-specific breakdown
-            pname = pyeong_name_map.get((t.get('complex_id'), area))
-            if pname and pname != str(area):
-                rtms_changes[-1] = rtms_changes[-1].replace(f"{c_name} {area}㎡:", f"{c_name} {pname}({area}㎡):")
-            
-        # 2. 네이버 최저호가 (lowest_ask 변동 비교)
+        # 2. Asks
         t_ask = t.get('lowest_ask') or 0
         y_ask = y.get('lowest_ask') or 0
-        
         if t_ask > 0 and y_ask > 0 and t_ask != y_ask:
             diff = t_ask - y_ask
             diff_abs = abs(diff)
-            mark = "📈상승" if diff > 0 else "📉하락"
-            
             t_str = format_price(t_ask)
             y_str = format_price(y_ask)
             d_str = format_price(diff_abs)
             
-            ask_changes.append(f"- {c_name} {area}㎡: {y_str} ➡️ {t_str} ({mark} {d_str})") 
-
-            # 2b. Also show type-specific breakdown using pyeong_name
-            pname = pyeong_name_map.get((t.get('complex_id'), area))
-            if pname and pname != str(area):  # Only add suffix if it adds info (e.g. "84A" not just "84")
-                ask_changes[-1] = ask_changes[-1].replace(f"{c_name} {area}㎡:", f"{c_name} {pname}({area}㎡):")
+            s = f"- {name_str} {y_str} ➡️ {t_str} "
+            if diff > 0:
+                s += f"(📈상승 {d_str})"
+                ask_rises.append(s)
+                ask_rise_diffs.append(diff)
+            else:
+                s += f"(📉하락 {d_str})"
+                ask_falls.append(s)
+                ask_fall_diffs.append(diff_abs)
             
-    # Format message
+    def _build_section(rises, falls, rise_diffs, fall_diffs, limit=15):
+        s = ""
+        total_len = len(rises) + len(falls)
+        if total_len == 0:
+            return ""
+            
+        if rises:
+            avg_rt = sum(rise_diffs) // len(rise_diffs) if rise_diffs else 0
+            s += f"[⬆️상승 {len(rises)}건 / 평균 +{format_price(avg_rt)}]\n"
+            s += "\n".join(rises[:limit]) + "\n"
+            if len(rises) > limit:
+                s += f"...가독성을 위해 {len(rises)-limit}건 생략\n"
+            s += "\n"
+        
+        if falls:
+            avg_ft = sum(fall_diffs) // len(fall_diffs) if fall_diffs else 0
+            s += f"[⬇️하락 {len(falls)}건 / 평균 -{format_price(avg_ft)}]\n"
+            s += "\n".join(falls[:limit]) + "\n"
+            if len(falls) > limit:
+                s += f"...가독성을 위해 {len(falls)-limit}건 생략\n"
+            s += "\n"
+        return s
+
     msg = f"🔔 *RealFifty 데일리 리포트*\n({today_date} 자정 기준)\n\n"
     
-    msg += f"🏢 *1. 국토부 실거래가 신규 등록* : 총 {len(rtms_changes)}건\n"
-    if rtms_changes:
-        msg += "\n".join(rtms_changes[:15]) + "\n"
-        if len(rtms_changes) > 15:
-            msg += f"...외 {len(rtms_changes)-15}건 더 있음\n"
+    rtms_total = len(rtms_rises) + len(rtms_falls)
+    msg += f"🏢 *1. 국토부 실거래가 신규 등록* : 총 {rtms_total}건\n"
+    if rtms_total > 0:
+        msg += _build_section(rtms_rises, rtms_falls, rtms_rise_diffs, rtms_fall_diffs, 10)
     else:
-        msg += "새롭게 등록된 실거래가 변동 내역이 없습니다.\n"
-    
-    msg += "\n"
-    msg += f"🏷️ *2. 네이버 최저호가 변동* : 총 {len(ask_changes)}건\n"
-    if ask_changes:
-        msg += "\n".join(ask_changes[:15]) + "\n"
-        if len(ask_changes) > 15:
-            msg += f"...외 {len(ask_changes)-15}건 더 있음\n"
+        msg += "새롭게 등록된 실거래가 변동 내역이 없습니다.\n\n"
+        
+    ask_total = len(ask_rises) + len(ask_falls)
+    msg += f"🏷️ *2. 네이버 최저호가 변동* : 총 {ask_total}건\n"
+    if ask_total > 0:
+        msg += _build_section(ask_rises, ask_falls, ask_rise_diffs, ask_fall_diffs, 15)
     else:
         msg += f"{prev_date} 대비 최저호가 변동 내역이 없습니다.\n"
         
-    # Send
     t_url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
     payload = {
         "chat_id": TELEGRAM_CHAT_ID,
@@ -147,9 +167,9 @@ def run():
     }
     r = requests.post(t_url, json=payload)
     if r.status_code != 200:
-        print(f"Failed to send telegram message: {r.text}")
+        print("Failed to send telegram msg:", r.text)
     else:
         print("Telegram notification sent successfully!")
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     run()

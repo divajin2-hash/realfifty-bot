@@ -1,0 +1,46 @@
+name: Daily transaction type verification
+on:
+  schedule:
+    - cron: '30 16 * * *'
+  workflow_dispatch:
+concurrency:
+  group: transaction-type-verification
+  cancel-in-progress: false
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    env:
+      TZ: Asia/Seoul
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+      RTMS_API_KEY: ${{ secrets.RTMS_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r pipeline/requirements.txt
+      - uses: actions/cache@v4
+        with:
+          path: pipeline/rtms_recheck
+          key: rtms-source-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: rtms-source-
+      - name: Collect asking prices
+        run: python pipeline/11_api_scraper_v2.py
+      - name: Verify type mappings
+        run: python pipeline/daily_type_matching.py --asks "pipeline/raw_daily_asks_$(date +%F).json"
+      - name: Build verified website data
+        env:
+          RTMS_VERIFIED_FILE: pipeline/rtms_recheck/verified_full.json
+        run: python pipeline/19_build_json_db.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: verified-type-matching-${{ github.run_id }}
+          retention-days: 14
+          path: |
+            pipeline/type_trade_evidence.json
+            pipeline/rtms_recheck/matching_status.json
+            web/src/data/kb50_stats.json
