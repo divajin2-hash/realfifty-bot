@@ -1,5 +1,5 @@
 """Shared, deterministic research snapshot. No API calls or env loading on import."""
-import json, math, os, re
+import json, math, os, re, hashlib
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 KST=timezone(timedelta(hours=9))
@@ -79,17 +79,23 @@ def validate_report(r,ids):
  if not isinstance(r.get('limitations'),list) or not r['limitations']:raise ValueError('한계 누락')
  for item in r['limitations']:text(item)
  return r
-def run_report():
+def _run_report():
  import argparse
  parser=argparse.ArgumentParser();parser.add_argument('--preview',action='store_true',help='AI 호출 없이 계산 결과만 확인');args=parser.parse_args()
  d=snapshot();facts=evidence(d)
+ fingerprint=hashlib.sha256(json.dumps(d,sort_keys=True,ensure_ascii=False).encode()).hexdigest()
+ target=DATA/'reports'/f'report_{datetime.now(KST):%Y-%m-%d}.json'
+ if not args.preview and target.exists():
+  prior=json.loads(target.read_text(encoding='utf-8'))
+  if prior.get('source_fingerprint')==fingerprint:
+   print('Report already matches this snapshot; no AI call.');return
  if args.preview:
   print(json.dumps(facts,ensure_ascii=False,indent=2));return
  prompt=(ROOT/'pipeline/prompts/daily_report.md').read_text(encoding='utf-8')
  report,model=generate_json(prompt,{'as_of':d['updatedAt'],'scope':'RealFifty 선정 단지 표본','evidence':facts})
  validate_report(report,set(facts))
  now=datetime.now(KST);date=now.strftime('%Y-%m-%d')
- result={'matching_version':'area-v3','schema_version':2,'date':date,'generated_at':now.isoformat(),'model':model,'prompt_version':'research-v2','snapshot':d,'evidence':facts,'report':report}
+ result={'source_fingerprint':fingerprint,'matching_version':'area-v3','schema_version':2,'date':date,'generated_at':now.isoformat(),'model':model,'prompt_version':'research-v2','snapshot':d,'evidence':facts,'report':report}
  atomic_json(DATA/'reports'/f'report_{date}.json',result)
  lines=[f"# {report['title']}",report['summary'],f"기준: {d['updatedAt']} | 모델: {model}",'## 주요 근거']
  for key,fact in facts.items():lines.append(f"- [{key}] {fact['label']}: {json.dumps(fact['value'],ensure_ascii=False)}")
@@ -100,3 +106,12 @@ def run_report():
  lines.extend(['## 분석 한계',*report['limitations']])
  path=DATA/'reports'/f'report_{date}.md';tmp=path.with_suffix('.md.tmp');tmp.write_text('\n\n'.join(lines),encoding='utf-8');tmp.replace(path)
  print(f'Report saved: {date} ({model})')
+
+
+def run_report():
+ lock=DATA/'reports'/'.generation.lock'
+ lock.parent.mkdir(parents=True,exist_ok=True)
+ try:lock.mkdir()
+ except FileExistsError:raise RuntimeError('Report generation already running')
+ try:_run_report()
+ finally:lock.rmdir()

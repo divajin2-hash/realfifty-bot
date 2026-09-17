@@ -1,29 +1,33 @@
 {
+  "source_fingerprint": "d479d4c2dd88c4e0118938fefeadd596998218783125e90dd204920f9dadd5ed",
+  "matching_version": "area-v3",
   "date": "2026-09-17",
   "complex": {
-    "id": "5fb7b4e9-776b-44a7-9d1c-774f255a6b7a",
-    "name": "래미안원베일리",
-    "address": "서울 반포동"
+    "id": "5eaa149f-38d5-4849-9c2c-7a45f0ad1ec8",
+    "name": "목동신시가지(7단지)",
+    "address": "서울 목동"
   },
-  "data_updated_at": "2026-09-16T15:06:56.447275+00:00",
+  "data_updated_at": "2026-09-17T04:28:40.528422+00:00",
   "selection_reason": "최근 7회 다룬 단지를 우선 제외하고, 전용 84㎡에 가까운 비교 가능 타입의 실거래·호가 괴리 절댓값이 큰 단지를 선정했습니다. 매수 추천 순위가 아닙니다.",
   "snapshot": {
-    "pyeong_name": "113I",
-    "naver_ptp_no": "15",
-    "exclusive_area": 84.92,
-    "match_key_area": 85,
+    "pyeong_name": "106",
+    "naver_ptp_no": "3",
+    "exclusive_area": 89.05,
+    "match_key_area": 89,
     "recent_deal_absolute": {
-      "price": 7150000000,
-      "date": "2026-05-29",
-      "floor": 13,
-      "type": "중개거래"
+      "id": "raw-7974",
+      "price": 2750000000,
+      "date": "2026-05-20",
+      "floor": 1,
+      "exclusive_area_exact": 89.05,
+      "type": "일반 매매"
     },
-    "current_lowest_ask": 5350000000,
+    "current_lowest_ask": 3400000000,
     "sale_count": 1,
-    "jeonse_count": 1,
-    "jeonse_lowest_ask": 2200000000
+    "jeonse_count": 0,
+    "jeonse_lowest_ask": 0
   },
-  "gap": -25.174825174825177,
+  "gap": 23.636363636363633,
   "personas": [
     {
       "id": "optimist",
@@ -59,66 +63,65 @@
   "opinions": [
     {
       "persona_id": "optimist",
-      "judgment": "최근 체결가보다 낮은 호가는 장기 관점에서 살펴볼 여지가 있습니다.",
-      "evidence": "선택 타입의 5월 29일 실거래는 71.5억, 현재 최저호가는 53.5억입니다. 낙관적 관점에서는 진입 가격을 검토할 계기로 보지만, 다른 물건과 시점의 비교여서 가치 회복이나 수요를 입증하지는 않습니다.",
-      "change_condition": "같은 평형의 후속 실거래가 더 낮게 누적되고 등록 매물이 지속적으로 늘면 낙관적 해석을 재검토합니다.",
+      "judgment": "목동 핵심 입지의 가치와 미래 기대를 반영한 강한 호가 형성",
+      "evidence": "5월 실거래가 27.5억 원 대비 9월 현재 매매 호가가 34억 원으로 높게 나타납니다. 단 1건의 매물만 확인되는 상황에서, 목동신시가지의 장기적인 입지적 가치가 호가에 반영되어 강세를 보이는 것으로 해석됩니다.",
+      "change_condition": "후속 실거래가가 직전 거래가 대비 하락하여 거래되는 현상이 지속될 경우",
       "outlook": "bull"
     },
     {
       "persona_id": "skeptic",
-      "judgment": "실거래보다 낮은 호가가 실제 체결로 이어질 가능성을 경계합니다.",
-      "evidence": "현재 호가는 5월 실거래보다 약 25.2% 낮습니다. 하방 위험에 민감한 관점에서는 후속 거래 확인이 우선입니다. 이 차이만으로 실제 가격 급락이나 거품 붕괴가 확인된 것은 아닙니다.",
-      "change_condition": "후속 실거래가 기존 가격 수준을 유지하고 현재 낮은 호가의 물건 조건이 설명된다면 경계를 완화합니다.",
+      "judgment": "실거래가 대비 과도하게 높은 호가와 거래 공백에 따른 리스크 우려",
+      "evidence": "5월 1층 실거래가인 27.5억 원 이후 4개월간 거래 소식이 없는 상태에서 호가만 34억 원으로 격차가 벌어져 있습니다. 전세 매물도 없어 실거주 기반의 수요 검증이 어려우며 추격 매수 부담이 큽니다.",
+      "change_condition": "현재 호가 수준에 부합하는 실거래 건수가 지속적으로 체결되며 가격이 안착될 경우",
       "outlook": "bear"
     },
     {
       "persona_id": "analyst",
-      "judgment": "거래와 호가의 시차를 고려하면 방향 판단은 유보할 필요가 있습니다.",
-      "evidence": "선택 타입의 최근 실거래일은 5월 29일이고 호가 자료는 9월 17일 기준입니다. 매매·전세 등록 매물은 각각 1건입니다. 작은 표본과 시차가 있어 단지 전체 추세로 일반화하기 어렵습니다.",
-      "change_condition": "동일 평형의 후속 거래와 여러 매물의 조건을 비교할 자료가 쌓이면 판단을 갱신합니다.",
+      "judgment": "실거래와 호가의 시차 및 극소수 표본으로 인한 판단 보류",
+      "evidence": "5월 실거래(27.5억 원, 1층)와 9월 현재 호가(34억 원) 사이에 약 4개월의 시차가 존재하며, 등록된 매매 매물이 1건에 불과해 통계적 유의성을 확보하기 어렵습니다. 전세 데이터도 부재하여 전세가율 분석이 불가능합니다.",
+      "change_condition": "다수의 매매 및 전세 매물이 신규 등록되고 거래 데이터가 누적되어 시차가 좁혀질 경우",
       "outlook": "neutral"
     },
     {
       "persona_id": "buyer",
-      "judgment": "거주 필요보다 먼저 감당 가능한 자금 범위를 확인하겠습니다.",
-      "evidence": "현재 최저 매매호가는 53.5억입니다. 실거주 관점에서는 과거 거래보다 낮다는 이유만으로 결정을 서두르기보다 실제 매물 상태와 본인의 자금 부담을 확인하는 편이 낫다고 봅니다.",
-      "change_condition": "매물 조건과 총 취득 비용을 확인하고 생활 계획과 자금 여력이 맞으면 매수를 다시 검토합니다.",
+      "judgment": "이전 실거래가 대비 크게 높아진 호가로 인한 진입 장벽 존재",
+      "evidence": "지난 5월 27.5억 원에 거래된 이력이 있으나, 현재 유일한 매물 호가는 34억 원으로 자금 마련 부담이 매우 큽니다. 단지 내 전세 매물마저 없어 전세 거주를 통한 우회 진입이나 매수 타이밍 조율도 쉽지 않은 상태입니다.",
+      "change_condition": "실거래 가격 수준에 근접한 합리적인 가격대의 매물이 추가로 출현할 경우",
       "outlook": "neutral"
     },
     {
       "persona_id": "tenant",
-      "judgment": "전세 유지와 매수의 비용을 비교하면서 선택을 보류하겠습니다.",
-      "evidence": "최저 전세호가 22억은 최저 매매호가 53.5억의 약 41.1%입니다. 서로 다른 물건일 수 있고, 보증금 반환 위험과 금융 비용을 알 수 없어 전세가 더 안전하다고 단정할 수는 없습니다.",
-      "change_condition": "실제 계약 가능한 전세 조건과 보증금 보호 여부, 매수 시 총비용을 확인하면 선택을 다시 비교합니다.",
+      "judgment": "전세 매물 부재 및 매매 전환 비용 부담으로 관망세 유지",
+      "evidence": "현재 전세 매물 등록 건수가 0건으로 전세 진입 자체가 불가능한 상황입니다. 매매 호가는 34억 원으로 5월 실거래가인 27.5억 원보다 크게 높아, 임차인 입장에서 매매로의 전환을 검토하기에는 비용적 부담이 상당합니다.",
+      "change_condition": "안정적인 가격대의 신규 전세 매물이 시장에 등록되어 거주 선택지가 생길 경우",
       "outlook": "neutral"
     },
     {
       "persona_id": "investor",
-      "judgment": "호가 차이가 커 자금 부담을 보수적으로 평가합니다.",
-      "evidence": "두 최저호가의 차이는 31.5억입니다. 임대 투자 관점에서는 부담이 큰 참고값으로 보지만 동일 물건 기준이 아니며 세금·대출 등도 빠져 있습니다. 매물 한 건으로 적체나 임대 수요를 판단할 수 없습니다.",
-      "change_condition": "같은 물건의 매매·임대 조건과 비용, 보증금 반환 여력을 확인해 자금 부담이 감당 가능하면 판단을 바꿉니다.",
+      "judgment": "전세 보증금을 활용한 투자 여건 악화 및 자금 부담 증가",
+      "evidence": "매매 호가는 34억 원인 반면 전세 매물이 없어 임대차를 통한 투자금 산정이 불가능합니다. 5월 실거래가 대비 호가가 대폭 높게 형성되어 있어 초기 자금 회수 가능성과 투자 리스크 측면에서 불확실성이 큽니다.",
+      "change_condition": "전세 매물 출시로 전세가가 형성되고 매매 호가와의 격차가 좁혀져 투자 자금 예측이 가능해질 경우",
       "outlook": "bear"
     }
   ],
   "model": "gemini-3.5-flash",
-  "generated_at": "2026-09-17T03:07:31.060869+00:00",
+  "generated_at": "2026-09-17T04:54:26.166893+00:00",
   "usage": {
     "cache_tokens_details": null,
     "cached_content_token_count": null,
-    "candidates_token_count": 886,
+    "candidates_token_count": 984,
     "candidates_tokens_details": null,
-    "prompt_token_count": 903,
+    "prompt_token_count": 1128,
     "prompt_tokens_details": [
       {
         "modality": "TEXT",
-        "token_count": 903
+        "token_count": 1128
       }
     ],
-    "thoughts_token_count": 2405,
+    "thoughts_token_count": 2791,
     "tool_use_prompt_token_count": null,
     "tool_use_prompt_tokens_details": null,
-    "total_token_count": 4194,
+    "total_token_count": 4903,
     "traffic_type": null
-  },
-  "editorial_note": "첫 발행분은 근거 범위를 벗어난 단정 표현을 편집 보정했습니다."
+  }
 }

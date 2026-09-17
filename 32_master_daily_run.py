@@ -42,7 +42,7 @@ if __name__ == "__main__":
     
     # 7. Build Macro Indices (Transaction & Volume)
     run_script('36_build_macro_index.py')
-    run_script('38_build_tx_index.py')
+    run_script('build_verified_macro.py')
     run_script('45_news_crawler.py')
     
     # 8. Generate AI Daily Report and Fact Check JSON

@@ -1,4 +1,5 @@
 """Daily single-complex, six-perspective discussion. Writes local dated artifacts only."""
+import hashlib
 import argparse
 import json
 import os
@@ -63,14 +64,16 @@ def run_bot(preview=False):
     date=datetime.now(timezone(timedelta(hours=9))).date().isoformat()
     OUT.mkdir(parents=True,exist_ok=True)
     target=OUT/f'{date}.json'
-    if target.exists():
-        print('Daily discussion already exists; no AI call.')
-        return
     groups=json.loads((ROOT/'web/src/data/kb50_stats.json').read_text(encoding='utf-8-sig'))
-    history=[json.loads(f.read_text(encoding='utf-8')) for f in sorted(OUT.glob('????-??-??.json'),reverse=True)]
+    fingerprint=hashlib.sha256(json.dumps(groups,sort_keys=True,ensure_ascii=False).encode()).hexdigest()
+    def current():
+        return target.exists() and json.loads(target.read_text(encoding='utf-8')).get('source_fingerprint')==fingerprint
+    if current():
+        print('Daily discussion matches current data; no AI call.');return
+    history=[json.loads(f.read_text(encoding='utf-8')) for f in sorted(OUT.glob('????-??-??.json'),reverse=True) if f != target]
     group,stat,gap=choose(groups,history)
     fields=['pyeong_name','naver_ptp_no','exclusive_area','match_key_area','recent_deal_absolute','current_lowest_ask','sale_count','jeonse_count','jeonse_lowest_ask']
-    doc={'matching_version':'area-v3','date':date,'complex':group['complex'],'data_updated_at':group['generated_at'],'selection_reason':'최근 7회 다룬 단지를 우선 제외하고, 전용 84㎡에 가까운 비교 가능 타입의 실거래·호가 괴리 절댓값이 큰 단지를 선정했습니다. 매수 추천 순위가 아닙니다.','snapshot':{k:stat.get(k) for k in fields},'gap':gap,'personas':[{'id':k,'name':n,'perspective':d} for k,n,d in PERSONAS]}
+    doc={'source_fingerprint':fingerprint,'matching_version':'area-v3','date':date,'complex':group['complex'],'data_updated_at':group['generated_at'],'selection_reason':'최근 7회 다룬 단지를 우선 제외하고, 전용 84㎡에 가까운 비교 가능 타입의 실거래·호가 괴리 절댓값이 큰 단지를 선정했습니다. 매수 추천 순위가 아닙니다.','snapshot':{k:stat.get(k) for k in fields},'gap':gap,'personas':[{'id':k,'name':n,'perspective':d} for k,n,d in PERSONAS]}
     if preview:
         print(json.dumps(doc,ensure_ascii=False,indent=2))
         return
@@ -88,7 +91,7 @@ def run_bot(preview=False):
     except FileExistsError:
         raise RuntimeError('Another generation is running; check lock before retrying')
     try:
-        if target.exists():
+        if current():
             return
         prompt="""RealFifty의 AI 가상 토론입니다. 아래 동일 단지·동일 평형 자료를 여섯 페르소나가 각각 독립적으로 해석합니다.
 성향은 유지하되 상승/하락/관망 결론을 강제하지 말고 비율을 맞추지 마세요. 같은 결론도 허용합니다.

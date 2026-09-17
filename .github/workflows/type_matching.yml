@@ -36,6 +36,8 @@ jobs:
         env:
           RTMS_VERIFIED_FILE: pipeline/rtms_recheck/verified_full.json
         run: python pipeline/19_build_json_db.py
+      - name: Build matching-based monthly observations
+        run: python pipeline/build_verified_macro.py
       - uses: actions/upload-artifact@v4
         with:
           name: verified-type-matching-${{ github.run_id }}
@@ -44,3 +46,4 @@ jobs:
             pipeline/type_trade_evidence.json
             pipeline/rtms_recheck/matching_status.json
             web/src/data/kb50_stats.json
+            web/src/data/macro_tx_index.json
