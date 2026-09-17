@@ -1,0 +1,127 @@
+{
+  "source_fingerprint": "ddecf3b19a94d1638d66d81c4b2c06eed7eedece5c03de0ed7a429b8d4bfa4de",
+  "matching_version": "area-v3",
+  "date": "2026-09-18",
+  "complex": {
+    "id": "5f2d4553-bab3-43c1-9e6a-774d287e3ca9",
+    "name": "래미안힐스테이트고덕",
+    "address": "서울 고덕동"
+  },
+  "data_updated_at": "2026-09-17T15:31:28.678752+00:00",
+  "selection_reason": "최근 7회 다룬 단지를 우선 제외하고, 전용 84㎡에 가까운 비교 가능 타입의 실거래·호가 괴리 절댓값이 큰 단지를 선정했습니다. 매수 추천 순위가 아닙니다.",
+  "snapshot": {
+    "pyeong_name": "115C",
+    "naver_ptp_no": "9",
+    "exclusive_area": 84.74,
+    "match_key_area": 85,
+    "recent_deal_absolute": {
+      "id": "raw-51666",
+      "price": 1980000000,
+      "date": "2026-06-13",
+      "floor": 4,
+      "exclusive_area_exact": 84.74,
+      "type": "일반 매매"
+    },
+    "current_lowest_ask": 2400000000,
+    "sale_count": 1,
+    "jeonse_count": 0,
+    "jeonse_lowest_ask": 0
+  },
+  "gap": 21.212121212121215,
+  "personas": [
+    {
+      "id": "optimist",
+      "name": "장기 낙관론자",
+      "perspective": "입지와 희소성, 장기 회복 가능성을 높게 평가하는 강한 낙관 성향. 반대 근거가 강하면 판단을 바꾼다."
+    },
+    {
+      "id": "skeptic",
+      "name": "하방 경계론자",
+      "perspective": "가격 부담, 거래 부진과 손실 가능성에 민감한 강한 비관 성향. 회복 근거가 충분하면 인정한다."
+    },
+    {
+      "id": "analyst",
+      "name": "데이터 분석가",
+      "perspective": "수치의 일치 여부와 표본 범위, 시차, 불확실성을 중시한다."
+    },
+    {
+      "id": "buyer",
+      "name": "실거주 매수자",
+      "perspective": "거주 필요와 감당 가능한 자금 부담 사이에서 매수 시점을 고민한다."
+    },
+    {
+      "id": "tenant",
+      "name": "전세 거주자",
+      "perspective": "전세 유지와 매수를 주거 안정과 비용 측면에서 비교한다."
+    },
+    {
+      "id": "investor",
+      "name": "임대 투자자",
+      "perspective": "전세 수요, 매물 적체, 자금 회수와 보증금 반환 부담을 중시한다."
+    }
+  ],
+  "opinions": [
+    {
+      "persona_id": "optimist",
+      "judgment": "장기적 가치 상승 여력 충분하며 매도자 우위 흐름 기대",
+      "evidence": "6월 실거래가 19.8억 원 대비 현재 등록된 유일한 매매 호가가 24억 원으로 높게 형성되어 있습니다. 전세 매물이 전혀 없는 상황도 매수자에게 긍정적인 신호입니다.",
+      "change_condition": "실거래가가 직전 실거래가보다 낮은 가격으로 신규 등록되는 경우",
+      "outlook": "bull"
+    },
+    {
+      "persona_id": "skeptic",
+      "judgment": "실거래 대비 지나치게 높은 호가로 인한 거래 단절 우려",
+      "evidence": "6월 4층 실거래가 19.8억 원 이후 3개월간 거래가 확인되지 않는 상황에서 호가만 24억 원으로 크게 벌어져 있어 추격 매수 시 손실 발생 위험이 큽니다.",
+      "change_condition": "실거래가가 호가 수준에 근접하여 연속 체결되며 시장 가격으로 안착할 때",
+      "outlook": "bear"
+    },
+    {
+      "persona_id": "analyst",
+      "judgment": "실거래와 호가 간 3개월의 시차와 표본 부족으로 불확실성 상존",
+      "evidence": "6월 실거래(19.8억) 이후 추가 거래 정보가 없고, 현재 등록 매물이 단 1건(24억)에 불과하여 통계적 신뢰도가 낮고 매도 희망가와의 괴리율이 21.2%로 큽니다.",
+      "change_condition": "향후 3개월 내 신규 실거래 데이터가 추가되어 호가와의 격차가 좁혀지는지 여부",
+      "outlook": "neutral"
+    },
+    {
+      "persona_id": "buyer",
+      "judgment": "실거래가와 호가의 격차가 너무 커 실거주 진입 시점 조율 필요",
+      "evidence": "115C 타입의 실거래가는 19.8억 원이나 현재 매수 가능한 최저 호가는 24억 원으로 자금 부담이 매우 큽니다. 실제 거주를 위해 무리하게 진입하기에는 부담스러운 격차입니다.",
+      "change_condition": "매매 호가가 직전 실거래가 수준으로 조정된 신규 매물이 등장할 때",
+      "outlook": "neutral"
+    },
+    {
+      "persona_id": "tenant",
+      "judgment": "전세 매물 부재 상황 속에서 매매 전환보다 관망이 유리",
+      "evidence": "현재 전세 매물이 0건이라 전세 거주 연장이 불확실하지만, 매매 호가가 실거래 대비 4.2억 원이나 높은 24억 원에 달해 매매로 전환하기에는 주거 비용 부담이 과도합니다.",
+      "change_condition": "전세 신규 매물이 등록되거나 매매 호가가 실거래가에 근접하게 하향 조정될 때",
+      "outlook": "neutral"
+    },
+    {
+      "persona_id": "investor",
+      "judgment": "전세 매물은 없으나 매매 호가 상승으로 투자 매력도 저하",
+      "evidence": "전세 매물 수가 0건이라 임대 수요 대응은 유리해 보이나, 6월 실거래 19.8억 원 대비 매매 호가가 24억 원으로 높아 초기 투자금 회수 및 보증금 반환 설계에 부담이 큽니다.",
+      "change_condition": "매매 호가가 낮아지거나 실제 전세 계약이 고가에 체결되어 갭 차이가 줄어들 때",
+      "outlook": "bear"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "generated_at": "2026-09-17T15:32:29.930634+00:00",
+  "usage": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 893,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 1128,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 1128
+      }
+    ],
+    "thoughts_token_count": 2560,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 4581,
+    "traffic_type": null
+  }
+}
