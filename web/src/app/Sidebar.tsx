@@ -4,7 +4,7 @@ import {useMember} from './MemberProvider';
 import BrandLogo from './BrandLogo';
 import FeedbackButton from './FeedbackButton';
 import Link from 'next/link';
-import { Activity, LayoutDashboard, Building2, FileText, CheckSquare, BookOpen } from 'lucide-react';
+import { Activity, LayoutDashboard, Building2, FileText, BookOpen } from 'lucide-react';
 
 export default function Sidebar({ activePath }: { activePath: string }) {
     const {user,ready}=useMember();
@@ -31,9 +31,6 @@ export default function Sidebar({ activePath }: { activePath: string }) {
                     </Link>
                     <Link href="/report" className={`nav-item ${activePath === '/report' ? 'active' : ''}`}>
                         <FileText size={18} /> 리포트
-                    </Link>
-                    <Link href="/news" className={`nav-item ${activePath === '/news' ? 'active' : ''}`}>
-                        <CheckSquare size={18} /> 팩트체크
                     </Link>
                     <Link href="/guide" aria-current={activePath === "/guide" ? "page" : undefined} className={`nav-item ${activePath === "/guide" ? "active" : ""}`}><BookOpen size={18}/> 이용 가이드</Link>
                 </nav>
@@ -75,10 +72,6 @@ export default function Sidebar({ activePath }: { activePath: string }) {
                 <Link href="/report" className={`mobile-nav-item ${activePath === '/report' ? 'active' : ''}`}>
                     <FileText size={20} />
                     리포트
-                </Link>
-                <Link href="/news" className={`mobile-nav-item ${activePath === '/news' ? 'active' : ''}`}>
-                    <CheckSquare size={20} />
-                    팩트체크
                 </Link>
             </nav>
         </>

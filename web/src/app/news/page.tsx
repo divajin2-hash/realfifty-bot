@@ -1,3 +1,44 @@
-import Link from 'next/link';import TerminalShell,{Metric} from '../TerminalShell';import {readMarket,complexHref} from '@/lib/market-data';import {readPublications} from '@/lib/factcheck-review';import {percent,price} from '@/lib/complex-model';
-export const dynamic='force-dynamic';
-export default async function News({searchParams}:{searchParams:Promise<{article?:string}>}){const q=await searchParams;const loaded=await readPublications().then(reviews=>({reviews,unavailable:false})).catch(()=>({reviews:[],unavailable:true}));const {reviews,unavailable}=loaded;const all=reviews.filter(r=>r.status==='published');const seen=new Set<string>();const published=all.filter(x=>{if(seen.has(x.result.article.id))return false;seen.add(x.result.article.id);return true;});const selected=published.find(x=>x.job_id===q.article)||published[0];const r=selected?.result;const market=await readMarket();const local=r?.scope.dong?market.rows.filter(x=>x.address.includes(r.scope.dong)):[];return <TerminalShell active="/news" eyebrow="FACT CHECK / VERIFIED BRIEF" title="기사 속 주장, 확인된 근거로 읽기" description="지역 실거래를 자동 분석하고 운영자가 검토한 결과를 모았습니다."><section className="rt-hero"><div className="rf-eyebrow">자동 분석 → 운영자 검토 → 공개</div><h2>검증은 RealFifty가, 판단은 근거와 함께.</h2><p>핵심 결론을 먼저 읽고, 궁금한 경우 비교 범위와 실제 거래를 펼쳐보세요. 근거가 부족하면 판단을 유보합니다.</p></section>{!r?<section className="rt-panel"><h2>{unavailable?'검증 브리핑을 불러오지 못했습니다':'첫 검증 브리핑을 준비하고 있습니다'}</h2><p>{unavailable?'잠시 후 다시 방문해 주세요.':'운영자 확인을 마친 기사가 아직 없습니다. 자동 분석 초안을 검토한 뒤 이곳에 게시합니다.'}</p><Link className="rt-link" href="/market">기다리는 동안 시장 데이터 보기 →</Link></section>:<><div className="rt-grid three">{published.map(p=><Link className="rt-panel" href={`/news?article=${p.job_id}`} key={p.job_id}><span className="rf-badge mint">운영자 검토 완료 · {p.result.verdict}</span><h2>{p.result.article.title}</h2><p>{p.summary}</p><small>{p.result.article.source} · 검토 {p.reviewed_at.slice(0,10)}</small></Link>)}</div><section className="rt-panel"><span className="rf-eyebrow">선택한 기사 검증</span><h2>{r.article.title}</h2><a className="rt-link" href={r.article.link} target="_blank" rel="noreferrer">기사 원문 ↗</a><div className="rt-note"><strong>{r.verdict}</strong><p>{selected.summary}</p></div><p>검증한 주장: {r.scope.claim}</p><p>{r.scope.district} {r.scope.dong} · {r.scope.start} ~ {r.scope.end}<br/>비교 기간 {r.scope.baseline_start} ~ {r.scope.baseline_end}</p><div className="rt-grid three">{r.scope.metric==='volume_change'?<><Metric label="대상 기간 거래" value={`${r.stats.current_count}건`} note="해제 제외 신고 거래"/><Metric label="비교 기간 거래" value={`${r.stats.baseline_count}건`} note="같은 길이의 비교 기간"/><Metric label="거래량 변화" value={percent(r.stats.volume_change)} note="가격 변화율과 다릅니다"/></>:<><Metric label="상승 거래" value={`${r.stats.up}건`} note="비교 기준보다 1% 초과"/><Metric label="하락 거래" value={`${r.stats.down}건`} note="비교 기준보다 1% 초과 낮음"/><Metric label="가격 비교 가능" value={`${r.stats.comparable}건`} note={`비교 불가 ${r.stats.unmatched}건`}/></>}</div><p>{r.reason}</p><details className="rt-method"><summary>RealFifty 동일 동 보조 데이터</summary>{local.length?local.map(x=><p key={x.id}><Link href={complexHref(x)}>{x.name} · {x.areaLabel} ↗</Link><br/>최근 거래 {price(x.trade)} / 현재 호가 {price(x.ask)}</p>):<p>동일 법정동의 선정 단지 표본이 없습니다.</p>}<p>현재 스냅샷이며 기사 대상 기간과 다를 수 있습니다. 지역 전체 검증을 대체하지 않습니다.</p></details>{r.provisional&&<p className="rt-note">신고가 진행 중인 잠정 자료입니다.</p>}<details className="rt-method"><summary>근거·비교 방식·한계 자세히 보기</summary>{r.method.map((x,i)=><p key={i}>{x}</p>)}<p>수집 {r.collected_at} · 검토 {selected.reviewed_at}</p><p>기사 전체의 진위가 아닌 위 주장과 범위에 한정된 결과입니다.</p><div className="rt-table-wrap"><table className="rt-table"><thead><tr><th>단지 / 계약일</th><th>면적 / 층</th><th>실거래</th><th>기준 가격</th><th>차이</th></tr></thead><tbody>{r.rows.slice(0,20).map((x,i)=><tr key={i}><td>{x.name}<small>{x.date}</small></td><td>{x.area}㎡ / {x.floor}층</td><td>{price(x.price)}</td><td>{price(x.baseline_median)}</td><td>{percent(x.change)}</td></tr>)}</tbody></table></div></details></section></>}<details className="rt-panel rt-method"><summary>검증 결과는 어떻게 만들어지나요?</summary><p>기사 본문에서 지역과 기간이 확인되는 아파트 실거래 주장을 선별합니다. 자동 분석 후 운영자가 본문·비교 범위·계산 결과·한계를 확인합니다. 광역 통계나 가격지수는 해당 원자료가 없으면 게시를 보류합니다.</p></details></TerminalShell>;}
+import Link from 'next/link';
+import TerminalShell, { Metric } from '../TerminalShell';
+import { readUniverse } from '@/lib/complex-data';
+import { compareVolume } from '@/lib/market-reading';
+
+export const dynamic = 'force-dynamic';
+export default async function News() {
+  const universe = await readUniverse().catch(() => null);
+  const data = universe ? compareVolume(universe.groups) : null;
+  const count = (n: number) => <>{n.toLocaleString('ko-KR')}<small style={{ fontFamily: 'inherit', fontSize: '0.65em' }}> 건</small></>;
+  return <TerminalShell active="/news" eyebrow="MARKET / READING DATA" title="데이터로 읽는 시장"
+    description="같은 기준으로 비교하고, 숫자가 말하지 않는 부분까지 확인합니다.">
+    <section className="rt-hero"><span className="rf-badge amber">첫 번째 질문 · 거래량</span>
+      <h2>거래가 정말 줄었을까요?</h2>
+      <p>한 달 전체와 이번 달 일부를 비교하면 감소폭이 과장될 수 있습니다. 두 달의 같은 날짜 구간을 나란히 살펴봅니다.</p>
+      <p className="rt-note">분석 범위: RealFifty 선정 단지의 평형에 연결된 거래입니다. 서울·경기도·전국 전체 거래량을 나타내지 않습니다.</p>
+    </section>
+    {!data ? <section className="rt-panel"><h2>비교 자료를 확인하고 있습니다</h2><p>최신 집계 시점과 거래 식별 정보를 확인할 수 있어야 비교를 제공합니다. 매월 첫날에는 전일까지의 이번 달 비교 구간이 없어 기다립니다. 자료 부족을 거래 0건으로 표시하지 않습니다.</p></section> : <>
+      <section className="rt-panel"><div className="rf-eyebrow">01 / SAME PERIOD</div><h2>먼저, 비교 기간을 맞췄습니다</h2>
+        <p>{data.complexes}개 선정 단지 · 계약일 기준 · 자료 생성 {new Date(data.stamp).toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' })} KST</p>
+        <div className="rt-grid three">
+          <Metric label="지난달 같은 구간" value={count(data.previous)} note={`${data.previousStart} ~ ${data.previousEnd}`} />
+          <Metric label="이번 달 같은 구간" value={count(data.current)} note={`${data.start} ~ ${data.end}`} />
+          <Metric label="현재 자료에서 관찰된 차이" value={data.change === null ? '비교 불가' : `${data.change > 0 ? '+' : ''}${data.change.toFixed(1)}%`} note="지난달 같은 구간 대비 · 최종 증감률 아님" />
+        </div>
+        <p>당일 계약은 제외하고, 두 달에 모두 존재하는 날짜까지만 비교합니다. 같은 거래가 여러 평형에 연결돼도 한 번만 셉니다.</p>
+      </section>
+      <section className="rt-panel"><div className="rf-eyebrow">02 / PROVISIONAL</div><h2>기간을 맞춰도 신고 진행 상태는 다릅니다</h2>
+        <span className="rf-badge amber">잠정 집계 · 확정 판단 유보</span>
+        <p>{data.change === null ? '지난달 비교 건수가 없어 증감률을 계산하지 않습니다.' : `현재 조회된 자료에서는 이번 달 거래가 지난달 같은 구간보다 ${data.change < 0 ? '적게' : data.change > 0 ? '많이' : '같게'} 확인됩니다.`} 최근 계약은 아직 신고가 추가될 수 있습니다.</p>
+        <p>지난달 거래는 신고가 반영될 시간이 더 길었습니다. 두 시점의 신고 진행 정도까지 같게 맞춘 비교는 아니며, 현재 차이를 최종 감소율이나 증가율로 읽으면 안 됩니다.</p>
+      </section>
+    </>}
+    <section className="rt-panel"><div className="rf-eyebrow">03 / LIMITS</div><h2>이 숫자만으로 알 수 없는 것</h2>
+      <ul><li>거래량의 변화만으로 집값의 상승·하락을 판단할 수 없습니다.</li><li>매수 심리나 대출 규제가 변화의 원인인지 입증하지 않습니다.</li><li>선정 단지의 변화를 다른 지역이나 주택시장 전체로 일반화할 수 없습니다.</li></ul>
+      <Link className="rt-download" href="/complex">관심 단지의 실제 거래 살펴보기 →</Link>
+    </section>
+    <details className="rt-panel rt-method"><summary>집계 기준과 자동 갱신 안내</summary>
+      <p>서비스 데이터가 갱신되면 같은 계산 기준을 적용합니다. 이 페이지를 열 때 유료 AI를 호출하지 않습니다.</p>
+      <p>현재 매칭 데이터의 일반 매매와 분양권·입주권 거래를 포함하며 해제·직거래는 제외합니다. 평형에 연결되지 않은 거래는 포함하지 않아, 선정 단지의 전체 계약 건수와도 다를 수 있습니다.</p>
+      <p>데이터 생성 후 3일이 지났거나 집계 시점이 불일치하거나 거래 식별자가 누락되면 비교를 숨깁니다. 신고 추가·해제·매칭 정정으로 과거 수치도 바뀔 수 있습니다.</p>
+    </details>
+  </TerminalShell>;
+}

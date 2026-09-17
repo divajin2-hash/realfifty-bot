@@ -28,6 +28,11 @@ jobs:
           path: pipeline/rtms_recheck
           key: rtms-source-${{ github.run_id }}-${{ github.run_attempt }}
           restore-keys: rtms-source-
+      - uses: actions/cache@v4
+        with:
+          path: pipeline/raw_daily_asks_*.json
+          key: daily-asks-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: daily-asks-
       - name: Collect asking prices
         run: python pipeline/11_api_scraper_v2.py
       - name: Verify type mappings
@@ -47,3 +52,4 @@ jobs:
             pipeline/rtms_recheck/matching_status.json
             web/src/data/kb50_stats.json
             web/src/data/macro_tx_index.json
+            web/src/data/daily_changes.json

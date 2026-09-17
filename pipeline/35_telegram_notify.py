@@ -128,7 +128,7 @@ def run():
             
         if rises:
             avg_rt = sum(rise_diffs) // len(rise_diffs) if rise_diffs else 0
-            s += f"[⬆️상승 {len(rises)}건 / 평균 +{format_price(avg_rt)}]\n"
+            s += f"[⬆️상승 {len(rises)}건]\n"
             s += "\n".join(rises[:limit]) + "\n"
             if len(rises) > limit:
                 s += f"...가독성을 위해 {len(rises)-limit}건 생략\n"
@@ -136,29 +136,30 @@ def run():
         
         if falls:
             avg_ft = sum(fall_diffs) // len(fall_diffs) if fall_diffs else 0
-            s += f"[⬇️하락 {len(falls)}건 / 평균 -{format_price(avg_ft)}]\n"
+            s += f"[⬇️하락 {len(falls)}건]\n"
             s += "\n".join(falls[:limit]) + "\n"
             if len(falls) > limit:
                 s += f"...가독성을 위해 {len(falls)-limit}건 생략\n"
             s += "\n"
         return s
 
-    msg = f"🔔 *RealFifty 데일리 리포트*\n({today_date} 자정 기준)\n\n"
+    msg = f"🔔 *RealFifty 데일리 리포트*\n({today_date} 수집분 기준)\n\n"
     
     rtms_total = len(rtms_rises) + len(rtms_falls)
-    msg += f"🏢 *1. 국토부 실거래가 신규 등록* : 총 {rtms_total}건\n"
+    msg += f"🏢 *1. 최근 실거래 가격이 달라진 면적 그룹* : 총 {rtms_total}건\n"
     if rtms_total > 0:
         msg += _build_section(rtms_rises, rtms_falls, rtms_rise_diffs, rtms_fall_diffs, 10)
     else:
-        msg += "새롭게 등록된 실거래가 변동 내역이 없습니다.\n\n"
+        msg += "최근 실거래 가격이 달라진 면적 그룹이 없습니다.\n\n"
         
     ask_total = len(ask_rises) + len(ask_falls)
-    msg += f"🏷️ *2. 네이버 최저호가 변동* : 총 {ask_total}건\n"
+    msg += f"🏷️ *2. 대표 타입 최저호가 변동* : 총 {ask_total}건\n"
     if ask_total > 0:
         msg += _build_section(ask_rises, ask_falls, ask_rise_diffs, ask_fall_diffs, 15)
     else:
         msg += f"{prev_date} 대비 최저호가 변동 내역이 없습니다.\n"
         
+    msg += "\n※ 신규 계약 건수가 아닌 일별 대표 가격 비교입니다. 같은 정수 면적의 타입을 묶은 집계로 웹의 타입별 집계와 다릅니다. 최저호가 변화는 동일 매물의 가격 수정과 다를 수 있습니다.\n"
     t_url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
     payload = {
         "chat_id": TELEGRAM_CHAT_ID,

@@ -25,6 +25,7 @@ interface Document {
     schema_version: number;
     date: string;
     generated_at: string;
+    evidence?: Record<string, {label?:string; date?:string; previous_date?:string; comparable?:number; rises?:number; falls?:number; unchanged?:number}>;
     model: string;
     prompt_version: string;
     snapshot: MarketData;
@@ -37,7 +38,7 @@ export async function readReport(requested?: string) {
         files = await fs.readdir(dir);
     }
     catch { }
-    const dates = [...new Set(files.filter(f => /^report_\d{4}-\d{2}-\d{2}\.(json|md)$/.test(f)).map(f => f.slice(7, 17)).filter(date => date >= '2026-09-16'))].sort().reverse();
+    const dates = [...new Set(files.filter(f => /^report_\d{4}-\d{2}-\d{2}\.(json|md)$/.test(f)).map(f => f.slice(7, 17)).filter(date => date >= '2026-09-17'))].sort().reverse();
     const date = requested && dates.includes(requested) ? requested : dates[0] || '';
     let document: Document | null = null;
     let legacy = '';

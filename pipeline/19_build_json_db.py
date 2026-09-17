@@ -202,6 +202,8 @@ def build_db():
         with open(out_path + '.tmp', 'rb') as source, open(out_path, 'wb') as destination:
             destination.write(source.read())
         os.remove(out_path + '.tmp')
+    from build_daily_changes import run as build_changes
+    build_changes()
     print(f"Generated DB at {out_path} with {len(final_data)} complexes.")
 
 if __name__ == "__main__":
