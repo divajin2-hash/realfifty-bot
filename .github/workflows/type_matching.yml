@@ -1,7 +1,5 @@
 name: Daily transaction type verification
 on:
-  schedule:
-    - cron: '30 16 * * *'
   workflow_dispatch:
 concurrency:
   group: transaction-type-verification
@@ -10,6 +8,8 @@ permissions:
   contents: read
 jobs:
   verify:
+    # Network collection is supported only by the local daily runner.
+    if: ${{ false }}
     runs-on: ubuntu-latest
     timeout-minutes: 180
     env:

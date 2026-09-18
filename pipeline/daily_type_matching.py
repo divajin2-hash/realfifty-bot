@@ -72,10 +72,9 @@ def main():
     cache = args.offline_cache or ROOT / 'rtms_recheck/naver_daily'
     cache.mkdir(parents=True, exist_ok=True)
     if not args.offline_cache:
-        now = datetime.now()
-        month_index = now.year * 12 + now.month - 1 - 2
-        env = dict(os.environ, RTMS_REFRESH_FROM=('201401' if args.full_refresh or now.weekday() == 6 else f'{month_index // 12:04d}{month_index % 12 + 1:02d}'))
-        subprocess.run([sys.executable, str(ROOT / 'recheck_rtms.py')], env=env, check=True)
+        command=[sys.executable, str(ROOT / 'recheck_rtms.py')]
+        if args.full_refresh:command.append('--full-refresh')
+        subprocess.run(command, check=True)
         for i, ask in enumerate(asks, 1):
             fetch_type(ask, cache)
             if i % 50 == 0:

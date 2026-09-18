@@ -1,5 +1,6 @@
 {
-  "source_fingerprint": "ddecf3b19a94d1638d66d81c4b2c06eed7eedece5c03de0ed7a429b8d4bfa4de",
+  "source_fingerprint": "1868b95e3032ac787ed6cbb2af5ce853382738bb498aee4ff60872bdf333e333",
+  "accuracy_version": "official-v1",
   "matching_version": "area-v3",
   "date": "2026-09-18",
   "complex": {
@@ -7,7 +8,7 @@
     "name": "래미안힐스테이트고덕",
     "address": "서울 고덕동"
   },
-  "data_updated_at": "2026-09-17T15:31:28.678752+00:00",
+  "data_updated_at": "2026-09-18T03:00:56.775395+00:00",
   "selection_reason": "최근 7회 다룬 단지를 우선 제외하고, 전용 84㎡에 가까운 비교 가능 타입의 실거래·호가 괴리 절댓값이 큰 단지를 선정했습니다. 매수 추천 순위가 아닙니다.",
   "snapshot": {
     "pyeong_name": "115C",
@@ -15,7 +16,7 @@
     "exclusive_area": 84.74,
     "match_key_area": 85,
     "recent_deal_absolute": {
-      "id": "raw-51666",
+      "id": "raw-51608",
       "price": 1980000000,
       "date": "2026-06-13",
       "floor": 4,
@@ -63,65 +64,65 @@
   "opinions": [
     {
       "persona_id": "optimist",
-      "judgment": "장기적 가치 상승 여력 충분하며 매도자 우위 흐름 기대",
-      "evidence": "6월 실거래가 19.8억 원 대비 현재 등록된 유일한 매매 호가가 24억 원으로 높게 형성되어 있습니다. 전세 매물이 전혀 없는 상황도 매수자에게 긍정적인 신호입니다.",
-      "change_condition": "실거래가가 직전 실거래가보다 낮은 가격으로 신규 등록되는 경우",
+      "judgment": "매물 희소성과 입지적 가치에 따른 장기 우상향 가능성",
+      "evidence": "6월 실거래가(19.8억 원) 대비 현재 매매 호가가 24억 원으로 높게 형성되어 있으며, 등록된 매도 매물이 단 1건에 불과해 매도자 우위의 흐름이 장기적으로 이어질 수 있습니다.",
+      "change_condition": "호가를 낮춘 신규 매물이 다수 등록되거나 실거래가가 직전 대비 낮게 체결되는 현상이 지속될 때",
       "outlook": "bull"
     },
     {
       "persona_id": "skeptic",
-      "judgment": "실거래 대비 지나치게 높은 호가로 인한 거래 단절 우려",
-      "evidence": "6월 4층 실거래가 19.8억 원 이후 3개월간 거래가 확인되지 않는 상황에서 호가만 24억 원으로 크게 벌어져 있어 추격 매수 시 손실 발생 위험이 큽니다.",
-      "change_condition": "실거래가가 호가 수준에 근접하여 연속 체결되며 시장 가격으로 안착할 때",
+      "judgment": "실거래가 대비 지나치게 높은 호가와 거래 공백 우려",
+      "evidence": "6월에 체결된 19.8억 원의 실거래가와 현재 유일한 매물 호가인 24억 원 사이에 4억 원 이상의 큰 격차가 존재하여 매수자의 가격 부담이 크고 거래 단절이 우려됩니다.",
+      "change_condition": "24억 원 안팎의 호가로 실제 매매 거래가 체결되어 시장에서 소화되는 현상이 확인될 때",
       "outlook": "bear"
     },
     {
       "persona_id": "analyst",
-      "judgment": "실거래와 호가 간 3개월의 시차와 표본 부족으로 불확실성 상존",
-      "evidence": "6월 실거래(19.8억) 이후 추가 거래 정보가 없고, 현재 등록 매물이 단 1건(24억)에 불과하여 통계적 신뢰도가 낮고 매도 희망가와의 괴리율이 21.2%로 큽니다.",
-      "change_condition": "향후 3개월 내 신규 실거래 데이터가 추가되어 호가와의 격차가 좁혀지는지 여부",
+      "judgment": "3개월의 시차와 단 1건의 매물 데이터가 가진 한계성",
+      "evidence": "6월 실거래(19.8억 원) 이후 3개월간 실거래가 없었고 현재 등록 매물도 단 1건에 불과해, 표본이 극히 부족하므로 현재 호가인 24억 원을 시장의 대표 가격으로 보기는 어렵습니다.",
+      "change_condition": "추가적인 실거래 사례가 누적되거나 다수의 매물이 등록되어 신뢰할 만한 가격대가 형성될 때",
       "outlook": "neutral"
     },
     {
       "persona_id": "buyer",
-      "judgment": "실거래가와 호가의 격차가 너무 커 실거주 진입 시점 조율 필요",
-      "evidence": "115C 타입의 실거래가는 19.8억 원이나 현재 매수 가능한 최저 호가는 24억 원으로 자금 부담이 매우 큽니다. 실제 거주를 위해 무리하게 진입하기에는 부담스러운 격차입니다.",
-      "change_condition": "매매 호가가 직전 실거래가 수준으로 조정된 신규 매물이 등장할 때",
-      "outlook": "neutral"
+      "judgment": "실거래가 대비 높은 호가로 인한 자금 마련 부담 심화",
+      "evidence": "실거주 목적의 매수를 고려하기에는 6월 실거래가보다 호가가 4.2억 원이나 높아 자금 조달 계획을 전면 수정해야 하는 부담이 있으며, 매물도 1건뿐이라 선택의 폭이 좁습니다.",
+      "change_condition": "매물이 늘어나며 호가가 실거래가에 근접한 수준으로 조정되는 매물이 출현할 때",
+      "outlook": "bear"
     },
     {
       "persona_id": "tenant",
-      "judgment": "전세 매물 부재 상황 속에서 매매 전환보다 관망이 유리",
-      "evidence": "현재 전세 매물이 0건이라 전세 거주 연장이 불확실하지만, 매매 호가가 실거래 대비 4.2억 원이나 높은 24억 원에 달해 매매로 전환하기에는 주거 비용 부담이 과도합니다.",
-      "change_condition": "전세 신규 매물이 등록되거나 매매 호가가 실거래가에 근접하게 하향 조정될 때",
+      "judgment": "전세 매물 부재 속에서 매수 전환 여부 결정의 어려움",
+      "evidence": "현재 해당 평형의 전세 매물이 전혀 없어 임대차 계약 연장이나 신규 진입이 불가능한 상황이며, 매매 호가는 실거래가 대비 크게 높아 매수로 선회하기에도 자금 부담이 큽니다.",
+      "change_condition": "전세 매물이 신규 등록되어 적정 전세가가 형성되거나 매매 호가가 하향 조정될 때",
       "outlook": "neutral"
     },
     {
       "persona_id": "investor",
-      "judgment": "전세 매물은 없으나 매매 호가 상승으로 투자 매력도 저하",
-      "evidence": "전세 매물 수가 0건이라 임대 수요 대응은 유리해 보이나, 6월 실거래 19.8억 원 대비 매매 호가가 24억 원으로 높아 초기 투자금 회수 및 보증금 반환 설계에 부담이 큽니다.",
-      "change_condition": "매매 호가가 낮아지거나 실제 전세 계약이 고가에 체결되어 갭 차이가 줄어들 때",
-      "outlook": "bear"
+      "judgment": "전세 매물 부재 및 높은 매매 호가로 인한 투자 매력 저하",
+      "evidence": "전세 매물이 전혀 없어 전세 시장의 실제 임대 수요와 가격대를 파악하기 어렵고, 매매 호가가 24억 원으로 높아 초기 투자금 회수 및 보증금 반환 부담을 예측하기 힘듭니다.",
+      "change_condition": "전세 매물이 출시되어 시장 전세가가 확인되고 매매가와의 차이가 좁혀지는 경우",
+      "outlook": "neutral"
     }
   ],
   "model": "gemini-3.5-flash",
-  "generated_at": "2026-09-17T15:32:29.930634+00:00",
+  "generated_at": "2026-09-18T03:03:10.827599+00:00",
   "usage": {
     "cache_tokens_details": null,
     "cached_content_token_count": null,
-    "candidates_token_count": 893,
+    "candidates_token_count": 903,
     "candidates_tokens_details": null,
-    "prompt_token_count": 1128,
+    "prompt_token_count": 1142,
     "prompt_tokens_details": [
       {
         "modality": "TEXT",
-        "token_count": 1128
+        "token_count": 1142
       }
     ],
-    "thoughts_token_count": 2560,
+    "thoughts_token_count": 2184,
     "tool_use_prompt_token_count": null,
     "tool_use_prompt_tokens_details": null,
-    "total_token_count": 4581,
+    "total_token_count": 4229,
     "traffic_type": null
   }
 }

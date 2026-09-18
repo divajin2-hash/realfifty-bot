@@ -66,34 +66,16 @@ def build_db():
         valid_areas_map[cid].add(area)
 
 
-    print(f"Fetching rtms_transactions...")
-    transactions = fetch_all("rtms_transactions")
-    cached_path = os.path.join(os.path.dirname(__file__), 'rtms_recheck', 'verified.json')
-    if os.path.exists(cached_path):
-        with open(cached_path, encoding='utf-8') as source:
-            recovered = json.load(source)
-        index = {}
-        for t in recovered['transactions']:
-            key = (str(t['complex_id']), t['deal_date'], t['deal_price'], t.get('floor'))
-            index.setdefault(key, set()).add(str(t['exclusive_area_exact']))
-        recovered_count = 0
-        for t in transactions:
-            if t.get('exclusive_area_exact') is not None:
-                continue
-            key = (str(t['complex_id']), t['deal_date'], t['deal_price'], t.get('floor'))
-            candidates = index.get(key, set())
-            if len(candidates) == 1:
-                t['exclusive_area_exact'] = float(next(iter(candidates)))
-                recovered_count += 1
-        print(f'Recovered original areas by unique date/price/floor key: {recovered_count}')
-    verified_path = os.environ.get('RTMS_VERIFIED_FILE')
+    verified_path = os.environ.get('RTMS_VERIFIED_FILE') or os.path.join(os.path.dirname(__file__), 'rtms_recheck', 'verified_full.json')
+    if not os.path.exists(verified_path):
+        raise RuntimeError('Verified official source required; legacy database fallback disabled')
     if verified_path:
         with open(verified_path, encoding='utf-8') as source:
             verified = json.load(source)
         # Replace the verified interval, including cancellations; retain older history separately.
         start = verified['from_month'][:4] + '-' + verified['from_month'][4:] + '-01'
         end_month = verified['to_month'][:4] + '-' + verified['to_month'][4:]
-        transactions = [t for t in transactions if t['deal_date'] < start or t['deal_date'][:7] > end_month] + verified['transactions']
+        transactions = verified['transactions']
         print(f"Applied verified official interval: {start} to {end_month}")
 
     grouped = {str(c['id']): [] for c in complexes}
@@ -186,10 +168,13 @@ def build_db():
             "stats": c_stats
         })
 
+    from official_changes import validate_groups
+    validate_groups(final_data, verified)
     generated_at = datetime.now(timezone.utc).isoformat()
     for group in final_data:
         group["generated_at"] = generated_at
         group["matching_version"] = "area-v3"
+        group["official_observed_at"] = verified["fetched_at"]
 
     out_path = os.path.join("web", "src", "data", "kb50_stats.json")
     os.makedirs(os.path.dirname(out_path), exist_ok=True)

@@ -89,6 +89,8 @@ def validate_report(r,ids):
 def _run_report():
  import argparse
  parser=argparse.ArgumentParser();parser.add_argument('--preview',action='store_true',help='AI 호출 없이 계산 결과만 확인');args=parser.parse_args()
+ from official_changes import require_current_source
+ require_current_source(json.loads((DATA/'kb50_stats.json').read_text(encoding='utf-8')), json.loads((ROOT/'pipeline/rtms_recheck/verified_full.json').read_text(encoding='utf-8')))
  d=snapshot();facts=evidence(d)
  fingerprint=hashlib.sha256(json.dumps({'snapshot':d,'facts':facts,'prompt_version':'research-v3'},sort_keys=True,ensure_ascii=False).encode()).hexdigest()
  target=DATA/'reports'/f'report_{datetime.now(KST):%Y-%m-%d}.json'
@@ -102,7 +104,7 @@ def _run_report():
  report,model=generate_json(prompt,{'as_of':d['updatedAt'],'scope':'RealFifty 선정 단지 표본','evidence':facts})
  validate_report(report,set(facts))
  now=datetime.now(KST);date=now.strftime('%Y-%m-%d')
- result={'source_fingerprint':fingerprint,'matching_version':'area-v3','schema_version':2,'date':date,'generated_at':now.isoformat(),'model':model,'prompt_version':'research-v3','snapshot':d,'evidence':facts,'report':report}
+ result={'source_fingerprint':fingerprint,'accuracy_version':'official-v1','matching_version':'area-v3','schema_version':2,'date':date,'generated_at':now.isoformat(),'model':model,'prompt_version':'research-v3','snapshot':d,'evidence':facts,'report':report}
  atomic_json(DATA/'reports'/f'report_{date}.json',result)
  lines=[f"# {report['title']}",report['summary'],f"기준: {d['updatedAt']} | 모델: {model}",'## 주요 근거']
  for key,fact in facts.items():lines.append(f"- [{key}] {fact['label']}: {json.dumps(fact.get('value', {k:v for k,v in fact.items() if k!='label'}),ensure_ascii=False)}")

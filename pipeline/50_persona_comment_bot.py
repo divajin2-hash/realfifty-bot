@@ -65,6 +65,8 @@ def run_bot(preview=False):
     OUT.mkdir(parents=True,exist_ok=True)
     target=OUT/f'{date}.json'
     groups=json.loads((ROOT/'web/src/data/kb50_stats.json').read_text(encoding='utf-8-sig'))
+    from official_changes import require_current_source
+    require_current_source(groups,json.loads((ROOT/'pipeline/rtms_recheck/verified_full.json').read_text(encoding='utf-8')))
     fingerprint=hashlib.sha256(json.dumps(groups,sort_keys=True,ensure_ascii=False).encode()).hexdigest()
     def current():
         return target.exists() and json.loads(target.read_text(encoding='utf-8')).get('source_fingerprint')==fingerprint
@@ -73,7 +75,7 @@ def run_bot(preview=False):
     history=[json.loads(f.read_text(encoding='utf-8')) for f in sorted(OUT.glob('????-??-??.json'),reverse=True) if f != target]
     group,stat,gap=choose(groups,history)
     fields=['pyeong_name','naver_ptp_no','exclusive_area','match_key_area','recent_deal_absolute','current_lowest_ask','sale_count','jeonse_count','jeonse_lowest_ask']
-    doc={'source_fingerprint':fingerprint,'matching_version':'area-v3','date':date,'complex':group['complex'],'data_updated_at':group['generated_at'],'selection_reason':'최근 7회 다룬 단지를 우선 제외하고, 전용 84㎡에 가까운 비교 가능 타입의 실거래·호가 괴리 절댓값이 큰 단지를 선정했습니다. 매수 추천 순위가 아닙니다.','snapshot':{k:stat.get(k) for k in fields},'gap':gap,'personas':[{'id':k,'name':n,'perspective':d} for k,n,d in PERSONAS]}
+    doc={'source_fingerprint':fingerprint,'accuracy_version':'official-v1','matching_version':'area-v3','date':date,'complex':group['complex'],'data_updated_at':group['generated_at'],'selection_reason':'최근 7회 다룬 단지를 우선 제외하고, 전용 84㎡에 가까운 비교 가능 타입의 실거래·호가 괴리 절댓값이 큰 단지를 선정했습니다. 매수 추천 순위가 아닙니다.','snapshot':{k:stat.get(k) for k in fields},'gap':gap,'personas':[{'id':k,'name':n,'perspective':d} for k,n,d in PERSONAS]}
     if preview:
         print(json.dumps(doc,ensure_ascii=False,indent=2))
         return

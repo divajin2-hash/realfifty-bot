@@ -38,14 +38,22 @@ export async function readReport(requested?: string) {
         files = await fs.readdir(dir);
     }
     catch { }
-    const dates = [...new Set(files.filter(f => /^report_\d{4}-\d{2}-\d{2}\.(json|md)$/.test(f)).map(f => f.slice(7, 17)).filter(date => date >= '2026-09-17'))].sort().reverse();
+    const dates: string[] = [];
+    for (const file of files.filter(f => /^report_\d{4}-\d{2}-\d{2}\.json$/.test(f))) {
+        try {
+            const entry = JSON.parse(await fs.readFile(path.join(dir, file), 'utf8'));
+            if (entry.accuracy_version === "official-v1" && entry.schema_version === 2 && entry.snapshot && entry.report)
+                dates.push(file.slice(7, 17));
+        } catch { }
+    }
+    dates.sort().reverse();
     const date = requested && dates.includes(requested) ? requested : dates[0] || '';
     let document: Document | null = null;
     let legacy = '';
     if (date) {
         try {
             const value = JSON.parse(await fs.readFile(path.join(dir, `report_${date}.json`), 'utf8'));
-            if (value.schema_version === 2 && value.matching_version === "area-v3" && value.snapshot && value.report)
+            if (value.accuracy_version === "official-v1" && value.schema_version === 2 && value.matching_version === "area-v3" && value.snapshot && value.report)
                 document = value;
         }
         catch { }
