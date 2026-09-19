@@ -17,3 +17,5 @@ env/
 .pytest_cache/
 .DS_Store
 .vercel
+
+web/src/data/factcheck/
