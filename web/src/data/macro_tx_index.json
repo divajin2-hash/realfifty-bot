@@ -12,7 +12,7 @@
   {
     "month": "2014-03",
     "sample_count": 368,
-    "recovery_rate": 25.69
+    "recovery_rate": 25.68
   },
   {
     "month": "2014-04",
@@ -237,12 +237,12 @@
   {
     "month": "2017-12",
     "sample_count": 743,
-    "recovery_rate": 39.3
+    "recovery_rate": 39.29
   },
   {
     "month": "2018-01",
     "sample_count": 828,
-    "recovery_rate": 41.42
+    "recovery_rate": 41.39
   },
   {
     "month": "2018-02",
@@ -322,7 +322,7 @@
   {
     "month": "2019-05",
     "sample_count": 583,
-    "recovery_rate": 43.99
+    "recovery_rate": 43.97
   },
   {
     "month": "2019-06",
@@ -352,7 +352,7 @@
   {
     "month": "2019-11",
     "sample_count": 727,
-    "recovery_rate": 53.68
+    "recovery_rate": 53.65
   },
   {
     "month": "2019-12",
@@ -382,7 +382,7 @@
   {
     "month": "2020-05",
     "sample_count": 430,
-    "recovery_rate": 52.01
+    "recovery_rate": 51.98
   },
   {
     "month": "2020-06",
@@ -437,7 +437,7 @@
   {
     "month": "2021-04",
     "sample_count": 260,
-    "recovery_rate": 64.04
+    "recovery_rate": 64.01
   },
   {
     "month": "2021-05",
@@ -682,7 +682,7 @@
   {
     "month": "2025-05",
     "sample_count": 479,
-    "recovery_rate": 80.94
+    "recovery_rate": 80.91
   },
   {
     "month": "2025-06",
@@ -702,12 +702,12 @@
   {
     "month": "2025-09",
     "sample_count": 460,
-    "recovery_rate": 89.55
+    "recovery_rate": 89.53
   },
   {
     "month": "2025-10",
     "sample_count": 399,
-    "recovery_rate": 93.82
+    "recovery_rate": 93.79
   },
   {
     "month": "2025-11",
@@ -717,7 +717,7 @@
   {
     "month": "2025-12",
     "sample_count": 138,
-    "recovery_rate": 95.29
+    "recovery_rate": 95.14
   },
   {
     "month": "2026-01",
@@ -737,31 +737,31 @@
   {
     "month": "2026-04",
     "sample_count": 576,
-    "recovery_rate": 90.43
+    "recovery_rate": 90.34
   },
   {
     "month": "2026-05",
     "sample_count": 550,
-    "recovery_rate": 91.31
+    "recovery_rate": 91.29
   },
   {
     "month": "2026-06",
     "sample_count": 252,
-    "recovery_rate": 93.73
+    "recovery_rate": 93.61
   },
   {
     "month": "2026-07",
     "sample_count": 249,
-    "recovery_rate": 95.71
+    "recovery_rate": 95.65
   },
   {
     "month": "2026-08",
-    "sample_count": 108,
-    "recovery_rate": 96.12
+    "sample_count": 110,
+    "recovery_rate": 96.19
   },
   {
     "month": "2026-09",
-    "sample_count": 40,
-    "recovery_rate": 91.96
+    "sample_count": 45,
+    "recovery_rate": 92.69
   }
 ]
