@@ -722,7 +722,7 @@
   {
     "month": "2026-01",
     "sample_count": 191,
-    "recovery_rate": 96.15
+    "recovery_rate": 96.13
   },
   {
     "month": "2026-02",
@@ -741,8 +741,8 @@
   },
   {
     "month": "2026-05",
-    "sample_count": 550,
-    "recovery_rate": 91.29
+    "sample_count": 551,
+    "recovery_rate": 91.3
   },
   {
     "month": "2026-06",
@@ -751,17 +751,17 @@
   },
   {
     "month": "2026-07",
-    "sample_count": 249,
-    "recovery_rate": 95.65
+    "sample_count": 250,
+    "recovery_rate": 95.68
   },
   {
     "month": "2026-08",
-    "sample_count": 110,
-    "recovery_rate": 96.19
+    "sample_count": 113,
+    "recovery_rate": 96.25
   },
   {
     "month": "2026-09",
-    "sample_count": 45,
-    "recovery_rate": 92.69
+    "sample_count": 49,
+    "recovery_rate": 92.31
   }
 ]
