@@ -1,0 +1,128 @@
+{
+  "source_fingerprint": "7973d959e912821ea4b1cb69216fe3e2e9a4c736c3ceb7261466b274903958f3",
+  "accuracy_version": "official-v1",
+  "matching_version": "area-v3",
+  "date": "2026-09-27",
+  "complex": {
+    "id": "3b36a481-b36e-4263-add8-2138f291430d",
+    "name": "반포자이",
+    "address": "서울 반포동"
+  },
+  "data_updated_at": "2026-09-26T15:32:59.051765+00:00",
+  "selection_reason": "최근 7회 다룬 단지를 우선 제외하고, 전용 84㎡에 가까운 비교 가능 타입의 실거래·호가 괴리 절댓값이 큰 단지를 선정했습니다. 매수 추천 순위가 아닙니다.",
+  "snapshot": {
+    "pyeong_name": "116A",
+    "naver_ptp_no": "3",
+    "exclusive_area": 84.94,
+    "match_key_area": 85,
+    "recent_deal_absolute": {
+      "id": "raw-14698",
+      "price": 5200000000,
+      "date": "2026-07-31",
+      "floor": 5,
+      "exclusive_area_exact": 84.943,
+      "type": "일반 매매"
+    },
+    "current_lowest_ask": 4200000000,
+    "sale_count": 155,
+    "jeonse_count": 90,
+    "jeonse_lowest_ask": 1400000000
+  },
+  "gap": -19.23076923076923,
+  "personas": [
+    {
+      "id": "optimist",
+      "name": "장기 낙관론자",
+      "perspective": "입지와 희소성, 장기 회복 가능성을 높게 평가하는 강한 낙관 성향. 반대 근거가 강하면 판단을 바꾼다."
+    },
+    {
+      "id": "skeptic",
+      "name": "하방 경계론자",
+      "perspective": "가격 부담, 거래 부진과 손실 가능성에 민감한 강한 비관 성향. 회복 근거가 충분하면 인정한다."
+    },
+    {
+      "id": "analyst",
+      "name": "데이터 분석가",
+      "perspective": "수치의 일치 여부와 표본 범위, 시차, 불확실성을 중시한다."
+    },
+    {
+      "id": "buyer",
+      "name": "실거주 매수자",
+      "perspective": "거주 필요와 감당 가능한 자금 부담 사이에서 매수 시점을 고민한다."
+    },
+    {
+      "id": "tenant",
+      "name": "전세 거주자",
+      "perspective": "전세 유지와 매수를 주거 안정과 비용 측면에서 비교한다."
+    },
+    {
+      "id": "investor",
+      "name": "임대 투자자",
+      "perspective": "전세 수요, 매물 적체, 자금 회수와 보증금 반환 부담을 중시한다."
+    }
+  ],
+  "opinions": [
+    {
+      "persona_id": "optimist",
+      "judgment": "반포 핵심 입지의 장기적 가치와 반등 가능성에 주목합니다.",
+      "evidence": "7월 실거래가 52억 원 대비 현재 최저 호가가 42억 원으로 낮게 형성되어 있으나, 반포동 중심 입지의 희소성과 장기적 가치는 유효합니다. 일시적인 호가 조정기일 수 있습니다.",
+      "change_condition": "매매 최저 호가가 지속적으로 하락하고 매물 적체가 심화되는 현상이 지표로 확인될 경우",
+      "outlook": "bull"
+    },
+    {
+      "persona_id": "skeptic",
+      "judgment": "최근 실거래가 대비 크게 낮아진 호가는 하방 압력의 신호입니다.",
+      "evidence": "7월 52억 원 실거래 이후 9월 현재 최저 호가가 42억 원까지 차이를 보이는 것은 시장의 매수 심리 위축을 반영합니다. 매매 매물도 155건 등록되어 있어 신중한 접근이 필요합니다.",
+      "change_condition": "실거래가가 반등하고 매매 최저 호가가 상승세로 돌아서는 거래가 다수 신고될 경우",
+      "outlook": "bear"
+    },
+    {
+      "persona_id": "analyst",
+      "judgment": "2개월의 시차와 호가 괴리, 매물 수치에 기반한 다각도 분석이 필요합니다.",
+      "evidence": "7월 5층 실거래(52억)와 9월 최저 호가(42억) 간 10억 원의 격차는 층수 차이 및 시차에 따른 왜곡 가능성이 있습니다. 매매 155건, 전세 90건의 매물 중복성도 감안해야 합니다.",
+      "change_condition": "실거래가와 호가의 괴리가 좁혀지고 거래량이 유의미하게 변하는 데이터가 관측될 경우",
+      "outlook": "neutral"
+    },
+    {
+      "persona_id": "buyer",
+      "judgment": "실거래가 대비 낮아진 최저 호가는 기회이나 자금 부담이 큽니다.",
+      "evidence": "실거주 목적으로 7월 실거래 52억 원 대비 최저 호가 42억 원은 매력적인 진입 시점으로 보일 수 있으나, 여전히 절대적인 금액대가 높고 자금 조달 부담이 상당하여 관망하고자 합니다.",
+      "change_condition": "최저 호가 수준의 매물이 실제 거래로 이어지며 가격 안정세가 확인될 경우",
+      "outlook": "neutral"
+    },
+    {
+      "persona_id": "tenant",
+      "judgment": "전세 최저 호가와 매매가의 격차가 커 전세 유지가 유리해 보입니다.",
+      "evidence": "매매 최저 호가는 42억 원인 반면 전세 최저 호가는 14억 원으로 차이가 큽니다. 주거 안정성 측면에서 무리한 매수보다는 현재의 전세 계약을 유지하며 시장 추이를 지켜보는 것이 합리적입니다.",
+      "change_condition": "전세 호가가 급격히 상승하여 매매가와의 격차가 크게 좁혀지는 현상이 발생할 경우",
+      "outlook": "neutral"
+    },
+    {
+      "persona_id": "investor",
+      "judgment": "전세가율이 낮아 투자금 부담이 크고 매물 추이를 주시해야 합니다.",
+      "evidence": "최저 호가 기준 매매 42억 원, 전세 14억 원으로 갭이 28억 원에 달해 초기 투자금 부담이 매우 큽니다. 매매 매물 155건, 전세 매물 90건의 소진 속도를 지켜보며 보수적으로 접근합니다.",
+      "change_condition": "전세 호가가 매매가 대비 빠르게 상승하여 갭 투자 부담이 완화되는 지표가 나타날 경우",
+      "outlook": "bear"
+    }
+  ],
+  "model": "gemini-3.5-flash",
+  "generated_at": "2026-09-26T15:33:58.518587+00:00",
+  "usage": {
+    "cache_tokens_details": null,
+    "cached_content_token_count": null,
+    "candidates_token_count": 962,
+    "candidates_tokens_details": null,
+    "prompt_token_count": 1156,
+    "prompt_tokens_details": [
+      {
+        "modality": "TEXT",
+        "token_count": 1156
+      }
+    ],
+    "thoughts_token_count": 2205,
+    "tool_use_prompt_token_count": null,
+    "tool_use_prompt_tokens_details": null,
+    "total_token_count": 4323,
+    "traffic_type": null
+  }
+}

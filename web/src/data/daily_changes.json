@@ -1,23 +1,32 @@
 {
-  "date": "2026-09-26",
-  "previousDate": "2026-09-25",
-  "generatedAt": "2026-09-25T15:32:16.069493+00:00",
+  "date": "2026-09-27",
+  "previousDate": "2026-09-26",
+  "generatedAt": "2026-09-26T15:32:59.051765+00:00",
   "comparable": 594,
-  "unchanged": 593,
+  "unchanged": 592,
   "appeared": 0,
-  "disappeared": 1,
+  "disappeared": 0,
   "missing": 0,
-  "rises": 1,
-  "falls": 0,
+  "rises": 0,
+  "falls": 2,
   "rows": [
     {
-      "id": "0f20c700-14a2-4506-a86e-64ca429d6a52",
-      "name": "헬리오시티",
-      "area": "18:109C:84.99",
-      "label": "109C · 전용 84.99㎡",
-      "before": 2750000000,
-      "after": 2780000000,
-      "percent": 1.090909090909098
+      "id": "94379391-ef97-4ce2-a4a1-bcb00a070ba7",
+      "name": "현대(1~5차)",
+      "area": "6:176:161.19",
+      "label": "176 · 전용 161.19㎡",
+      "before": 9100000000,
+      "after": 9000000000,
+      "percent": -1.098901098901095
+    },
+    {
+      "id": "dd976eb4-fbfd-4fce-acae-e043a72c21c9",
+      "name": "현대(신현대)",
+      "area": "25:188B:171.43",
+      "label": "188B · 전용 171.43㎡",
+      "before": 11000000000,
+      "after": 8000000000,
+      "percent": -27.27272727272727
     }
   ],
   "tradeStatus": "unavailable"
